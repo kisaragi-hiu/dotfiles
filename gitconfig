@@ -3,3 +3,5 @@
 	name = Moonlight Feather
 [credential]
 	helper = cache
+[core]
+	quotepath = false

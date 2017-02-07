@@ -1,19 +1,29 @@
 #!/bin/bash
 
-# enable it where you want instead, namely video players
-export vblank_mode=0
-
-# qt5ct platform theme
-#if [[ "$XDG_CURRENT_DESKTOP" == "KDE" || "$XDG_CURRENT_DESKTOP" == "GNOME" ]]; then
-#  export QT_QPA_PLATFORMTHEME="qt5ct"
+## while commands do run, variables don't get stored
+## source .profile.d
+#if test -d $HOME/.profile.d; then
+#  for profile in $HOME/.profile.d/*; do
+#    source "$profile" &
+#  done
 #fi
 
-# do (set -U fish_user_paths ...) in fish for PATH
-#export PATH=/home/moonlightf/git/scripts:/home/moonlightf/bin:$PATH
+## do (set -U fish_user_paths ...) in fish for PATH
+
+# run .startup with bash
+bash ~/.startup &
+
+# Map area to screen ratio
+xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
+
+# Make sure fcitx is used
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-# use vim instead of vi by default
+# vim
 export VISUAL=vim
 export EDITOR=vim
+
+# VSync off by default
+export vblank_mode=0

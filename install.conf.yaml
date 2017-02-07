@@ -2,8 +2,22 @@
 
 - link:
     ~/.profile: profile
+    ~/.profile.d: profile.d
+    ~/.startup.d: startup.d
+    ~/.startup: startup
     ~/.gitconfig: gitconfig
+    ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.Xmodmap: Xmodmap
-
-
+    ~/.config/blender: blender
+    ~/.dir_colors: dircolors-solarized/dircolors.256dark
+    ~/.face: avatar
+    ~/.face.icon: avatar
+    ~/.config/fcitx/rime/custom_phrase.txt: rime/custom_phrase.txt
+    ~/.config/fcitx/rime/default.custom.yaml: rime/default.custom.yaml
+    ~/.config/ibus/rime/custom_phrase.txt: rime/custom_phrase.txt
+    ~/.config/ibus/rime/default.custom.yaml: rime/default.custom.yaml
+    ~/.config/fontconfig: fontconfig
+    ~/.config/fish: fish
+    ~/.local/share/omf: oh-my-fish
+    ~/.local/share/krita: krita

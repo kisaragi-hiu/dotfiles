@@ -1,0 +1,2 @@
+# VSync off by default
+export vblank_mode=0
