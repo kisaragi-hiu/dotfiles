@@ -10,6 +10,12 @@
 
 ## do (set -U fish_user_paths ...) in fish for PATH
 
+# setup GOPATH
+export GOPATH=/home/moonlightf/.gopath
+
+# for storing ssh keys with kdewallet
+export SSH_ASKPASS="/usr/bin/ksshaskpass"
+
 # run .startup with bash
 bash ~/.startup &
 
