@@ -1,8 +1,0 @@
-#!/bin/bash
-# startup: run by a .desktop in autostart, to start constantly running programs
-# source .startup.d
-if [[ -d $HOME/.startup.d ]]; then
-  for i in $HOME/.startup.d/*; do
-    source "$i" &
-  done
-fi
