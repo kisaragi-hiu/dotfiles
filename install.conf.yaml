@@ -3,8 +3,6 @@
 - link:
     ~/.profile: profile
     ~/.profile.d: profile.d
-    ~/.startup.d: startup.d
-    ~/.startup: startup
     ~/.gitconfig: gitconfig
     ~/.vim: vim
     ~/.vimrc: vimrc
@@ -19,5 +17,5 @@
     ~/.config/ibus/rime/default.custom.yaml: rime/default.custom.yaml
     ~/.config/fontconfig: fontconfig
     ~/.config/fish: fish
-    ~/.local/share/omf: oh-my-fish
+    ~/.config/omf: oh-my-fish
     ~/.local/share/krita: krita

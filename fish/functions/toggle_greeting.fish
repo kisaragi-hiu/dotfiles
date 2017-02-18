@@ -1,14 +1,16 @@
 function toggle_greeting
-    if test $fish_disable_greeting -eq 1 2> /dev/null
-        set -gx fish_disable_greeting 0
-    else if test $fish_disable_greeting -eq 0 2> /dev/null
-        set -gx fish_disable_greeting 1
-    else if test -z $fish_disable_greeting # if its length is zero
-        set -gx fish_disable_greeting 1
-    else
-        # fish_disable_greeting is something else
-        # complain
-        echo "fish_disable_greeting does not seem like a boolean value."
-        exit 1
-    end
+    switch "$fish_disable_greeting"
+        case 1 'y*' 'on'
+            if test "$argv[1]" = "-v"
+                echo \n"greeting enabled"
+            end
+            set -gx fish_disable_greeting 0
+        case 0 'n*' 'off' ''
+            if test "$argv[1]" = "-v"
+                echo \n"greeting disabled"
+            end
+            set -gx fish_disable_greeting 1
+        case '*'
+            echo "fish_disable_greeting does not seem like a boolean value."
+    end   
 end
