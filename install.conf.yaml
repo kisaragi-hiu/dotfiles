@@ -6,6 +6,7 @@
     ~/.gitconfig: gitconfig
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
     ~/.Xmodmap: Xmodmap
     ~/.config/blender: blender
     ~/.config/autostart: autostart
