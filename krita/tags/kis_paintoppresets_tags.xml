@@ -1,101 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tags>
 <tags>
- <resource identifier="/usr/share/krita/paintoppresets/Pencil_2B.kpp" md5="h0Obq3EhJfNzl54qcp4L+A==">
-  <tag>sketch</tag>
+ <resource md5="ZGyOAEZd+QNmT0m3QYlYYw==" identifier="/usr/share/krita/paintoppresets/Smudge_soft.kpp"/>
+ <resource md5="KJQuTH6N7Qp4Ezs9LFvAHw==" identifier="/usr/share/krita/paintoppresets/Airbrush_eraser.kpp"/>
+ <resource md5="tYkdoZ8DyA3EZbqkuBTRyQ==" identifier="/usr/share/krita/paintoppresets/Block_mix_tilt.kpp"/>
+ <resource md5="PNgWP5sRU0WGeGtZrKdLgw==" identifier="/usr/share/krita/paintoppresets/Smudge_block_tilt.kpp"/>
+ <resource md5="Sf+LwjQCa/bLxaomd1xP1A==" identifier="/usr/share/krita/paintoppresets/Basic_tip_soft.kpp"/>
+ <resource md5="KdtxZbwqJaYI0QvrQ/cHag==" identifier="/usr/share/krita/paintoppresets/Basic_circle.kpp">
+  <tag blacklisted="false">paint</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Bristles_hairy.kpp" md5="LYHcKGV344ZuzRsD8eWttw==">
-  <tag>demo</tag>
+ <resource md5="9lf5ssxI9l19S8REaWTy/A==" identifier="/usr/share/krita/paintoppresets/Ink_circle_10.kpp">
+  <tag blacklisted="false">ink</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Airbrush_linear.kpp" md5="HUzu0bsoUnh1B3jeqZXPNQ==">
-  <tag>paint</tag>
+ <resource md5="QHxqwLMo6m73dsbXha4t1Q==" identifier="/usr/share/krita/paintoppresets/Basic_tip_default.kpp">
+  <tag blacklisted="false">demo</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Basic_mix.kpp" md5="+MKlutfRsrv3Vz45EVHzug==">
-  <tag>demo</tag>
+ <resource md5="n+th0zkrdVzmcadMRFBxGg==" identifier="/usr/share/krita/paintoppresets/Pixelart_dither.kpp"/>
+ <resource md5="RT+G7vQx4U8luUHsisZkzw==" identifier="/usr/share/krita/paintoppresets/Eraser_soft.kpp">
+  <tag blacklisted="false">sketch</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Basic_wet_soft.kpp" md5="dfYwrb91jZXJQrVUR4nUxA==">
-  <tag>demo</tag>
+ <resource md5="gBFPik0q6QPItP+LgNMJlw==" identifier="/usr/share/krita/paintoppresets/Fill_circle.kpp">
+  <tag blacklisted="false">paint</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Basic_tip_default.kpp" md5="QHxqwLMo6m73dsbXha4t1Q==">
-  <tag>demo</tag>
+ <resource md5="ApPzjbkS3/AZKQvquwpv6g==" identifier="/usr/share/krita/paintoppresets/ink_precision_03.kpp"/>
+ <resource md5="Za6SphefASdbCP3+jH6jfA==" identifier="/usr/share/krita/paintoppresets/Ink_tilt_10.kpp"/>
+ <resource md5="b5t26gMflJu4OxvyDzccRQ==" identifier="/usr/share/krita/paintoppresets/Pixelart_square.kpp"/>
+ <resource md5="SSSiIrr959jpNXBouMmnYA==" identifier="/usr/share/krita/paintoppresets/FX_blur_light.kpp"/>
+ <resource md5="eq70dIWrKGFNRz58q4hOpw==" identifier="/usr/share/krita/paintoppresets/Ink_gpen_10.kpp">
+  <tag blacklisted="false">demo</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Eraser_soft.kpp" md5="RT+G7vQx4U8luUHsisZkzw==">
-  <tag>sketch</tag>
+ <resource md5="ed8osKzPztdJ8mYVnNGswA==" identifier="/usr/share/krita/paintoppresets/FX_overlay.kpp"/>
+ <resource md5="CD1BPA8rTaJDd+MM0xF5QA==" identifier="/usr/share/krita/paintoppresets/Screentones_eraser.kpp"/>
+ <resource md5="NJLSuh5hldaTIyR7k2qUFQ==" identifier="/usr/share/krita/paintoppresets/Layout_block.kpp"/>
+ <resource md5="LvkeIrEisX/FjkyCk+/TIA==" identifier="/usr/share/krita/paintoppresets/Ink_tilt_20.kpp"/>
+ <resource md5="m50TBtJ7JyEd9zehB3njPA==" identifier="/usr/share/krita/paintoppresets/Layout_circle_soft.kpp"/>
+ <resource md5="KO3fC5sSIawmyoprNj4Gjw==" identifier="/usr/share/krita/paintoppresets/Basic_tip_gaussian.kpp"/>
+ <resource md5="WYb3P2m6yAPzCP6UcZ9OFg==" identifier="/usr/share/krita/paintoppresets/Eraser_hard.kpp">
+  <tag blacklisted="false">ink</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Eraser_hard.kpp" md5="WYb3P2m6yAPzCP6UcZ9OFg==">
-  <tag>ink</tag>
+ <resource md5="2t9QkmKNCs6snwTNZAX57w==" identifier="/usr/share/krita/paintoppresets/Ink_gpen_25.kpp"/>
+ <resource md5="badnTeJroPQ0kGYk5Xc39g==" identifier="/usr/share/krita/paintoppresets/Block_bristles.kpp"/>
+ <resource md5="4RDtwTYaFd7G4oW+M7XabQ==" identifier="/usr/share/krita/paintoppresets/Ink_ballpen.kpp"/>
+ <resource md5="sygFcfGfV9WYWA8WPoLc5g==" identifier="/usr/share/krita/paintoppresets/FX_splat_starfield.kpp"/>
+ <resource md5="NVbSBuXDdC3e4qIXZBa2Lw==" identifier="/usr/share/krita/paintoppresets/Pencil_HB.kpp">
+  <tag blacklisted="false">sketch</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Pencil_HB.kpp" md5="NVbSBuXDdC3e4qIXZBa2Lw==">
-  <tag>sketch</tag>
+ <resource md5="i0lhTxtr5SfVGfHdNOzG9A==" identifier="/usr/share/krita/paintoppresets/Block_wet_tilt.kpp"/>
+ <resource md5="6kLCBYsggIZCxWFNkjG6hw==" identifier="/usr/share/krita/paintoppresets/Smudge_rake.kpp"/>
+ <resource md5="AebX4dlY1cnZw4ZrwRfuJg==" identifier="/usr/share/krita/paintoppresets/Eraser_circle.kpp">
+  <tag blacklisted="false">demo</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Ink_circle_10.kpp" md5="9lf5ssxI9l19S8REaWTy/A==">
-  <tag>ink</tag>
+ <resource md5="H1JI5+4OsugW1tTMiJBPUg==" identifier="/usr/share/krita/paintoppresets/Bristles_wet.kpp"/>
+ <resource md5="WYPAI9HnZM+31iDIIX4Eiw==" identifier="/usr/share/krita/paintoppresets/Fill_block.kpp"/>
+ <resource md5="dfYwrb91jZXJQrVUR4nUxA==" identifier="/usr/share/krita/paintoppresets/Basic_wet_soft.kpp">
+  <tag blacklisted="false">demo</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Basic_wet.kpp" md5="bhiruEnfPq9QtfH70mNBFQ==">
-  <tag>demo</tag>
+ <resource md5="AwjsNqVC2oJjMgXtmwankQ==" identifier="/usr/share/krita/paintoppresets/Splat_wet_cells.kpp"/>
+ <resource md5="fEHvZO4AdFGJojO1fIIMgw==" identifier="/usr/share/krita/paintoppresets/Smudge_textured.kpp">
+  <tag blacklisted="false">paint</tag>
+  <tag blacklisted="false">demo</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Ink_gpen_10.kpp" md5="eq70dIWrKGFNRz58q4hOpw==">
-  <tag>demo</tag>
+ <resource md5="xpdTagkfb76nPiIFms9L5A==" identifier="/usr/share/krita/paintoppresets/Block_tilt.kpp"/>
+ <resource md5="FkqN6rZL8WCXBy1go/lLXA==" identifier="/usr/share/krita/paintoppresets/pixel1.kpp"/>
+ <resource md5="ysxBoj1a1QYE9cRNf7PyHA==" identifier="/usr/share/krita/paintoppresets/FX_color_HSY.kpp"/>
+ <resource md5="HUzu0bsoUnh1B3jeqZXPNQ==" identifier="/usr/share/krita/paintoppresets/Airbrush_linear.kpp">
+  <tag blacklisted="false">paint</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Basic_mix_soft.kpp" md5="kraUtRXtAPFN42XT9iL1Ow==">
-  <tag>demo</tag>
+ <resource md5="bhiruEnfPq9QtfH70mNBFQ==" identifier="/usr/share/krita/paintoppresets/Basic_wet.kpp">
+  <tag blacklisted="false">demo</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Basic_circle.kpp" md5="KdtxZbwqJaYI0QvrQ/cHag==">
-  <tag>paint</tag>
+ <resource md5="FAv9bj1807aygPrCVHmtOQ==" identifier="/usr/share/krita/paintoppresets/FX_explode.kpp"/>
+ <resource md5="h0Obq3EhJfNzl54qcp4L+A==" identifier="/usr/share/krita/paintoppresets/Pencil_2B.kpp">
+  <tag blacklisted="false">sketch</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Eraser_circle.kpp" md5="AebX4dlY1cnZw4ZrwRfuJg==">
-  <tag>demo</tag>
+ <resource md5="+MKlutfRsrv3Vz45EVHzug==" identifier="/usr/share/krita/paintoppresets/Basic_mix.kpp">
+  <tag blacklisted="false">demo</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Smudge_textured.kpp" md5="fEHvZO4AdFGJojO1fIIMgw==">
-  <tag>paint</tag>
-  <tag>demo</tag>
+ <resource md5="iaDn9ulCsXtHnajUgQUgVg==" identifier="/usr/share/krita/paintoppresets/Pixelart_round.kpp"/>
+ <resource md5="LYHcKGV344ZuzRsD8eWttw==" identifier="/usr/share/krita/paintoppresets/Bristles_hairy.kpp">
+  <tag blacklisted="false">demo</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Ink_brush_25.kpp" md5="Xebx+7bK0mL3q9vPGjfXaA==">
-  <tag>ink</tag>
+ <resource md5="gWod5rQTdcinE5Buykcl/Q==" identifier="/usr/share/krita/paintoppresets/Block_fuzzy.kpp"/>
+ <resource md5="NNR2MgWZNXTbDnTbX8hsRg==" identifier="/usr/share/krita/paintoppresets/Block_basic.kpp">
+  <tag blacklisted="false">demo</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Fill_circle.kpp" md5="gBFPik0q6QPItP+LgNMJlw==">
-  <tag>paint</tag>
+ <resource md5="I4aD9y63gSwMNVcPTBszvg==" identifier="/usr/share/krita/paintoppresets/Splat_mix_cells.kpp"/>
+ <resource md5="+ZlhtFsdwSw35utTbn3d+g==" identifier="/usr/share/krita/paintoppresets/Ink_circle_05.kpp"/>
+ <resource md5="Xebx+7bK0mL3q9vPGjfXaA==" identifier="/usr/share/krita/paintoppresets/Ink_brush_25.kpp">
+  <tag blacklisted="false">ink</tag>
  </resource>
- <resource identifier="/usr/share/krita/paintoppresets/Block_basic.kpp" md5="NNR2MgWZNXTbDnTbX8hsRg==">
-  <tag>demo</tag>
+ <resource md5="aJ6B32YjYVRB4nuqJ9jQ/Q==" identifier="/usr/share/krita/paintoppresets/FX_glow_add.kpp"/>
+ <resource md5="kraUtRXtAPFN42XT9iL1Ow==" identifier="/usr/share/krita/paintoppresets/Basic_mix_soft.kpp">
+  <tag blacklisted="false">demo</tag>
+ </resource>
+ <resource md5="0z90oFiQvfdSx/mL5xLm/A==" identifier="/usr/share/krita/paintoppresets/Sparkle_wet.kpp"/>
+ <resource md5="iatG6w0IUd7sn2Q2Q9sOLg==" identifier="/usr/share/krita/paintoppresets/Sparkle_wet_soft.kpp"/>
+ <resource md5="FbO1eQ7M4qEpbUB3I0YGtQ==" identifier="/usr/share/krita/paintoppresets/Bristles_mix.kpp"/>
+ <resource md5="Di7CAhmne/DZO6/yc3uXgA==" identifier="/usr/share/krita/paintoppresets/Smudge_rake_2.kpp"/>
+ <resource identifier="dummy">
+  <tag blacklisted="false">Ink</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>Wet</tag>
+  <tag blacklisted="false">sketch</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>Mix</tag>
+  <tag blacklisted="false">ink</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>PixelArt</tag>
+  <tag blacklisted="false">paint</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>Smudge</tag>
+  <tag blacklisted="false">Erasers</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>demo</tag>
+  <tag blacklisted="false">demo</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>Ink</tag>
+  <tag blacklisted="false">Block</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>Circle</tag>
+  <tag blacklisted="false">Wet</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>ink</tag>
+  <tag blacklisted="false">Circle</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>Erasers</tag>
+  <tag blacklisted="false">PixelArt</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>FX</tag>
+  <tag blacklisted="false">FX</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>sketch</tag>
+  <tag blacklisted="false">Mix</tag>
  </resource>
  <resource identifier="dummy">
-  <tag>paint</tag>
- </resource>
- <resource identifier="dummy">
-  <tag>Block</tag>
+  <tag blacklisted="false">Smudge</tag>
  </resource>
 </tags>
