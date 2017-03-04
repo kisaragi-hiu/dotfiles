@@ -21,3 +21,4 @@
     ~/.config/fish: fish
     ~/.config/omf: oh-my-fish
     ~/.local/share/krita: krita
+    ~/.config/powerline: powerline
