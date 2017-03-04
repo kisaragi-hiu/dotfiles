@@ -63,6 +63,8 @@ nnoremap <leader>u :GundoToggle<CR>
 "Powerline
 set laststatus=2
 set t_Co=256
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" `powerline-vim` package on manjaro set it up for me...
+let g:powerline_pycmd = "py3"
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
