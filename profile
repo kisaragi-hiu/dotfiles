@@ -8,19 +8,20 @@
 #  done
 #fi
 
-## do (set -U fish_user_paths ...) in fish for PATH
-
 # setup GOPATH
 export GOPATH=/home/moonlightf/.gopath
 
 # for storing ssh keys with kdewallet
 export SSH_ASKPASS="/usr/bin/ksshaskpass"
 
-# run .startup with bash
-bash ~/.startup &
+# exporting PATH here ensures the desktop also sees them
+export PATH=/home/moonlightf/git/scripts:/home/moonlightf/git/Sudocabulary:/home/moonlightf/bin:$PATH
 
 # Map area to screen ratio
 xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
+
+# turn on numpad
+numlockx &
 
 # Make sure fcitx is used
 export GTK_IM_MODULE=fcitx
