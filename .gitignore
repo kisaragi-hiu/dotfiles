@@ -1,3 +1,4 @@
 fish/fishd.*
 blender/*/config/bookmarks.txt
 blender/*/config/recent-files.txt
+vim/.netrwhist
