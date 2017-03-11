@@ -23,6 +23,9 @@ xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
 # turn on numpad
 numlockx &
 
+# start ssh-agent
+ssh-agent &
+
 # Make sure fcitx is used
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
