@@ -15,16 +15,10 @@ export GOPATH=/home/moonlightf/.gopath
 export SSH_ASKPASS="/usr/bin/ksshaskpass"
 
 # exporting PATH here ensures the desktop also sees them
-export PATH=/home/moonlightf/git/scripts:/home/moonlightf/git/Sudocabulary:/home/moonlightf/bin:$PATH
+export PATH=/home/moonlightf/git/scripts:/home/moonlightf/git/Sudocabulary:/home/moonlightf/bin:/home/moonlightf/.gem/ruby/2.4.0/bin:$PATH
 
 # Map area to screen ratio
 xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
-
-# turn on numpad
-numlockx &
-
-# start ssh-agent
-ssh-agent &
 
 # Make sure fcitx is used
 export GTK_IM_MODULE=fcitx
