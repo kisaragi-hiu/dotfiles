@@ -26,7 +26,7 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 # Filmic Blender can be loaded this way
-export OCIO=/home/moonlight/.dotfiles/filmic-blender/config.ocio
+export OCIO=/home/moonlightf/.dotfiles/filmic-blender/config.ocio
 
 # vim
 export VISUAL=vim
