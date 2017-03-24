@@ -4,9 +4,6 @@
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git
-[submodule "rime-hokkien"]
-	path = rime-hokkien
-	url = https://github.com/flyingfeather1501/rime-hokkien
 [submodule "filmic-blender"]
 	path = filmic-blender
 	url = https://github.com/sobotka/filmic-blender.git
