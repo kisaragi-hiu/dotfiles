@@ -2,4 +2,4 @@ patch:
   schema_list:
     - schema: bopomofo_tw
     - schema: cangjie5
-    - schema: blg_taipak
+    - schema: blg_tai
