@@ -3,7 +3,10 @@
 	url = https://github.com/anishathalye/dotbot
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
-	url = https://github.com/seebi/dircolors-solarized.git
+    url = https://github.com/seebi/dircolors-solarized.git
+[submodule "rime-hokkien"]
+    path = rime-hokkien
+    url = https://github.com/a-thok/rime-hokkien.git
 [submodule "filmic-blender"]
 	path = filmic-blender
 	url = https://github.com/sobotka/filmic-blender.git
