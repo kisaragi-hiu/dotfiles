@@ -25,6 +25,12 @@ set foldnestmax=10
 nnoremap <space> za
 set foldmethod=indent
 
+"Wrap
+set whichwrap=b,s,<,>,[,]
+
+"Mouse support
+set mouse=a
+
 "Language specific settings
 augroup configgroup
         autocmd!
