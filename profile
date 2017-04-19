@@ -8,8 +8,8 @@
 #  done
 #fi
 
-# My config.fish uses this variable
-export enable_powerline=0
+# Powerline truncates stuff properly. Probably not gonna use anything else.
+#export enable_powerline=0
 
 # setup GOPATH
 export GOPATH=/home/moonlightf/.gopath
