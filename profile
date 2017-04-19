@@ -11,6 +11,10 @@
 # Powerline truncates stuff properly. Probably not gonna use anything else.
 #export enable_powerline=0
 
+# Workaround electron apps' global menu not functioning
+# by disabling election's global menu integration
+export ELECTRON_FORCE_WINDOW_MENU_BAR=1
+
 # setup GOPATH
 export GOPATH=/home/moonlightf/.gopath
 
