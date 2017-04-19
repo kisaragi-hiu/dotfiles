@@ -1,1 +1,1 @@
-/home/moonlightf/.local/share/omf/themes/ocean/fish_prompt.fish
+/home/moonlightf/.local/share/omf/themes/pure/fish_prompt.fish
