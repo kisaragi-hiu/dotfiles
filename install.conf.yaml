@@ -10,6 +10,7 @@
     ~/.Xmodmap: Xmodmap
     ~/.config/blender: blender
     ~/.config/autostart: autostart
+    ~/.config/autostart-scripts: autostart-scripts
     ~/.dir_colors: dircolors-solarized/dircolors.256dark
     ~/.face: avatar
     ~/.face.icon: avatar
