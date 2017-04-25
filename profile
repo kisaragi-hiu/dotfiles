@@ -1,16 +1,5 @@
 #!/bin/bash
 
-## while commands do run, variables don't get stored
-## source .profile.d
-#if test -d $HOME/.profile.d; then
-#  for profile in $HOME/.profile.d/*; do
-#    source "$profile" &
-#  done
-#fi
-
-# Powerline truncates stuff properly. Probably not gonna use anything else.
-#export enable_powerline=0
-
 # Workaround electron apps' global menu not functioning
 # by disabling election's global menu integration
 export ELECTRON_FORCE_WINDOW_MENU_BAR=1
@@ -24,27 +13,27 @@ export SSH_ASKPASS="/usr/bin/ksshaskpass"
 # exporting PATH here ensures the desktop also sees them
 export PATH=/home/flyin1501/git/scripts:/home/flyin1501/git/Sudocabulary:/home/flyin1501/bin:/home/flyin1501/.gem/ruby/2.4.0/bin:$PATH
 
-# Map area to screen ratio
+# map area to screen ratio
 xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
 
-# Make sure fcitx is used
+# make sure fcitx is used
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-# Filmic Blender can be loaded this way
+# filmic Blender can be loaded this way
 export OCIO=/home/flyin1501/.dotfiles/filmic-blender/config.ocio
 
 # vim
 export VISUAL=vim
 export EDITOR=vim
 
-# Dir variables
+# dir variables
 export D=/run/media/flyin1501/Data
 export C=/run/media/flyin1501/Windows
 export G='/run/media/flyin1501/Data/Google ドライブ'
 export M=/run/media/flyin1501/Data/Mega
 export P=/run/media/flyin1501/Data/Mega/Projects
 
-# VSync off by default
+# vsync off by default
 export vblank_mode=0
