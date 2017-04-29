@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo $(date): priority test from ~/.profile >> $HOME/.priority_test
+
 # Workaround electron apps' global menu not functioning
 # by disabling election's global menu integration
 export ELECTRON_FORCE_WINDOW_MENU_BAR=1
@@ -15,6 +17,9 @@ export PATH=/home/flyin1501/git/scripts:/home/flyin1501/git/Sudocabulary:/home/f
 
 # map area to screen ratio
 xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
+
+# run this earlier so tilda stops complaining about F24
+xmodmap ~/.Xmodmap
 
 # make sure fcitx is used
 export GTK_IM_MODULE=fcitx
