@@ -1,5 +1,0 @@
-[Desktop Entry]
-Exec=ssh-agent
-Name=ssh-agent
-Terminal=false
-Type=Application

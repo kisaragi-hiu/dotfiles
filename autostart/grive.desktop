@@ -1,5 +1,0 @@
-[Desktop Entry]
-Exec=loop-command 10m 0 grive -p /run/media/moonlightf/Data/Google\ ドライブ/
-Terminal=false
-Type=Application
-Name=Grive
