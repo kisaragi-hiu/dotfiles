@@ -39,6 +39,10 @@ export C=/run/media/flyin1501/Windows
 export G='/run/media/flyin1501/Data/Google ドライブ'
 export M=/run/media/flyin1501/Data/Mega
 export P=/run/media/flyin1501/Data/Mega/Projects
+# grab XDG_* from user-dirs.dirs
+for i in $(sed 's/#.*//g' ~/.config/user-dirs.dirs | grep XDG | sed 's/XDG_//g' | sed 's/_.*//'); do
+  export XDG_"$i"_DIR=$(xdg-user-dir $i)/
+done
 
 # vsync off by default
 export vblank_mode=0
