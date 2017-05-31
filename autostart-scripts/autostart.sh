@@ -13,7 +13,7 @@ loop-command 30m 0 pop-random-notification\
 loop-command 10m 0 grive -p /run/media/flyin1501/Data/Google\ ドライブ/ & # Grive
 ssh-agent &
 numlockx &
-screenstalk -t 10 &
+screenstalk -t 10m &
 
 # the sleep isn't put in the background, have to find another place for them probably
 sleep 4; tilda &
