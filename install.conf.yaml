@@ -16,8 +16,6 @@
     ~/.face.icon: avatar
     ~/.config/fcitx/rime/custom_phrase.txt: rime/custom_phrase.txt
     ~/.config/fcitx/rime/default.custom.yaml: rime/default.custom.yaml
-    ~/.config/fcitx/rime/banlam.dict.yaml: rime-hokkien/banlam.dict.yaml
-    ~/.config/fcitx/rime/blg_tai.schema.yaml: rime-hokkien/blg_tai.schema.yaml
     ~/.config/fontconfig: fontconfig
     ~/.config/fish: fish
     ~/.config/omf: oh-my-fish
