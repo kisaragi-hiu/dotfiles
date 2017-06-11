@@ -29,6 +29,9 @@ export XMODIFIERS=@im=fcitx
 # filmic Blender can be loaded this way
 export OCIO=/home/flyin1501/.dotfiles/filmic-blender/config.ocio
 
+# turn off wine debugging
+export WINEDEBUG=-all
+
 # vim
 export VISUAL=vim
 export EDITOR=vim
@@ -36,9 +39,9 @@ export EDITOR=vim
 # dir variables
 export D=/run/media/flyin1501/Data
 export C=/run/media/flyin1501/Windows
-export G='/run/media/flyin1501/Data/Google ドライブ'
-export M=/run/media/flyin1501/Data/Mega
-export P=/run/media/flyin1501/Data/Mega/Projects
+export G=/home/flyin1501/ドキュメント
+export M=/run/media/flyin1501/Data/mega
+export P=/run/media/flyin1501/Data/mega/Projects
 # grab XDG_* from user-dirs.dirs
 for i in $(sed 's/#.*//g' ~/.config/user-dirs.dirs | grep XDG | sed 's/XDG_//g' | sed 's/_.*//'); do
   export XDG_"$i"_DIR=$(xdg-user-dir $i)/
