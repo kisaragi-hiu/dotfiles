@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=osu %u
+Icon=/opt/osu/osu.png
+MimeType=x-scheme-handler/osu
+Name=osu! link handler
+Path[$e]=
+Terminal=false
+Type=Application
