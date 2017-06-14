@@ -14,7 +14,8 @@
     ~/.dir_colors: dircolors-solarized/dircolors.256dark
     ~/.face: avatar
     ~/.face.icon: avatar
-    ~/.local/share/applications/osuhandler.desktop: osuhandler.desktop
+    ~/.local/share/applications/osuhandler.desktop: applications/osuhandler.desktop
+    ~/.local/share/applications/mimeapps.list: applications/mimeapps.list
     ~/.config/fcitx/rime/custom_phrase.txt: rime/custom_phrase.txt
     ~/.config/fcitx/rime/default.custom.yaml: rime/default.custom.yaml
     ~/.config/fontconfig: fontconfig

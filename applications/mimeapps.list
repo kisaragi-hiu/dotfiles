@@ -1,0 +1,5 @@
+[Added Associations]
+x-scheme-handler/osu=osuhandler.desktop
+
+[Default Applications]
+x-scheme-handler/osu=osuhandler.desktop
