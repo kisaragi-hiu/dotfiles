@@ -11,6 +11,3 @@ loop-command 10m 0 grive -p /home/flyin1501/ドキュメント/
 ssh-agent &
 numlockx &
 screenstalk -t 10m &
-
-# Megasync would put a window right at the upper-left corner if started before the tray
-sleep 2m; megasync &
