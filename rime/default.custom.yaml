@@ -1,4 +1,5 @@
 patch:
+  "menu/page_size": 9
   schema_list:
     - schema: bopomofo_tw
     - schema: cangjie5
