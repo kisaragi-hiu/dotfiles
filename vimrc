@@ -51,9 +51,12 @@ augroup configgroup
         autocmd BufEnter *.cls setlocal filetype=java
         autocmd BufEnter *.zsh-theme setlocal filetype=zsh
         autocmd BufEnter Makefile setlocal noexpandtab
-        autocmd BufEnter *.sh setlocal tabstop=2
-        autocmd BufEnter *.sh setlocal shiftwidth=2
-        autocmd BufEnter *.sh setlocal softtabstop=2
+        autocmd BufEnter sh setlocal tabstop=2
+        autocmd BufEnter sh setlocal shiftwidth=2
+        autocmd BufEnter sh setlocal softtabstop=2
+        autocmd BufEnter javascript setlocal tabstop=2
+        autocmd BufEnter javascript setlocal shiftwidth=2
+        autocmd BufEnter javascript setlocal softtabstop=2
 augroup END
 
 "Solarized
