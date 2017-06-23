@@ -3,3 +3,4 @@ patch:
     - schema: bopomofo_tw
     - schema: cangjie5
     - schema: blg_tai
+    - schema: jyutping
