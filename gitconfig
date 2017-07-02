@@ -5,8 +5,11 @@
 	helper = cache
 [core]
 	quotepath = false
+	pager = less -r
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[color]
+	ui = true
