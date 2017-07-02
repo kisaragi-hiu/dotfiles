@@ -5,3 +5,8 @@ patch:
     - schema: cangjie5
     - schema: blg_tai
     - schema: jyutping
+  "switcher/option_list_separator": "/"
+  "switcher/hotkeys":
+    - "Super+f" # Mandarin 方案 -> "Fang An"
+    - F4
+  "switcher/caption": "［方案］"
