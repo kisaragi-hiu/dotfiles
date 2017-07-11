@@ -7,7 +7,6 @@ loop-command 30m 0 pop-random-notification\
   /home/flyin1501/git/text-files/vocab-word-30m.txt\
   /home/flyin1501/git/text-files/vocab-meaning-30m.txt &
 
-loop-command 10m 0 grive -p /home/flyin1501/ドキュメント/
+loop-command 10m 0 grive -p /home/flyin1501/ドキュメント/ &
 ssh-agent &
 numlockx &
-screenstalk -t 10m &
