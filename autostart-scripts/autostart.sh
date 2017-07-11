@@ -9,4 +9,5 @@ loop-command 30m 0 pop-random-notification\
 
 loop-command 10m 0 grive -p /home/flyin1501/ドキュメント/ &
 ssh-agent &
+ssh-add </dev/null
 numlockx &
