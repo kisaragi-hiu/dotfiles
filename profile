@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo $(date): priority test from ~/.profile >> $HOME/.priority_test
+# use qt5ct outside plasma
+[ "$XDG_CURRENT_DESKTOP" != plasma ] && export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Workaround electron apps' global menu not functioning
 # by disabling election's global menu integration
