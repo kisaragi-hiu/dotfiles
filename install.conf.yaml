@@ -17,6 +17,10 @@
     ~/.face.icon: avatar
     ~/.local/share/applications/osuhandler.desktop: applications/osuhandler.desktop
     ~/.local/share/applications/mimeapps.list: applications/mimeapps.list
+    ~/.config/ibus/rime/custom_phrase.txt: rime/custom_phrase.txt
+    ~/.config/ibus/rime/default.custom.yaml: rime/default.custom.yaml
+    ~/.config/ibus/rime/blg_tai.schema.yaml: rime-hokkien/blg_tai.schema.yaml
+    ~/.config/ibus/rime/banlam.dict.yaml: rime-hokkien/banlam.dict.yaml
     ~/.config/fcitx/rime/custom_phrase.txt: rime/custom_phrase.txt
     ~/.config/fcitx/rime/default.custom.yaml: rime/default.custom.yaml
     ~/.config/fcitx/rime/blg_tai.schema.yaml: rime-hokkien/blg_tai.schema.yaml
