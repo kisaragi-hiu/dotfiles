@@ -1,0 +1,29 @@
+QT_QPA_PLATFORMTHEME DEFAULT=qt5ct
+
+GTK_IM_MODULE        DEFAULT=ibus
+QT_IM_MODULE         DEFAULT=ibus
+
+SSH_ASKPASS          DEFAULT=/usr/bin/ksshaskpass
+
+GOPATH               DEFAULT=/home/flyin1501/.gopath
+PATH                 DEFAULT=/home/flyin1501/git/scripts:/home/flyin1501/git/Sudocabulary:/home/flyin1501/bin:/home/flyin1501/git/scripts:/home/flyin1501/git/Sudocabulary:/home/flyin1501/bin:/flyin1501/.local/share/npm-global:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+VISUAL               DEFAULT=vim
+EDITOR               DEFAULT=vim
+
+OCIO                 DEFAULT=/home/flyin1501/.dotfiles/filmic-blender/config.ocio
+WINEDEBUG            DEFAULT=-all
+
+D                    DEFAULT=/run/media/flyin1501/Data
+C                    DEFAULT=/run/media/flyin1501/Windows
+G                    DEFAULT=/home/flyin1501/ドキュメント
+M                    DEFAULT=/run/media/flyin1501/Data/mega
+P                    DEFAULT=/run/media/flyin1501/Data/mega/Projects
+
+XDG_DESKTOP_DIR      DEFAULT=${HOME}/デスクトップ
+XDG_DOWNLOAD_DIR     DEFAULT=${HOME}/ダウンロード
+XDG_TEMPLATES_DIR    DEFAULT=${HOME}/テンプレート
+XDG_PUBLICSHARE_DIR  DEFAULT=${HOME}/公開
+XDG_DOCUMENTS_DIR    DEFAULT=${HOME}/ドキュメント
+XDG_MUSIC_DIR        DEFAULT=${HOME}/音楽
+XDG_PICTURES_DIR     DEFAULT=${HOME}/画像
+XDG_VIDEOS_DIR       DEFAULT=${HOME}/ビデオ

@@ -1,6 +1,7 @@
 - clean: ['~']
 
 - link:
+    ~/.pam_environment: pam_environment
     ~/.profile: profile
     ~/.profile.d: profile.d
     ~/.gitconfig: gitconfig
