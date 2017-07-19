@@ -49,10 +49,15 @@ export C=/run/media/flyin1501/Windows
 export G=/home/flyin1501/ドキュメント
 export M=/run/media/flyin1501/Data/mega
 export P=/run/media/flyin1501/Data/mega/Projects
-# grab XDG_* from user-dirs.dirs
-for i in $(sed 's/#.*//g' ~/.config/user-dirs.dirs | grep XDG | sed 's/XDG_//g' | sed 's/_.*//'); do
-  export XDG_"$i"_DIR=$(xdg-user-dir $i)/
-done
+# for XDG_* directory quick access
+export XDG_DESKTOP_DIR=/home/flyin1501/デスクトップ/
+export XDG_DOWNLOAD_DIR=/home/flyin1501/ダウンロード/
+export XDG_TEMPLATES_DIR=/home/flyin1501/テンプレート/
+export XDG_PUBLICSHARE_DIR=/home/flyin1501/公開/
+export XDG_DOCUMENTS_DIR=/home/flyin1501/ドキュメント/
+export XDG_MUSIC_DIR=/home/flyin1501/音楽/
+export XDG_PICTURES_DIR=/home/flyin1501/画像/
+export XDG_VIDEOS_DIR=/home/flyin1501/ビデオ/
 
 # vsync off by default
 export vblank_mode=0
