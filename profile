@@ -21,8 +21,12 @@ export PATH=/home/flyin1501/git/scripts:/home/flyin1501/git/Sudocabulary:/home/f
 # map area to screen ratio
 xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
 
-# run this earlier so tilda stops complaining about F24
-xmodmap ~/.Xmodmap
+# running multiple xmodmap -e commands seems to be more reliable
+# for some reason xmodmap ~/.Xmodmap needs to be run twice to achieve this
+# remap CapsLock(keycode 66) to U25CA(◊) via unused keysym XF86Launch0
+xmodmap -e 'clear lock'
+xmodmap -e 'keycode 66 = XF86Launch0'
+xmodmap -e 'keysym XF86Launch0 = U25CA'
 
 # make sure fcitx is used
 export GTK_IM_MODULE=fcitx
