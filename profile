@@ -23,10 +23,9 @@ xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
 
 # running multiple xmodmap -e commands seems to be more reliable
 # for some reason xmodmap ~/.Xmodmap needs to be run twice to achieve this
-# remap CapsLock(keycode 66) to U25CA(◊) via unused keysym XF86Launch0
-xmodmap -e 'clear lock'
-xmodmap -e 'keycode 66 = XF86Launch0'
-xmodmap -e 'keysym XF86Launch0 = U25CA'
+# remap CapsLock(keycode 66) to U03BB(λ) & (second level) U25CA(◊) via unused keysym XF86Launch0
+xmodmap -e 'remove Lock = Caps_Lock'
+xmodmap -e 'keysym Caps_Lock = U03BB U25CA'
 
 # make sure fcitx is used
 export GTK_IM_MODULE=fcitx
