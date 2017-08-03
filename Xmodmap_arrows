@@ -1,0 +1,15 @@
+! vim style arrow keys; single & double arrows ←↓↑→ ⇇⇊⇈⇉
+! Left
+keycode 43 = h H U2190 U21C7
+! Down
+keycode 44 = j J U2193 U21CA
+! Up
+keycode 45 = k K U2191 U21C8
+! Right
+keycode 46 = l L U2192 U21C9
+
+! large arrows, white and black ⇧⇦⇩⇨ ⬆⬅⬇⮕
+keycode 25 = w W U21E7 U2B06
+keycode 38 = a A U21E6 U2B05
+keycode 39 = s S U21E9 U2B07
+keycode 40 = d D U21E8 U2B95

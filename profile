@@ -21,11 +21,10 @@ export PATH=/home/flyin1501/git/scripts:/home/flyin1501/git/Sudocabulary:/home/f
 # map area to screen ratio
 xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
 
-# running multiple xmodmap -e commands seems to be more reliable
-# for some reason xmodmap ~/.Xmodmap needs to be run twice to achieve this
-# remap CapsLock(keycode 66) to U03BB(λ) & (second level) U25CA(◊) via unused keysym XF86Launch0
-xmodmap -e 'remove Lock = Caps_Lock'
-xmodmap -e 'keysym Caps_Lock = U03BB U25CA'
+# keyboard config
+# TODO: .Xmodmap.d/ (or just port to xkb)
+xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap_arrows
 
 # make sure fcitx is used
 export GTK_IM_MODULE=fcitx

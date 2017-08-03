@@ -1,2 +1,14 @@
-remove Lock = Caps_Lock
-keysym Caps_Lock = U03BB U25CA
+! Caps_Lock -> AltGr, for 3nd & 4th level stuff
+! way easier to press than Alt_R
+remove lock = Caps_Lock
+keysym Caps_Lock = Mode_switch
+
+! Alt_R -> Lozenge ◊ ♦ ✧ ✦
+remove mod1 = Alt_R
+keysym Alt_R = U25CA U2666 U2727 U2726
+
+! -, _, – (en dash), — (em dash)
+keycode 20 = minus underscore U2013 U2014
+
+! backslash, bar, λ, Λ (upper case λ)
+keycode 51 = backslash bar U03BB U039B
