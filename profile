@@ -24,7 +24,6 @@ xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
 # keyboard config
 # TODO: .Xmodmap.d/ (or just port to xkb)
 xmodmap ~/.Xmodmap
-xmodmap ~/.Xmodmap_arrows
 
 # make sure fcitx is used
 export GTK_IM_MODULE=fcitx
