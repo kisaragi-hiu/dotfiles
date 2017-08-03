@@ -9,6 +9,7 @@
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.Xmodmap: Xmodmap
+    ~/.Xmodmap_arrows: Xmodmap_arrows
     ~/.config/blender: blender
     ~/.config/autostart: autostart
     ~/.config/autostart-scripts: autostart-scripts
