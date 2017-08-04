@@ -6,6 +6,12 @@ keysym Caps_Lock = Mode_switch
 ! 6 ^ ◊ ♦
 keycode 15 = 6 asciicircum U25CA U2666
 
+! ` ~ ≈
+keycode 49 = grave asciitilde U2248 U2248
+
+! +=≒≓
+keycode 21 = equal plus U2252 U2253
+
 ! -, _, – (en dash), — (em dash)
 keycode 20 = minus underscore U2013 U2014
 
