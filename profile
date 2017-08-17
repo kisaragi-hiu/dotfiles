@@ -46,6 +46,8 @@ export C=/run/media/flyin1501/Windows
 export G=/home/flyin1501/ドキュメント
 export M=/run/media/flyin1501/Data/mega
 export P=/run/media/flyin1501/Data/mega/Projects
+export XDG_OSU_DIR=/run/media/flyin1501/Data/games/osu
+
 # for XDG_* directory quick access
 export XDG_DESKTOP_DIR=/home/flyin1501/デスクトップ/
 export XDG_DOWNLOAD_DIR=/home/flyin1501/ダウンロード/
