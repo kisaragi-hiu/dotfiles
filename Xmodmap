@@ -18,15 +18,27 @@ keycode 20 = minus underscore U2013 U2014
 ! backslash, bar, λ, Λ (upper case λ)
 keycode 51 = backslash bar U03BB U039B
 
-! vim style arrow keys; single & double arrows ←↓↑→ ⇇⇊⇈⇉
+! ', ", “ (left double quote), ” (right double quote)
+keycode 48 = apostrophe quotedbl U201C U201D
+
+! 7, &, ⚬, ・
+keycode 16 = 7 ampersand U26AC U30FB
+
+! u, U, µ (micro sign)
+keycode 30 = u U U00B5 U00B5
+
+! c, C, © (copyrignt sign)
+keycode 54 = c C U00A9 U00A9
+
+! vim style arrow keys; single & double arrows ←↓↑→ ⇐⇑⇒⇓
 ! Left
-keycode 43 = h H U2190 U21C7
+keycode 43 = h H U2190 U21D0
 ! Down
-keycode 44 = j J U2193 U21CA
+keycode 44 = j J U2193 U21D3
 ! Up
-keycode 45 = k K U2191 U21C8
+keycode 45 = k K U2191 U21D1
 ! Right
-keycode 46 = l L U2192 U21C9
+keycode 46 = l L U2192 U21D2
 
 ! large arrows, white and black ⇧⇦⇩⇨ ⬆⬅⬇⮕
 keycode 25 = w W U21E7 U2B06
