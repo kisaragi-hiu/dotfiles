@@ -1,5 +1,8 @@
+*.swp
 fish/fishd.*
 fish/functions/fish_prompt.fish
 blender/*/config/bookmarks.txt
 blender/*/config/recent-files.txt
 vim/.netrwhist
+# plugin list in .vimrc, run :PlugInstall
+vim/plugged

@@ -1,10 +1,21 @@
-" Fish doesnt work well with vim, use bash
+set nocompatible
+
+"Fish doesnt work well with vim, use bash
 if &shell =~# 'fish$'
     set shell=bash
 endif
 
-" Pathogen
-execute pathogen#infect()
+"vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-sensible'
+Plug 'bhurlow/vim-parinfer'
+Plug 'wlangstroth/vim-racket'
+Plug 'fasiha/pollen.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
 
 syntax on
 filetype plugin indent on
@@ -59,21 +70,12 @@ augroup configgroup
         autocmd BufEnter javascript setlocal softtabstop=2
 augroup END
 
-"Solarized
-"set background=dark
-"colorscheme solarized
-
 "Save file with sudo with :w!!
 cmap w!! w !sudo tee > /dev/null %
 
 "toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
 
-"Powerline
+"Airline
 set laststatus=2
-set t_Co=256
-" `powerline-vim` package on manjaro set it up for me...
-let g:powerline_pycmd = "py3"
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
+let g:airline_powerline_fonts = 1
