@@ -30,9 +30,11 @@ set number
 set lazyredraw " Don't redraw when not needed
 
 "Tab
-set tabstop=4
-set softtabstop=4
+set tabstop=8
+set softtabstop=0
 set expandtab " <tab>->space
+set shiftwidth=4
+set smarttab
 
 set incsearch " Increment search, search as chars are entered
 
