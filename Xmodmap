@@ -8,6 +8,9 @@ keycode 135 = F24
 ! 6 ^ ◊ ♦
 keycode 15 = 6 asciicircum U25CA U2666
 
+! 8 * ☆ ※
+keycode 17 = 8 asterisk U2606 U203B
+
 ! ` ~ ≈
 keycode 49 = grave asciitilde U2248 U2248
 
@@ -43,7 +46,7 @@ keycode 45 = k K U2191 U21D1
 keycode 46 = l L U2192 U21D2
 
 ! large arrows, white and black ⇧⇦⇩⇨ ⬆⬅⬇⮕
-keycode 25 = w W U21E7 U2B06
-keycode 38 = a A U21E6 U2B05
-keycode 39 = s S U21E9 U2B07
-keycode 40 = d D U21E8 U2B95
+!keycode 25 = w W U21E7 U2B06
+!keycode 38 = a A U21E6 U2B05
+!keycode 39 = s S U21E9 U2B07
+!keycode 40 = d D U21E8 U2B95
