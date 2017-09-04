@@ -1,12 +1,9 @@
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-[submodule "dircolors-solarized"]
-	path = dircolors-solarized
-    url = https://github.com/seebi/dircolors-solarized.git
-[submodule "rime-hokkien"]
-    path = rime-hokkien
-    url = https://github.com/a-thok/rime-hokkien.git
-[submodule "filmic-blender"]
-	path = filmic-blender
+[submodule "_dircolors-solarized"]
+	path = _dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized.git
+[submodule "_filmic-blender"]
+	path = _filmic-blender
 	url = https://github.com/sobotka/filmic-blender.git
+[submodule "_rime-hokkien"]
+	path = _rime-hokkien
+	url = https://github.com/a-thok/rime-hokkien.git

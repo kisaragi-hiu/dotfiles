@@ -1,0 +1,68 @@
+# Local/private config goes in the include
+[include]
+    path = ~/.config/.gitconfig.sec
+
+[user]
+    email = flyingfeather1501@gmail.com
+    name = Kisaragi Hiu
+
+[core]
+    pager = less -r
+    editor = vim
+    # Needed for proper Unicode display
+    quotepath = false
+    excludesfile = ~/.gitignore
+
+[alias]
+    last = log -1 HEAD
+    co = checkout
+    st = status
+    uncommit = reset --soft HEAD~
+    unstage = reset HEAD --
+    lg = log --graph --abbrev-commit --decorate --date=relative --all
+
+[credential]
+    helper = cache
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+
+[diff]
+    tool = meld
+
+[difftool]
+    prompt = false
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[gui]
+    # Remove `git gui` pop-up warning
+    gcwarning = false
+
+[help]
+    autocorrect = 1
+
+[merge]
+    tool = meld
+
+[mergetool]
+    keepBackup = false
+
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+
+[pull]
+    rebase = true
+
+[push]
+    default = simple
+
+[rebase]
+    autoStash = true

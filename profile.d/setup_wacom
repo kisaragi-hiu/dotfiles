@@ -1,2 +1,0 @@
-# Map area to screen ratio
-xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
