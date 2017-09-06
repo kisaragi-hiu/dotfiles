@@ -31,7 +31,7 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 # filmic Blender can be loaded this way
-export OCIO=/home/flyin1501/.dotfiles/filmic-blender/config.ocio
+export OCIO=/home/flyin1501/.dotfiles/_filmic-blender/config.ocio
 
 # turn off wine debugging
 export WINEDEBUG=-all
@@ -46,6 +46,7 @@ export C=/run/media/flyin1501/Windows
 export G=/home/flyin1501/ドキュメント
 export M=/run/media/flyin1501/Data/mega
 export P=/run/media/flyin1501/Data/mega/Projects
+export DIARY=/home/flyin1501/git/diary
 export XDG_OSU_DIR=/run/media/flyin1501/Data/games/osu
 
 # for XDG_* directory quick access
