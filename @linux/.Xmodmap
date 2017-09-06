@@ -5,6 +5,16 @@ keysym Caps_Lock = Mode_switch
 
 keycode 135 = F24
 
+! Alt_R -> Esc
+remove mod1 = Alt_R
+keycode 108 = Escape
+
+! Parens are used more often. Note Takuten and Hantakuten will have to be AltGr+( & AltGr+)
+keycode 18 = 9 braceleft parenleft parenleft
+keycode 19 = 0 braceright parenright braceright
+keycode 34 = parenleft bracketleft braceleft parenleft
+keycode 35 = parenright bracketright braceright parenright
+
 ! 6 ^ ◊ ♦
 keycode 15 = 6 asciicircum U25CA U2666
 
@@ -22,6 +32,9 @@ keycode 20 = minus underscore U2013 U2014
 
 ! backslash, bar, λ, Λ (upper case λ)
 keycode 51 = backslash bar U03BB U039B
+
+! a, A, Λ, A
+keycode 38 = a A U039B A
 
 ! ', ", “ (left double quote), ” (right double quote)
 keycode 48 = apostrophe quotedbl U201C U201D
