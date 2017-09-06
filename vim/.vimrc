@@ -77,6 +77,7 @@ augroup configgroup
         autocmd FileType python setlocal commentstring=#\ %s
         autocmd BufEnter *.cls setlocal filetype=java
         autocmd BufEnter *.zsh-theme setlocal filetype=zsh
+        autocmd BufEnter custom_phrases.txt setlocal noexpandtab
         autocmd BufEnter Makefile setlocal noexpandtab
         autocmd BufEnter sh setlocal tabstop=2
         autocmd BufEnter sh setlocal shiftwidth=2
