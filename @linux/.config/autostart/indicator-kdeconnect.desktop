@@ -6,4 +6,5 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Icon=kdeconnect
+NotShowIn=KDE
 Categories=GNOME;GTK;System;
