@@ -9,6 +9,9 @@ keycode 135 = F24
 remove mod1 = Alt_R
 keycode 108 = Escape
 
+! AltGr + Return -> "⏎"
+keycode 36 = Return NoSymbol U23CE
+
 ! Fuck Insert
 keycode 118 = F35 NoSymbol NoSymbol
 
