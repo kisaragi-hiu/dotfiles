@@ -10,7 +10,7 @@ remove mod1 = Alt_R
 keycode 108 = Escape
 
 ! Fuck Insert
-keycode 118 = NoSymbol NoSymbol NoSymbol
+keycode 118 = F35 NoSymbol NoSymbol
 
 ! Parens are used more often. Note Takuten and Hantakuten will have to be AltGr+( & AltGr+)
 keycode 34 = parenleft bracketleft braceleft parenleft
