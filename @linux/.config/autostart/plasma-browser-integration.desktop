@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Plasma Browser Integration
+Comment=Provides integration with Chrome
+Exec=plasma-browser-integration-host
+Terminal=false
+Type=Application
+StartupNotify=true
+Icon=plasma
+OnlyShowIn=KDE
+Categories=KDE;System
