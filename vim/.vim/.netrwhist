@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/flyin1501/.local/share/konsole/プロファイル <resource>1<'
-let g:netrw_dirhist_2='/home/flyin1501/git/osuskin-rezeroscript/.git'
-let g:netrw_dirhist_3='/home/flyin1501/.dotfiles/fish/conf.d'
-let g:netrw_dirhist_4='/home/flyin1501/.config/fish'
-let g:netrw_dirhist_5='/home/flyin1501/.config/fish/conf.d'
-let g:netrw_dirhist_6='/home/flyin1501/.config/fish'
-let g:netrw_dirhist_7='/home/flyin1501/.config/fish/functions'
