@@ -1,4 +1,5 @@
 set nocompatible
+set hidden
 set encoding=utf-8
 set fileencoding=utf-8
 
@@ -15,6 +16,15 @@ Plug 'bhurlow/vim-parinfer'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tomasr/molokai'
+
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
+"Editing
+Plug 'terryma/vim-multiple-cursors'
+Plug 'Yggdroot/indentLine'
+Plug 'jiangmiao/auto-pairs'
 
 "languages
 Plug 'dag/vim-fish'
@@ -22,21 +32,44 @@ Plug 'wlangstroth/vim-racket'
 Plug 'fasiha/pollen.vim'
 
 "linter
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 
 call plug#end()
 
+function! s:goyo_enter()
+    set noshowmode
+    set noshowcmd
+    set scrolloff=999
+    Limelight
+endfunction
+
+function! s:goyo_leave()
+    set showmode
+    set showcmd
+    set scrolloff=5
+    Limelight!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 syntax on
 filetype plugin indent on
+colorscheme molokai
 set number
-set lazyredraw " Don't redraw when not needed
+set relativenumber
+
+let g:airline#extentions#tabline#enabled = 1
 
 "Tab
 set tabstop=8
 set softtabstop=0
-set expandtab " <tab>->space
+set expandtab " ^T->space
 set shiftwidth=4
 set smarttab
+
+set list
+set listchars=eol:¬,tab:>-,nbsp:⎵
 
 set incsearch " Increment search, search as chars are entered
 
@@ -55,36 +88,39 @@ set mouse=a
 
 "Language specific settings
 augroup configgroup
-        autocmd!
-        autocmd VimEnter * highlight clear SignColumn
-        autocmd FileType java setlocal noexpandtab
-        autocmd FileType java setlocal list
-        autocmd FileType java setlocal listchars=tab:+\ ,eol:-
-        autocmd FileType java setlocal formatprg=par\ -w80\ -T4
-        autocmd FileType php setlocal expandtab
-        autocmd FileType php setlocal list
-        autocmd FileType php setlocal listchars=tab:+\ ,eol:-
-        autocmd FileType php setlocal formatprg=par\ -w80\ -T4
-        autocmd FileType fish setlocal tabstop=4
-        autocmd FileType fish setlocal softtabstop=4
-        autocmd FileType fish setlocal textwidth=79
-        autocmd FileType fish setlocal foldmethod=expr
-        autocmd FileType fish compiler fish
-        autocmd FileType ruby setlocal tabstop=2
-        autocmd FileType ruby setlocal shiftwidth=2
-        autocmd FileType ruby setlocal softtabstop=2
-        autocmd FileType ruby setlocal commentstring=#\ %s
-        autocmd FileType python setlocal commentstring=#\ %s
-        autocmd BufEnter *.cls setlocal filetype=java
-        autocmd BufEnter *.zsh-theme setlocal filetype=zsh
-        autocmd BufEnter custom_phrases.txt setlocal noexpandtab
-        autocmd BufEnter Makefile setlocal noexpandtab
-        autocmd BufEnter sh setlocal tabstop=2
-        autocmd BufEnter sh setlocal shiftwidth=2
-        autocmd BufEnter sh setlocal softtabstop=2
-        autocmd BufEnter javascript setlocal tabstop=2
-        autocmd BufEnter javascript setlocal shiftwidth=2
-        autocmd BufEnter javascript setlocal softtabstop=2
+    autocmd!
+    autocmd VimEnter * highlight clear SignColumn
+    autocmd FileType java setlocal noexpandtab
+    autocmd FileType java setlocal list
+    autocmd FileType java setlocal listchars=tab:+\ ,eol:-
+    autocmd FileType java setlocal formatprg=par\ -w80\ -T4
+    autocmd FileType php setlocal expandtab
+    autocmd FileType php setlocal list
+    autocmd FileType php setlocal listchars=tab:+\ ,eol:-
+    autocmd FileType php setlocal formatprg=par\ -w80\ -T4
+    autocmd FileType fish setlocal tabstop=4
+    autocmd FileType fish setlocal softtabstop=4
+    autocmd FileType fish setlocal textwidth=79
+    autocmd FileType fish setlocal foldmethod=expr
+    autocmd FileType fish compiler fish
+    autocmd FileType ruby setlocal tabstop=2
+    autocmd FileType ruby setlocal shiftwidth=2
+    autocmd FileType ruby setlocal softtabstop=2
+    autocmd FileType ruby setlocal commentstring=#\ %s
+    autocmd FileType python setlocal commentstring=#\ %s
+    autocmd BufEnter *.cls setlocal filetype=java
+    autocmd BufEnter *.zsh-theme setlocal filetype=zsh
+    autocmd BufEnter custom_phrases.txt setlocal noexpandtab
+    autocmd BufEnter Makefile setlocal noexpandtab
+    autocmd BufEnter markdown setlocal tabstop=2
+    autocmd BufEnter markdown setlocal shiftwidth=2
+    autocmd BufEnter markdown setlocal softtabstop=2
+    autocmd BufEnter sh setlocal tabstop=2
+    autocmd BufEnter sh setlocal shiftwidth=2
+    autocmd BufEnter sh setlocal softtabstop=2
+    autocmd BufEnter javascript setlocal tabstop=2
+    autocmd BufEnter javascript setlocal shiftwidth=2
+    autocmd BufEnter javascript setlocal softtabstop=2
 augroup END
 
 "Save file with sudo with :w!!
