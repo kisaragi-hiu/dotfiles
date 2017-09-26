@@ -1,6 +1,8 @@
 alias frog 'raco frog'
 alias pollen 'raco pollen'
 
+alias screenshot 'import -window root'
+
 alias clear 'clear; fish_greeting'
 alias diff 'diff --color=auto'
 alias git 'hub'
