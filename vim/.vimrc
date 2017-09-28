@@ -12,6 +12,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
+Plug 'MicahElliott/vrod'
 Plug 'bhurlow/vim-parinfer'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'vim-airline/vim-airline'
@@ -58,8 +59,7 @@ filetype plugin indent on
 colorscheme molokai
 set number
 set relativenumber
-
-let g:airline#extentions#tabline#enabled = 1
+set path+=** " recursive completion
 
 "Tab
 set tabstop=8
@@ -85,6 +85,10 @@ set whichwrap=b,s,<,>,[,]
 
 "Mouse support
 set mouse=a
+
+"Switch buffers
+nnoremap <C-l> :bn<CR>
+nnoremap <C-h> :bp<CR>
 
 "Language specific settings
 augroup configgroup
