@@ -116,18 +116,18 @@ DefaultInputMethodState=Active
 #DontCommitPreeditWhenUnfocus=False
 
 [Appearance]
-# 入力メソッドを切換後にヒントを表示
+# 入力メソッドを切換後に入力メソッドのヒントを表示
 # Available Value:
 # True False
 #ShowInputWindowAfterTriggering=True
-# 入力メソッドを切換え、フォーカスした時にヒントを表示
+# 入力メソッドを切換え、フォーカスした際に入力メソッドのヒントを表示
 # Available Value:
 # True False
 #ShowInputWindowWhenFocusIn=False
-# オンの時だけ入力メソッドのヒントを表示
+# 有効の時だけ入力メソッドのヒントを表示
 # Available Value:
 # True False
-#ShowInputWindowOnlyWhenActive=True
+ShowInputWindowOnlyWhenActive=False
 # 入力速度の表示
 # Available Value:
 # True False
