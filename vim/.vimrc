@@ -12,20 +12,24 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
-Plug 'MicahElliott/vrod'
-Plug 'bhurlow/vim-parinfer'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'tomasr/molokai'
+Plug 'junegunn/seoul256.vim'
 
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1
 
 "Editing
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'MicahElliott/vrod'
+Plug 'bhurlow/vim-parinfer'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 "languages
 Plug 'dag/vim-fish'
@@ -33,7 +37,7 @@ Plug 'wlangstroth/vim-racket'
 Plug 'fasiha/pollen.vim'
 
 "linter
-Plug 'w0rp/ale'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
@@ -56,7 +60,8 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 syntax on
 filetype plugin indent on
-colorscheme molokai
+colorscheme seoul256
+set noshowmode
 set number
 set relativenumber
 set path+=** " recursive completion
@@ -135,14 +140,16 @@ nnoremap <leader>u :GundoToggle<CR>
 
 "statusline
 set laststatus=2
-let g:airline_powerline_fonts = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:lightline = {
+    \ 'colorscheme': 'seoul256',
+    \ }
 
 "syntastic
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_racket_racket_checker = 1
