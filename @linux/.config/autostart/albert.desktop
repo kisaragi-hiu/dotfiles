@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=Utility;
+Comment[ja_JP]=A desktop agnostic launcher
+Comment=A desktop agnostic launcher
+Exec=albert
+GenericName[ja_JP]=Launcher
+GenericName=Launcher
+Icon=albert
+MimeType=
+Name[ja_JP]=Albert
+Name=Albert
+Path=
+StartupNotify=false
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
