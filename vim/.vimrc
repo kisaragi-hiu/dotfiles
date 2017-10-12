@@ -11,11 +11,15 @@ endif
 "vim-plug
 call plug#begin('~/.vim/plugged')
 
+"Config
 Plug 'tpope/vim-sensible'
+
+"UI
 Plug 'itchyny/lightline.vim'
+Plug 'ap/vim-buftabline'
+Plug 'Yggdroot/indentLine'
 Plug 'tomasr/molokai'
 Plug 'junegunn/seoul256.vim'
-
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
@@ -23,16 +27,24 @@ Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
 "Editing
-Plug 'terryma/vim-multiple-cursors'
-Plug 'Yggdroot/indentLine'
-Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-surround'
-Plug 'MicahElliott/vrod'
 Plug 'bhurlow/vim-parinfer'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-repeat'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+"Motions, Objects
+Plug 'tpope/vim-surround' "object: s. ex: c s ( '
+Plug 'christoomey/vim-sort-motion' "verb: gs. ex: gs i (
+"vim-textobj-user based
+"a_ vs i_ is analogous to UTAU C-a vs C-w
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-datetime' "{a,i}d{a,f,d,t,z} [a]uto [f]ull [d]ate [t]ime [z]one
+Plug 'kana/vim-textobj-entire' "object: ae, ie for entire file
+Plug 'kana/vim-textobj-indent' "object: {a,i}i {a,i}I similar or exact indent level
 
 "languages
 Plug 'dag/vim-fish'
+Plug 'MicahElliott/vrod'
 Plug 'wlangstroth/vim-racket'
 Plug 'fasiha/pollen.vim'
 
@@ -71,18 +83,15 @@ set tabstop=8
 set softtabstop=0
 set expandtab " ^T->space
 set shiftwidth=4
-set smarttab
 
 set list
 set listchars=eol:¬,tab:>-,nbsp:⎵
-
-set incsearch " Increment search, search as chars are entered
 
 "Folding
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
-nnoremap <space> za
+nnoremap <tab> za
 set foldmethod=indent
 
 "Wrap
@@ -90,6 +99,9 @@ set whichwrap=b,s,<,>,[,]
 
 "Mouse support
 set mouse=a
+
+nnoremap <space> <nop>
+let mapleader = "\<space>"
 
 "Switch buffers
 nnoremap <C-l> :bn<CR>
@@ -135,11 +147,7 @@ augroup END
 "Save file with sudo with :w!!
 cmap w!! w !sudo tee > /dev/null %
 
-"toggle gundo
-nnoremap <leader>u :GundoToggle<CR>
-
 "statusline
-set laststatus=2
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -153,3 +161,4 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_racket_racket_checker = 1
+let g:syntastic_sh_shellcheck_args = "-x"
