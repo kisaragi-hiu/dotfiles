@@ -1,0 +1,5 @@
+#!/bin/bash
+export bk_site=/home/flyin1501/git/flyingfeather1501.github.io
+export bk_diary=/home/flyin1501/git/diary
+export bk_osu=/run/media/flyin1501/Data/games/osu
+export bk_retome=/home/flyin1501/git/mkosuskin.sh/skin.Retome

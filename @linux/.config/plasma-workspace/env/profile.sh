@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # use qt5ct outside plasma
-[ "$XDG_CURRENT_DESKTOP" != plasma ] && export QT_QPA_PLATFORMTHEME=qt5ct
+if [ "$XDG_CURRENT_DESKTOP" != plasma ] || [ "$XDG_CURRENT_DESKTOP" != KDE ]; then
+  export QT_QPA_PLATFORMTHEME=qt5ct
+fi
 
 # Workaround electron apps' global menu not functioning
 # by disabling election's global menu integration
@@ -46,8 +48,7 @@ export C=/run/media/flyin1501/Windows
 export G=/home/flyin1501/ドキュメント
 export M=/run/media/flyin1501/Data/mega
 export P=/run/media/flyin1501/Data/mega/Projects
-export DIARY=/home/flyin1501/git/diary
-export XDG_OSU_DIR=/run/media/flyin1501/Data/games/osu
+source /home/flyin1501/.bookmarks
 
 # for XDG_* directory quick access
 export XDG_DESKTOP_DIR=/home/flyin1501/デスクトップ/
