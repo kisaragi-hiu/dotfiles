@@ -9,3 +9,5 @@ alias git 'hub'
 
 alias pacman-list-orphans 'pacman -Qtd'
 alias pacman-remove-orphans 'sudo pacman -Rns (pacman -Qtdq)'
+
+alias vim 'echo using nvim...; sleep 0.1; nvim'
