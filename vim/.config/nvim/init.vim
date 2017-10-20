@@ -21,6 +21,7 @@ Plug 'tomasr/molokai'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' } "helm equivalent for vim
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
@@ -29,7 +30,8 @@ let g:rainbow_active = 1
 Plug 'bhurlow/vim-parinfer'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-repeat'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+let g:deoplete#enable_at_startup = 1
 
 "Motions, Objects
 Plug 'tpope/vim-surround' "object: s. ex: c s ( '
@@ -52,6 +54,7 @@ Plug 'vim-syntastic/syntastic'
 
 "apps
 Plug 'mrtazz/simplenote.vim'
+Plug 'EinfachToll/DidYouMean'
 
 call plug#end()
 
@@ -78,6 +81,8 @@ set noshowmode "mode is shown in statusline already, hide it
 set number
 set relativenumber
 set path+=** " recursive completion
+set wrap
+set formatoptions+=mM
 
 "Tab
 set tabstop=8
@@ -101,9 +106,14 @@ set whichwrap=b,s,<,>,[,]
 "Mouse support
 set mouse=a
 
+"Keys
+"Space -> leader
 nnoremap <space> <nop>
 let mapleader = "\<space>"
+
+"leader based stuff
 nnoremap <leader>c :noh<CR>
+nnoremap <leader>eb :so %<CR>
 
 "Switch buffers
 nnoremap <C-l> :bn<CR>
