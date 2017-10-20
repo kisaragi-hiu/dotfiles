@@ -3,3 +3,5 @@ vim/.vim/plugged/
 fishd.*
 blender
 .netrwhist
+emacs/.emacs.d/*
+!emacs/.emacs.d/init.el
