@@ -8,7 +8,7 @@
 
 [core]
     pager = less -r
-    editor = vim
+    editor = nvim
     # Needed for proper Unicode display
     quotepath = false
     excludesfile = ~/.gitignore
