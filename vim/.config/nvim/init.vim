@@ -26,6 +26,16 @@ Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' } "helm equivalent for
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
+"Jumping around
+if executable("ag")
+    Plug 'mileszs/ack.vim'
+    let g:ackprg = 'ag --vimgrep'
+endif
+
+if executable("fzf")
+    Plug 'junegunn/fzf.vim'
+endif
+
 "Editing
 Plug 'bhurlow/vim-parinfer'
 Plug 'jiangmiao/auto-pairs'
@@ -53,6 +63,7 @@ Plug 'fasiha/pollen.vim'
 Plug 'vim-syntastic/syntastic'
 
 "apps
+Plug 'airblade/vim-gitgutter' "<leader>hs <leader>hp <leader>hu -> stage, preview, unstage
 Plug 'mrtazz/simplenote.vim'
 Plug 'EinfachToll/DidYouMean'
 
