@@ -1,0 +1,5 @@
+#!/bin/bash
+source ~/.profile
+xmodmap ~/.Xmodmap
+#polybar
+compton &
