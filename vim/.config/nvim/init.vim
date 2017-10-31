@@ -132,6 +132,9 @@ nnoremap <leader>eb :so %<CR>
 nnoremap <C-l> :bn<CR>
 nnoremap <C-h> :bp<CR>
 
+"Terminal
+tnoremap <Esc> <C-\><C-n>
+
 "Language specific settings
 augroup configgroup
     autocmd!
