@@ -46,6 +46,8 @@ let g:deoplete#enable_at_startup = 1
 "Motions, Objects
 Plug 'tpope/vim-surround' "object: s. ex: c s ( '
 Plug 'christoomey/vim-sort-motion' "verb: gs. ex: gs i (
+Plug 'tpope/vim-commentary' "verb: gc, gcc
+
 "vim-textobj-user based
 "a_ vs i_ is analogous to UTAU C-a vs C-w
 Plug 'kana/vim-textobj-user'
@@ -152,6 +154,7 @@ augroup configgroup
     autocmd FileType ruby setlocal softtabstop=2
     autocmd FileType ruby setlocal commentstring=#\ %s
     autocmd FileType python setlocal commentstring=#\ %s
+    autocmd FileType racket setlocal commentstring=;;\ %s
     autocmd BufEnter *.cls setlocal filetype=java
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd BufEnter custom_phrases.txt setlocal noexpandtab
