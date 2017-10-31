@@ -80,6 +80,10 @@
 (global-hl-line-mode 1)
 (show-paren-mode 1)
 
+(use-package rainbow-delimiters
+  :config
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+
 (use-package spaceline
   :config
   (setq-default spaceline-highlight-face-func 'spaceline-highlight-face-evil-state))
