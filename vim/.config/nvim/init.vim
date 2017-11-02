@@ -14,9 +14,20 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 
 "UI
-Plug 'itchyny/lightline.vim'
-Plug 'ap/vim-buftabline'
-Plug 'Yggdroot/indentLine'
+Plug 'vim-airline/vim-airline'
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 1
+
+let g:airline#extensions#whitespace#enabled = 1
+
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme = 'zenburn' "matches seoul256 somewhat
+
+"Plug 'itchyny/lightline.vim'
+"Plug 'ap/vim-buftabline'
+"Plug 'Yggdroot/indentLine'
+
 Plug 'tomasr/molokai'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
