@@ -56,9 +56,8 @@ Plug 'kana/vim-textobj-entire' "object: ae, ie for entire file
 Plug 'kana/vim-textobj-indent' "object: {a,i}i {a,i}I similar or exact indent level
 
 "languages
-Plug 'dag/vim-fish'
+Plug 'sheerun/vim-polyglot' "lang pack
 Plug 'MicahElliott/vrod'
-Plug 'wlangstroth/vim-racket'
 Plug 'fasiha/pollen.vim'
 
 "linter
