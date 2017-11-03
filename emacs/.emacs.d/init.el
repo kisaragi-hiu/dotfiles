@@ -76,7 +76,8 @@
 ;; UI
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-(scroll-bar-mode -1)
+(if (functionp 'scroll-bar-mode)
+    (scroll-bar-mode -1))
 (global-hl-line-mode 1)
 (show-paren-mode 1)
 
@@ -92,12 +93,17 @@
   (setq powerline-text-scale-factor 1.2)
   (spaceline-emacs-theme))
 
-(set-fontset-font "fontset-default" 'unicode
-  (font-spec :name "Noto Sans Mono CJK TC"))
+(if (functionp 'set-fontset-font)
+    (set-fontset-font "fontset-default" 'unicode
+		      (font-spec :name "Noto Sans Mono CJK TC")))
 
-(use-package monokai-theme
+(use-package monokai-theme)
+
+(use-package seoul256-theme
+  :init
+  (setq seoul256-background 235)
   :config
-  (load-theme 'monokai t))
+  (load-theme 'seoul256 t))
 
 ;; Apps
 (use-package magit)
