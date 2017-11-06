@@ -79,6 +79,13 @@
 (use-package markdown-mode)
 (use-package fish-mode)
 
+(use-package web-mode
+  :config
+  (evil-define-key 'normal web-mode-map
+    (kbd "<key-chord> za") #'web-mode-fold-or-unfold)
+  (evil-define-key 'normal web-mode-map
+    (kbd "<SPC>r") #'web-mode-element-rename))
+
 ;; UI
 (tool-bar-mode -1)
 (menu-bar-mode -1)
