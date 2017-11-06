@@ -26,7 +26,13 @@
     :config
     (evil-leader/set-leader "<SPC>")
     (evil-leader/set-key
-      "<SPC>" 'execute-extended-command)
+      "<SPC>" 'execute-extended-command
+      "el" 'eval-last-sexp
+      "eb" 'eval-buffer
+      "ed" 'eval-defun
+      "hf" 'counsel-describe-function
+      "hv" 'counsel-describe-variable)
+    ;; (evil-leader/set-key-for-mode)
     (global-evil-leader-mode))
   :config
   (use-package evil-surround
