@@ -39,8 +39,8 @@ export OCIO=/home/flyin1501/.dotfiles/_filmic-blender/config.ocio
 export WINEDEBUG=-all
 
 # vim
-export VISUAL=vim
-export EDITOR=vim
+export VISUAL=nvim
+export EDITOR=nvim
 
 # dir variables
 export D=/run/media/flyin1501/Data
