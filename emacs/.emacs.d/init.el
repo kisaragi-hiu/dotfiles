@@ -106,9 +106,10 @@
   (setq powerline-text-scale-factor 1.2)
   (spaceline-emacs-theme))
 
+(set-default-font (font-spec :name "Overpass Mono" :size 20))
 (if (functionp 'set-fontset-font)
     (set-fontset-font "fontset-default" 'unicode
-		      (font-spec :name "Noto Sans Mono CJK TC")))
+                      (font-spec :name "Noto Sans Mono CJK TC" :size 18)))
 
 (use-package monokai-theme)
 
