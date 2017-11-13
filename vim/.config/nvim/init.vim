@@ -66,10 +66,11 @@ Plug 'kana/vim-textobj-datetime' "{a,i}d{a,f,d,t,z} [a]uto [f]ull [d]ate [t]ime 
 Plug 'kana/vim-textobj-entire' "object: ae, ie for entire file
 Plug 'kana/vim-textobj-indent' "object: {a,i}i {a,i}I similar or exact indent level
 
-"languages
+"filetypes
 Plug 'sheerun/vim-polyglot' "lang pack
 Plug 'MicahElliott/vrod'
 Plug 'fasiha/pollen.vim'
+Plug 'Firef0x/PKGBUILD.vim'
 
 "linter
 Plug 'vim-syntastic/syntastic'
