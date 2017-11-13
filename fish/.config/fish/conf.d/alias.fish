@@ -1,7 +1,9 @@
 alias clear 'clear; fish_greeting'
 alias diff 'diff --color=auto'
 
-alias git 'hub'
+# Check if hub's avaiable before setting alias
+type -q hub; and alias git 'hub'
+
 alias g↑ 'git push'
 alias g↓ 'git pull'
 alias gc 'git commit'
