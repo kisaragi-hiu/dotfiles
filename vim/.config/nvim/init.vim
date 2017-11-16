@@ -78,6 +78,7 @@ Plug 'vim-syntastic/syntastic'
 
 "apps
 Plug 'airblade/vim-gitgutter' "<leader>hs <leader>hp <leader>hu -> stage, preview, unstage
+Plug 'tpope/vim-fugitive'
 Plug 'mrtazz/simplenote.vim'
 Plug 'EinfachToll/DidYouMean'
 
