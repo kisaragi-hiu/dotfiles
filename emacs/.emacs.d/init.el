@@ -106,6 +106,8 @@
 (global-hl-line-mode 1)
 (show-paren-mode 1)
 
+(global-whitespace-newline-mode 1)
+
 (use-package rainbow-delimiters
   :config
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
