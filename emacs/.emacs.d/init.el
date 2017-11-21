@@ -43,7 +43,8 @@
       "eb" 'eval-buffer
       "ed" 'eval-defun
       "hf" 'counsel-describe-function
-      "hv" 'counsel-describe-variable)
+      "hv" 'counsel-describe-variable
+      "hb" 'counsel-descbinds)
     ;; (evil-leader/set-key-for-mode)
     (global-evil-leader-mode))
   :config
@@ -66,8 +67,8 @@
   (global-linum-mode 1))
 
 ;; Keybinds
-(global-set-key (kbd "C-l") 'evil-next-buffer)
-(global-set-key (kbd "C-h") 'evil-prev-buffer)
+(global-set-key (kbd "M-l") 'evil-next-buffer)
+(global-set-key (kbd "M-h") 'evil-prev-buffer)
 
 ;; Auto completion
 (use-package company
