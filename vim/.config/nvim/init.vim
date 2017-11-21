@@ -145,44 +145,85 @@ nnoremap <C-l> :bn<CR>
 nnoremap <C-h> :bp<CR>
 
 "Terminal
-tnoremap <Esc> <C-\><C-n>
+tnoremap <Esc><Esc> <C-\><C-n>
 
 "Language specific settings
-augroup configgroup
+augroup main
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
+augroup END
+
+augroup java
+    autocmd!
     autocmd FileType java setlocal noexpandtab
     autocmd FileType java setlocal list
     autocmd FileType java setlocal listchars=tab:+\ ,eol:-
     autocmd FileType java setlocal formatprg=par\ -w80\ -T4
+augroup END
+
+augroup php
+    autocmd!
     autocmd FileType php setlocal expandtab
     autocmd FileType php setlocal list
     autocmd FileType php setlocal listchars=tab:+\ ,eol:-
     autocmd FileType php setlocal formatprg=par\ -w80\ -T4
+augroup END
+
+augroup fish
+    autocmd!
     autocmd FileType fish setlocal tabstop=4
     autocmd FileType fish setlocal softtabstop=4
     autocmd FileType fish setlocal textwidth=79
     autocmd FileType fish setlocal foldmethod=expr
     autocmd FileType fish compiler fish
+augroup END
+
+augroup ruby
+    autocmd!
     autocmd FileType ruby setlocal tabstop=2
     autocmd FileType ruby setlocal shiftwidth=2
     autocmd FileType ruby setlocal softtabstop=2
     autocmd FileType ruby setlocal commentstring=#\ %s
+augroup END
+
+augroup python
+    autocmd!
     autocmd FileType python setlocal commentstring=#\ %s
     autocmd FileType racket setlocal commentstring=;;\ %s
     autocmd BufEnter *.cls setlocal filetype=java
+augroup END
+
+augroup config
+    autocmd!
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd BufEnter custom_phrases.txt setlocal noexpandtab
     autocmd BufEnter Makefile setlocal noexpandtab
+augroup END
+
+augroup markdown
+    autocmd!
     autocmd BufEnter markdown setlocal tabstop=2
     autocmd BufEnter markdown setlocal shiftwidth=2
     autocmd BufEnter markdown setlocal softtabstop=2
+augroup END
+
+augroup shell
+    autocmd!
     autocmd BufEnter sh setlocal tabstop=2
     autocmd BufEnter sh setlocal shiftwidth=2
     autocmd BufEnter sh setlocal softtabstop=2
+augroup END
+
+augroup javascript
+    autocmd!
     autocmd BufEnter javascript setlocal tabstop=2
     autocmd BufEnter javascript setlocal shiftwidth=2
     autocmd BufEnter javascript setlocal softtabstop=2
+augroup END
+
+augroup xml
+    autocmd!
+    autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
 augroup END
 
 "Save file with sudo with :w!!
