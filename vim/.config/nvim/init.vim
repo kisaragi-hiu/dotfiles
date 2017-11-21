@@ -66,6 +66,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-datetime' "{a,i}d{a,f,d,t,z} [a]uto [f]ull [d]ate [t]ime [z]one
 Plug 'kana/vim-textobj-entire' "object: ae, ie for entire file
 Plug 'kana/vim-textobj-indent' "object: {a,i}i {a,i}I similar or exact indent level
+Plug 'whatyouhide/vim-textobj-xmlattr' "object: ax, ix for html/xml attrs
 
 "filetypes
 Plug 'sheerun/vim-polyglot' "lang pack
