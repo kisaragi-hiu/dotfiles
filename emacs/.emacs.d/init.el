@@ -106,7 +106,7 @@
 (global-hl-line-mode 1)
 (show-paren-mode 1)
 
-(global-whitespace-newline-mode 1)
+;; (global-whitespace-newline-mode 0)
 
 (use-package rainbow-delimiters
   :config
@@ -118,7 +118,7 @@
 (use-package spaceline-config :ensure spaceline
   :config
   (setq powerline-text-scale-factor 1.2)
-  (spaceline-emacs-theme))
+  (spaceline-spacemacs-theme))
 
 (set-default-font (font-spec :name "Overpass Mono" :size 20))
 (if (functionp 'set-fontset-font)
