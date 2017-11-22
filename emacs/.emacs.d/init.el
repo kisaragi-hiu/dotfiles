@@ -15,7 +15,11 @@
 (setq use-package-always-ensure t)
 
 ;; Editing
-(electric-pair-mode 1)
+;; (electric-pair-mode 1)
+(use-package smartparens
+  :config
+  (require 'smartparens-config)
+  (smartparens-global-mode))
 (delete-selection-mode 1)
 (setq tab-always-indent 'complete)
 
@@ -115,9 +119,8 @@
 
 (use-package spaceline
   :config
-  (setq-default spaceline-highlight-face-func 'spaceline-highlight-face-evil-state))
-(use-package spaceline-config :ensure spaceline
-  :config
+  (require 'spaceline-config)
+  (setq-default spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
   (setq powerline-text-scale-factor 1.2)
   (spaceline-spacemacs-theme))
 
