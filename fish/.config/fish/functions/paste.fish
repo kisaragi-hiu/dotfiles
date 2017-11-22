@@ -1,4 +1,4 @@
 function paste
-    echo (xclip -o -sel clip)
+    xclip -o -sel clip
 end
 
