@@ -16,7 +16,14 @@ export GOPATH=/home/flyin1501/.gopath
 export SSH_ASKPASS="/usr/bin/ksshaskpass"
 
 # exporting PATH here ensures that the desktop also sees them
-export PATH=/home/flyin1501/git/scripts:/home/flyin1501/git/Sudocabulary:/home/flyin1501/bin:/home/flyin1501/.local/share/npm-global/bin:/home/flyin1501/.gem/ruby/2.4.0/bin:$PATH
+export PATH=\
+"$HOME"/git/scripts:\
+"$HOME"/git/Sudocabulary:\
+"$HOME"/bin:\
+"$HOME"/.racket/6.11/bin:\
+"$HOME"/.local/share/npm-global/bin:\
+"$HOME"/.gem/ruby/2.4.0/bin:\
+$PATH
 
 # `npm config set prefix ~/.local/share/npm-global` to set up global node prefix
 
