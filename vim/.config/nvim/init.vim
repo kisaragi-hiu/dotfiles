@@ -60,6 +60,10 @@ Plug 'tpope/vim-surround' "object: s. ex: c s ( '
 Plug 'christoomey/vim-sort-motion' "verb: gs. ex: gs i (
 Plug 'tpope/vim-commentary' "verb: gc, gcc
 
+"Easymotion
+Plug 'easymotion/vim-easymotion'
+let g:EasyMotion_use_migemo = 1 "match kana with romaji
+
 "vim-textobj-user based
 "a_ vs i_ is analogous to UTAU C-a vs C-w
 Plug 'kana/vim-textobj-user'
