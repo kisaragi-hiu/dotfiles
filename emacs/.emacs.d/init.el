@@ -65,6 +65,10 @@
   (setq evil-move-beyond-eol t)
   (evil-mode 1))
 
+(use-package evil-easymotion
+  :config
+  (evilem-default-keybindings "SPC"))
+
 (use-package linum-relative
   :config
   (linum-relative-global-mode 1)
