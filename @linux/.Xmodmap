@@ -55,6 +55,9 @@ keycode 54 = c C U00A9 U00A9
 ! r, R, ® (registered mark)
 keycode 27 = r R U00AE U00AE
 
+! ., >, …, ︙
+keycode 60 = period greater U2026 UFE19
+
 ! vim style arrow keys; single & double arrows ←↓↑→ ⇐⇑⇒⇓
 ! Left
 keycode 43 = h H U2190 U21D0
