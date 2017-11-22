@@ -143,8 +143,8 @@ nnoremap <leader>c :noh<CR>
 nnoremap <leader>eb :so %<CR>
 
 "Switch buffers
-nnoremap <C-l> :bn<CR>
-nnoremap <C-h> :bp<CR>
+nnoremap <M-l> :bn<CR>
+nnoremap <M-h> :bp<CR>
 
 "Terminal
 tnoremap <Esc><Esc> <C-\><C-n>
