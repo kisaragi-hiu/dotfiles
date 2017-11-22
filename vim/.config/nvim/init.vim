@@ -64,6 +64,12 @@ Plug 'tpope/vim-commentary' "verb: gc, gcc
 Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_use_migemo = 1 "match kana with romaji
 
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+
 "vim-textobj-user based
 "a_ vs i_ is analogous to UTAU C-a vs C-w
 Plug 'kana/vim-textobj-user'
