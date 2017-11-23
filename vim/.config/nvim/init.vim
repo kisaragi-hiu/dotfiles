@@ -225,8 +225,14 @@ augroup END
 augroup python
     autocmd!
     autocmd FileType python setlocal commentstring=#\ %s
-    autocmd FileType racket setlocal commentstring=;;\ %s
     autocmd BufEnter *.cls setlocal filetype=java
+augroup END
+
+augroup racket
+    autocmd!
+    autocmd FileType racket setlocal commentstring=;;\ %s
+    " https://stackoverflow.com/questions/6366049/vim-in-file-commands
+    autocmd BufReadPost *.rkt.bash call TextEnableCodeSnip('racket', 'cat <<END', 'END', 'SpecialComment')
 augroup END
 
 augroup config
