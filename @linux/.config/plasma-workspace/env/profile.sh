@@ -69,3 +69,5 @@ export XDG_VIDEOS_DIR=/home/flyin1501/ビデオ/
 
 # vsync off by default
 export vblank_mode=0
+
+source "$HOME"/.private_env
