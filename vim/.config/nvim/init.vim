@@ -31,6 +31,21 @@ let g:airline_theme = 'zenburn' "matches seoul256 somewhat
 Plug 'tomasr/molokai'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
+function! s:goyo_enter()
+    set noshowmode
+    set noshowcmd
+    set scrolloff=999
+    Limelight
+endfunction
+function! s:goyo_leave()
+    set showmode
+    set showcmd
+    set scrolloff=5
+    Limelight!
+endfunction
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 Plug 'junegunn/limelight.vim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' } "helm equivalent for vim
 
@@ -108,9 +123,6 @@ function! s:goyo_leave()
     set scrolloff=5
     Limelight!
 endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 let g:lightline = { 'colorscheme': 'seoul256', }
 colorscheme seoul256
