@@ -62,6 +62,9 @@
     :config
     (global-set-key (kbd "C-=") 'evil-numbers/inc-at-pt)
     (global-set-key (kbd "C--") 'evil-numbers/dec-at-pt))
+  (use-package evil-textobj-line
+    :recipe (evil-textobj-line :type git :host github
+			       :repo "syohex/evil-textobj-line"))
   (setq evil-move-beyond-eol t)
   (evil-mode 1))
 
