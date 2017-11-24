@@ -90,6 +90,7 @@ let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-datetime' "{a,i}d{a,f,d,t,z} [a]uto [f]ull [d]ate [t]ime [z]one
 Plug 'kana/vim-textobj-entire' "object: ae, ie for entire file
+Plug 'kana/vim-textobj-line' "object: al, il -> line
 Plug 'kana/vim-textobj-indent' "object: {a,i}i {a,i}I similar or exact indent level
 Plug 'whatyouhide/vim-textobj-xmlattr' "object: ax, ix for html/xml attrs
 
@@ -207,6 +208,9 @@ augroup END
 
 augroup fish
     autocmd!
+    " https://stackoverflow.com/questions/6366049/vim-in-file-commands
+    autocmd FileType sh call TextEnableCodeSnip('racket', '<<RKT', 'RKT', 'SpecialComment')
+
     autocmd FileType fish setlocal tabstop=4
     autocmd FileType fish setlocal softtabstop=4
     autocmd FileType fish setlocal textwidth=79
@@ -231,8 +235,6 @@ augroup END
 augroup racket
     autocmd!
     autocmd FileType racket setlocal commentstring=;;\ %s
-    " https://stackoverflow.com/questions/6366049/vim-in-file-commands
-    autocmd BufReadPost *.rkt.bash call TextEnableCodeSnip('racket', 'cat <<END', 'END', 'SpecialComment')
 augroup END
 
 augroup config
