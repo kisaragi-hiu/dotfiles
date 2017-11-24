@@ -77,6 +77,11 @@
 ;; Keybinds
 (global-set-key (kbd "M-l") 'evil-next-buffer)
 (global-set-key (kbd "M-h") 'evil-prev-buffer)
+(use-package hydra)
+(defhydra hydra-zoom (global-map "<f2>")
+  "zoom"
+  ("g" text-scale-increase "in")
+  ("l" text-scale-decrease "out"))
 
 ;; Auto completion
 (use-package company
