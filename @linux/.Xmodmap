@@ -6,8 +6,8 @@ keysym Caps_Lock = Mode_switch
 keycode 135 = F24
 
 ! Alt_R -> Esc
-remove mod1 = Alt_R
-keycode 108 = Escape
+! remove mod1 = Alt_R
+! keycode 108 = Escape
 
 ! AltGr + Return -> "⏎"
 keycode 36 = Return NoSymbol U23CE
