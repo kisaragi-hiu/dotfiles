@@ -116,6 +116,7 @@
     (kbd "<SPC>r") #'web-mode-element-rename))
 
 ;; UI
+(setq initial-scratch-message nil)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (if (functionp 'scroll-bar-mode)
