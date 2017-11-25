@@ -9,5 +9,7 @@ alias g↓ 'git pull'
 alias gc 'git commit'
 alias gd 'git diff'
 alias gco 'git checkout'
+alias gst 'git status'
+alias gl 'git log'
 
 alias vim 'echo using nvim...; sleep 0.1; nvim'
