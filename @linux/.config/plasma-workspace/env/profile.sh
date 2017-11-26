@@ -35,7 +35,8 @@ xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
 # TODO: .Xmodmap.d/ (or just port to xkb)
 xmodmap ~/.Xmodmap
 
-xcape -e 'Alt_R=Escape;Super_L=Alt_L|F1' -t 250
+# This should be run a bit later. Putting it into autostart-scripts/.
+# xcape -e 'Alt_R=Escape;Super_L=Alt_L|F1' -t 250
 
 # make sure fcitx is used
 export GTK_IM_MODULE=fcitx

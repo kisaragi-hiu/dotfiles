@@ -11,3 +11,5 @@ loop-command 10m 0 grive -p /home/flyin1501/ドキュメント/ &
 ssh-agent &
 ssh-add </dev/null
 numlockx &
+
+sleep 10 && xcape -e 'Alt_R=Escape;Super_L=Alt_L|F1' -t 250 &
