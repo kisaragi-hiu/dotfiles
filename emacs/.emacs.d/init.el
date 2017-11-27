@@ -74,6 +74,7 @@
 
 (use-package linum-relative
   :config
+  (setq linum-relative-current-symbol "")
   (linum-relative-global-mode 1)
   (global-linum-mode 1))
 
@@ -89,6 +90,12 @@
 ;; Auto completion
 (use-package company
   :config
+  (use-package company-shell
+    :config
+    (add-to-list 'company-backends '(company-shell company-shell-env)))
+  (use-package company-flx
+    :config
+    (company-flx-mode +1))
   (global-company-mode 1))
 
 ;; Syntax checking
@@ -99,7 +106,6 @@
 (use-package ivy
   :config
   (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
-  (use-package flx)
   (ivy-mode 1))
 
 ;; Languages
