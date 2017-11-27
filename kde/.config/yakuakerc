@@ -1,0 +1,56 @@
+[Appearance]
+Skin=adapta-nokto
+
+[Desktop Entry]
+DefaultProfile=Default2.profile
+
+[Dialogs]
+FirstRun=false
+
+[DownloadDialog Settings]
+Height 1080=489
+Width 1920=700
+
+[Favorite Profiles]
+Favorites=
+
+[KDE]
+switch-to-session-4=Ctrl+4
+
+[Shortcuts]
+close-active-terminal=Ctrl+Shift+R
+decrease-window-height=Alt+Shift+Up
+decrease-window-width=Alt+Shift+Left
+file_quit=Ctrl+Shift+Q
+increase-window-height=Alt+Shift+Down
+increase-window-width=Alt+Shift+Right
+move-session-left=Ctrl+Shift+Left
+move-session-right=Ctrl+Shift+Right
+new-session=Ctrl+Shift+T
+new-session-two-horizontal=Alt+S
+new-session-two-vertical=Alt+A
+next-session=Shift+Right
+next-terminal=Ctrl+Shift+Down
+previous-session=Shift+Left
+previous-terminal=Ctrl+Shift+Up
+rename-session=Ctrl+F2
+split-left-right=Ctrl+(
+split-top-bottom=Ctrl+)
+switch-to-session-1=Ctrl+1
+switch-to-session-10=Ctrl+0
+switch-to-session-2=Ctrl+2
+switch-to-session-3=Ctrl+3
+switch-to-session-4=Ctrl+4
+switch-to-session-5=Ctrl+5
+switch-to-session-6=Ctrl+6
+switch-to-session-7=Ctrl+7
+switch-to-session-8=Ctrl+8
+switch-to-session-9=Ctrl+9
+toggle-session-monitor-activity=Ctrl+Shift+A
+toggle-session-monitor-silence=Ctrl+Shift+I
+view-full-screen=Ctrl+Shift+F11
+
+[Window]
+Height=100
+KeepOpen=false
+Width=100

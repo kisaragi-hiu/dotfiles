@@ -1,0 +1,104 @@
+[DockWidget sharedtooldocker]
+TabbedMode=false
+
+[Interface]
+ResolutionX=14.1732529
+ResolutionY=14.1732529
+Rulers=false
+StatusBarShowLineNumber=true
+StatusBarShowModified=true
+StatusBarShowMouse=false
+StatusBarShowPage=true
+StatusBarShowPageSize=false
+StatusBarShowPageStyle=true
+StatusBarShowWordCount=false
+StatusBarShowZoom=true
+ViewFieldShadings=true
+ViewFormattingChars=false
+ViewFrameBorders=true
+ViewSectionBounds=false
+ViewTableBorders=true
+Zoom=176
+ZoomMode=1
+
+[MainWindow]
+Window-Maximized 1080x1920=true
+ko_geometry=AdnQywACAAAAAAAAAAAAHAAAB38AAAQ3AAABQAAAAMwAAAY/AAADhwAAAAACAAAAB4A=
+ko_windowstate=AAAA/wAAAAD9AAAAAQAAAAEAAAeAAAAD0/wCAAAAB/sAAAAgAHMAaABhAHIAZQBkAHQAbwBvAGwAZABvAGMAawBlAHIAAAAARAAAALMAAABmAP////sAAAAUAE4AYQB2AGkAZwBhAHQAaQBvAG4AAAAAAP////8AAABuAP////sAAAAqAFMAaABhAHAAZQBDAG8AbABsAGUAYwB0AGkAbwBuAEQAbwBjAGsAZQByAQAAABsAAAB1AAAATQAIABf7AAAAIABTAGgAYQBwAGUAIABQAHIAbwBwAGUAcgB0AGkAZQBzAAAAAAD/////AAAAGAD////7AAAAFABTAHQAYQB0AGkAcwB0AGkAYwBzAAAAAAD/////AAABGwD////7AAAAKABTAG4AYQBwAEcAdQBpAGQAZQAgAFAAcgBvAHAAZQByAHQAaQBlAHMAAAAAAP////8AAAAYAP////sAAAAOAE0AbwBkAGUAQgBvAHgBAAAAlgAAA1gAAACdAAgAFwAAAAAAAAPTAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+
+[Misc]
+Units=cm
+
+[Recent Dirs]
+OpenDialog[$e]=/run/media/flyin1501/Data/mega/Projects/working.music.cover.或る街のキギ - sasakure.uk,$HOME,$HOME/ドキュメント
+
+[RecentFiles]
+File1[$e]=/run/media/flyin1501/Data/mega/Projects/working.music.cover.或る街のキギ - sasakure.uk/或る街のギギ_lyric.rtf
+Name1[$e]=或る街のギギ_lyric.rtf
+
+[Statistics]
+CharnospacesVisible=true
+CharspacesVisible=true
+EastAsianCharactersVisible=true
+FleschVisible=true
+LinesVisible=true
+SentencesVisible=true
+SyllablesVisible=true
+WordsVisible=true
+
+[TemplateChooserDialog]
+AlwaysUseTemplate=
+DetailsPaneSplitterSizes=1209,394
+FullTemplateName[$e]=/usr/share/calligrawords/templates/Normal/.source/A4.odt
+LastReturnType=Template
+
+[calligra]
+DevicePlugins=spacenavigator
+DevicePluginsDisabled=
+DockerPlugins=calligradockers,calligra_docker_stencils
+DockerPluginsDisabled=
+ModeBoxHorizontalTabsSide=0
+ShapePlugins=artistictextshape,chartshape,formulashape,musicshape,pathshapes,pictureshape,pluginshape,spreadsheetshape,textshape,vectorshape,videoshape
+TextEditingPlugins=autocorrect,changecase,spellcheck
+TextInlinePlugins=textvariables
+ToolPlugins=basicflakesplugin,defaulttools,karbontools
+ToolPluginsDisabled=
+
+[calligrawords]
+State=AAAA/wAAAAD9AAAAAQAAAAEAAAHmAAADqvwCAAAAB/sAAAAgAHMAaABhAHIAZQBkAHQAbwBvAGwAZABvAGMAawBlAHIAAAAARAAAALMAAABmAP////sAAAAUAE4AYQB2AGkAZwBhAHQAaQBvAG4AAAAAAP////8AAABuAP////sAAAAqAFMAaABhAHAAZQBDAG8AbABsAGUAYwB0AGkAbwBuAEQAbwBjAGsAZQByAQAAAEQAAAB1AAAATQAIABf7AAAAIABTAGgAYQBwAGUAIABQAHIAbwBwAGUAcgB0AGkAZQBzAAAAAAD/////AAAAGAD////7AAAAFABTAHQAYQB0AGkAcwB0AGkAYwBzAAAAAAD/////AAABGwD////7AAAAKABTAG4AYQBwAEcAdQBpAGQAZQAgAFAAcgBvAHAAZQByAHQAaQBlAHMAAAAAAP////8AAABdAP////sAAAAOAE0AbwBkAGUAQgBvAHgBAAAAvwAAAy8AAACdAAgAFwAABZQAAAOqAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABlAGQAaQB0AF8AdABvAG8AbABiAGEAcgEAAADv/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[calligrawords][DockWidget ModeBox]
+Collapsed=false
+DockArea=2
+Locked=false
+
+[calligrawords][DockWidget Navigation]
+Collapsed=false
+DockArea=2
+Locked=false
+
+[calligrawords][DockWidget Shape Properties]
+Collapsed=false
+DockArea=2
+Locked=false
+
+[calligrawords][DockWidget ShapeCollectionDocker]
+Collapsed=false
+DockArea=2
+Locked=false
+
+[calligrawords][DockWidget SnapGuide Properties]
+Collapsed=false
+DockArea=2
+Locked=false
+
+[calligrawords][DockWidget Statistics]
+Collapsed=false
+DockArea=2
+Locked=false
+
+[calligrawords][DockWidget sharedtooldocker]
+Collapsed=false
+DockArea=2
+Locked=false

@@ -1,0 +1,11 @@
+[OSD]
+Enabled=true
+
+[PlasmaToolTips]
+Delay=0.7
+
+[Theme]
+name=Adapta
+
+[Wallpapers]
+usersWallpapers=/run/media/flyin1501/Data/mega/Pictures/Project Result/image.rooftop.夕中.png

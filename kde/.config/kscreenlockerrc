@@ -1,0 +1,12 @@
+[$Version]
+update_info=kscreenlocker.upd:0.1-autolock
+
+[Greeter]
+Theme=com.github.varlesh.adapta
+WallpaperPlugin=org.kde.image
+
+[Greeter][Wallpaper][org.kde.color][General]
+Color=0,0,0
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=file:///run/media/flyin1501/Data/mega/Pictures/Project Result/image.rooftop.夕中.png

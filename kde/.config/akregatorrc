@@ -1,0 +1,21 @@
+[$Version]
+update_info=fonts_akregator.upd:Plasma_Fonts_Akregator
+
+[Appearance]
+Fixed Font=Fira Code
+Sans Serif Font=Source Sans Pro
+Serif Font=Source Sans Pro
+Standard Font=Source Sans Pro
+
+[General]
+ArticleListFeedHeaders=
+ArticleListGroupHeaders=
+SubscriptionListHeaders=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAADBgAAAAIAAAABAAAAZAAAAAIAAABkAAAAZAAAAAMBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAMAAABkAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAAGQ=
+
+[HTML Settings]
+Fonts=Source Sans Pro,Fira Code,Source Sans Pro,Source Sans Pro,0
+MediumFontSize=11
+MinimumFontSize=9
+
+[Migratekde4]
+Version=1

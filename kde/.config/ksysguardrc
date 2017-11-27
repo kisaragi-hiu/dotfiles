@@ -1,0 +1,22 @@
+Height 1080=636
+State=AAAA/wAAAAD9AAAAAAAAA8YAAAI/AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+Width 1920=966
+
+[DownloadDialog Settings]
+Height 1080=407
+Width 1920=700
+
+[MainWindow]
+CommandList=
+Height 1080=821
+Height 480=420
+HostList=
+MenuBar=Disabled
+SelectedSheets[$e]=ProcessTable.sgrd,SystemLoad2.sgrd
+SplitterSizeList=639,391
+State=AAAA/wAAAAD9AAAAAAAAA+4AAAMZAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1920=1006
+Width 640=640
+currentSheet=0
+isMinimized=false

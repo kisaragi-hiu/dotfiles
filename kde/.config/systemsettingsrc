@@ -1,0 +1,48 @@
+[ConfigDialog]
+Height 1080=251
+Width 1920=431
+
+[DownloadDialog Settings]
+Height 1080=489
+Width 1920=700
+
+[FileDialogSize]
+Window-Maximized 1080x1920=true
+
+[HTML Settings]
+AutomaticDetectionLanguage=1
+
+[KFileDialog Settings]
+Recent Files[$e]=5月のいつかの夜_54938690_p0.png,file:///run/media/flyin1501/Data/mega/Pictures/Wallpapers/5月のいつかの夜_54938690_p0.png
+Recent URLs[$e]=file:///run/media/flyin1501/Data/mega/Pictures/Wallpapers/
+
+[KPropertiesDialog]
+Height 1080=450
+Width 1920=420
+
+[MainWindow]
+Height 1080=1006
+Height 1920=636
+Height 480=420
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABREAAAPuAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1080=1278
+Width 1920=1297
+Width 640=320
+Window-Maximized 1080x1920=true
+Window-Maximized 480x640=true
+
+[Notification Messages]
+FontSettingsChanged=false
+
+[Open-with settings]
+CompletionMode=5
+History=albert,yakuake,megasync,plank
+
+[PlasmaRunnerManager]
+LaunchCounts=
+
+[classic_mode]
+autoExpandOneLevel=false
+viewLayout=253,1358

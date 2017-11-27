@@ -1,0 +1,74 @@
+[Default Item Styles - Schema imoji]
+Alert=ffda4453,ffda4453,1,,,,ff773540,-,,---
+Annotation=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Attribute=ff2980b9,fffdbc4b,,,,,-,-,,---
+Base-N Integer=fff67400,fff67400,,,,,-,-,,---
+Built-in=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Character=ff3daee9,fffcfcfc,,,,,-,-,,---
+Comment=ff898d99,ffd3dae3,,,,,-,-,,---
+Comment Variable=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Constant=ffd3dae3,ffd3dae3,1,,,,-,-,,---
+Control Flow=ffd3dae3,ffd3dae3,1,,,,-,-,,---
+Data Type=ff2980b9,fffdbc4b,,,,,-,-,,---
+Decimal/Value=fff67400,fff67400,,,,,-,-,,---
+Documentation=ffda4453,ffda4453,,,,,-,-,,---
+Error=ffda4453,ffda4453,,,,,-,-,,---
+Extension=ff0095ff,ffd3dae3,1,,,,-,-,,---
+Floating Point=fff67400,fff67400,,,,,-,-,,---
+Function=fff67400,fff67400,,,,,-,-,,---
+Import=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Information=fff67400,fff67400,,,,,-,-,,---
+Keyword=ffd3dae3,ffd3dae3,1,,,,-,-,,---
+Normal=ffd3dae3,ffd3dae3,,,,,-,-,,---
+Operator=ffd3dae3,ffd3dae3,,,,,-,-,,---
+Others=ff27ae60,ff27ae60,,,,,-,-,,---
+Preprocessor=ff27ae60,ff27ae60,,,,,-,-,,---
+Region Marker=ff2980b9,fffdbc4b,,,,,ff264d6a,-,,---
+Special Character=ff3daee9,fffcfcfc,,,,,-,-,,---
+Special String=ffda4453,ffda4453,,,,,-,-,,---
+String=ffda4453,ffda4453,,,,,-,-,,---
+Variable=ff2980b9,fffdbc4b,,,,,-,-,,---
+Verbatim String=ffda4453,ffda4453,,,,,-,-,,---
+Warning=ffda4453,ffda4453,,,,,-,-,,---
+
+[Default Item Styles - Schema rozerofo]
+Alert=ffda4453,ffda4453,1,,,,ff773540,-,,---
+Annotation=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Attribute=ff2980b9,fffdbc4b,,,,,-,-,,---
+Base-N Integer=fff67400,fff67400,,,,,-,-,,---
+Built-in=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Character=ff3daee9,fffcfcfc,,,,,-,-,,---
+Comment=ff898d99,ffd3dae3,,,,,-,-,,---
+Comment Variable=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Constant=ffd3dae3,ffd3dae3,1,,,,-,-,,---
+Control Flow=ffd3dae3,ffd3dae3,1,,,,-,-,,---
+Data Type=ff2980b9,fffdbc4b,,,,,-,-,,---
+Decimal/Value=fff67400,fff67400,,,,,-,-,,---
+Documentation=ffda4453,ffda4453,,,,,-,-,,---
+Error=ffda4453,ffda4453,,,,,-,-,,---
+Extension=ff0095ff,ffd3dae3,1,,,,-,-,,---
+Floating Point=fff67400,fff67400,,,,,-,-,,---
+Function=fff67400,fff67400,,,,,-,-,,---
+Import=ff7f8c8d,ffbdc3c7,,,,,-,-,,---
+Information=fff67400,fff67400,,,,,-,-,,---
+Keyword=ffd3dae3,ffd3dae3,1,,,,-,-,,---
+Normal=ffd3dae3,ffd3dae3,,,,,-,-,,---
+Operator=ffd3dae3,ffd3dae3,,,,,-,-,,---
+Others=ff27ae60,ff27ae60,,,,,-,-,,---
+Preprocessor=ff27ae60,ff27ae60,,,,,-,-,,---
+Region Marker=ff2980b9,fffdbc4b,,,,,ff264d6a,-,,---
+Special Character=ff3daee9,fffcfcfc,,,,,-,-,,---
+Special String=ffda4453,ffda4453,,,,,-,-,,---
+String=ffda4453,ffda4453,,,,,-,-,,---
+Variable=ff2980b9,fffdbc4b,,,,,-,-,,---
+Verbatim String=ffda4453,ffda4453,,,,,-,-,,---
+Warning=ffda4453,ffda4453,,,,,-,-,,---
+
+[Highlighting None - Schema Normal]
+通常のテキスト=0,,,,,,,,,,---
+
+[Highlighting None - Schema imoji]
+通常のテキスト=0,,,,,,,,,,---
+
+[Highlighting None - Schema rozerofo]
+通常のテキスト=0,,,,,,,,,,---

@@ -1,0 +1,5 @@
+[Favorites-org.kde.plasma.kicker.favorites.instance-78-f37dc9aa-a4b8-44aa-9dac-69b719932006]
+ordering=systemsettings.desktop,org.kde.dolphin.desktop,org.kde.kate.desktop,kvantummanager.desktop,qt5ct.desktop
+
+[Favorites-org.kde.plasma.kicker.favorites.instance-78-global]
+ordering=systemsettings.desktop,org.kde.dolphin.desktop,org.kde.kate.desktop,kvantummanager.desktop,qt5ct.desktop

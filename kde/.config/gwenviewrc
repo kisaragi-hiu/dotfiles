@@ -1,0 +1,39 @@
+[General]
+SideBarPage=folders
+
+[ImageView]
+ThumbnailSplitterSizes=311,89
+
+[MainWindow]
+Height 1080=468
+State=AAAA/wAAAAD9AAAAAAAAAekAAAGNAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1920=489
+
+[Recent Files]
+File1[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-13@2x.png
+File10[$e]=$HOME/画像/imoji.jpg
+File2[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-14.png
+File3[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-14@2x.png
+File4[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-15.png
+File5[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-15@2x.png
+File6[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-16.png
+File7[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-16@2x.png
+File8[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-17.png
+File9[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-17@2x.png
+Name1[$e]=scorebar-colour-13@2x.png
+Name10[$e]=imoji.jpg
+Name2[$e]=scorebar-colour-14.png
+Name3[$e]=scorebar-colour-14@2x.png
+Name4[$e]=scorebar-colour-15.png
+Name5[$e]=scorebar-colour-15@2x.png
+Name6[$e]=scorebar-colour-16.png
+Name7[$e]=scorebar-colour-16@2x.png
+Name8[$e]=scorebar-colour-17.png
+Name9[$e]=scorebar-colour-17@2x.png
+
+[SideBar-BrowseMode]
+IsVisible=false
+
+[SideBar-ViewMode]
+IsVisible=false

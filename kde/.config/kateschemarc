@@ -1,0 +1,13 @@
+[$Version]
+update_info=fonts_kate.upd:Plasma_Fonts_Kate
+
+[Normal]
+dummy=prevent-empty-group
+
+[imoji]
+Font=Re:zero_imoji_ver1.1.1,11,-1,5,50,0,0,0,0,0,Regular
+dummy=prevent-empty-group
+
+[rozerofo]
+Font=Rozerofo,11,-1,5,50,1,0,0,0,0,Regular
+dummy=prevent-empty-group

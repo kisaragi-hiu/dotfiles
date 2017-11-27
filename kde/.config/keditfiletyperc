@@ -1,0 +1,7 @@
+[KPropertiesDialog]
+Height 1080=472
+Width 1920=413
+
+[Open-with settings]
+CompletionMode=5
+History=vim %F,gnome-terminal -- vim %f,kate -b %U,kate %U

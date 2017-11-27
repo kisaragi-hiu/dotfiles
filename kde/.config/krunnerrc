@@ -1,0 +1,38 @@
+[General]
+history=xdg-open http://piapro.jp/my_page/?view=content&pid=balloon0120,mypaint, https://hackernoon.com/what-really-happened-with-vista-4ca7ffb5a1a,chrome,typora,l,kate
+
+[PlasmaRunnerManager]
+LaunchCounts=1 windows_0_69206035,1 shell_xdg-open http://piapro.jp/my_page/?view=content&pid=balloon0120,1 baloosearch_//blender/2.78/scripts/addons/cycles/shader/node_blackbody.oso,1 services_mypaint.desktop,1 windows_0_104857601,1 locations_opennetwork,1 services_org.kde.plasma.lookandfeelexplorer.desktop
+
+[Plugins]
+DictionaryEnabled=true
+Kill RunnerEnabled=false
+PIM Contacts Search RunnerEnabled=true
+PowerDevilEnabled=true
+Spell CheckerEnabled=false
+appstreamrunnerEnabled=true
+baloosearchEnabled=true
+bookmarksEnabled=true
+browsertabsEnabled=true
+calculatorEnabled=true
+desktopsessionsEnabled=true
+katesessionsEnabled=true
+ktp_contactsEnabled=true
+kwinEnabled=true
+locationsEnabled=true
+org.kde.activitiesEnabled=true
+org.kde.datetimeEnabled=true
+org.kde.windowedwidgetsEnabled=true
+placesEnabled=true
+plasma-desktopEnabled=true
+recentdocumentsEnabled=true
+servicesEnabled=true
+shellEnabled=true
+unitconverterEnabled=true
+webshortcutsEnabled=true
+windowsEnabled=true
+
+[Runners][Kill Runner]
+sorting=0
+triggerWord=killl
+useTriggerWord=true

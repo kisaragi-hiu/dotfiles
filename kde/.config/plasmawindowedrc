@@ -1,0 +1,14 @@
+[Applets][3]
+immutability=1
+plugin=org.kde.resourcesMonitor
+
+[Applets][3][Configuration]
+geometry=1384,130,289,139
+
+[Applets][3][Configuration][ConfigDialog]
+DialogHeight=600
+DialogWidth=800
+
+[Applets][3][Configuration][General]
+enableHints=false
+enableShadows=false
