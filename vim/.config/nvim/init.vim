@@ -94,6 +94,8 @@ Plug 'kana/vim-textobj-line' "object: al, il -> line
 Plug 'kana/vim-textobj-indent' "object: {a,i}i {a,i}I similar or exact indent level
 Plug 'whatyouhide/vim-textobj-xmlattr' "object: ax, ix for html/xml attrs
 
+Plug 'rhysd/vim-textobj-word-column' "object: {a,i}{v,V}
+
 "filetypes
 Plug 'sheerun/vim-polyglot' "lang pack
 Plug 'MicahElliott/vrod'
