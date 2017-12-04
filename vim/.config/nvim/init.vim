@@ -3,9 +3,9 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 "Fish doesnt work well with vim, use bash
-if &shell =~# 'fish$'
-    set shell=bash
-endif
+" if &shell =~# 'fish$'
+"     set shell=bash
+" endif
 
 "vim-plug
 call plug#begin('~/.vim/plugged')
