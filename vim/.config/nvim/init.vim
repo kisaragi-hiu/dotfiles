@@ -94,6 +94,20 @@ Plug 'rhysd/vim-textobj-word-column' "object: {a,i}{v,V}
 
 "filetypes
 Plug 'sheerun/vim-polyglot' "lang pack
+let g:polyglot_disabled = [ 'elm' ]
+
+if executable("elm-format")
+    Plug 'elmcast/elm-vim'
+    let g:elm_format_autosave = 1
+    " <Leader>m Compile the current buffer.
+    " <Leader>b Compile the Main.elm file in the project.
+    " <Leader>t Runs the tests of the current buffer or 'tests/TestRunner'.
+    " <Leader>r Opens an elm repl in a subprocess.
+    " <Leader>e Shows the detail of the current error or warning.
+    " <Leader>d Shows the type and docs for the word under the cursor.
+    " <Leader>w Opens the docs web page for the word under the cursor.
+end
+
 Plug 'MicahElliott/vrod'
 Plug 'fasiha/pollen.vim'
 Plug 'Firef0x/PKGBUILD.vim'
@@ -288,3 +302,4 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_racket_racket_checker = 1
 let g:syntastic_sh_shellcheck_args = "-x"
+let g:elm_syntastic_show_warnings = 1
