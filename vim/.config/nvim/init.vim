@@ -21,14 +21,10 @@ let g:airline#extensions#tabline#show_buffers = 1
 
 let g:airline#extensions#whitespace#enabled = 1
 
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme = 'zenburn' "matches seoul256 somewhat
-
-"Plug 'itchyny/lightline.vim'
-"Plug 'ap/vim-buftabline'
-"Plug 'Yggdroot/indentLine'
-
 Plug 'tomasr/molokai'
+Plug 'skielbasa/vim-material-monokai'
+let g:airline_theme='materialmonokai'
+
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
 function! s:goyo_enter()
@@ -139,8 +135,10 @@ function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
   \ contains=@'.group
 endfunction
 
-let g:lightline = { 'colorscheme': 'seoul256', }
-colorscheme seoul256
+set background=dark
+set termguicolors
+colorscheme material-monokai
+
 set noshowmode "mode is shown in statusline already, hide it
 set number
 set relativenumber
