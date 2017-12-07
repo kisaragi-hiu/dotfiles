@@ -26,6 +26,9 @@ export PATH=\
 "$HOME"/.gem/ruby/2.4.0/bin:\
 $PATH
 
+export fish_alias="$HOME/.config/fish/conf.d/alias.fish"
+export fish_alias_linux="$HOME/.config/fish/conf.d/alias-linux.fish"
+
 # `npm config set prefix ~/.local/share/npm-global` to set up global node prefix
 
 # map area to screen ratio
