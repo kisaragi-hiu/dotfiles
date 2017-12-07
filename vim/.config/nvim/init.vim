@@ -204,6 +204,11 @@ augroup main
     autocmd VimEnter * highlight clear SignColumn
 augroup END
 
+augroup web
+    autocmd!
+    autocmd FileType html call TextEnableCodeSnip('css', '<style>', '</style>', 'SpecialComment')
+augroup END
+
 augroup terminal
     autocmd!
     autocmd TermOpen * setlocal nonumber norelativenumber
