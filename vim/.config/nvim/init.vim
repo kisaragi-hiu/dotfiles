@@ -61,7 +61,7 @@ endif
 "Editing
 Plug 'bhurlow/vim-parinfer'
 Plug 'jiangmiao/auto-pairs'
-let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`', '「':'」'}
+let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`', '「':'」', '“':'”'}
 Plug 'tpope/vim-repeat'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
