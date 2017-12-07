@@ -196,12 +196,17 @@ nnoremap <M-l> :bn<CR>
 nnoremap <M-h> :bp<CR>
 
 "Terminal
-tnoremap <Esc><Esc> <C-\><C-n>
+tnoremap <leader><Esc> <C-\><C-n>
 
 "Language specific settings
 augroup main
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
+augroup END
+
+augroup terminal
+    autocmd!
+    autocmd TermOpen * setlocal nonumber norelativenumber
 augroup END
 
 augroup java
