@@ -49,6 +49,9 @@ keycode 16 = 7 ampersand U26AC U30FB
 ! u, U, µ (micro sign)
 keycode 30 = u U U00B5 U00B5
 
+! d D ð Ð
+keycode 40 = d D U00F0 U00D0
+
 ! c, C, © (copyrignt sign)
 keycode 54 = c C U00A9 U00A9
 
