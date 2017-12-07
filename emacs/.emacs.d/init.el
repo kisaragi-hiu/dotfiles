@@ -16,10 +16,10 @@
 
 ;; Editing
 ;; (electric-pair-mode 1)
-(use-package smartparens
-  :config
-  (require 'smartparens-config)
-  (smartparens-global-mode))
+(straight-use-package 'smartparens)
+(require 'smartparens-config)
+(smartparens-global-mode)
+
 (delete-selection-mode 1)
 (setq tab-always-indent 'complete)
 
@@ -35,91 +35,92 @@
 (setq indent-tabs-mode nil)
 (infer-indentation-style)
 
-(use-package evil
-  :init
-  ;; evil-leader should be enabled before evil loads
-  (use-package evil-leader
-    :config
-    (evil-leader/set-leader "<SPC>")
-    (evil-leader/set-key
-      "<SPC>" 'execute-extended-command
-      "el" 'eval-last-sexp
-      "eb" 'eval-buffer
-      "ed" 'eval-defun
-      "hf" 'counsel-describe-function
-      "hv" 'counsel-describe-variable
-      "hb" 'counsel-descbinds)
-    ;; (evil-leader/set-key-for-mode)
-    (global-evil-leader-mode))
-  :config
-  (use-package evil-surround
-    :config
-    (global-evil-surround-mode))
-  (use-package evil-commentary
-    :config
-    (evil-commentary-mode))
-  (use-package evil-numbers
-    :config
-    (global-set-key (kbd "C-=") 'evil-numbers/inc-at-pt)
-    (global-set-key (kbd "C--") 'evil-numbers/dec-at-pt))
-  (use-package evil-textobj-line
-    :recipe (evil-textobj-line :type git :host github
-			       :repo "syohex/evil-textobj-line"))
-  (setq evil-move-beyond-eol t)
-  (evil-mode 1))
+(straight-use-package 'evil-leader)
+(require 'evil-leader)
+(evil-leader/set-leader "<SPC>")
+(evil-leader/set-key
+  "x" 'execute-extended-command
+  "el" 'eval-last-sexp
+  "eb" 'eval-buffer
+  "ed" 'eval-defun
+  "hf" 'counsel-describe-function
+  "hv" 'counsel-describe-variable
+  "hb" 'counsel-descbinds)
+(global-evil-leader-mode)
 
-(use-package evil-easymotion
-  :config
-  (evilem-default-keybindings "SPC"))
+(straight-use-package 'evil)
 
-(use-package linum-relative
-  :config
-  (setq linum-relative-current-symbol "")
-  (linum-relative-global-mode 1)
-  (global-linum-mode 1))
+(straight-use-package 'evil-surround)
+(global-evil-surround-mode)
+
+(straight-use-package 'evil-commentary)
+(evil-commentary-mode)
+
+(straight-use-package 'evil-numbers)
+(global-set-key (kbd "C-=") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "C--") 'evil-numbers/dec-at-pt)
+
+(straight-use-package '(evil-textobj-line :type git :host github
+                                          :repo "syohex/evil-textobj-line"))
+(setq evil-move-beyond-eol t)
+(evil-mode 1)
+
+(straight-use-package 'evil-easymotion)
+(evilem-default-keybindings "SPC")
+
+(straight-use-package 'linum-relative)
+(setq linum-relative-current-symbol "")
+(linum-relative-global-mode 1)
+(global-linum-mode 1)
 
 ;; Keybinds
 (global-set-key (kbd "M-l") 'evil-next-buffer)
 (global-set-key (kbd "M-h") 'evil-prev-buffer)
-(use-package hydra)
+
+(straight-use-package 'hydra)
 (defhydra hydra-zoom (global-map "<f2>")
-  "zoom"
-  ("g" text-scale-increase "in")
-  ("l" text-scale-decrease "out"))
+    "zoom"
+    ("g" text-scale-increase "in")
+    ("l" text-scale-decrease "out"))
 
 ;; Auto completion
-(use-package company
-  :config
-  (use-package company-shell
-    :config
-    (add-to-list 'company-backends '(company-shell company-shell-env)))
-  (use-package company-flx
-    :config
-    (company-flx-mode +1))
-  (global-company-mode 1))
+(straight-use-package 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+
+(straight-use-package 'company-shell)
+(add-to-list 'company-backends '(company-shell company-shell-env))
+
+(straight-use-package 'company-flx)
+(company-flx-mode +1)
+;; (global-company-mode 1)
 
 ;; Syntax checking
-(use-package flycheck
-  :commands flycheck-mode)
+(straight-use-package 'flycheck)
 
 ;; Fuzzy find thing
-(use-package ivy
-  :config
-  (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
-  (ivy-mode 1))
+(straight-use-package 'ivy)
+(setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
+(ivy-mode 1)
 
 ;; Languages
-(use-package racket-mode)
-(use-package pollen-mode)
-(use-package markdown-mode)
-(use-package fish-mode)
+(straight-use-package 'racket-mode)
+(straight-use-package 'pollen-mode)
+(require 'pollen-mode)
 
-(use-package web-mode
-  :config
-  (evil-define-key 'normal web-mode-map
-    (kbd "<key-chord> za") #'web-mode-fold-or-unfold)
-  (evil-define-key 'normal web-mode-map
-    (kbd "<SPC>r") #'web-mode-element-rename))
+(straight-use-package 'markdown-mode)
+(straight-use-package 'fish-mode)
+
+(straight-use-package 'elm-mode)
+(setq elm-format-on-save t)
+
+(straight-use-package 'vimrc-mode)
+(add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
+
+(straight-use-package 'web-mode)
+(evil-define-key 'normal web-mode-map
+  (kbd "<key-chord> za") #'web-mode-fold-or-unfold)
+(evil-define-key 'normal web-mode-map
+  (kbd "<SPC>r") #'web-mode-element-rename)
 
 ;; UI
 (setq initial-scratch-message nil)
@@ -132,33 +133,36 @@
 
 ;; (global-whitespace-newline-mode 0)
 
-(use-package rainbow-delimiters
-  :config
-  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-  (add-hook 'pollen-mode-hook #'rainbow-delimiters-mode))
+(straight-use-package 'rainbow-delimiters)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'pollen-mode-hook #'rainbow-delimiters-mode)
 
-(use-package spaceline
-  :config
-  (require 'spaceline-config)
-  (setq-default spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
-  (setq powerline-text-scale-factor 1.2)
-  (spaceline-spacemacs-theme))
+(straight-use-package 'spaceline)
+(require 'spaceline-config)
+(setq-default spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
+(setq powerline-text-scale-factor 1.2)
+(spaceline-spacemacs-theme)
 
 (set-default-font (font-spec :name "Overpass Mono" :size 20))
 (if (functionp 'set-fontset-font)
     (set-fontset-font "fontset-default" 'unicode
                       (font-spec :name "Noto Sans Mono CJK TC" :size 18)))
 
-(use-package monokai-theme)
+(straight-use-package 'monokai-theme)
 
-(use-package seoul256-theme
-  :init
-  (setq seoul256-background 235)
-  :config
-  (load-theme 'seoul256 t))
+(straight-use-package 'material-theme)
+(load-theme 'material t)
+
+;; (use-package seoul256-theme
+;;   :init
+;;   (setq seoul256-background 235)
+;;   :config
+;;   (load-theme 'seoul256 t))
 
 ;; Apps
-(use-package magit)
+(straight-use-package 'magit)
+(require 'magit)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
