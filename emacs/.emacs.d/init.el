@@ -86,6 +86,7 @@
 ;; Auto completion
 (straight-use-package 'company)
 (add-hook 'after-init-hook 'global-company-mode)
+(require 'company)
 
 (straight-use-package 'company-shell)
 (add-to-list 'company-backends '(company-shell company-shell-env))
@@ -142,6 +143,10 @@
 (setq-default spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
 (setq powerline-text-scale-factor 1.2)
 (spaceline-spacemacs-theme)
+
+; Show minor mode count instead of their names
+(straight-use-package 'nummm-mode)
+(nummm-mode t)
 
 (set-default-font (font-spec :name "Overpass Mono" :size 20))
 (if (functionp 'set-fontset-font)
