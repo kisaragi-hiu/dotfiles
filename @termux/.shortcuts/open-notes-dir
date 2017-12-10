@@ -1,0 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+( echo "cd /sdcard/0.git/notes" > ~/.config/fish/conf.d/zz.tempcd.fish; sleep 5; rm ~/.config/fish/conf.d/zz.tempcd.fish ) &
+fish
