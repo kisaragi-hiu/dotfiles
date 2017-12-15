@@ -14,6 +14,10 @@
 
 (setq use-package-always-ensure t)
 
+;; File library
+(straight-use-package 'f)
+(require 'f)
+
 ;; Editing
 ;; (electric-pair-mode 1)
 (straight-use-package 'smartparens)
@@ -22,6 +26,13 @@
 
 (delete-selection-mode 1)
 (setq tab-always-indent 'complete)
+
+;; run moccur-grep
+;; then "C-c C-i" / "C-x C-q" to start editing
+;; "C-c C-f" to "commit", "C-c C-k" to abort, "C-c C-r to clear changes"
+(straight-use-package 'color-moccur)
+(straight-use-package 'moccur-edit)
+(require 'moccur-edit)
 
 ;; Good'ol EmacsWiki
 ;; Indent with spaces by default
