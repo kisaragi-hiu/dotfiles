@@ -184,16 +184,16 @@ set mouse=a
 
 "Keys
 "Space -> leader
-nnoremap <space> <nop>
-let mapleader = "\<space>"
+" nnoremap <space> <nop>
+let mapleader = ","
 
 "leader based stuff
 nnoremap <leader>c :noh<CR>
 nnoremap <leader>eb :so %<CR>
 
 "Switch buffers
-nnoremap <M-l> :bn<CR>
-nnoremap <M-h> :bp<CR>
+nnoremap <leader>l :bn<CR>
+nnoremap <leader>h :bp<CR>
 
 "Terminal
 tnoremap <leader><Esc> <C-\><C-n>
