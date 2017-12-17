@@ -1,2 +1,7 @@
 [Plugin-org.kde.ActivityManager.Resources.Scoring]
+allowed-applications=VirtualBox,ark,atom,audacity,blender,calligrawords,clementine,dex,eog,evince,firefox,firefox-beta-bin,fontforge,gnome-disk-image-mounter,google-chrome-unstable,gwenview,inkscape,io.github.gnomempv,kate,kdenlive,kdialog,krita,krita_jpeg,krita_png,libreoffice-writer,lmms,mpv,nvim,org.gnome.font-viewer,org.gnome.totem,org.kde.ark,org.kde.calligrawords,org.kde.dolphin,org.kde.filelight,org.kde.gwenview,org.kde.kate,org.kde.kdenlive,org.kde.kfontview,org.kde.krunner,org.kde.libtaskmanager,org.kde.plasma.kicker,org.kde.systemsettings,org.pantheon.scratch,osu,panel-desktop-handler,plasmashell,rosegarden,shotwell-viewer,systemsettings,transmission-qt,typora,vim,vlc,wine,wine-extension-ini,wine-extension-ust,xournal
+blocked-applications=
+blocked-by-default=false
+keep-history-for=0
 off-the-record-activities=65aa94b4-229e-46ec-a01e-e9c0bbc0b840
+what-to-remember=0

@@ -1,13 +1,19 @@
+[Plugins]
+org.kde.ActivityManager.ResourceScoringEnabled=true
+org.kde.ActivityManager.VirtualDesktopSwitchEnabled=false
+
 [activities]
-65aa94b4-229e-46ec-a01e-e9c0bbc0b840=Record
+65aa94b4-229e-46ec-a01e-e9c0bbc0b840[$d]
 f37dc9aa-a4b8-44aa-9dac-69b719932006=Default
 
 [activities-descriptions]
-65aa94b4-229e-46ec-a01e-e9c0bbc0b840=直播 / 錄影用的空桌面
+65aa94b4-229e-46ec-a01e-e9c0bbc0b840[$d]
 
 [activities-icons]
-65aa94b4-229e-46ec-a01e-e9c0bbc0b840=obs
+65aa94b4-229e-46ec-a01e-e9c0bbc0b840[$d]
 f37dc9aa-a4b8-44aa-9dac-69b719932006=cs-desktop
 
 [main]
 currentActivity=f37dc9aa-a4b8-44aa-9dac-69b719932006
+runningActivities=f37dc9aa-a4b8-44aa-9dac-69b719932006
+stoppedActivities=

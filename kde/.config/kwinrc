@@ -15,7 +15,7 @@ Name_1=ワークスペース 1
 Name_2=ワークスペース 2
 Name_3=ワークスペース 3
 Name_4=ワークスペース 4
-Number=4
+Number=6
 Rows=2
 
 [Effect-CoverSwitch]
@@ -104,6 +104,10 @@ TextOnly=false
 [Script-quarter-tiling]
 ignoredClients=steam, kate, osu!.exe
 
+[SubSession: 65aa94b4-229e-46ec-a01e-e9c0bbc0b840]
+active=-1
+count=0
+
 [TabBox]
 ActivitiesMode=1
 ApplicationsMode=0
@@ -179,3 +183,4 @@ ButtonsOnLeft=MFS
 ButtonsOnRight=IAX
 CloseOnDoubleClickOnMenu=false
 library=org.kde.breeze
+theme[$d]

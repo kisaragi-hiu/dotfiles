@@ -1,36 +1,43 @@
+[Crop]
+CropAdvancedSettingsEnabled=true
+
 [General]
 SideBarPage=folders
 
 [ImageView]
+AnimationMethod=DocumentView::NoAnimation
 ThumbnailSplitterSizes=311,89
 
 [MainWindow]
-Height 1080=468
-State=AAAA/wAAAAD9AAAAAAAAAekAAAGNAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+Height 1080=1023
+Height 1920=1861
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAA+QAAAPKAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1920=489
+Width 1080=540
+Width 1920=996
 
 [Recent Files]
-File1[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-13@2x.png
-File10[$e]=$HOME/画像/imoji.jpg
-File2[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-14.png
-File3[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-14@2x.png
-File4[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-15.png
-File5[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-15@2x.png
-File6[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-16.png
-File7[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-16@2x.png
-File8[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-17.png
-File9[$e]=/run/media/flyin1501/Data/games/osu/Skins/Re.m/scorebar-colour-17@2x.png
-Name1[$e]=scorebar-colour-13@2x.png
-Name10[$e]=imoji.jpg
-Name2[$e]=scorebar-colour-14.png
-Name3[$e]=scorebar-colour-14@2x.png
-Name4[$e]=scorebar-colour-15.png
-Name5[$e]=scorebar-colour-15@2x.png
-Name6[$e]=scorebar-colour-16.png
-Name7[$e]=scorebar-colour-16@2x.png
-Name8[$e]=scorebar-colour-17.png
-Name9[$e]=scorebar-colour-17@2x.png
+File1[$e]=$HOME/画像/Screenshots/Screenshot_20171215_225424.jpg
+File10[$e]=$HOME/ドキュメント/photos/IMG_20171214_172808.jpg
+File2[$e]=$HOME/ドキュメント/photos/IMG_20171214_172207.jpg
+File3[$e]=$HOME/ドキュメント/photos/IMG_20171214_172503.jpg
+File4[$e]=$HOME/ドキュメント/photos/IMG_20171214_172547.jpg
+File5[$e]=$HOME/ドキュメント/photos/IMG_20171214_172659.jpg
+File6[$e]=$HOME/ドキュメント/photos/IMG_20171214_172713.jpg
+File7[$e]=$HOME/ドキュメント/photos/IMG_20171214_172730.jpg
+File8[$e]=$HOME/ドキュメント/photos/IMG_20171214_173313.jpg
+File9[$e]=$HOME/ドキュメント/photos/IMG_20171214_172913.jpg
+Name1[$e]=Screenshot_20171215_225424.jpg
+Name10[$e]=IMG_20171214_172808.jpg
+Name2[$e]=IMG_20171214_172207.jpg
+Name3[$e]=IMG_20171214_172503.jpg
+Name4[$e]=IMG_20171214_172547.jpg
+Name5[$e]=IMG_20171214_172659.jpg
+Name6[$e]=IMG_20171214_172713.jpg
+Name7[$e]=IMG_20171214_172730.jpg
+Name8[$e]=IMG_20171214_173313.jpg
+Name9[$e]=IMG_20171214_172913.jpg
 
 [SideBar-BrowseMode]
 IsVisible=false

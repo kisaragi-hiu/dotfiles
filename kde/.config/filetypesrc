@@ -1,3 +1,4 @@
 [EmbedSettings]
 embed-application/x-desktop=false
+embed-application/x-wine-extension-osk=false
 embed-text/markdown=false
