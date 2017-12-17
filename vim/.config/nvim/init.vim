@@ -7,6 +7,8 @@ set fileencoding=utf-8
 "     set shell=bash
 " endif
 
+cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'bd' : 'q')<CR>
+
 "vim-plug
 call plug#begin('~/.vim/plugged')
 
@@ -85,12 +87,21 @@ let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 "a_ vs i_ is analogous to UTAU C-a vs C-w
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-datetime' "{a,i}d{a,f,d,t,z} [a]uto [f]ull [d]ate [t]ime [z]one
-Plug 'kana/vim-textobj-entire' "object: ae, ie for entire file
+" Plug 'kana/vim-textobj-entire' "object: ae, ie for entire file
 Plug 'kana/vim-textobj-line' "object: al, il -> line
 Plug 'kana/vim-textobj-indent' "object: {a,i}i {a,i}I similar or exact indent level
 Plug 'whatyouhide/vim-textobj-xmlattr' "object: ax, ix for html/xml attrs
-
 Plug 'rhysd/vim-textobj-word-column' "object: {a,i}{v,V}
+
+Plug 'guns/vim-sexp' "object: {a,i}{fFse} for forms, toplevel forms, strings, and elements (s-exp)
+" (): nearest bracket pair
+" <M-{b,w}>: element-wise 'b'/'w' motion
+" {g,}<M-e>: element-wise 'ge'/'e' motion (b/w but to the end of word)
+" [[, ]]: adjacent toplevel element
+" [e , ]e: select adjacent element
+" ==: indent form
+" =-: indent toplevel form
+" more at github.com/guns/vim-sexp
 
 "filetypes
 Plug 'sheerun/vim-polyglot' "lang pack
@@ -116,7 +127,8 @@ Plug 'Firef0x/PKGBUILD.vim'
 Plug 'vim-syntastic/syntastic'
 
 "apps
-Plug 'airblade/vim-gitgutter' "<leader>hs <leader>hp <leader>hu -> stage, preview, unstage
+" Plug 'airblade/vim-gitgutter' "<leader>hs <leader>hp <leader>hu -> stage, preview, unstage
+" Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'mrtazz/simplenote.vim'
 Plug 'EinfachToll/DidYouMean'
