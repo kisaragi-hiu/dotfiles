@@ -310,8 +310,9 @@ augroup xml
     autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
 augroup END
 
-"Save file with sudo with :w!!
-cmap w!! w !sudo tee > /dev/null %
+" highlight >120 char lines & trailing whitespaces
+match ErrorMsg '\%>120v.\+'
+match ErrorMsg '\s\+$'
 
 "statusline
 if &statusline ==# ''
