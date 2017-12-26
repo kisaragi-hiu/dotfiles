@@ -75,6 +75,10 @@ Plug 'tpope/vim-surround' "object: s. ex: c s ( '
 Plug 'christoomey/vim-sort-motion' "verb: gs. ex: gs i (
 Plug 'tpope/vim-commentary' "verb: gc, gcc
 
+Plug 'joereynolds/place.vim'
+let g:place_single_character_mode = 0
+nmap ga <Plug>(place-insert)
+
 "Easymotion
 Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_use_migemo = 1 "match kana with romaji
