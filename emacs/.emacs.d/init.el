@@ -149,12 +149,6 @@
   (straight-use-package 'web-mode))
 (kisaragi/setup-languages)
 
-(straight-use-package 'web-mode)
-(evil-define-key 'normal web-mode-map
-  (kbd "<key-chord> za") #'web-mode-fold-or-unfold)
-(evil-define-key 'normal web-mode-map
-  (kbd "<SPC>r") #'web-mode-element-rename)
-
 ;; UI
 (defun kisaragi/setup-ui ()
   (setq initial-scratch-message nil) ; leave scratch empty
