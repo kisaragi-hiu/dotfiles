@@ -23,6 +23,8 @@ let g:airline#extensions#tabline#show_buffers = 1
 
 let g:airline#extensions#whitespace#enabled = 1
 
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
 Plug 'tomasr/molokai'
 Plug 'skielbasa/vim-material-monokai'
 let g:airline_theme='materialmonokai'
