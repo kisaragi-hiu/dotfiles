@@ -83,10 +83,7 @@ nmap ga <Plug>(place-insert)
 Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_use_migemo = 1 "match kana with romaji
 
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
+nmap F <Plug>(easymotion-prefix)s
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
 "vim-textobj-user based
@@ -133,8 +130,11 @@ Plug 'Firef0x/PKGBUILD.vim'
 Plug 'vim-syntastic/syntastic'
 
 "apps
-" Plug 'airblade/vim-gitgutter' "<leader>hs <leader>hp <leader>hu -> stage, preview, unstage
-" Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter' "<leader>hs <leader>hp <leader>hu -> stage, preview, unstage
+nnoremap <c-N> :GitGutterNextHunk<CR>
+nnoremap <c-P> :GitGutterPrevHunk<CR>
+nnoremap <c-U> :GitGutterUndoHunk<CR>
+
 Plug 'tpope/vim-fugitive'
 Plug 'mrtazz/simplenote.vim'
 Plug 'EinfachToll/DidYouMean'
