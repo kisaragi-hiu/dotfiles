@@ -227,11 +227,6 @@ augroup web
     autocmd FileType html call TextEnableCodeSnip('css', '<style>', '</style>', 'SpecialComment')
 augroup END
 
-augroup terminal
-    autocmd!
-    autocmd TermOpen * setlocal nonumber norelativenumber
-augroup END
-
 augroup java
     autocmd!
     autocmd FileType java setlocal noexpandtab
