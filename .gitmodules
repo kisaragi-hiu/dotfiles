@@ -7,3 +7,6 @@
 [submodule "_rime-hokkien"]
 	path = _rime-hokkien
 	url = https://github.com/a-thok/rime-hokkien.git
+[submodule "_nord-konsole"]
+	path = _nord-konsole
+	url = https://github.com/arcticicestudio/nord-konsole.git
