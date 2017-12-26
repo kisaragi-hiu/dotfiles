@@ -1,5 +1,13 @@
 [Containments][4][General]
-appletOrder=5;6
+appletOrder[$d]
 
 [ScreenConnectors]
 10=DVI-D-0
+
+[UniversalSettings]
+currentLayout=Plasma
+lastNonAssignedLayout=Plasma
+launchers=applications:xfce4-appfinder.desktop,applications:firefox.desktop,applications:google-chrome-unstable.desktop,applications:org.kde.dolphin.desktop,applications:anki.desktop,applications:chrome-gmgnghphiockcigbjihhdnnmmcbdcjdf-Default.desktop,applications:org.baedert.corebird.desktop,applications:osu-wine.desktop,applications:steam-native.desktop,applications:com.vinszent.GnomeTwitch.desktop,applications:blender.desktop,applications:inkscape.desktop,applications:gpick.desktop,applications:azpainter.desktop,applications:org.kde.krita.desktop,applications:ardour.desktop,applications:audacity.desktop,applications:org.kde.konsole.desktop,applications:visual-studio-code.desktop,applications:emacs.desktop,applications:lighttable.desktop
+layoutsWindowSize=700,450
+showInfoWindow=true
+version=2

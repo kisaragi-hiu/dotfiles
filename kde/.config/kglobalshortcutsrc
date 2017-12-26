@@ -35,11 +35,11 @@ PowerOff=Power Off,Power Off,關閉電源
 Show System Activity=none,Ctrl+Esc,顯示系統活動
 Sleep=Sleep,Sleep,暫停
 Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,切換鍵盤背光
-_k_friendly_name=KDE Daemon
+_k_friendly_name=電源管理
 display=Display,Display\tMeta+P,切換顯示
 
 [khotkeys]
-_k_friendly_name=KDE Daemon
+_k_friendly_name=KDE システム設定
 {1d2caced-b83e-4d05-b2c8-52578680953c}=none,none,Take Rectangular Region Screenshot
 {2bf8adc2-f816-49dc-a08b-eeaeb0d05bc1}=Meta+P,none,Restart PulseAudio
 {4776e0ad-0331-45d6-8b20-76b750067c04}=Meta+I,none,mouse sensitivity 1.6x
@@ -65,6 +65,12 @@ increase_volume=Meta+Alt+Up,Volume Up,遞增音量
 mic_mute=Microphone Mute,Microphone Mute,麥克風靜音
 mute=Volume Mute,Volume Mute,靜音
 
+[kopete]
+ReadMessage=Ctrl+Shift+I,Ctrl+Shift+I,メッセージを読む
+Set_Away_Back=Ctrl+Shift+W,Ctrl+Shift+W,不在/復帰にセット
+ShowContactList=Ctrl+Alt+T,Ctrl+Alt+T,コンタクトリストを表示/隠す
+_k_friendly_name=Kopete
+
 [krunner]
 _k_friendly_name=執行指令
 run command=\tMeta+R,Alt+Space,コマンドを実行
@@ -76,7 +82,7 @@ Lock Session=,Ctrl+Alt+L\tScreensaver,鎖定工作階段
 Log Out=none,none,ログアウト
 Log Out Without Confirmation=none,none,確認なしにログアウト
 Reboot Without Confirmation=none,none,確認なしにリブート
-_k_friendly_name=KDE システム設定
+_k_friendly_name=ksmserver
 
 [kwin]
 Activate Window Demanding Attention=none,Ctrl+Alt+A,操作を要求しているウィンドウをアクティブに
@@ -126,7 +132,7 @@ Switch Window Down=,Meta+Alt+Down,下のウィンドウに切り替え
 Switch Window Left=none,Meta+Alt+Left,左のウィンドウに切り替え
 Switch Window Right=none,Meta+Alt+Right,右のウィンドウに切り替え
 Switch Window Up=,Meta+Alt+Up,上のウィンドウに切り替え
-Switch to Desktop 1=Meta+Ctrl+1,Ctrl+F1,デスクトップ 1 に切り替え
+Switch to Desktop 1=Meta+Ctrl+1,Ctrl+F1,切換到桌面 1
 Switch to Desktop 10=Meta+Ctrl+0,none,切換到桌面 10
 Switch to Desktop 11=none,none,切換到桌面 11
 Switch to Desktop 12=none,none,切換到桌面 12
@@ -137,12 +143,12 @@ Switch to Desktop 16=none,none,切換到桌面 16
 Switch to Desktop 17=none,none,切換到桌面 17
 Switch to Desktop 18=none,none,切換到桌面 18
 Switch to Desktop 19=none,none,切換到桌面 19
-Switch to Desktop 2=Meta+Ctrl+2,Ctrl+F2,デスクトップ 2 に切り替え
+Switch to Desktop 2=Meta+Ctrl+2,Ctrl+F2,切換到桌面 2
 Switch to Desktop 20=none,none,切換到桌面 20
-Switch to Desktop 3=Meta+Ctrl+3,Ctrl+F3,デスクトップ 3 に切り替え
-Switch to Desktop 4=Meta+Ctrl+4,Ctrl+F4,デスクトップ 4 に切り替え
-Switch to Desktop 5=Meta+Ctrl+5,none,デスクトップ 5 に切り替え
-Switch to Desktop 6=Meta+Ctrl+6,none,デスクトップ 6 に切り替え
+Switch to Desktop 3=Meta+Ctrl+3,Ctrl+F3,切換到桌面 3
+Switch to Desktop 4=Meta+Ctrl+4,Ctrl+F4,切換到桌面 4
+Switch to Desktop 5=Meta+Ctrl+5,none,切換到桌面 5
+Switch to Desktop 6=Meta+Ctrl+6,none,切換到桌面 6
 Switch to Desktop 7=Meta+Ctrl+7,none,切換到桌面 7
 Switch to Desktop 8=Meta+Ctrl+8,none,切換到桌面 8
 Switch to Desktop 9=Meta+Ctrl+9,none,切換到桌面 9
@@ -177,10 +183,10 @@ TILING: Toggle Floating=Meta+F,none,Toggle Floating
 TILING: Toggle Tiling=,none,Toggle Tiling
 Toggle Window Raise/Lower=none,none,ウィンドウを前面/背面に
 ToggleMouseClick=,Meta+*,切換滑鼠點擊效果
-Walk Through Desktop List=none,none,走過桌面清單
-Walk Through Desktop List (Reverse)=none,none,走過桌面清單 (反轉)
-Walk Through Desktops=none,none,走過桌面
-Walk Through Desktops (Reverse)=none,none,走過桌面 (反轉)
+Walk Through Desktop List=none,none,デスクトップリストを巡回
+Walk Through Desktop List (Reverse)=none,none,デスクトップリストを巡回 (反対回り)
+Walk Through Desktops=none,none,デスクトップを巡回
+Walk Through Desktops (Reverse)=none,none,デスクトップを巡回 (反対回り)
 Walk Through Window Tabs=none,none,ウィンドウのタブを巡回
 Walk Through Window Tabs (Reverse)=none,none,ウィンドウのタブを巡回 (反対回り)
 Walk Through Windows=Alt+Tab,none,ウィンドウを巡回
@@ -259,10 +265,42 @@ Window to Screen 4=none,none,視窗移至螢幕 4
 Window to Screen 5=none,none,視窗移至螢幕 5
 Window to Screen 6=none,none,視窗移至螢幕 6
 Window to Screen 7=none,none,視窗移至螢幕 7
-_k_friendly_name=KDE システム設定
+_k_friendly_name=KWin
 view_actual_size=,Meta+0,実際のサイズ(A)
 view_zoom_in=Meta+=,Meta+=,拡大(I)
 view_zoom_out=Meta+-,Meta+-,縮小(O)
+
+[lattedock]
+_k_friendly_name=Latte Dock
+activate task manager entry 1=,Meta+1,啟用工作管理員項目 1
+activate task manager entry 10=,Meta+0,啟用工作管理員項目 10
+activate task manager entry 2=,Meta+2,啟用工作管理員項目 2
+activate task manager entry 3=,Meta+3,啟用工作管理員項目 3
+activate task manager entry 4=,Meta+4,啟用工作管理員項目 4
+activate task manager entry 5=,Meta+5,啟用工作管理員項目 5
+activate task manager entry 6=,Meta+6,啟用工作管理員項目 6
+activate task manager entry 7=,Meta+7,啟用工作管理員項目 7
+activate task manager entry 8=,Meta+8,啟用工作管理員項目 8
+activate task manager entry 9=,Meta+9,啟用工作管理員項目 9
+clear-history=none,none,クリップボードの履歴を消去(L)
+clipboard_action=none,Ctrl+Alt+X,クリップボードのアクションを有効にする
+cycleNextAction=none,none,履歴の次のアイテム
+cyclePrevAction=none,none,履歴の前のアイテム
+edit_clipboard=none,none,内容を編集(E)...
+new instance for task manager entry 1=,Meta+Ctrl+1,工作管理員項目 1 的新實體
+new instance for task manager entry 10=,Meta+Ctrl+0,工作管理員項目 10 的新實體
+new instance for task manager entry 2=,Meta+Ctrl+2,工作管理員項目 2 的新實體
+new instance for task manager entry 3=,Meta+Ctrl+3,工作管理員項目 3 的新實體
+new instance for task manager entry 4=,Meta+Ctrl+4,工作管理員項目 4 的新實體
+new instance for task manager entry 5=,Meta+Ctrl+5,工作管理員項目 5 的新實體
+new instance for task manager entry 6=,Meta+Ctrl+6,工作管理員項目 6 的新實體
+new instance for task manager entry 7=,Meta+Ctrl+7,工作管理員項目 7 的新實體
+new instance for task manager entry 8=,Meta+Ctrl+8,工作管理員項目 8 的新實體
+new instance for task manager entry 9=,Meta+Ctrl+9,工作管理員項目 9 的新實體
+repeat_action=none,Ctrl+Alt+R,現在のクリップボードに対するアクションを手動で呼び出す
+show latte dock=,Meta+`,顯示 Latte Dock
+show-barcode=none,none,バーコードを表示する(S)...
+show-on-mouse-pos=none,none,在滑鼠游標位置開啟 Klipper
 
 [mediacontrol]
 _k_friendly_name=媒體控制器

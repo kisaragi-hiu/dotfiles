@@ -18,19 +18,19 @@ Recent URLs[$e]=file:///run/media/flyin1501/Data/mega/Pictures/Wallpapers/
 
 [KPropertiesDialog]
 Height 1080=506
-Width 1920=438
+Width 1920=436
 
 [MainWindow]
 Height 1080=808
 Height 1920=636
 Height 480=420
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQcAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAABOUAAAMoAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 Width 1080=1278
 Width 1920=1253
 Width 640=320
-Window-Maximized 1080x1920=true
+Window-Maximized 1080x1920=false
 Window-Maximized 480x640=true
 
 [Notification Messages]
@@ -38,7 +38,7 @@ FontSettingsChanged=false
 
 [Open-with settings]
 CompletionMode=5
-History=albert,tilda,yakuake,megasync,plank
+History=yakuake,guake,xfwm4 --replace,albert,tilda,megasync,plank
 
 [PlasmaRunnerManager]
 LaunchCounts=

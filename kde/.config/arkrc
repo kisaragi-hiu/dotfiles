@@ -14,35 +14,35 @@ Recent URLs[$e]=file:///run/media/flyin1501/Data/software/,file:///run/media/fly
 Search History=enable_shared,cflag
 
 [MainWindow]
-Height 1080=638
+Height 1080=891
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAA20AAAJJAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAABM4AAANGAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 StatusBar=Disabled
 ToolBarsMovable=Disabled
-Width 1920=877
-splitterSizes=636,240
+Width 1920=1230
+splitterSizes=892,337
 
 [Recent Files]
 File1[$e]=/run/media/flyin1501/Data/software/UTAU/presamp0.8996/predit1730.zip
-File10[$e]=/run/media/flyin1501/Data/assets/fonts/theleagueof-sorts-mill-goudy-0607289.zip
+File10[$d]
 File2[$e]=/run/media/flyin1501/Data/mega/Projects/1.done/20160619.music.cover.銀河録 - はるまきごはん/銀河録 UST.zip
 File3[$e]=/run/media/flyin1501/Data/assets/blender/Addons/grass_free.zip
 File4[$e]=/run/media/flyin1501/Data/games/1BeatHeart_1.00/1BeatHeart_1.00.zip
-File5[$e]=/run/media/flyin1501/Data/mega/Projects/working.music.cover.utau.Alice in 冷凍庫 - orangestar/Alice_in_冷凍庫ust.zip
-File6[$e]=/run/media/flyin1501/Data/games/Minecraft/Minecraft.jar
-File7[$e]=/run/media/flyin1501/Data/HalfLife2OldEngine2-0.zip
-File8[$e]=$HOME/z5/lineage-14.1-20170720-UNOFFICIAL-sumire.zip
-File9[$e]=$HOME/z5/RR-N-v5.8.5-20171114-sumire-Unofficial_zach.zip
+File5[$e]=/run/media/flyin1501/Data/games/Minecraft/Minecraft.jar
+File6[$e]=/run/media/flyin1501/Data/HalfLife2OldEngine2-0.zip
+File7[$e]=$HOME/z5/lineage-14.1-20170720-UNOFFICIAL-sumire.zip
+File8[$e]=$HOME/z5/RR-N-v5.8.5-20171114-sumire-Unofficial_zach.zip
+File9[$e]=/run/media/flyin1501/Data/assets/fonts/JK Gothic/JK ゴシック.zip
 Name1[$e]=predit1730.zip
-Name10[$e]=theleagueof-sorts-mill-goudy-0607289.zip
+Name10[$d]
 Name2[$e]=銀河録 UST.zip
 Name3[$e]=grass_free.zip
 Name4[$e]=1BeatHeart_1.00.zip
-Name5[$e]=Alice_in_冷凍庫ust.zip
-Name6[$e]=Minecraft.jar
-Name7[$e]=HalfLife2OldEngine2-0.zip
-Name8[$e]=lineage-14.1-20170720-UNOFFICIAL-sumire.zip
-Name9[$e]=RR-N-v5.8.5-20171114-sumire-Unofficial_zach.zip
+Name5[$e]=Minecraft.jar
+Name6[$e]=HalfLife2OldEngine2-0.zip
+Name7[$e]=lineage-14.1-20170720-UNOFFICIAL-sumire.zip
+Name8[$e]=RR-N-v5.8.5-20171114-sumire-Unofficial_zach.zip
+Name9[$e]=JK ゴシック.zip
 
 [Viewer]
 Height 1080=636
