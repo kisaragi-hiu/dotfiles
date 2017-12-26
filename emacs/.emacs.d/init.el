@@ -54,19 +54,6 @@
 (setq indent-tabs-mode nil)
 (infer-indentation-style)
 
-(straight-use-package 'evil-leader)
-(require 'evil-leader)
-(evil-leader/set-leader "<SPC>")
-(evil-leader/set-key
-  "x" 'execute-extended-command
-  "el" 'eval-last-sexp
-  "eb" 'eval-buffer
-  "ed" 'eval-defun
-  "hf" 'counsel-describe-function
-  "hv" 'counsel-describe-variable
-  "hb" 'counsel-descbinds)
-(global-evil-leader-mode)
-
 (straight-use-package 'evil)
 
 (straight-use-package 'evil-surround)
@@ -93,14 +80,36 @@
 (global-linum-mode 1)
 
 ;; Keybinds
-(global-set-key (kbd "M-l") 'evil-next-buffer)
-(global-set-key (kbd "M-h") 'evil-prev-buffer)
-
 (straight-use-package 'hydra)
-(defhydra hydra-zoom (global-map "<f2>")
-    "zoom"
-    ("g" text-scale-increase "in")
-    ("l" text-scale-decrease "out"))
+(defhydra hydra-eval ()
+  "eval stuff"
+  ("x" execute-extended-command)
+  ("l" eval-last-sexp)
+  ("b" eval-buffer)
+  ("d" eval-defun))
+
+(defhydra hydra-help ()
+  "help"
+  ("f" counsel-describe-function)
+  ("v" counsel-describe-variable)
+  ("b" counsel-descbinds))
+
+(defhydra hydra-zoom ()
+  "zoom"
+  ; up and down → in and out
+  ("k" text-scale-increase "in")
+  ("j" text-scale-decrease "out"))
+
+(straight-use-package 'evil-leader)
+(require 'evil-leader)
+(evil-leader/set-leader ",")
+(evil-leader/set-key
+  "e" 'hydra-eval/body
+  "h" 'hydra-help/body
+  "z" 'hydra-zoom/body
+  "l" 'evil-next-buffer
+  "h" 'evil-prev-buffer)
+(global-evil-leader-mode)
 
 ;; Auto completion
 (straight-use-package 'company)
