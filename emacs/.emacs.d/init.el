@@ -1,18 +1,16 @@
-(let ((bootstrap-file (concat user-emacs-directory "straight/bootstrap.el"))
-      (bootstrap-version 2))
-  (unless (file-exists-p bootstrap-file)
-    (with-current-buffer
-        (url-retrieve-synchronously
-         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
-         'silent 'inhibit-cookies)
-      (goto-char (point-max))
-      (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
-
-(unless (require 'use-package nil 'noerror)
-  (straight-use-package 'use-package))
-
-(setq use-package-always-ensure t)
+;; Install straight.el
+(defun straight-init ()
+  (let ((bootstrap-file (concat user-emacs-directory "straight/bootstrap.el"))
+	(bootstrap-version 2))
+    (unless (file-exists-p bootstrap-file)
+      (with-current-buffer
+	  (url-retrieve-synchronously
+	   "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+	   'silent 'inhibit-cookies)
+	(goto-char (point-max))
+	(eval-print-last-sexp)))
+    (load bootstrap-file nil 'nomessage)))
+(straight-init)
 
 ;; File library
 (straight-use-package 'f)
@@ -115,18 +113,22 @@
 (ivy-mode 1)
 
 ;; Languages
-(straight-use-package 'racket-mode)
-(straight-use-package 'pollen-mode)
-(require 'pollen-mode)
+(defun kisaragi/setup-languages ()
+  (straight-use-package 'racket-mode)
+  (straight-use-package 'pollen-mode)
+  (require 'pollen-mode)
 
-(straight-use-package 'markdown-mode)
-(straight-use-package 'fish-mode)
+  (straight-use-package 'markdown-mode)
+  (straight-use-package 'fish-mode)
 
-(straight-use-package 'elm-mode)
-(setq elm-format-on-save t)
+  (straight-use-package 'elm-mode)
+  (setq elm-format-on-save t)
 
-(straight-use-package 'vimrc-mode)
-(add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
+  (straight-use-package 'vimrc-mode)
+  (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
+
+  (straight-use-package 'web-mode))
+(kisaragi/setup-languages)
 
 (straight-use-package 'web-mode)
 (evil-define-key 'normal web-mode-map
@@ -135,45 +137,44 @@
   (kbd "<SPC>r") #'web-mode-element-rename)
 
 ;; UI
-(setq initial-scratch-message nil)
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(if (functionp 'scroll-bar-mode)
-    (scroll-bar-mode -1))
-(global-hl-line-mode 1)
-(show-paren-mode 1)
+(defun kisaragi/setup-ui ()
+  (setq initial-scratch-message nil) ; leave scratch empty
+  ;; disable toolbar, menubar, scrollbar
+  (tool-bar-mode -1)
+  (menu-bar-mode -1)
+  (if (functionp 'scroll-bar-mode)
+      (scroll-bar-mode -1))
 
-;; (global-whitespace-newline-mode 0)
+  ;; highlight current line
+  (global-hl-line-mode 1)
+  (global-whitespace-newline-mode 1)
 
-(straight-use-package 'rainbow-delimiters)
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-(add-hook 'pollen-mode-hook #'rainbow-delimiters-mode)
+  ;; show matching parens
+  (show-paren-mode 1)
+  (straight-use-package 'rainbow-delimiters)
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+  (add-hook 'pollen-mode-hook #'rainbow-delimiters-mode)
 
-(straight-use-package 'spaceline)
-(require 'spaceline-config)
-(setq-default spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
-(setq powerline-text-scale-factor 1.2)
-(spaceline-spacemacs-theme)
+  ;; spaceline
+  (straight-use-package 'spaceline)
+  (require 'spaceline-config)
+  (setq-default spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
+  (setq powerline-text-scale-factor 1.2)
+  (spaceline-spacemacs-theme))
+(kisaragi/setup-ui)
 
-; Show minor mode count instead of their names
-(straight-use-package 'nummm-mode)
-(nummm-mode t)
+(defun kisaragi/setup-fonts ()
+  (set-default-font (font-spec :name "Overpass Mono" :size 20))
+  (if (functionp 'set-fontset-font)
+      (set-fontset-font "fontset-default" 'unicode
+			(font-spec :name "Noto Sans Mono CJK TC" :size 18))))
+(kisaragi/setup-fonts)
 
-(set-default-font (font-spec :name "Overpass Mono" :size 20))
-(if (functionp 'set-fontset-font)
-    (set-fontset-font "fontset-default" 'unicode
-                      (font-spec :name "Noto Sans Mono CJK TC" :size 18)))
-
-(straight-use-package 'monokai-theme)
-
-(straight-use-package 'material-theme)
-(load-theme 'material t)
-
-;; (use-package seoul256-theme
-;;   :init
-;;   (setq seoul256-background 235)
-;;   :config
-;;   (load-theme 'seoul256 t))
+(defun kisaragi/setup-colorscheme ()
+  (straight-use-package 'monokai-theme)
+  (straight-use-package 'material-theme)
+  (load-theme 'material t))
+(kisaragi/setup-colorscheme)
 
 ;; Apps
 (straight-use-package 'magit)
