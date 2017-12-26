@@ -191,7 +191,9 @@
 
 ;; Apps
 (straight-use-package 'magit)
+(straight-use-package 'evil-magit)
 (require 'magit)
+(require 'evil-magit)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
