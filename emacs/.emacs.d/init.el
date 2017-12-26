@@ -25,6 +25,16 @@
 (delete-selection-mode 1)
 (setq tab-always-indent 'complete)
 
+(straight-use-package 'parinfer)
+(global-set-key (kbd "C-,") 'parinfer-toggle-mode)
+(setq parinfer-extensions
+      '(defaults
+	 pretty-parens
+	 evil
+	 smart-tab
+	 smart-yank))
+(add-hook 'racket-mode-hook #'parinfer-mode)
+
 ;; run moccur-grep
 ;; then "C-c C-i" / "C-x C-q" to start editing
 ;; "C-c C-f" to "commit", "C-c C-k" to abort, "C-c C-r to clear changes"
