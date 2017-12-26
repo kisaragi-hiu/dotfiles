@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[ja_JP]=
+Comment=
+Exec=yakuake
+GenericName[ja_JP]=
+GenericName=
+Icon=system-run
+MimeType=
+Name[ja_JP]=
+Name=
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
