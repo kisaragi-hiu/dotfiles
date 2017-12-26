@@ -248,6 +248,8 @@ augroup fish
     " https://stackoverflow.com/questions/6366049/vim-in-file-commands
     autocmd FileType sh call TextEnableCodeSnip('racket', '<<RKT', 'RKT', 'SpecialComment')
     autocmd FileType sh call TextEnableCodeSnip('racket', '<<''RKT''', 'RKT', 'SpecialComment')
+    autocmd FileType sh call TextEnableCodeSnip('python', '<<PYTHON', 'PYTHON', 'SpecialComment')
+    autocmd FileType sh call TextEnableCodeSnip('python', '<<''PYTHON''', 'PYTHON', 'SpecialComment')
 
     autocmd FileType fish setlocal tabstop=4
     autocmd FileType fish setlocal softtabstop=4
