@@ -24,7 +24,7 @@ splitterSizes=892,337
 
 [Recent Files]
 File1[$e]=/run/media/flyin1501/Data/software/UTAU/presamp0.8996/predit1730.zip
-File10[$d]
+File10[$e]=$HOME/.cache/pacaur/quicklisp/quicklisp-20150128-1-any.pkg.tar.xz
 File2[$e]=/run/media/flyin1501/Data/mega/Projects/1.done/20160619.music.cover.銀河録 - はるまきごはん/銀河録 UST.zip
 File3[$e]=/run/media/flyin1501/Data/assets/blender/Addons/grass_free.zip
 File4[$e]=/run/media/flyin1501/Data/games/1BeatHeart_1.00/1BeatHeart_1.00.zip
@@ -34,7 +34,7 @@ File7[$e]=$HOME/z5/lineage-14.1-20170720-UNOFFICIAL-sumire.zip
 File8[$e]=$HOME/z5/RR-N-v5.8.5-20171114-sumire-Unofficial_zach.zip
 File9[$e]=/run/media/flyin1501/Data/assets/fonts/JK Gothic/JK ゴシック.zip
 Name1[$e]=predit1730.zip
-Name10[$d]
+Name10[$e]=quicklisp-20150128-1-any.pkg.tar.xz
 Name2[$e]=銀河録 UST.zip
 Name3[$e]=grass_free.zip
 Name4[$e]=1BeatHeart_1.00.zip

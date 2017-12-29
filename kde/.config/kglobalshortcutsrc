@@ -39,7 +39,7 @@ _k_friendly_name=電源管理
 display=Display,Display\tMeta+P,切換顯示
 
 [khotkeys]
-_k_friendly_name=KDE システム設定
+_k_friendly_name=KDE Daemon
 {1d2caced-b83e-4d05-b2c8-52578680953c}=none,none,Take Rectangular Region Screenshot
 {2bf8adc2-f816-49dc-a08b-eeaeb0d05bc1}=Meta+P,none,Restart PulseAudio
 {4776e0ad-0331-45d6-8b20-76b750067c04}=Meta+I,none,mouse sensitivity 1.6x
