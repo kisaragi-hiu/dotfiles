@@ -10,8 +10,7 @@ has_command () {
 # map, filter, fold
 zplug "Tarrasch/zsh-functional"
 
-if has_command jq &&
-    (has_command fzf || has_command peco); then
+if has_command jq && has_command fzf; then
     # use C-s to complete emoji
     zplug "b4b4r07/emoji-cli"
 fi
