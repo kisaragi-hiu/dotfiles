@@ -16,6 +16,15 @@
 (straight-use-package 'f)
 (require 'f)
 
+;; color
+(defun kisaragi/setup-colorscheme ()
+  (straight-use-package 'monokai-theme)
+  (straight-use-package 'material-theme)
+  (straight-use-package 'nord-theme)
+  ;; (setq nord-comment-brightness 20) ; 0 is default
+  (load-theme 'material t))
+(kisaragi/setup-colorscheme)
+
 ;; Editing
 ;; (electric-pair-mode 1)
 (straight-use-package 'smartparens)
@@ -160,7 +169,6 @@
 
   ;; highlight current line
   (global-hl-line-mode 1)
-  (global-whitespace-newline-mode 1)
 
   ;; show matching parens
   (show-paren-mode 1)
@@ -180,14 +188,8 @@
   (set-default-font (font-spec :name "Overpass Mono" :size 20))
   (if (functionp 'set-fontset-font)
       (set-fontset-font "fontset-default" 'unicode
-			(font-spec :name "Noto Sans Mono CJK TC" :size 18))))
+                        (font-spec :name "Noto Sans Mono CJK TC" :size 18))))
 (kisaragi/setup-fonts)
-
-(defun kisaragi/setup-colorscheme ()
-  (straight-use-package 'monokai-theme)
-  (straight-use-package 'material-theme)
-  (load-theme 'material t))
-(kisaragi/setup-colorscheme)
 
 ;; Apps
 (straight-use-package 'magit)
@@ -195,11 +197,21 @@
 (require 'magit)
 (require 'evil-magit)
 
+(straight-use-package 'evil-org)
+(require 'evil-org)
+(require 'evil-org-agenda)
+(add-hook 'org-mode-hook 'evil-org-mode)
+(evil-org-set-key-theme '(navigation insert textobjects additional calendar))
+(evil-org-agenda-set-keys)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("8e0c6a96a17a5b45979c31265821053aff9beea9fb5ac5e41130e0c27a89214e" "a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" default)))
  '(inhibit-startup-screen t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
