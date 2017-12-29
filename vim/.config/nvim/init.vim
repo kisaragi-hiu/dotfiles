@@ -26,8 +26,8 @@ let g:airline#extensions#whitespace#enabled = 1
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 Plug 'tomasr/molokai'
+Plug 'arcticicestudio/nord-vim'
 Plug 'skielbasa/vim-material-monokai'
-let g:airline_theme='materialmonokai'
 
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
@@ -169,7 +169,7 @@ endfunction
 
 set background=dark
 set termguicolors
-colorscheme material-monokai
+colorscheme nord
 
 set noshowmode "mode is shown in statusline already, hide it
 set number
@@ -256,6 +256,11 @@ augroup fish
     autocmd FileType fish setlocal textwidth=79
     autocmd FileType fish setlocal foldmethod=expr
     autocmd FileType fish compiler fish
+augroup END
+
+augroup pollen
+    autocmd!
+    autocmd FileType pollen setlocal commentstring=◊;\ %s
 augroup END
 
 augroup ruby
