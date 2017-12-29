@@ -10,3 +10,6 @@
 [submodule "_nord-konsole"]
 	path = _nord-konsole
 	url = https://github.com/arcticicestudio/nord-konsole.git
+[submodule "_nord-dircolors"]
+	path = _nord-dircolors
+	url = https://github.com/arcticicestudio/nord-dircolors.git
