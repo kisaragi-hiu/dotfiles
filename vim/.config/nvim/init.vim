@@ -328,6 +328,7 @@ augroup END
 
 augroup javascript
     autocmd!
+    autocmd FileType html call TextEnableCodeSnip('javascript', '<script>', '</script>', 'SpecialComment')
     autocmd BufEnter javascript setlocal tabstop=2
     autocmd BufEnter javascript setlocal shiftwidth=2
     autocmd BufEnter javascript setlocal softtabstop=2
