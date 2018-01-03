@@ -1288,14 +1288,14 @@ Uuid={c4af49f1-d5ec-49d1-93a5-d788940752ba}
 [Data_9]
 Comment=コメント
 Enabled=true
-Name=f35 trigger
+Name=trigger
 Type=SIMPLE_ACTION_DATA
 
 [Data_9Actions]
 ActionsCount=1
 
 [Data_9Actions0]
-CommandURL=echo F35 triggered > /tmp/f35trigger; sleep 3; rm /tmp/f35trigger
+CommandURL=echo triggered > /tmp/trigger; sleep 3; rm /tmp/trigger
 Type=COMMAND_URL
 
 [Data_9Conditions]
