@@ -1,0 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/bash
+echo git-pulling notes/ ...
+cd /sdcard/0.git/notes/
+git pull
+echo git-pulling learning/ ...
+cd /sdcard/0.git/learning/
+git pull
