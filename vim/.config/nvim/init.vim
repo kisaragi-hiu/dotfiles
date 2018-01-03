@@ -219,7 +219,25 @@ nnoremap <leader>h :bp<CR>
 "Terminal
 tnoremap <leader><Esc> <C-\><C-n>
 
-"Language specific settings
+" highlight >120 char lines & trailing whitespaces
+match ErrorMsg '\%>120v.\+'
+match ErrorMsg '\s\+$'
+
+"statusline
+if &statusline ==# ''
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+endif
+
+"syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_racket_racket_checker = 1
+let g:syntastic_sh_shellcheck_args = "-x"
+let g:elm_syntastic_show_warnings = 1
 
 " == augroups ==
 augroup main
@@ -320,22 +338,3 @@ augroup xml
     autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
 augroup END
 
-" highlight >120 char lines & trailing whitespaces
-match ErrorMsg '\%>120v.\+'
-match ErrorMsg '\s\+$'
-
-"statusline
-if &statusline ==# ''
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-endif
-
-"syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_racket_racket_checker = 1
-let g:syntastic_sh_shellcheck_args = "-x"
-let g:elm_syntastic_show_warnings = 1
