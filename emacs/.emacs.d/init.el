@@ -43,6 +43,8 @@
 	 smart-tab
 	 smart-yank))
 (add-hook 'racket-mode-hook #'parinfer-mode)
+(add-hook 'lisp-mode-hook #'parinfer-mode)
+(add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
 
 ;; run moccur-grep
 ;; then "C-c C-i" / "C-x C-q" to start editing
