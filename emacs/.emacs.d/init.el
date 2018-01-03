@@ -77,8 +77,22 @@
 (global-set-key (kbd "C-=") 'evil-numbers/inc-at-pt)
 (global-set-key (kbd "C--") 'evil-numbers/dec-at-pt)
 
+;; evil text objects
 (straight-use-package '(evil-textobj-line :type git :host github
                                           :repo "syohex/evil-textobj-line"))
+;; https://stackoverflow.com/questions/18102004
+(defmacro define-and-bind-text-object (key start-regex end-regex)
+  (let ((inner-name (make-symbol "inner-name"))
+        (outer-name (make-symbol "outer-name")))
+    `(progn
+       (evil-define-text-object ,inner-name (count &optional beg end type)
+         (evil-select-paren ,start-regex ,end-regex beg end type count nil))
+       (evil-define-text-object ,outer-name (count &optional beg end type)
+         (evil-select-paren ,start-regex ,end-regex beg end type count t))
+       (define-key evil-inner-text-objects-map ,key (quote ,inner-name))
+       (define-key evil-outer-text-objects-map ,key (quote ,outer-name)))))
+;; no idea how this should be used
+(define-and-bind-text-object "." "\. " "\. ")
 (setq evil-move-beyond-eol t)
 (evil-mode 1)
 
