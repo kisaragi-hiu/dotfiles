@@ -1,14 +1,14 @@
 ;; Install straight.el
 (defun straight-init ()
   (let ((bootstrap-file (concat user-emacs-directory "straight/bootstrap.el"))
-	(bootstrap-version 2))
+        (bootstrap-version 2))
     (unless (file-exists-p bootstrap-file)
       (with-current-buffer
-	  (url-retrieve-synchronously
-	   "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
-	   'silent 'inhibit-cookies)
-	(goto-char (point-max))
-	(eval-print-last-sexp)))
+          (url-retrieve-synchronously
+           "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+           'silent 'inhibit-cookies)
+        (goto-char (point-max))
+        (eval-print-last-sexp)))
     (load bootstrap-file nil 'nomessage)))
 (straight-init)
 
@@ -38,10 +38,10 @@
 (global-set-key (kbd "C-,") 'parinfer-toggle-mode)
 (setq parinfer-extensions
       '(defaults
-	 pretty-parens
-	 evil
-	 smart-tab
-	 smart-yank))
+         pretty-parens
+         evil
+         smart-tab
+         smart-yank))
 (add-hook 'racket-mode-hook #'parinfer-mode)
 (add-hook 'lisp-mode-hook #'parinfer-mode)
 (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
@@ -215,9 +215,4 @@
    (quote
     ("8e0c6a96a17a5b45979c31265821053aff9beea9fb5ac5e41130e0c27a89214e" "a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" default)))
  '(inhibit-startup-screen t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(custom-set-faces)
