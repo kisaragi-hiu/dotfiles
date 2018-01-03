@@ -125,8 +125,9 @@ end
 
 Plug 'MicahElliott/vrod'
 Plug 'fasiha/pollen.vim'
+Plug 'tpope/vim-speeddating' | Plug 'jceb/vim-orgmode'
 Plug 'Firef0x/PKGBUILD.vim'
-
+Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown' "tabular is a dependency
 "linter
 Plug 'vim-syntastic/syntastic'
 
