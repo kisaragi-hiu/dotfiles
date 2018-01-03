@@ -1,3 +1,4 @@
+" == init settings ==
 set hidden
 set encoding=utf-8
 set fileencoding=utf-8
@@ -9,7 +10,7 @@ set fileencoding=utf-8
 
 cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'bd' : 'q')<CR>
 
-"vim-plug
+" == plugins ==
 call plug#begin('~/.vim/plugged')
 
 "Config
@@ -106,7 +107,7 @@ Plug 'guns/vim-sexp' "object: {a,i}{fFse} for forms, toplevel forms, strings, an
 " =-: indent toplevel form
 " more at github.com/guns/vim-sexp
 
-"filetypes
+"filetypes / languages
 Plug 'sheerun/vim-polyglot' "lang pack
 let g:polyglot_disabled = [ 'elm' ]
 
@@ -141,6 +142,7 @@ Plug 'EinfachToll/DidYouMean'
 
 call plug#end()
 
+" == function definitions ==
 " http://vim.wikia.com/wiki/Different_syntax_highlighting_within_regions_of_a_file
 function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
   let ft=toupper(a:filetype)
@@ -167,6 +169,7 @@ function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
   \ contains=@'.group
 endfunction
 
+" == settings ==
 set background=dark
 set termguicolors
 colorscheme nord
@@ -200,7 +203,7 @@ set whichwrap=b,s,<,>,[,]
 "Mouse support
 set mouse=a
 
-"Keys
+" == keys ==
 "Space -> leader
 " nnoremap <space> <nop>
 let mapleader = ","
@@ -217,6 +220,8 @@ nnoremap <leader>h :bp<CR>
 tnoremap <leader><Esc> <C-\><C-n>
 
 "Language specific settings
+
+" == augroups ==
 augroup main
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
