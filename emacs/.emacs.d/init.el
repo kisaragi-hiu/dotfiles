@@ -113,6 +113,17 @@
   ("b" eval-buffer)
   ("d" eval-defun))
 
+(defhydra hydra-buffer ()
+  "switch buffer"
+  ("d" evil-delete-buffer)
+  ("n" evil-next-buffer)
+  ("p" evil-prev-buffer))
+
+(defhydra hydra-magit ()
+  "magit operations"
+  ("s" magit-status)
+  ("↑" magit-push-current))
+
 (defhydra hydra-help ()
   "help"
   ("f" counsel-describe-function)
@@ -132,8 +143,11 @@
   "e" 'hydra-eval/body
   "h" 'hydra-help/body
   "z" 'hydra-zoom/body
+  "b" 'hydra-buffer/body
+  "g" 'hydra-magit/body
   "l" 'evil-next-buffer
-  "h" 'evil-prev-buffer)
+  "h" 'evil-prev-buffer
+  "pt" 'parinfer-toggle-mode)
 (global-evil-leader-mode)
 
 ;; Auto completion
