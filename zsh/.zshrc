@@ -1,4 +1,4 @@
-if ! [[ -f $HOME/.zplug/init.zsh ]]; then
+if [[ ! -f ~/.zplug/init.zsh ]]; then
     git clone https://github.com/zplug/zplug.git ~/.zplug
 fi
 source ~/.zplug/init.zsh
@@ -7,8 +7,10 @@ has_command () {
     type $1 &>/dev/null
 }
 
-# map, filter, fold
+# libraries
+## map, filter, fold
 zplug "Tarrasch/zsh-functional"
+zplug "mafredri/zsh-async", defer:0
 
 if has_command jq && has_command fzf; then
     # use C-s to complete emoji
@@ -25,18 +27,15 @@ fi
 zplug "eendroroy/alien"
 
 zplug "zsh-users/zsh-autosuggestions"
+zplug "lib/completion", from:oh-my-zsh
 zplug "hlissner/zsh-autopair", defer:2
 zplug "zdharma/fast-syntax-highlighting"
 zplug load
 
-# cd to git repo root
-# http://blog.sushi.money/entry/20100211/1265879271
-u () {
-    cd ./$(git rev-parse --show-cdup)
-    if [ $# = 1 ]; then
-        cd $1
-    fi
-}
+# ~/.zsh/functions/
+for i in $(find ~/.zsh/functions/ -name '*.zsh'); do
+    source "$i"
+done
 
-bindkey -v
-export KEYTIMEOUT=1
+# bindkey -v
+# export KEYTIMEOUT=1
