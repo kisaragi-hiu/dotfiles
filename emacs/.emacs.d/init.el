@@ -120,7 +120,8 @@
   ("d" eval-defun))
 
 (defhydra hydra-buffer ()
-  "switch buffer"
+  "l → buffer list, d → :bd, n → :bn, p → :bp\n"
+  ("l" ivy-switch-buffer)
   ("d" evil-delete-buffer)
   ("n" evil-next-buffer)
   ("p" evil-prev-buffer))
