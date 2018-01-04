@@ -129,7 +129,8 @@
 (defhydra hydra-magit ()
   "magit operations"
   ("s" magit-status)
-  ("↑" magit-push-current))
+  ("↑" magit-push-current)
+  ("↓" magit-pull))
 
 (defhydra hydra-help ()
   "help"
