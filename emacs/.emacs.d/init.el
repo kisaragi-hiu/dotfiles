@@ -161,6 +161,7 @@
 (straight-use-package 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 (require 'company)
+(add-to-list 'company-backends 'company-files)
 
 (straight-use-package 'company-shell)
 (add-to-list 'company-backends '(company-shell company-shell-env))
