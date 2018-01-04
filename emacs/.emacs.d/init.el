@@ -16,6 +16,12 @@
 (straight-use-package 'f)
 (require 'f)
 
+;; save backups and autosaves to system temp dir
+(setq backup-directory-alist
+      (list (cons ".*" temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      (list (list ".*" temporary-file-directory t)))
+
 ;; color
 (defun kisaragi/setup-colorscheme ()
   (straight-use-package 'monokai-theme)
