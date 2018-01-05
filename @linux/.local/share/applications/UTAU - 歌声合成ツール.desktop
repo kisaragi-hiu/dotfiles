@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=UTAU - 歌声合成ツール
+Exec=env WINEPREFIX="/home/flyin1501/.wineprefix/UTAU" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/flyin1501/.wineprefix/UTAU/dosdevices/c:/users/flyin1501/Start\\ Menu/Programs/U\\ T\\ A\\ U/UTAU\\ -\\ 歌声合成ツール.lnk
+Type=Application
+StartupNotify=true
+Path=/home/flyin1501/.wineprefix/UTAU/dosdevices/c:/Program Files (x86)/UTAU/
+Icon=F3DC__EC0338140B0E2F5FC3652D.0
+StartupWMClass=utau.exe

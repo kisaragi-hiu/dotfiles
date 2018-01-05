@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=dex %U
+MimeType=application/x-desktop;
+Name=dex
+NoDisplay=true
+Type=Application

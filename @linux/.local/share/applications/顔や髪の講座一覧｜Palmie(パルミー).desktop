@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=顔や髪の講座一覧｜Palmie(パルミー)
+Exec=/opt/google/chrome-unstable/google-chrome-unstable --profile-directory=Default --app-id=nfbflfekpcdlgmgkbdcbiadeibecdljc
+Icon=chrome-nfbflfekpcdlgmgkbdcbiadeibecdljc-Default
+StartupWMClass=crx_nfbflfekpcdlgmgkbdcbiadeibecdljc

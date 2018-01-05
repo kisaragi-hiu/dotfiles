@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Unicode
+Exec=/opt/google/chrome-unstable/google-chrome-unstable --user-data-dir=/home/flyin1501/.config/google-chrome-unstable --profile-directory=Default --app-id=ahgignikbpeboaanhpliahmojhiacjcn
+Icon=chrome-ahgignikbpeboaanhpliahmojhiacjcn-Default
+StartupWMClass=crx_ahgignikbpeboaanhpliahmojhiacjcn

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Steam (Wine)
+Comment=Windows version of Steam with Wine
+Type=Application
+Exec=/usr/share/playonlinux/playonlinux --run "Steam" %F
+Icon=/home/flyin1501/.PlayOnLinux//icones/full_size/Steam
+Name[fr_FR]=Steam
+StartupWMClass=Steam.lnk
+Categories=Game;

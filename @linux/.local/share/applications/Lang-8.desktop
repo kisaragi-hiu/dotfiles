@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Lang-8
+Exec=/opt/google/chrome-unstable/google-chrome-unstable --profile-directory=Default --app-id=neacbkjhhbeeohjocoopbblmkhfcednp
+Icon=chrome-neacbkjhhbeeohjocoopbblmkhfcednp-Default
+StartupWMClass=crx_neacbkjhhbeeohjocoopbblmkhfcednp

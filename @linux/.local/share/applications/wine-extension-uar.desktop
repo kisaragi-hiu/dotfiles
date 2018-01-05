@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=歌声合成ツール - UTAU
+MimeType=application/x-wine-extension-uar;
+Exec=env WINEPREFIX="/home/flyin1501/.wineprefix/UTAU" /usr/bin/wine start /ProgIDOpen UTAUInstallerArchive %f
+NoDisplay=true
+StartupNotify=true
+Icon=2BC6_utau.0

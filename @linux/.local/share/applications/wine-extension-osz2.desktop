@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=osu!
+MimeType=application/x-wine-extension-osz2;
+Exec=env WINEPREFIX="/home/flyin1501/.wineprefix/osu" /usr/bin/wine start /ProgIDOpen osu! %f
+NoDisplay=true
+StartupNotify=true
+Icon=6CEA_osu!.0
