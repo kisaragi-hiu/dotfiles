@@ -5,6 +5,7 @@ Comment=A desktop agnostic launcher
 Exec=albert
 GenericName[ja_JP]=Launcher
 GenericName=Launcher
+Hidden=true
 Icon=albert
 MimeType=
 Name[ja_JP]=Albert
