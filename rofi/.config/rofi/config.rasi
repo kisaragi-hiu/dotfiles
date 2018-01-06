@@ -1,26 +1,31 @@
 // config.rasi
 // run rofi -dump-config to get this template
 configuration {
-   modi: "window,run,drun,combi";
+   /* Theming */
+   theme: "android_notification";
+   show-icons: true;
+   drun-icon-theme: "Papirus";
+   font: "Fira Sans 12";
+   line-margin: 2;
+   line-padding: 1;
    width: 50;
    lines: 15;
    columns: 1;
-   font: "mono 12";
-   bw: 1;
    location: 0;
    padding: 5;
    yoffset: 0;
    xoffset: 0;
+
+   /* Settings */
+   modi: "window,run,drun,combi";
    fixed-num-lines: true;
-   show-icons: false;
-   terminal: "rofi-sensible-terminal";
+   terminal: "konsole";
    ssh-client: "ssh";
    ssh-command: "{terminal} -e {ssh-client} {host}";
    run-command: "{cmd}";
    run-list-command: "";
    run-shell-command: "{terminal} -e {cmd}";
    window-command: "xkill -id {window}";
-   /* drun-icon-theme: ; */
    disable-history: false;
    sort: false;
    levenshtein-sort: false;
@@ -35,14 +40,11 @@ configuration {
    matching: "normal";
    tokenize: true;
    m: "-5";
-   line-margin: 2;
-   line-padding: 1;
    /* filter: ; */
    separator-style: "dash";
    hide-scrollbar: false;
    fullscreen: false;
    fake-transparency: false;
-   dpi: -1;
    threads: 0;
    scrollbar-width: 8;
    scroll-method: 0;
@@ -50,7 +52,8 @@ configuration {
    window-format: "{w}    {i}{c}   {t}";
    click-to-exit: true;
    show-match: true;
-   theme: "Adapta-Nokto";
+
+   /* == Key Bindings == */
    kb-primary-paste: "Control+V,Shift+Insert";
    kb-secondary-paste: "Control+v,Insert";
    kb-clear-line: "Control+w";
