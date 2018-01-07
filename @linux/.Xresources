@@ -13,10 +13,13 @@ xterm*renderFont: true
 xterm*faceName: Dejavu Sans Mono
 
 ! == urxvt ==
-URxvt.termName: screen-256color
+URxvt.termName: rxvt-unicode-256color
 URxvt.font: xft:Fira Code:size=12,\
             xft:Noto Sans CJK TC:size=12,\
             -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
 
 ! clickable URLs (from ArchWiki)
 URxvt.perl-ext-common: default,matcher
