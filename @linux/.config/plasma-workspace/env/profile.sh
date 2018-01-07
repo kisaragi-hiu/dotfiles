@@ -25,9 +25,7 @@ export DOTFILES_DIR="$HOME"/.dotfiles/
 # use qt5ct (within plasma as well)
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-# Workaround electron apps' global menu not functioning
-# by disabling election's global menu integration
-export ELECTRON_FORCE_WINDOW_MENU_BAR=1
+# export ELECTRON_FORCE_WINDOW_MENU_BAR=1 # electron global menu is fixed in 1.6.15
 
 # map tablet area to screen ratio
 xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
