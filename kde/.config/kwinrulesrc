@@ -1,23 +1,42 @@
 [1]
-Description=pittrace.exe のウィンドウ設定
-above=false
-aboverule=4
+Description=urxvt のアプリケーション設定
+above=true
+aboverule=3
 clientmachine=mf-pc
 clientmachinematch=0
 decocolor[$d]
 decocolorrule[$d]
-size=1,1
-sizerule=4
-title=拡張.*エディタ.*
-titlematch=3
-types=1
+noborder=true
+noborderrule=3
+position=488,328
+positionrule=3
+size=944,424
+sizerule=3
+title[$d]
+titlematch[$d]
+types[$d]
 windowrole[$d]
 windowrolematch[$d]
-wmclass=pittrace.exe
+wmclass=urxvt
 wmclasscomplete=false
-wmclassmatch=0
+wmclassmatch=1
 
 [10]
+Description=gwenview のアプリケーション設定
+clientmachine=localhost
+clientmachinematch=0
+decocolor=AdaptaNoktoWindowColors
+decocolorrule=2
+desktop[$d]
+desktoprule[$d]
+title[$d]
+titlematch[$d]
+types[$d]
+wmclass=gwenview
+wmclasscomplete=false
+wmclassmatch=1
+
+[11]
 Description=inkscape のアプリケーション設定
 clientmachine=mf-pc
 clientmachinematch=0
