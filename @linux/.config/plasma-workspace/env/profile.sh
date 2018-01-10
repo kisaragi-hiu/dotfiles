@@ -50,9 +50,10 @@ export PATH=\
 "$HOME"/git/Sudocabulary:\
 "$HOME"/bin:\
 "$HOME"/.racket/6.11/bin:\
-"$HOME"/.local/share/npm-global/bin:\ # `npm config set prefix ~/.local/share/npm-global` to set up global node prefix
+"$HOME"/.local/share/npm-global/bin:\
 "$HOME"/.gem/ruby/2.4.0/bin:\
 $PATH
+# `npm config set prefix ~/.local/share/npm-global` to set up global node prefix
 
 # == app behavior controls ==
 export SSH_ASKPASS="/usr/bin/ksshaskpass" # for storing ssh keys with kdewallet
