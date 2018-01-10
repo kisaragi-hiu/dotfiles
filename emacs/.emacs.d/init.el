@@ -183,6 +183,8 @@
   (straight-use-package 'racket-mode)
   (straight-use-package 'pollen-mode)
   (require 'pollen-mode)
+  (straight-use-package '(scribble-mode :type git :host github
+                                        :repo "emacs-pe/scribble-mode"))
 
   (straight-use-package 'markdown-mode)
   (straight-use-package 'fish-mode)
