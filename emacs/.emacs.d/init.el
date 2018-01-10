@@ -155,6 +155,7 @@
   "l" 'evil-next-buffer
   "h" 'evil-prev-buffer
   "pt" 'parinfer-toggle-mode)
+(evil-leader/set-key-for-mode 'org-mode "c" 'org-toggle-checkbox)
 (global-evil-leader-mode)
 
 ;; Auto completion
