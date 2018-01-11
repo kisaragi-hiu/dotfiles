@@ -26,9 +26,8 @@
 (defun kisaragi/setup-colorscheme ()
   (straight-use-package 'monokai-theme)
   (straight-use-package 'material-theme)
-  (straight-use-package 'nord-theme)
-  ;; (setq nord-comment-brightness 20) ; 0 is default
-  (load-theme 'material t))
+  (straight-use-package 'dracula-theme)
+  (load-theme 'dracula t))
 (kisaragi/setup-colorscheme)
 
 ;; Editing

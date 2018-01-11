@@ -29,6 +29,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tomasr/molokai'
 Plug 'arcticicestudio/nord-vim'
 Plug 'skielbasa/vim-material-monokai'
+Plug 'dracula/vim'
 
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
@@ -173,7 +174,7 @@ endfunction
 " == settings ==
 set background=dark
 set termguicolors
-colorscheme nord
+colorscheme dracula
 
 set noshowmode "mode is shown in statusline already, hide it
 set number
