@@ -61,6 +61,7 @@
 
 ;; Good'ol EmacsWiki
 ;; Indent with spaces by default
+;; indent-tabs-mode is buffer local
 (defun infer-indentation-style ()
   ;; if our source file uses tabs, we use tabs, if spaces spaces, and if
   ;; neither, we use the current indent-tabs-mode
@@ -68,8 +69,7 @@
         (tab-count (how-many "^\t" (point-min) (point-max))))
     (if (> space-count tab-count) (setq indent-tabs-mode nil))
     (if (> tab-count space-count) (setq indent-tabs-mode t))))
-(setq indent-tabs-mode nil)
-(infer-indentation-style)
+(setq-default indent-tabs-mode nil)
 
 (straight-use-package 'evil)
 
