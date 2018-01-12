@@ -215,6 +215,9 @@
   (if (functionp 'scroll-bar-mode)
       (scroll-bar-mode -1))
 
+  ;; highlight trailing whitespace
+  (setq-default show-trailing-whitespace t)
+
   ;; highlight current line
   (global-hl-line-mode 1)
 
