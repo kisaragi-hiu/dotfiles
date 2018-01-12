@@ -23,18 +23,14 @@
       (list (list ".*" temporary-file-directory t)))
 
 ;; color
-(defun kisaragi/set-theme ()
-  (if (display-graphic-p)
-      (load-theme 'dracula t)
-      (load-theme 'monokai t)))
-
 (defun kisaragi/setup-colorscheme ()
   (straight-use-package 'monokai-theme)
   (straight-use-package 'material-theme)
   (straight-use-package 'dracula-theme)
-  (kisaragi/set-theme)
+  (setq kisaragi/theme (if (display-graphic-p) 'dracula 'monokai))
+  (load-theme kisaragi/theme t)
   (add-hook 'after-make-frame-functions
-            'kisaragi/set-theme))
+            (lambda () (load-theme kisaragi/theme t))))
 (kisaragi/setup-colorscheme)
 
 ;; Editing
