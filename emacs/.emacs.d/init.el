@@ -135,19 +135,29 @@
   ("k" text-scale-increase "in")
   ("j" text-scale-decrease "out"))
 
+(defhydra hydra-racket ()
+  "racket stuff"
+  ("d" racket-describe "describe")
+  ("x" racket-trim-requires "trim requires")
+  ("b" racket-base-requires "base requires")
+  ("t" racket-tidy-requires "tidy requires")
+  ("m" racket-visit-module "visit module")
+  ("v" racket-visit-definition "visit definition"))
+
 (straight-use-package 'evil-leader)
 (require 'evil-leader)
 (evil-leader/set-leader ",")
 (evil-leader/set-key
   "e" 'hydra-eval/body
-  "h" 'hydra-help/body
   "z" 'hydra-zoom/body
   "b" 'hydra-buffer/body
   "g" 'hydra-magit/body
   "l" 'evil-next-buffer
   "h" 'evil-prev-buffer
-  "pt" 'parinfer-toggle-mode)
+  "p" 'parinfer-toggle-mode)
 (evil-leader/set-key-for-mode 'org-mode "c" 'org-toggle-checkbox)
+(evil-leader/set-key-for-mode 'racket-mode
+  "r" 'hydra-racket/body)
 (global-evil-leader-mode)
 
 ;; Auto completion
