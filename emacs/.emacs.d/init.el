@@ -207,8 +207,8 @@
   ;; disable toolbar, menubar, scrollbar
   (tool-bar-mode -1)
   (menu-bar-mode -1)
-  (if (functionp 'scroll-bar-mode)
-      (scroll-bar-mode -1))
+  (when (functionp 'scroll-bar-mode)
+    (scroll-bar-mode -1))
 
   ;; color
   (straight-use-package 'monokai-theme)
