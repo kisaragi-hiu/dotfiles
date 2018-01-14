@@ -219,11 +219,9 @@
   (add-hook 'after-make-frame-functions
             (lambda () (load-theme kisaragi/theme t)))
 
-  ;; highlight trailing whitespace
-  (setq-default show-trailing-whitespace t)
+  (setq-default show-trailing-whitespace t) ; highlight trailing whitespace
 
-  ;; highlight current line
-  (global-hl-line-mode 1)
+  (global-hl-line-mode 1) ; highlight current line
 
   ;; show matching parens
   (show-paren-mode 1)
