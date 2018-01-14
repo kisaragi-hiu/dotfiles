@@ -19,7 +19,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_10Actions0]
-CommandURL=import -window root $XDG_PICTURES_DIR/Screenshots/Screenshot_$(date +%Y%m%d_%H%M%S).jpg
+CommandURL=import -window root $XDG_PICTURES_DIR/Screenshots/Screenshot_$(date +%Y%m%d_%H%M%S).jpg; notify-send "Screenshot taken"
 Type=COMMAND_URL
 
 [Data_10Conditions]
