@@ -215,7 +215,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_17Actions0]
-CommandURL=rofi -combi-modi window,drun,run -show combi -modi combi
+CommandURL=rofi -combi-modi window,drun,run -show combi
 Type=COMMAND_URL
 
 [Data_17Conditions]
