@@ -247,6 +247,8 @@
 ;; Apps
 (straight-use-package 'magit)
 (straight-use-package 'evil-magit)
+(straight-use-package '(git-undo :type git :host github
+                                 :repo "jwiegley/git-undo-el"))
 (require 'magit)
 (require 'evil-magit)
 
