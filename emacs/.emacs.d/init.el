@@ -22,17 +22,6 @@
 (setq auto-save-file-name-transforms
       (list (list ".*" temporary-file-directory t)))
 
-;; color
-(defun kisaragi/setup-colorscheme ()
-  (straight-use-package 'monokai-theme)
-  (straight-use-package 'material-theme)
-  (straight-use-package 'dracula-theme)
-  (setq kisaragi/theme (if (display-graphic-p) 'dracula 'monokai))
-  (load-theme kisaragi/theme t)
-  (add-hook 'after-make-frame-functions
-            (lambda () (load-theme kisaragi/theme t))))
-(kisaragi/setup-colorscheme)
-
 ;; Editing
 ;; (electric-pair-mode 1)
 (straight-use-package 'smartparens)
@@ -210,6 +199,15 @@
   (menu-bar-mode -1)
   (if (functionp 'scroll-bar-mode)
       (scroll-bar-mode -1))
+
+  ;; color
+  (straight-use-package 'monokai-theme)
+  (straight-use-package 'material-theme)
+  (straight-use-package 'dracula-theme)
+  (setq kisaragi/theme (if (display-graphic-p) 'dracula 'monokai))
+  (load-theme kisaragi/theme t)
+  (add-hook 'after-make-frame-functions
+            (lambda () (load-theme kisaragi/theme t)))
 
   ;; highlight trailing whitespace
   (setq-default show-trailing-whitespace t)
