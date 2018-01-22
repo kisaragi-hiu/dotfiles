@@ -1,0 +1,5 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+printf "New diary entry title: "
+read title
+nvim $(bash /sdcard/0.git/diary/diary new "$title" noedit)

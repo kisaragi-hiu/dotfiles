@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/data/data/com.termux/files/usr/bin/fish
 echo git-pulling notes/ ...
 cd /sdcard/0.git/notes/
 git pull
