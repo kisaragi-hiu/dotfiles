@@ -273,12 +273,6 @@ augroup END
 
 augroup fish
     autocmd!
-    " https://stackoverflow.com/questions/6366049/vim-in-file-commands
-    autocmd FileType sh call TextEnableCodeSnip('racket', '<<RKT', 'RKT', 'SpecialComment')
-    autocmd FileType sh call TextEnableCodeSnip('racket', '<<''RKT''', 'RKT', 'SpecialComment')
-    autocmd FileType sh call TextEnableCodeSnip('python', '<<PYTHON', 'PYTHON', 'SpecialComment')
-    autocmd FileType sh call TextEnableCodeSnip('python', '<<''PYTHON''', 'PYTHON', 'SpecialComment')
-
     autocmd FileType fish setlocal tabstop=4
     autocmd FileType fish setlocal softtabstop=4
     autocmd FileType fish setlocal textwidth=79
@@ -326,6 +320,15 @@ augroup END
 
 augroup shell
     autocmd!
+    " https://stackoverflow.com/questions/6366049/vim-in-file-commands
+    autocmd FileType sh call TextEnableCodeSnip('racket', '<<RKT', 'RKT', 'SpecialComment')
+    autocmd FileType sh call TextEnableCodeSnip('racket', '<<''RKT''', 'RKT', 'SpecialComment')
+    autocmd FileType sh call TextEnableCodeSnip('c', '<<C', 'C', 'SpecialComment')
+    autocmd FileType sh call TextEnableCodeSnip('c', '<<''C''', 'C', 'SpecialComment')
+    autocmd FileType sh call TextEnableCodeSnip('json', '<<JSON', 'JSON', 'SpecialComment')
+    autocmd FileType sh call TextEnableCodeSnip('json', '<<''JSON''', 'JSON', 'SpecialComment')
+    autocmd FileType sh call TextEnableCodeSnip('python', '<<PYTHON', 'PYTHON', 'SpecialComment')
+    autocmd FileType sh call TextEnableCodeSnip('python', '<<''PYTHON''', 'PYTHON', 'SpecialComment')
     autocmd BufEnter sh setlocal tabstop=2
     autocmd BufEnter sh setlocal shiftwidth=2
     autocmd BufEnter sh setlocal softtabstop=2
