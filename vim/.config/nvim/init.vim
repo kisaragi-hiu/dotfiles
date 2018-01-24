@@ -175,6 +175,9 @@ endfunction
 set background=dark
 set termguicolors
 colorscheme dracula
+hi LineNr ctermbg=none guibg=none
+hi NonText ctermbg=none guibg=none
+hi Normal ctermbg=none guibg=none
 
 set noshowmode "mode is shown in statusline already, hide it
 set number
