@@ -1,5 +1,6 @@
 // config.rasi
-// run rofi -dump-config to get this template
+// vim: filetype=css
+// css-like format
 configuration {
    /* Theming */
    theme: "android_notification";
