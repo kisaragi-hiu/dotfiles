@@ -3,12 +3,10 @@
 // css-like format
 configuration {
    /* Theming */
-   theme: "android_notification";
-   show-icons: true;
+   theme: "Adapta-Nokto";
+   show-icons: false;
    drun-icon-theme: "Papirus";
    font: "Fira Sans 12";
-   line-margin: 2;
-   line-padding: 1;
    width: 50;
    lines: 15;
    columns: 1;
@@ -16,41 +14,26 @@ configuration {
    padding: 5;
    yoffset: 0;
    xoffset: 0;
+   eh: 1; /* row height (chars) */
+   bw: 0; /* border width */
+   /* sidebar-mode: true; */
+   /* levenshtein-sort: false; */
+   /* disable-history: true; */
 
    /* Settings */
    modi: "window,run,drun,combi";
-   fixed-num-lines: true;
-   terminal: "konsole";
-   ssh-client: "ssh";
-   ssh-command: "{terminal} -e {ssh-client} {host}";
-   run-command: "{cmd}";
-   run-list-command: "";
-   run-shell-command: "{terminal} -e {cmd}";
-   window-command: "xkill -id {window}";
-   disable-history: false;
-   sort: false;
-   levenshtein-sort: false;
-   case-sensitive: false;
-   cycle: true;
-   sidebar-mode: false;
-   eh: 1;
-   auto-select: false;
-   parse-hosts: false;
-   parse-known-hosts: true;
    combi-modi: "window,run";
-   matching: "normal";
    tokenize: true;
-   m: "-5";
-   /* filter: ; */
-   separator-style: "dash";
-   hide-scrollbar: false;
+   /* matching: "fuzzy"; */ /* matches LINE with emacs?!?! Disabling for now.*/
+   terminal: "konsole";
+   /* possible values: name, generic, categories, exec, comment, all */
+   /* drun-match-fields: "name,generic,categories"; */
+   fixed-num-lines: true;
    fullscreen: false;
-   fake-transparency: false;
-   threads: 0;
+   threads: 4;
    scrollbar-width: 8;
-   scroll-method: 0;
+   scroll-method: 1; /* 0=page, 1=centered */
    fake-background: "screenshot";
-   window-format: "{w}    {i}{c}   {t}";
    click-to-exit: true;
    show-match: true;
 
