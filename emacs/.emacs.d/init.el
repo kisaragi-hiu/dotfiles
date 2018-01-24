@@ -66,103 +66,84 @@
     (if (> tab-count space-count) (setq indent-tabs-mode t))))
 (setq-default indent-tabs-mode nil)
 
-(straight-use-package 'evil)
+(defun kisaragi/setup-keys ()
+  (straight-use-package 'evil)
+  (straight-use-package 'evil-surround)
+  (straight-use-package 'evil-commentary)
+  (global-evil-surround-mode)
+  (evil-commentary-mode)
 
-(straight-use-package 'evil-surround)
-(global-evil-surround-mode)
+  (straight-use-package 'evil-numbers)
+  (global-set-key (kbd "C-=") 'evil-numbers/inc-at-pt)
+  (global-set-key (kbd "C--") 'evil-numbers/dec-at-pt)
 
-(straight-use-package 'evil-commentary)
-(evil-commentary-mode)
+  ;; evil text objects
+  (straight-use-package '(evil-textobj-line :type git :host github
+                                            :repo "syohex/evil-textobj-line"))
+  (setq evil-move-beyond-eol t)
+  (evil-mode 1)
+  (straight-use-package 'evil-easymotion)
+  (evilem-default-keybindings "SPC")
 
-(straight-use-package 'evil-numbers)
-(global-set-key (kbd "C-=") 'evil-numbers/inc-at-pt)
-(global-set-key (kbd "C--") 'evil-numbers/dec-at-pt)
+  ;; Keybinds
+  (straight-use-package 'hydra)
+  (defhydra hydra-eval ()
+    "eval stuff"
+    ("x" execute-extended-command)
+    ("l" eval-last-sexp)
+    ("b" eval-buffer)
+    ("d" eval-defun))
 
-;; evil text objects
-(straight-use-package '(evil-textobj-line :type git :host github
-                                          :repo "syohex/evil-textobj-line"))
-;; https://stackoverflow.com/questions/18102004
-(defmacro define-and-bind-text-object (key start-regex end-regex)
-  (let ((inner-name (make-symbol "inner-name"))
-        (outer-name (make-symbol "outer-name")))
-    `(progn
-       (evil-define-text-object ,inner-name (count &optional beg end type)
-         (evil-select-paren ,start-regex ,end-regex beg end type count nil))
-       (evil-define-text-object ,outer-name (count &optional beg end type)
-         (evil-select-paren ,start-regex ,end-regex beg end type count t))
-       (define-key evil-inner-text-objects-map ,key (quote ,inner-name))
-       (define-key evil-outer-text-objects-map ,key (quote ,outer-name)))))
-;; no idea how this should be used
-(define-and-bind-text-object "." "\. " "\. ")
-(setq evil-move-beyond-eol t)
-(evil-mode 1)
+  (defhydra hydra-buffer ()
+    "l → buffer list, d → :bd, n → :bn, p → :bp\n"
+    ("l" ivy-switch-buffer)
+    ("d" evil-delete-buffer)
+    ("n" evil-next-buffer)
+    ("p" evil-prev-buffer))
 
-(straight-use-package 'evil-easymotion)
-(evilem-default-keybindings "SPC")
+  (defhydra hydra-magit ()
+    "magit operations"
+    ("s" magit-status)
+    ("↑" magit-push-current)
+    ("↓" magit-pull))
 
-(straight-use-package 'linum-relative)
-(setq linum-relative-current-symbol "")
-(linum-relative-global-mode 1)
-(global-linum-mode 1)
+  (defhydra hydra-help ()
+    "help"
+    ("f" counsel-describe-function)
+    ("v" counsel-describe-variable)
+    ("b" counsel-descbinds))
 
-;; Keybinds
-(straight-use-package 'hydra)
-(defhydra hydra-eval ()
-  "eval stuff"
-  ("x" execute-extended-command)
-  ("l" eval-last-sexp)
-  ("b" eval-buffer)
-  ("d" eval-defun))
+  (defhydra hydra-zoom ()
+    "zoom"
+    ; up and down → in and out
+    ("k" text-scale-increase "in")
+    ("j" text-scale-decrease "out"))
 
-(defhydra hydra-buffer ()
-  "l → buffer list, d → :bd, n → :bn, p → :bp\n"
-  ("l" ivy-switch-buffer)
-  ("d" evil-delete-buffer)
-  ("n" evil-next-buffer)
-  ("p" evil-prev-buffer))
+  (defhydra hydra-racket ()
+    "racket stuff"
+    ("d" racket-describe "describe")
+    ("x" racket-trim-requires "trim requires")
+    ("b" racket-base-requires "base requires")
+    ("t" racket-tidy-requires "tidy requires")
+    ("m" racket-visit-module "visit module")
+    ("v" racket-visit-definition "visit definition"))
 
-(defhydra hydra-magit ()
-  "magit operations"
-  ("s" magit-status)
-  ("↑" magit-push-current)
-  ("↓" magit-pull))
-
-(defhydra hydra-help ()
-  "help"
-  ("f" counsel-describe-function)
-  ("v" counsel-describe-variable)
-  ("b" counsel-descbinds))
-
-(defhydra hydra-zoom ()
-  "zoom"
-  ; up and down → in and out
-  ("k" text-scale-increase "in")
-  ("j" text-scale-decrease "out"))
-
-(defhydra hydra-racket ()
-  "racket stuff"
-  ("d" racket-describe "describe")
-  ("x" racket-trim-requires "trim requires")
-  ("b" racket-base-requires "base requires")
-  ("t" racket-tidy-requires "tidy requires")
-  ("m" racket-visit-module "visit module")
-  ("v" racket-visit-definition "visit definition"))
-
-(straight-use-package 'evil-leader)
-(require 'evil-leader)
-(evil-leader/set-leader ",")
-(evil-leader/set-key
-  "e" 'hydra-eval/body
-  "z" 'hydra-zoom/body
-  "b" 'hydra-buffer/body
-  "g" 'hydra-magit/body
-  "l" 'evil-next-buffer
-  "h" 'evil-prev-buffer
-  "p" 'parinfer-toggle-mode)
-(evil-leader/set-key-for-mode 'org-mode "c" 'org-toggle-checkbox)
-(evil-leader/set-key-for-mode 'racket-mode
-  "r" 'hydra-racket/body)
-(global-evil-leader-mode)
+  (straight-use-package 'evil-leader)
+  (require 'evil-leader)
+  (evil-leader/set-leader ",")
+  (evil-leader/set-key
+    "e" 'hydra-eval/body
+    "z" 'hydra-zoom/body
+    "b" 'hydra-buffer/body
+    "g" 'hydra-magit/body
+    "l" 'evil-next-buffer
+    "h" 'evil-prev-buffer
+    "p" 'parinfer-toggle-mode)
+  (evil-leader/set-key-for-mode 'org-mode "c" 'org-toggle-checkbox)
+  (evil-leader/set-key-for-mode 'racket-mode
+    "r" 'hydra-racket/body)
+  (global-evil-leader-mode))
+(kisaragi/setup-keys)
 
 ;; Auto completion
 (straight-use-package 'company)
@@ -214,14 +195,25 @@
   (when (functionp 'scroll-bar-mode)
     (scroll-bar-mode -1))
 
+  ;; line numbers
+  (straight-use-package 'linum-relative)
+  (setq linum-relative-current-symbol "")
+  (linum-relative-global-mode 1)
+  (global-linum-mode 1)
+  (add-hook 'doc-view-mode
+            (lambda ()
+              (linum-relative-off)
+              (linum-mode -1)))
   ;; color
   (straight-use-package 'monokai-theme)
   (straight-use-package 'material-theme)
   (straight-use-package 'dracula-theme)
-  (setq kisaragi/theme (if (display-graphic-p) 'dracula 'monokai))
+  (straight-use-package 'zerodark-theme)
+  (setq kisaragi/theme (if (display-graphic-p) 'zerodark 'monokai))
   (load-theme kisaragi/theme t)
   (add-hook 'after-make-frame-functions
             (lambda () (load-theme kisaragi/theme t)))
+  (zerodark-setup-modeline-format)
 
   (setq-default show-trailing-whitespace t) ; highlight trailing whitespace
 
@@ -231,14 +223,14 @@
   (show-paren-mode 1)
   (straight-use-package 'rainbow-delimiters)
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-  (add-hook 'pollen-mode-hook #'rainbow-delimiters-mode)
+  (add-hook 'pollen-mode-hook #'rainbow-delimiters-mode))
 
-  ;; spaceline
-  (straight-use-package 'spaceline)
-  (require 'spaceline-config)
-  (setq-default spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
-  (setq powerline-text-scale-factor 1.2)
-  (spaceline-spacemacs-theme))
+  ;; Sky color clock widget for modeline
+  ;; (straight-use-package '(sky-color-clock :type git :host github :repo "zk-phi/sky-color-clock"))
+  ;; (sky-color-clock-initialize 25) ; taipei
+  ;; (push '(:eval (sky-color-clock)) (default-value 'mode-line-format))
+  ;; (sky-color-clock-initialize-openweathermap-client (getenv "OPENWEATHERMAP_API_KEY") 1668341))
+
 (kisaragi/setup-ui)
 
 (defun kisaragi/setup-fonts ()
