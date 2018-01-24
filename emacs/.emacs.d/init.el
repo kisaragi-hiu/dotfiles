@@ -43,6 +43,10 @@
 (add-hook 'lisp-mode-hook #'parinfer-mode)
 (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
 
+;; (fold-this) folds active region, C-g or Enter unfolds
+(straight-use-package 'fold-this)
+(require 'fold-this)
+
 ;; run moccur-grep
 ;; then "C-c C-i" / "C-x C-q" to start editing
 ;; "C-c C-f" to "commit", "C-c C-k" to abort, "C-c C-r to clear changes"
