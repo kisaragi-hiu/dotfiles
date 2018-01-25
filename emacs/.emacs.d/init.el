@@ -259,6 +259,10 @@
 (global-set-key (kbd "C-h v") #'helpful-variable)
 (global-set-key (kbd "C-h k") #'helpful-key)
 
+(straight-use-package 'ranger) ; ranger emulation for dired
+;; run ranger to start it
+(ranger-override-dired-mode t)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
