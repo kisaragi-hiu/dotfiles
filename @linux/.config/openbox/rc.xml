@@ -211,14 +211,12 @@
   <!-- </keybind> -->
 
   <!-- window switching with arrows / hjkl -->
-  <keybind key="W-Left"><action name="DirectionalCycleWindows"><direction>left</direction></action></keybind>
-  <keybind key="W-h"><action name="DirectionalCycleWindows"><direction>left</direction></action></keybind>
-  <keybind key="W-Down"><action name="DirectionalCycleWindows"><direction>down</direction></action></keybind>
-  <keybind key="W-j"><action name="DirectionalCycleWindows"><direction>down</direction></action></keybind>
-  <keybind key="W-Up"><action name="DirectionalCycleWindows"><direction>up</direction></action></keybind>
-  <keybind key="W-k"><action name="DirectionalCycleWindows"><direction>up</direction></action></keybind>
-  <keybind key="W-Right"><action name="DirectionalCycleWindows"><direction>right</direction></action></keybind>
-  <keybind key="W-l"><action name="DirectionalCycleWindows"><direction>right</direction></action></keybind>
+  <!-- Unlike emacs where (kbd "a b") is key chain a then b, "W-Up W-k" means "W-Up" or "W-k" -->
+  <!-- key chains are created with nesting instead -->
+  <keybind key="W-Left W-h"><action name="DirectionalCycleWindows"><direction>left</direction></action></keybind>
+  <keybind key="W-Down W-j"><action name="DirectionalCycleWindows"><direction>down</direction></action></keybind>
+  <keybind key="W-Up W-k"><action name="DirectionalCycleWindows"><direction>up</direction></action></keybind>
+  <keybind key="W-Right W-l"><action name="DirectionalCycleWindows"><direction>right</direction></action></keybind>
 
   <!-- Keybindings for running applications -->
   <!-- Might want to move Plasma custom keys over here -->
