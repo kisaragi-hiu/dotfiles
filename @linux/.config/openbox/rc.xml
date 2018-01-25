@@ -9,7 +9,7 @@
 <!-- Keybinding documentation <"http://openbox.org/wiki/Help:Bindings"> -->
 
 <openbox_config xmlns="http://openbox.org/3.4/rc"
-		xmlns:xi="http://www.w3.org/2001/XInclude">
+                xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <resistance>
   <strength>10</strength>
