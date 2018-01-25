@@ -271,53 +271,33 @@
       <action name="Unfocus"/>
     </mousebind>
 
-    <mousebind button="A-Up" action="Click">
+    <!-- Up Down = mwheelup/down -->
+    <mousebind button="W-Up" action="Click">
       <action name="GoToDesktop"><to>previous</to></action>
     </mousebind>
-    <mousebind button="A-Down" action="Click">
+    <mousebind button="W-Down" action="Click">
       <action name="GoToDesktop"><to>next</to></action>
     </mousebind>
-    <mousebind button="C-A-Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
-    </mousebind>
-    <mousebind button="C-A-Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
-    </mousebind>
-    <mousebind button="A-S-Up" action="Click">
+    <mousebind button="W-S-Up" action="Click">
       <action name="SendToDesktop"><to>previous</to></action>
     </mousebind>
-    <mousebind button="A-S-Down" action="Click">
+    <mousebind button="W-S-Down" action="Click">
       <action name="SendToDesktop"><to>next</to></action>
     </mousebind>
   </context>
 
   <context name="Titlebar">
     <mousebind button="Left" action="Drag">
+      <action name="if">
+        <maximized>yes</maximized>
+        <then>
+          <action name="Unmaximize"/>
+        </then>
+      </action>
       <action name="Move"/>
     </mousebind>
     <mousebind button="Left" action="DoubleClick">
       <action name="ToggleMaximize"/>
-    </mousebind>
-
-    <mousebind button="Up" action="Click">
-      <action name="if">
-        <shaded>no</shaded>
-        <then>
-          <action name="Shade"/>
-          <action name="FocusToBottom"/>
-          <action name="Unfocus"/>
-          <action name="Lower"/>
-        </then>
-      </action>
-    </mousebind>
-    <mousebind button="Down" action="Click">
-      <action name="if">
-        <shaded>yes</shaded>
-        <then>
-          <action name="Unshade"/>
-          <action name="Raise"/>
-        </then>
-      </action>
     </mousebind>
   </context>
 
@@ -328,10 +308,9 @@
       <action name="Unshade"/>
     </mousebind>
 
+    <!-- middle click to minimize -->
     <mousebind button="Middle" action="Press">
-      <action name="Lower"/>
-      <action name="FocusToBottom"/>
-      <action name="Unfocus"/>
+      <action name="Iconify"/>
     </mousebind>
 
     <mousebind button="Right" action="Press">
