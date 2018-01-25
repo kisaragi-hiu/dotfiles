@@ -91,10 +91,10 @@
   ;; Keybinds
   (straight-use-package 'hydra)
   (defhydra hydra-eval ()
-    "eval stuff"
-    ("x" execute-extended-command)
+    "l → last sexp, b → buffer, r → region, d → defun\n"
     ("l" eval-last-sexp)
     ("b" eval-buffer)
+    ("r" eval-region)
     ("d" eval-defun))
 
   (defhydra hydra-buffer ()
@@ -141,7 +141,8 @@
     "g" 'hydra-magit/body
     "l" 'evil-next-buffer
     "h" 'evil-prev-buffer
-    "p" 'parinfer-toggle-mode)
+    "p" 'parinfer-toggle-mode
+    "x" 'execute-extended-command)
   (evil-leader/set-key-for-mode 'org-mode "c" 'org-toggle-checkbox)
   (evil-leader/set-key-for-mode 'racket-mode
     "r" 'hydra-racket/body)
