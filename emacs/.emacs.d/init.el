@@ -236,6 +236,10 @@
 
   (global-hl-line-mode 1) ; highlight current line
 
+  (straight-use-package 'column-marker)
+  (require 'column-marker)
+  (add-hook 'prog-mode-hook (lambda () (interactive) (column-marker-1 80)))
+
   ;; show matching parens
   (show-paren-mode 1)
   (straight-use-package 'rainbow-delimiters)
