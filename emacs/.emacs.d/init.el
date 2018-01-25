@@ -31,6 +31,9 @@
 (delete-selection-mode 1)
 (setq tab-always-indent 'complete)
 
+;; Symbolic link to Git-controlled source file; follow link? (YES PLEASE)
+(setq vc-follow-symlinks t)
+
 (straight-use-package 'parinfer)
 (global-set-key (kbd "C-,") 'parinfer-toggle-mode)
 (setq parinfer-extensions
