@@ -217,11 +217,22 @@
   (add-hook 'after-make-frame-functions
             (lambda () (load-theme kisaragi/theme t)))
 
+  ;; modeline
   (straight-use-package 'telephone-line)
   (require 'telephone-line-config)
   (telephone-line-evil-config)
 
   (setq-default show-trailing-whitespace t) ; highlight trailing whitespace
+
+  ;; whitespace-mode: eol = "¬", tab = "▷"
+  ;; http://ergoemacs.org/emacs/whitespace-mode.html
+  (setq whitespace-style '(face tabs newline space-mark tab-mark newline-mark))
+  (setq whitespace-display-mappings
+        ;; all numbers are unicode codepoint in decimal. e.g. (insert-char 182 1)
+        (quote
+         ((newline-mark 10 [172 10]) ; 172: not sign (U00A7)
+          (tab-mark 9 [9655 9] [92 9]))))
+  (global-whitespace-mode 1)
 
   (global-hl-line-mode 1) ; highlight current line
 
