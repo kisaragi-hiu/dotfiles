@@ -1,5 +1,5 @@
 [1]
-Description=filelight のアプリケーション設定
+Description=vmpk-virtual midi piano keyboard のアプリケーション設定
 above[$d]
 aboverule[$d]
 clientmachine=localhost
@@ -17,11 +17,28 @@ titlematch[$d]
 types[$d]
 windowrole[$d]
 windowrolematch[$d]
-wmclass=filelight
-wmclasscomplete=false
+wmclass=vmpk vmpk-virtual midi piano keyboard
+wmclasscomplete=true
 wmclassmatch=1
 
 [10]
+Description=zynaddsubfx のアプリケーション設定
+above=true
+aboverule=4
+clientmachine=mf-pc
+clientmachinematch=0
+decocolor[$d]
+decocolorrule[$d]
+desktop[$d]
+desktoprule[$d]
+title[$d]
+titlematch[$d]
+types[$d]
+wmclass=zynaddsubfx
+wmclasscomplete=false
+wmclassmatch=1
+
+[11]
 Description=firefox のアプリケーション設定
 clientmachine=mf-pc
 clientmachinematch=0
@@ -36,7 +53,7 @@ wmclass=places firefox
 wmclasscomplete=true
 wmclassmatch=1
 
-[11]
+[12]
 Description=gwenview のアプリケーション設定
 clientmachine=localhost
 clientmachinematch=0
@@ -51,7 +68,7 @@ wmclass=gwenview
 wmclasscomplete=false
 wmclassmatch=1
 
-[12]
+[13]
 Description=inkscape のアプリケーション設定
 clientmachine=mf-pc
 clientmachinematch=0
@@ -66,7 +83,7 @@ wmclass=inkscape
 wmclasscomplete=false
 wmclassmatch=1
 
-[13]
+[14]
 Description=onboard Onboard の設定
 clientmachine=mf-pc
 clientmachinematch=0
@@ -81,7 +98,7 @@ wmclass=onboard onboard
 wmclasscomplete=true
 wmclassmatch=1
 
-[14]
+[15]
 Description=emacs のアプリケーション設定
 clientmachine=mf-pc
 clientmachinematch=0
@@ -94,7 +111,7 @@ wmclass=emacs
 wmclasscomplete=false
 wmclassmatch=1
 
-[15]
+[16]
 Description=typora のアプリケーション設定
 clientmachine=mf-pc
 clientmachinematch=0
@@ -107,7 +124,7 @@ wmclass=typora
 wmclasscomplete=false
 wmclassmatch=1
 
-[16]
+[17]
 Description=kfontview のアプリケーション設定
 clientmachine=localhost
 clientmachinematch=0
@@ -120,21 +137,8 @@ wmclass=kfontview
 wmclasscomplete=false
 wmclassmatch=1
 
-[17]
-Description=gpick のアプリケーション設定
-clientmachine=mf-pc
-clientmachinematch=0
-decocolor=AdaptaNoktoWindowColors
-decocolorrule=2
-title[$d]
-titlematch[$d]
-types[$d]
-wmclass=gpick
-wmclasscomplete=false
-wmclassmatch=1
-
 [18]
-Description=firefox のアプリケーション設定
+Description=gpick のアプリケーション設定
 clientmachine=mf-pc
 clientmachinematch=0
 decocolor=AdaptaNoktoWindowColors
@@ -144,11 +148,49 @@ noborderrule[$d]
 title[$d]
 titlematch[$d]
 types[$d]
+wmclass=gpick
+wmclasscomplete=false
+wmclassmatch=1
+
+[19]
+Description=firefox のアプリケーション設定
+clientmachine=mf-pc
+clientmachinematch=0
+decocolor=AdaptaNoktoWindowColors
+decocolorrule=2
+title[$d]
+titlematch[$d]
+types[$d]
 wmclass=navigator firefox
 wmclasscomplete=true
 wmclassmatch=1
 
-[19]
+[2]
+Description=filelight のアプリケーション設定
+above[$d]
+aboverule[$d]
+clientmachine=localhost
+clientmachinematch=0
+decocolor=AdaptaNoktoWindowColors
+decocolorrule=2
+desktop[$d]
+desktoprule[$d]
+noborder[$d]
+noborderrule[$d]
+position[$d]
+positionrule[$d]
+size[$d]
+sizerule[$d]
+title[$d]
+titlematch[$d]
+types[$d]
+windowrole[$d]
+windowrolematch[$d]
+wmclass=filelight
+wmclasscomplete=false
+wmclassmatch=1
+
+[20]
 Description=file-roller のウィンドウ設定
 clientmachine=mf-pc
 clientmachinematch=0
@@ -161,7 +203,73 @@ wmclass=file-roller
 wmclasscomplete=false
 wmclassmatch=1
 
-[2]
+[21]
+Description=konsole のアプリケーション設定
+clientmachine=localhost
+clientmachinematch=0
+decocolor=AdaptaNoktoWindowColors
+decocolorrule=2
+title[$d]
+titlematch[$d]
+types[$d]
+wmclass=konsole
+wmclasscomplete=false
+wmclassmatch=1
+
+[22]
+Description=spotify のウィンドウ設定
+clientmachine=mf-pc
+clientmachinematch=0
+decocolor=AdaptaNoktoWindowColors
+decocolorrule=2
+title=Spotify
+titlematch=1
+types=1
+wmclass=spotify
+wmclasscomplete=false
+wmclassmatch=1
+
+[23]
+Description=ark のアプリケーション設定
+clientmachine=localhost
+clientmachinematch=0
+decocolor=AdaptaNoktoWindowColors
+decocolorrule=2
+wmclass=ark
+wmclasscomplete=false
+wmclassmatch=1
+
+[24]
+Description=spotify のアプリケーション設定
+clientmachine=mf-pc
+clientmachinematch=0
+decocolor=AdaptaNoktoWindowColors
+decocolorrule=2
+wmclass=spotify
+wmclasscomplete=false
+wmclassmatch=1
+
+[25]
+Description=google-chrome-unstable のアプリケーション設定
+clientmachine=mf-pc
+clientmachinematch=0
+decocolor=AdaptaNoktoWindowColors
+decocolorrule=2
+wmclass=google-chrome-unstable
+wmclasscomplete=false
+wmclassmatch=1
+
+[26]
+Description=dolphin のアプリケーション設定
+clientmachine=localhost
+clientmachinematch=0
+decocolor=AdaptaNoktoWindowColors
+decocolorrule=2
+wmclass=dolphin
+wmclasscomplete=false
+wmclassmatch=1
+
+[3]
 Description=urxvt のアプリケーション設定
 above=true
 aboverule=3
@@ -186,73 +294,7 @@ wmclass=urxvt
 wmclasscomplete=false
 wmclassmatch=1
 
-[20]
-Description=konsole のアプリケーション設定
-clientmachine=localhost
-clientmachinematch=0
-decocolor=AdaptaNoktoWindowColors
-decocolorrule=2
-title[$d]
-titlematch[$d]
-types[$d]
-wmclass=konsole
-wmclasscomplete=false
-wmclassmatch=1
-
-[21]
-Description=spotify のウィンドウ設定
-clientmachine=mf-pc
-clientmachinematch=0
-decocolor=AdaptaNoktoWindowColors
-decocolorrule=2
-title=Spotify
-titlematch=1
-types=1
-wmclass=spotify
-wmclasscomplete=false
-wmclassmatch=1
-
-[22]
-Description=ark のアプリケーション設定
-clientmachine=localhost
-clientmachinematch=0
-decocolor=AdaptaNoktoWindowColors
-decocolorrule=2
-wmclass=ark
-wmclasscomplete=false
-wmclassmatch=1
-
-[23]
-Description=spotify のアプリケーション設定
-clientmachine=mf-pc
-clientmachinematch=0
-decocolor=AdaptaNoktoWindowColors
-decocolorrule=2
-wmclass=spotify
-wmclasscomplete=false
-wmclassmatch=1
-
-[24]
-Description=google-chrome-unstable のアプリケーション設定
-clientmachine=mf-pc
-clientmachinematch=0
-decocolor=AdaptaNoktoWindowColors
-decocolorrule=2
-wmclass=google-chrome-unstable
-wmclasscomplete=false
-wmclassmatch=1
-
-[25]
-Description=dolphin のアプリケーション設定
-clientmachine=localhost
-clientmachinematch=0
-decocolor=AdaptaNoktoWindowColors
-decocolorrule=2
-wmclass=dolphin
-wmclasscomplete=false
-wmclassmatch=1
-
-[3]
+[4]
 Description=pittrace.exe のウィンドウ設定
 above=false
 aboverule=4
@@ -273,7 +315,7 @@ wmclass=pittrace.exe
 wmclasscomplete=false
 wmclassmatch=0
 
-[4]
+[5]
 Description=shotwell のアプリケーション設定
 above[$d]
 aboverule[$d]
@@ -292,7 +334,7 @@ wmclass=shotwell
 wmclasscomplete=false
 wmclassmatch=1
 
-[5]
+[6]
 Description=drracket のアプリケーション設定
 above[$d]
 aboverule[$d]
@@ -311,7 +353,7 @@ wmclass=drracket
 wmclasscomplete=false
 wmclassmatch=1
 
-[6]
+[7]
 Description=octopi のアプリケーション設定
 above[$d]
 aboverule[$d]
@@ -330,7 +372,7 @@ wmclass=octopi
 wmclasscomplete=false
 wmclassmatch=1
 
-[7]
+[8]
 Description=brasero のアプリケーション設定
 above[$d]
 aboverule[$d]
@@ -349,7 +391,7 @@ wmclass=brasero
 wmclasscomplete=false
 wmclassmatch=1
 
-[8]
+[9]
 Description=thunar のウィンドウ設定
 above[$d]
 aboverule[$d]
@@ -368,22 +410,5 @@ wmclass=thunar
 wmclasscomplete=false
 wmclassmatch=1
 
-[9]
-Description=zynaddsubfx のアプリケーション設定
-above=true
-aboverule=4
-clientmachine=mf-pc
-clientmachinematch=0
-decocolor[$d]
-decocolorrule[$d]
-desktop[$d]
-desktoprule[$d]
-title[$d]
-titlematch[$d]
-types[$d]
-wmclass=zynaddsubfx
-wmclasscomplete=false
-wmclassmatch=1
-
 [General]
-count=25
+count=26

@@ -88,6 +88,7 @@ desktopchangeosdEnabled=false
 enforcedecoEnabled=true
 highlightwindowEnabled=true
 kwin-script-tilingEnabled=false
+kwin4_effect_fadeEnabled[$d]
 kwin4_effect_fadedesktopEnabled=false
 max2NewVirtualDesktopEnabled=false
 minimizeallEnabled=true

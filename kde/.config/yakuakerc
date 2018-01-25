@@ -2,7 +2,7 @@
 Skin=adapta-nokto
 
 [Desktop Entry]
-DefaultProfile=Default2.profile
+DefaultProfile=Default.profile
 
 [Dialogs]
 FirstRun=false
