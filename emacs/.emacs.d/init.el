@@ -212,12 +212,14 @@
   (straight-use-package 'monokai-theme)
   (straight-use-package 'material-theme)
   (straight-use-package 'dracula-theme)
-  (straight-use-package 'zerodark-theme)
-  (setq kisaragi/theme (if (display-graphic-p) 'zerodark 'monokai))
+  (setq kisaragi/theme (if (display-graphic-p) 'material 'monokai))
   (load-theme kisaragi/theme t)
   (add-hook 'after-make-frame-functions
             (lambda () (load-theme kisaragi/theme t)))
-  (zerodark-setup-modeline-format)
+
+  (straight-use-package 'telephone-line)
+  (require 'telephone-line-config)
+  (telephone-line-evil-config)
 
   (setq-default show-trailing-whitespace t) ; highlight trailing whitespace
 
@@ -228,13 +230,6 @@
   (straight-use-package 'rainbow-delimiters)
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
   (add-hook 'pollen-mode-hook #'rainbow-delimiters-mode))
-
-  ;; Sky color clock widget for modeline
-  ;; (straight-use-package '(sky-color-clock :type git :host github :repo "zk-phi/sky-color-clock"))
-  ;; (sky-color-clock-initialize 25) ; taipei
-  ;; (push '(:eval (sky-color-clock)) (default-value 'mode-line-format))
-  ;; (sky-color-clock-initialize-openweathermap-client (getenv "OPENWEATHERMAP_API_KEY") 1668341))
-
 (kisaragi/setup-ui)
 
 (defun kisaragi/setup-fonts ()
