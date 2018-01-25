@@ -203,6 +203,12 @@
       </finalactions>
     </action>
   </keybind>
+  <!-- Currently defined in Plasma -->
+  <!-- <keybind key="W-Tab"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>rofi -show window</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
 
   <!-- window switching with arrows / hjkl -->
   <keybind key="W-Left"><action name="DirectionalCycleWindows"><direction>left</direction></action></keybind>
