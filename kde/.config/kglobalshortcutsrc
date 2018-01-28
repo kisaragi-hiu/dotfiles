@@ -42,7 +42,6 @@ display=Display,Display\tMeta+P,切換顯示
 _k_friendly_name=KDE Daemon
 {1d2caced-b83e-4d05-b2c8-52578680953c}=none,none,Take Rectangular Region Screenshot
 {2bf8adc2-f816-49dc-a08b-eeaeb0d05bc1}=Meta+P,none,Restart PulseAudio
-{31a6dca0-ce60-440f-afe4-c8edc103903f}=Meta+Tab,none,rofi -show window
 {4776e0ad-0331-45d6-8b20-76b750067c04}=Meta+I,none,mouse sensitivity 1.6x
 {67f9f811-b277-4d95-863d-57dc0aabf3e6}=Meta+Shift+O,none,Restore tablet remap
 {6ad0c6c2-aa1a-43e1-a14f-30be991be726}=none,none,Take Full Screen Screenshot
@@ -57,7 +56,6 @@ _k_friendly_name=KDE Daemon
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Search,none,検索
 {d945c5e5-157b-4706-99ef-666033fcbe6b}=Meta+O,none,remap tablet
 {f8964512-75a1-4419-b6b8-286ae1e9244b}=F35,none,fcitx-next-im
-{fd722b3b-04d5-4368-828d-fd4324b6060f}=Alt+F1,none,rofi
 
 [kmix]
 _k_friendly_name=音效音量

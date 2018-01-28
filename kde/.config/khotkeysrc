@@ -207,7 +207,7 @@ Uuid={99f26c9b-2c22-4047-bb4c-20add6da5713}
 
 [Data_17]
 Comment=コメント
-Enabled=true
+Enabled=false
 Name=rofi
 Type=SIMPLE_ACTION_DATA
 
@@ -259,7 +259,7 @@ Uuid={b59f1136-0672-4da4-a2f5-2ec910d27955}
 
 [Data_19]
 Comment=コメント
-Enabled=true
+Enabled=false
 Name=rofi -show window
 Type=SIMPLE_ACTION_DATA
 
@@ -279,7 +279,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_19Triggers0]
-Key=Meta+Tab
+Key=
 Type=SHORTCUT
 Uuid={31a6dca0-ce60-440f-afe4-c8edc103903f}
 

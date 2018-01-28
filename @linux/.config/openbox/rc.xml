@@ -203,13 +203,16 @@
       </finalactions>
     </action>
   </keybind>
-  <!-- Currently defined in Plasma -->
-  <!-- <keybind key="W-Tab"> -->
-  <!--   <action name="Execute"> -->
-  <!--     <command>rofi -show window</command> -->
-  <!--   </action> -->
-  <!-- </keybind> -->
-
+  <keybind key="W-Tab">
+    <action name="Execute">
+      <command>rofi -show window</command>
+    </action>
+  </keybind>
+  <keybind key="A-F1"> <!-- xcape handles W -> A-F1 -->
+    <action name="Execute">
+      <command>rofi -combi-modi window,drun,run -show combi</command>
+    </action>
+  </keybind>
   <!-- window switching with arrows / hjkl -->
   <!-- Unlike emacs where (kbd "a b") is key chain a then b, "W-Up W-k" means "W-Up" or "W-k" -->
   <!-- key chains are created with nesting instead -->
@@ -217,6 +220,9 @@
   <keybind key="W-Down W-j"><action name="DirectionalCycleWindows"><direction>down</direction></action></keybind>
   <keybind key="W-Up W-k"><action name="DirectionalCycleWindows"><direction>up</direction></action></keybind>
   <keybind key="W-Right W-l"><action name="DirectionalCycleWindows"><direction>right</direction></action></keybind>
+
+  <!-- one-off command stuff -->
+
 
   <!-- Keybindings for running applications -->
   <!-- Might want to move Plasma custom keys over here -->
