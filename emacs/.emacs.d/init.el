@@ -131,6 +131,12 @@
     ("m" racket-visit-module "visit module")
     ("v" racket-visit-definition "visit definition"))
 
+  (defhydra hydra-racket-repl ()
+    "repl stuff, for racket"
+    ("l" 'racket-send-last-sexp "send last sexp")
+    ("d" 'racket-send-definition "send definition")
+    ("r" 'racket-send-region "send region"))
+
   (straight-use-package 'evil-leader)
   (require 'evil-leader)
   (evil-leader/set-leader ",")
@@ -145,7 +151,8 @@
     "x" 'execute-extended-command)
   (evil-leader/set-key-for-mode 'org-mode "c" 'org-toggle-checkbox)
   (evil-leader/set-key-for-mode 'racket-mode
-    "r" 'hydra-racket/body)
+    "r" 'hydra-racket/body
+    "e" 'hydra-racket-repl/body)
   (global-evil-leader-mode))
 (kisaragi/setup-keys)
 
