@@ -213,13 +213,46 @@
       <command>rofi -combi-modi window,drun,run -show combi</command>
     </action>
   </keybind>
-  <!-- window switching with arrows / hjkl -->
-  <!-- Unlike emacs where (kbd "a b") is key chain a then b, "W-Up W-k" means "W-Up" or "W-k" -->
-  <!-- key chains are created with nesting instead -->
-  <keybind key="W-Left W-h"><action name="DirectionalCycleWindows"><direction>left</direction></action></keybind>
-  <keybind key="W-Down W-j"><action name="DirectionalCycleWindows"><direction>down</direction></action></keybind>
-  <keybind key="W-Up W-k"><action name="DirectionalCycleWindows"><direction>up</direction></action></keybind>
-  <keybind key="W-Right W-l"><action name="DirectionalCycleWindows"><direction>right</direction></action></keybind>
+
+  <!-- edge snap -->
+  <keybind key="W-S-Left W-S-h">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="Maximize"><direction>vertical</direction></action>
+    <action name="MoveResizeTo"><width>50%</width></action>
+    <action name="MoveToEdge"><direction>west</direction></action>
+  </keybind>
+  <keybind key="W-S-Right W-S-l">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="Maximize"><direction>vertical</direction></action>
+    <action name="MoveResizeTo"><width>50%</width></action>
+    <action name="MoveToEdge"><direction>east</direction></action>
+  </keybind>
+  <keybind key="W-S-Up W-S-k">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="Maximize"><direction>horizontal</direction></action>
+    <action name="MoveResizeTo"><height>50%</height></action>
+    <action name="MoveToEdge"><direction>north</direction></action>
+  </keybind>
+  <keybind key="W-S-Down W-S-j">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="Maximize"><direction>horizontal</direction></action>
+    <action name="MoveResizeTo"><height>50%</height></action>
+    <action name="MoveToEdge"><direction>south</direction></action>
+  </keybind>
+
+  <!-- Maximize, unmaximize, minimize if not maximized -->
+  <keybind key="W-Up W-k"><action name="Maximize"/></keybind>
+  <keybind key="W-Down W-j">
+    <action name="if">
+      <maximized>yes</maximized>
+      <then>
+        <action name="Unmaximize"/>
+      </then>
+      <else>
+        <action name="Iconify"/>
+      </else>
+    </action>
+  </keybind>
 
   <!-- one-off command stuff -->
 
@@ -259,6 +292,12 @@
       <action name="Unshade"/>
     </mousebind>
     <mousebind button="W-Left" action="Drag">
+      <action name="if">
+        <maximized>yes</maximized>
+        <then>
+          <action name="Unmaximize"/>
+        </then>
+      </action>
       <action name="Move"/>
     </mousebind>
 
