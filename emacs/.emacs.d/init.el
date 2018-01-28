@@ -149,7 +149,6 @@
     "h" 'evil-prev-buffer
     "p" 'parinfer-toggle-mode
     "x" 'execute-extended-command)
-  (evil-leader/set-key-for-mode 'org-mode "c" 'org-toggle-checkbox)
   (evil-leader/set-key-for-mode 'racket-mode
     "r" 'hydra-racket/body
     "e" 'hydra-racket-repl/body)
@@ -269,12 +268,16 @@
 (require 'magit)
 (require 'evil-magit)
 
-(straight-use-package 'evil-org)
-(require 'evil-org)
-(require 'evil-org-agenda)
-(add-hook 'org-mode-hook 'evil-org-mode)
-(evil-org-set-key-theme '(navigation insert textobjects additional calendar))
-(evil-org-agenda-set-keys)
+(defun kisaragi/setup-org ()
+  (straight-use-package 'evil-org)
+  (require 'evil-org)
+  (require 'evil-org-agenda)
+  (add-hook 'org-mode-hook 'evil-org-mode)
+  (evil-org-set-key-theme '(navigation insert textobjects additional calendar))
+  (evil-org-agenda-set-keys)
+  (setq org-src-fontify-natively t) ;; highlight SRC blocks
+  (evil-leader/set-key-for-mode 'org-mode "c" 'org-toggle-checkbox))
+(kisaragi/setup-org)
 
 (straight-use-package 'helpful)
 (global-set-key (kbd "C-h f") #'helpful-callable)
