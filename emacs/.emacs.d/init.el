@@ -193,6 +193,9 @@
   (straight-use-package 'vimrc-mode)
   (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
 
+  (straight-use-package 'yaml-mode)
+  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
   (straight-use-package 'web-mode))
 (kisaragi/setup-languages)
 
