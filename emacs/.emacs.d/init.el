@@ -285,6 +285,13 @@
 ;; run ranger to start it
 (ranger-override-dired-mode t)
 
+;; xmlgenexp->xml
+;; where xexp looks like '(tag ([attr "attr-val"]) (nested-tag) "tag-val"),
+;; "xmlgenexp" looks like '(tag :attr "attr-val" (nested-tag) "tag-val").
+;; -> <tag attr="attr-val"><nested-tag/>tag-val</tag>
+(straight-use-package '(xmlgen :type git :host github
+                               :repo "philjackson/xmlgen"))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
