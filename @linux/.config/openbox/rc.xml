@@ -146,7 +146,11 @@
 
 <!-- keybindings -->
 <keyboard>
-  <chainQuitKey>C-g</chainQuitKey> <!-- like in emacs -->
+  <chainQuitKey>C-g</chainQuitKey>
+  <keybind key="W-r">
+    <action name="Execute"><command>openbox --reconfigure</command></action>
+    <action name="Execute"><command>notify-send "Openbox --reconfigure complete" " " --icon view-refresh</command></action>
+  </keybind>
 
   <!-- Keybindings for desktop switching -->
   <keybind key="C-W-Left">
