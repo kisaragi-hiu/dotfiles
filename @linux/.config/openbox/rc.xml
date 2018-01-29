@@ -183,9 +183,20 @@
     <action name="ToggleShowDesktop"/>
   </keybind>
 
-  <!-- Keybindings for windows -->
+  <!-- keybinds that act on windows -->
   <keybind key="A-F4">
     <action name="Close"/>
+  </keybind>
+  <keybind key="W-F10"><action name="ToggleDecorations"/></keybind>
+  <keybind key="W-F11"><action name="ToggleFullscreen"/></keybind>
+  <keybind key="W-Up W-k"><action name="Maximize"/></keybind>
+  <keybind key="W-Down W-j">
+    <!-- Minimize if not maximized -->
+    <action name="if">
+      <maximized>yes</maximized>
+      <then><action name="Unmaximize"/></then>
+      <else><action name="Iconify"/></else>
+    </action>
   </keybind>
 
   <!-- Alt-tabbing -->
@@ -242,20 +253,6 @@
     <action name="Maximize"><direction>horizontal</direction></action>
     <action name="MoveResizeTo"><height>50%</height></action>
     <action name="MoveToEdge"><direction>south</direction></action>
-  </keybind>
-
-  <!-- Maximize, unmaximize, minimize if not maximized -->
-  <keybind key="W-Up W-k"><action name="Maximize"/></keybind>
-  <keybind key="W-Down W-j">
-    <action name="if">
-      <maximized>yes</maximized>
-      <then>
-        <action name="Unmaximize"/>
-      </then>
-      <else>
-        <action name="Iconify"/>
-      </else>
-    </action>
   </keybind>
 
   <!-- one-off command stuff -->
