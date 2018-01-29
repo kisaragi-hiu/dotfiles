@@ -269,6 +269,29 @@
   <!--     <command>emacs</command> -->
   <!--   </action> -->
   <!-- </keybind> -->
+
+  <!-- application specific keybinds -->
+  <keybind key="KP_5">
+    <action name="if">
+      <query><title>osu!*</title><class>osu!.exe</class><name>osu!.exe</name></query>
+      <then><action name="Execute"><command>bash -c "xdotool keydown grave; sleep 1; xdotool keyup grave"</command></action></then>
+      <else><action name="Execute"><command>xdotool key KP_5</command></action></else>
+    </action>
+  </keybind>
+  <keybind key="KP_7">
+    <action name="if">
+      <query><title>osu!*</title><class>osu!.exe</class><name>osu!.exe</name></query>
+      <then><action name="Execute"><command>xdotool key Escape</command></action></then>
+      <else><action name="Execute"><command>xdotool key KP_7</command></action></else>
+    </action>
+  </keybind>
+  <keybind key="KP_3">
+    <action name="if">
+      <query><title>osu!*</title><class>osu!.exe</class><name>osu!.exe</name></query>
+      <then><action name="Execute"><command>xdotool key Tab</command></action></then>
+      <else><action name="Execute"><command>xdotool key KP_3</command></action></else>
+    </action>
+  </keybind>
 </keyboard>
 
 <mouse>
