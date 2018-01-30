@@ -1,5 +1,5 @@
 [Data]
-DataCount=19
+DataCount=8
 
 [Data_1]
 Comment=KMenuEdit Global Shortcuts
@@ -10,278 +10,296 @@ SystemGroup=1
 Type=ACTION_DATA_GROUP
 
 [Data_10]
-Comment=Direct screenshot
-Enabled=true
-Name=imagemagick screenshot
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_10Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_10Actions0]
-CommandURL=import -window root $XDG_PICTURES_DIR/Screenshots/Screenshot_$(date +%Y%m%d_%H%M%S).jpg; notify-send "Screenshot taken"
-Type=COMMAND_URL
+CommandURL[$d]
+Type[$d]
 
 [Data_10Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_10Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_10Triggers0]
-Key=Print
-Type=SHORTCUT
-Uuid={84ecdee1-757a-4f04-b729-5010456763ad}
+Key[$d]
+Type[$d]
+Uuid[$d]
+WindowActions[$d]
+
+[Data_10Triggers0Windows]
+Comment[$d]
+WindowsCount[$d]
+
+[Data_10Triggers0Windows0]
+Class[$d]
+ClassType[$d]
+Comment[$d]
+Role[$d]
+RoleType[$d]
+Title[$d]
+TitleType[$d]
+Type[$d]
+WindowTypes[$d]
 
 [Data_11]
-Comment=コメント
-Enabled=false
-Name=osu! tablet remap leave
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_11Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_11Actions0]
-CommandURL=xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
-Type=COMMAND_URL
+CommandURL[$d]
+Type[$d]
 
 [Data_11Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_11Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_11Triggers0]
-Type=WINDOW
-WindowActions=8
+Key[$d]
+Type[$d]
+Uuid[$d]
+WindowActions[$d]
 
 [Data_11Triggers0Windows]
-Comment=Windowdef_list comment
-WindowsCount=1
+Comment[$d]
+WindowsCount[$d]
 
 [Data_11Triggers0Windows0]
-Class=osu!.exe
-ClassType=2
-Comment=osu!
-Role=
-RoleType=0
-Title=osu!
-TitleType=1
-Type=SIMPLE
-WindowTypes=1
+Class[$d]
+ClassType[$d]
+Comment[$d]
+Role[$d]
+RoleType[$d]
+Title[$d]
+TitleType[$d]
+Type[$d]
+WindowTypes[$d]
 
 [Data_12]
-Comment=コメント
-Enabled=true
-Name=remap tablet
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_12Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_12Actions0]
-CommandURL=wacom-sensitivity -c -s 450
-Type=COMMAND_URL
+CommandURL[$d]
+Type[$d]
 
 [Data_12Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_12Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_12Triggers0]
-Key=Meta+O
-Type=SHORTCUT
-Uuid={d945c5e5-157b-4706-99ef-666033fcbe6b}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_13]
-Comment=コメント
-Enabled=true
-Name=Restore tablet remap
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_13Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_13Actions0]
-CommandURL=wacom-sensitivity -c -s 950
-Type=COMMAND_URL
+CommandURL[$d]
+Type[$d]
 
 [Data_13Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_13Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_13Triggers0]
-Key=Meta+Shift+O
-Type=SHORTCUT
-Uuid={67f9f811-b277-4d95-863d-57dc0aabf3e6}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_14]
-Comment=コメント
-Enabled=true
-Name=copy dialog
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_14Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_14Actions0]
-CommandURL=zenity --entry --title クリップボードにコピー --text "" --width 320 | copy
-Type=COMMAND_URL
+CommandURL[$d]
+Type[$d]
 
 [Data_14Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_14Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_14Triggers0]
-Key=Meta+C
-Type=SHORTCUT
-Uuid={b0a8e4d8-0680-4f9a-927f-314d6d31cfb2}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_15]
-Comment=コメント
-Enabled=true
-Name=mouse sensitivity 1.6x
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_15Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_15Actions0]
-CommandURL=mouse-sensitivity -s 1.6
-Type=COMMAND_URL
+CommandURL[$d]
+Type[$d]
 
 [Data_15Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_15Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_15Triggers0]
-Key=Meta+I
-Type=SHORTCUT
-Uuid={4776e0ad-0331-45d6-8b20-76b750067c04}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_16]
-Comment=コメント
-Enabled=true
-Name=restore mouse sensitivity
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_16Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_16Actions0]
-CommandURL=mouse-sensitivity -s 1
-Type=COMMAND_URL
+CommandURL[$d]
+Type[$d]
 
 [Data_16Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_16Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_16Triggers0]
-Key=Meta+Shift+I
-Type=SHORTCUT
-Uuid={99f26c9b-2c22-4047-bb4c-20add6da5713}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_17]
-Comment=コメント
-Enabled=false
-Name=rofi
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_17Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_17Actions0]
-CommandURL=rofi -combi-modi window,drun,run -show combi
-Type=COMMAND_URL
+CommandURL[$d]
+Type[$d]
 
 [Data_17Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_17Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_17Triggers0]
-Key=Alt+F1
-Type=SHORTCUT
-Uuid={fd722b3b-04d5-4368-828d-fd4324b6060f}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_18]
-Comment=コメント
-Enabled=true
-Name=color picker dialog
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_18Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_18Actions0]
-CommandURL=kdialog --getcolor | copy
-Type=COMMAND_URL
+CommandURL[$d]
+Type[$d]
 
 [Data_18Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_18Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_18Triggers0]
-Key=Meta+F
-Type=SHORTCUT
-Uuid={b59f1136-0672-4da4-a2f5-2ec910d27955}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_19]
-Comment=コメント
-Enabled=false
-Name=rofi -show window
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_19Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_19Actions0]
-CommandURL=rofi -show window
-Type=COMMAND_URL
+CommandURL[$d]
+Type[$d]
 
 [Data_19Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_19Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_19Triggers0]
-Key=
-Type=SHORTCUT
-Uuid={31a6dca0-ce60-440f-afe4-c8edc103903f}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_1Conditions]
 Comment=
@@ -1131,145 +1149,161 @@ Type=SHORTCUT
 Uuid={66d569ac-6e61-40ea-afa7-c2088ac304d1}
 
 [Data_4]
-Comment=Shortcuts for taking screenshots
-DataCount=4
+Comment=コメント
+DataCount[$d]
 Enabled=true
-ImportId=spectacle
-Name=Screenshots
-SystemGroup=0
-Type=ACTION_DATA_GROUP
+ImportId[$d]
+Name=trigger
+SystemGroup[$d]
+Type=SIMPLE_ACTION_DATA
+
+[Data_4Actions]
+ActionsCount=1
+
+[Data_4Actions0]
+CommandURL=echo triggered > /tmp/trigger; sleep 3; rm /tmp/trigger
+Type=COMMAND_URL
 
 [Data_4Conditions]
 Comment=
 ConditionsCount=0
 
+[Data_4Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_4Triggers0]
+Key=Pause
+Type=SHORTCUT
+Uuid={8b04b080-fd47-4029-980f-d3cb762298cf}
+
 [Data_4_1]
-Comment=Start the screenshot tool and show the GUI
-Enabled=true
-Name=Start Screenshot Tool
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_4_1Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_4_1Actions0]
-Arguments=
-Call=StartAgent
-RemoteApp=org.kde.Spectacle
-RemoteObj=/
-Type=DBUS
+Arguments[$d]
+Call[$d]
+RemoteApp[$d]
+RemoteObj[$d]
+Type[$d]
 
 [Data_4_1Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_4_1Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_4_1Triggers0]
-Key=Meta+Print
-Type=SHORTCUT
-Uuid={b0edcfcf-d163-44b9-8afe-568d4a9f02d5}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_4_2]
-Comment=Take a full screen (all monitors) screenshot and save it
-Enabled=true
-Name=Take Full Screen Screenshot
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_4_2Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_4_2Actions0]
-Arguments=false
-Call=FullScreen
-RemoteApp=org.kde.Spectacle
-RemoteObj=/
-Type=DBUS
+Arguments[$d]
+Call[$d]
+RemoteApp[$d]
+RemoteObj[$d]
+Type[$d]
 
 [Data_4_2Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_4_2Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_4_2Triggers0]
-Key=
-Type=SHORTCUT
-Uuid={6ad0c6c2-aa1a-43e1-a14f-30be991be726}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_4_3]
-Comment=Take a screenshot of the currently active window and save it
-Enabled=true
-Name=Take Active Window Screenshot
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_4_3Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_4_3Actions0]
-Arguments=true, false
-Call=ActiveWindow
-RemoteApp=org.kde.Spectacle
-RemoteObj=/
-Type=DBUS
+Arguments[$d]
+Call[$d]
+RemoteApp[$d]
+RemoteObj[$d]
+Type[$d]
 
 [Data_4_3Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_4_3Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_4_3Triggers0]
-Key=
-Type=SHORTCUT
-Uuid={a685a464-9d07-4d18-9b9d-74c51718c2f1}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_4_4]
-Comment=Take a screenshot of a rectangular region you specify and save it
-Enabled=true
-Name=Take Rectangular Region Screenshot
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_4_4Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_4_4Actions0]
-Arguments=true
-Call=RectangularRegion
-RemoteApp=org.kde.Spectacle
-RemoteObj=/
-Type=DBUS
+Arguments[$d]
+Call[$d]
+RemoteApp[$d]
+RemoteObj[$d]
+Type[$d]
 
 [Data_4_4Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_4_4Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_4_4Triggers0]
-Key=
-Type=SHORTCUT
-Uuid={1d2caced-b83e-4d05-b2c8-52578680953c}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Data_5]
 Comment=コメント
-Enabled=true
-Name=fcitx-next-im
+Enabled=false
+Name=remap tablet
 Type=SIMPLE_ACTION_DATA
 
 [Data_5Actions]
 ActionsCount=1
 
 [Data_5Actions0]
-CommandURL=fcitx-next-im
+CommandURL=wacom-sensitivity -c -s 450
 Type=COMMAND_URL
 
 [Data_5Conditions]
@@ -1281,21 +1315,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_5Triggers0]
-Key=F35
+Key=Meta+O
 Type=SHORTCUT
-Uuid={f8964512-75a1-4419-b6b8-286ae1e9244b}
+Uuid={d945c5e5-157b-4706-99ef-666033fcbe6b}
 
 [Data_6]
 Comment=コメント
-Enabled=true
-Name=Restart PulseAudio
+Enabled=false
+Name=Restore tablet remap
 Type=SIMPLE_ACTION_DATA
 
 [Data_6Actions]
 ActionsCount=1
 
 [Data_6Actions0]
-CommandURL=pulseaudio -k; pulseaudio --start; notify-send "PulseAudio has been restarted" " " --icon view-refresh
+CommandURL=wacom-sensitivity -c -s 950
 Type=COMMAND_URL
 
 [Data_6Conditions]
@@ -1307,21 +1341,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_6Triggers0]
-Key=Meta+P
+Key=Meta+Shift+O
 Type=SHORTCUT
-Uuid={2bf8adc2-f816-49dc-a08b-eeaeb0d05bc1}
+Uuid={67f9f811-b277-4d95-863d-57dc0aabf3e6}
 
 [Data_7]
 Comment=コメント
-Enabled=false
-Name=xfce4-terminal --drop-down
+Enabled=true
+Name=copy dialog
 Type=SIMPLE_ACTION_DATA
 
 [Data_7Actions]
 ActionsCount=1
 
 [Data_7Actions0]
-CommandURL=xfce4-terminal --drop-down
+CommandURL=zenity --entry --title クリップボードにコピー --text "" --width 320 | copy
 Type=COMMAND_URL
 
 [Data_7Conditions]
@@ -1333,21 +1367,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_7Triggers0]
-Key=Menu
+Key=Meta+C
 Type=SHORTCUT
-Uuid={c08e734a-9eb7-4dfe-914b-2a6574559d57}
+Uuid={b0a8e4d8-0680-4f9a-927f-314d6d31cfb2}
 
 [Data_8]
 Comment=コメント
 Enabled=true
-Name=fcitx-next-im prev
+Name=color picker dialog
 Type=SIMPLE_ACTION_DATA
 
 [Data_8Actions]
 ActionsCount=1
 
 [Data_8Actions0]
-CommandURL=fcitx-next-im prev
+CommandURL=kdialog --getcolor | copy
 Type=COMMAND_URL
 
 [Data_8Conditions]
@@ -1359,35 +1393,35 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_8Triggers0]
-Key=Shift+F35
+Key=Meta+F
 Type=SHORTCUT
-Uuid={c4af49f1-d5ec-49d1-93a5-d788940752ba}
+Uuid={b59f1136-0672-4da4-a2f5-2ec910d27955}
 
 [Data_9]
-Comment=コメント
-Enabled=true
-Name=trigger
-Type=SIMPLE_ACTION_DATA
+Comment[$d]
+Enabled[$d]
+Name[$d]
+Type[$d]
 
 [Data_9Actions]
-ActionsCount=1
+ActionsCount[$d]
 
 [Data_9Actions0]
-CommandURL=echo triggered > /tmp/trigger; sleep 3; rm /tmp/trigger
-Type=COMMAND_URL
+CommandURL[$d]
+Type[$d]
 
 [Data_9Conditions]
-Comment=
-ConditionsCount=0
+Comment[$d]
+ConditionsCount[$d]
 
 [Data_9Triggers]
-Comment=Simple_action
-TriggersCount=1
+Comment[$d]
+TriggersCount[$d]
 
 [Data_9Triggers0]
-Key=Pause
-Type=SHORTCUT
-Uuid={8b04b080-fd47-4029-980f-d3cb762298cf}
+Key[$d]
+Type[$d]
+Uuid[$d]
 
 [Gestures]
 Disabled=true

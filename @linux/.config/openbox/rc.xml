@@ -256,25 +256,41 @@
   </keybind>
 
   <!-- one-off command stuff -->
+  <!-- Restart PulseAudio with W-p -->
+  <keybind key="W-p">
+    <action name="Execute"><command>pulseaudio -k</command></action>
+    <action name="Execute"><command>pulseaudio --start</command></action>
+    <action name="Execute"><command>notify-send "PulseAudio has been restarted" " " --icon view-refresh</command></action>
+  </keybind>
 
+  <!-- Switch fcitx input methods with [S-]F35 -->
+  <keybind key="F35">
+    <action name="Execute">
+      <command>fcitx-next-im</command>
+    </action>
+  </keybind>
+  <keybind key="S-F35">
+    <action name="Execute">
+      <command>fcitx-next-im prev</command>
+    </action>
+  </keybind>
+
+  <!-- W-Print to start Spectacle, or just Print to use imagemagick -->
+  <keybind key="Print">
+    <action name="Execute">
+      <command>bash -c 'import -window root "$XDG_PICTURES_DIR"/Screenshots/Screenshot_$(date +%Y%m%d_%H%M%S).jpg'</command>
+    </action>
+    <action name="Execute">
+      <command>notify-send "Screenshot taken" " " --icon accessories-screenshot</command>
+    </action>
+  </keybind>
+  <keybind key="W-Print">
+    <action name="Execute">
+      <command>spectacle</command>
+    </action>
+  </keybind>
 
   <!-- Keybindings for running applications -->
-  <!-- Might want to move Plasma custom keys over here -->
-  <!-- <keybind key="W-e"> -->
-  <!--   <action name="Execute"> -->
-  <!--     <startupnotify> -->
-  <!--       <enabled>true</enabled> -->
-  <!--       <name>Konqueror</name> -->
-  <!--     </startupnotify> -->
-  <!--     <command>emacs</command> -->
-  <!--   </action> -->
-  <!-- </keybind> -->
-    </action>
-  </keybind>
-    </action>
-  </keybind>
-    </action>
-  </keybind>
 
   <!-- keymap -->
   <keybind key="W-o">
