@@ -16,7 +16,7 @@ _k_friendly_name=啟動 GNOME システムモニター
 _launch=none,none,啟動 GNOME システムモニター
 
 [kaccess]
-Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,切換螢幕閱讀器開關
+Toggle Screen Reader On and Off=none,Meta+Alt+S,切換螢幕閱讀器開關
 _k_friendly_name=無障礙輔助
 
 [kcm_touchpad]
@@ -344,7 +344,7 @@ clipboard_action=none,Ctrl+Alt+X,クリップボードのアクションを有�
 cycleNextAction=none,none,履歴の次のアイテム
 cyclePrevAction=none,none,履歴の前のアイテム
 edit_clipboard=none,none,内容を編集(E)...
-manage activities=Meta+A,Meta+Q,アクティビティ...
+manage activities=none,Meta+Q,アクティビティ...
 next activity=none,none,瀏覽活動
 previous activity=none,none,瀏覽活動（反向）
 repeat_action=none,Ctrl+Alt+R,現在のクリップボードに対するアクションを手動で呼び出す
