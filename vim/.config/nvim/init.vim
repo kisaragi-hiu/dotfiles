@@ -8,7 +8,7 @@ set fileencoding=utf-8
 "     set shell=bash
 " endif
 
-cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'bd' : 'q')<CR>
+" cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'bd' : 'q')<CR>
 
 " == plugins ==
 call plug#begin('~/.vim/plugged')
@@ -174,7 +174,7 @@ endfunction
 " == settings ==
 set background=dark
 set termguicolors
-colorscheme dracula
+colorscheme material-monokai
 hi LineNr ctermbg=none guibg=none
 hi NonText ctermbg=none guibg=none
 hi Normal ctermbg=none guibg=none
