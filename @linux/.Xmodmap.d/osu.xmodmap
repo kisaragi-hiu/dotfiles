@@ -1,0 +1,6 @@
+! keymap for osu on a keypad
+keycode 80 = KP_Up F31 KP_Up F31
+keycode 79 = KP_Home F32 KP_Home F32
+keycode 83 = KP_Left F33 KP_Left F33
+keycode 84 = KP_Begin F34 KP_Begin F34
+! f34 is bound to hold grave for a second in openbox config

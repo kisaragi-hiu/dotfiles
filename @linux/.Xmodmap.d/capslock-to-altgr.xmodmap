@@ -1,0 +1,6 @@
+! Caps_Lock -> AltGr, for 3nd & 4th level stuff
+! way easier to press than Alt_R
+! can only be run once.
+remove lock = Caps_Lock
+keysym Caps_Lock = Mode_switch
+

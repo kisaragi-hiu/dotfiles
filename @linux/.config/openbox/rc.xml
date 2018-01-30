@@ -269,28 +269,36 @@
   <!--     <command>emacs</command> -->
   <!--   </action> -->
   <!-- </keybind> -->
+    </action>
+  </keybind>
+    </action>
+  </keybind>
+    </action>
+  </keybind>
 
-  <!-- application specific keybinds -->
-  <keybind key="KP_5">
-    <action name="if">
-      <query><title>osu!*</title><class>osu!.exe</class><name>osu!.exe</name></query>
-      <then><action name="Execute"><command>bash -c "xdotool keydown grave; sleep 1; xdotool keyup grave"</command></action></then>
-      <else><action name="Execute"><command>xdotool key KP_5</command></action></else>
-    </action>
+  <!-- keymap -->
+  <keybind key="W-o">
+    <action name="Execute"><command>bash -c 'xmodmap &lt;(cat ~/.Xmodmap ~/.Xmodmap.d/osu.xmodmap)'</command></action>
+    <action name="Execute"><command>wacom-sensitivity -c -s 450</command></action>
+    <action name="Execute"><command>notify-send "Using osu! keymap" " "</command></action>
   </keybind>
-  <keybind key="KP_7">
-    <action name="if">
-      <query><title>osu!*</title><class>osu!.exe</class><name>osu!.exe</name></query>
-      <then><action name="Execute"><command>xdotool key Escape</command></action></then>
-      <else><action name="Execute"><command>xdotool key KP_7</command></action></else>
-    </action>
+  <keybind key="W-S-o">
+    <action name="Execute"><command>bash -c 'xmodmap &lt;(cat ~/.Xmodmap)'</command></action>
+    <action name="Execute"><command>wacom-sensitivity -c -s 950</command></action>
+    <action name="Execute"><command>notify-send "Using default keymap" " "</command></action>
   </keybind>
-  <keybind key="KP_3">
-    <action name="if">
-      <query><title>osu!*</title><class>osu!.exe</class><name>osu!.exe</name></query>
-      <then><action name="Execute"><command>xdotool key Tab</command></action></then>
-      <else><action name="Execute"><command>xdotool key KP_3</command></action></else>
-    </action>
+  <!-- keybinds for osu!. use a keymap to bind stuff to F32-34 -->
+  <keybind key="F31">
+    <action name="Execute"><command>xdotool key F2</command></action>
+  </keybind>
+  <keybind key="F32">
+    <action name="Execute"><command>xdotool key Escape</command></action>
+  </keybind>
+  <keybind key="F33">
+    <action name="Execute"><command>xdotool key Tab</command></action>
+  </keybind>
+  <keybind key="F34">
+    <action name="Execute"><command>bash -c "xdotool keydown grave; sleep 1; xdotool keyup grave"</command></action>
   </keybind>
 </keyboard>
 

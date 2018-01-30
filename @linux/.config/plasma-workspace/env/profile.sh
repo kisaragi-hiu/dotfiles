@@ -31,7 +31,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
 
 # keyboard config with xmodmap
-xmodmap ~/.Xmodmap
+xmodmap <(cat ~/.Xmodmap ~/.Xmodmap.d/capslock-to-altgr.xmodmap)
 
 # vsync off by default
 export vblank_mode=0
