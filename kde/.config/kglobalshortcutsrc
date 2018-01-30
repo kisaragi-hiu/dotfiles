@@ -60,9 +60,9 @@ _k_friendly_name=KDE Daemon
 [kmix]
 _k_friendly_name=音效音量
 decrease_microphone_volume=Microphone Volume Down,Microphone Volume Down,遞減麥克風音量
-decrease_volume=Meta+Alt+Down,Volume Down,遞減音量
+decrease_volume=Volume Down,Volume Down,遞減音量
 increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,增加麥克風音量
-increase_volume=Meta+Alt+Up,Volume Up,遞增音量
+increase_volume=Volume Up,Volume Up,遞增音量
 mic_mute=Microphone Mute,Microphone Mute,麥克風靜音
 mute=Volume Mute,Volume Mute,靜音
 
@@ -305,10 +305,10 @@ show-on-mouse-pos=none,none,在滑鼠游標位置開啟 Klipper
 
 [mediacontrol]
 _k_friendly_name=媒體控制器
-nextmedia=Media Next\tMeta+Alt+Right,Media Next,播放下一首
-playpausemedia=Media Play\tMeta+Alt+Home,Media Play,播放/暫停媒體
-previousmedia=Media Previous\tMeta+Alt+Left,Media Previous,播放前一首
-stopmedia=Media Stop\tMeta+Alt+End,Media Stop,停止媒體播放
+nextmedia=Media Next,Media Next,播放下一首
+playpausemedia=Media Play,Media Play,播放/暫停媒體
+previousmedia=Media Previous,Media Previous,播放前一首
+stopmedia=Media Stop,Media Stop,停止媒體播放
 
 [org.kde.dolphin.desktop]
 _k_friendly_name=啟動 Dolphin
