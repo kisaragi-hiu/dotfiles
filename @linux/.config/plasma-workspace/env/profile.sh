@@ -44,14 +44,19 @@ export XMODIFIERS=@im=fcitx
 # == PATH ==
 export GOPATH="$HOME"/.gopath
 
+RACKET_VERSION=$(racket --version | sed 's/^.*v\(.*\)./\1/')
+export RACKET_VERSION
+
+RUBY_VERSION=$(ruby --version | cut -d' ' -f 2 | sed 's/[a-zA-Z].*//')
+export RUBY_VERSION
 # exporting PATH here ensures that the desktop also sees them
 export PATH=\
 "$HOME"/git/scripts:\
 "$HOME"/git/Sudocabulary:\
 "$HOME"/bin:\
-"$HOME"/.racket/6.11/bin:\
+"$HOME"/.racket/$RACKET_VERSION/bin:\
 "$HOME"/.local/share/npm-global/bin:\
-"$HOME"/.gem/ruby/2.4.0/bin:\
+"$HOME"/.gem/ruby/$RUBY_VERSION/bin:\
 $PATH
 # `npm config set prefix ~/.local/share/npm-global` to set up global node prefix
 
