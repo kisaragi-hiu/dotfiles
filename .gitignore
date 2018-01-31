@@ -5,3 +5,5 @@ blender
 .netrwhist
 emacs/.emacs.d/*
 !emacs/.emacs.d/init.el
+@linux/.config/openbox/compiled/
+@linux/.config/openbox/rc.xml

@@ -1,3 +1,4 @@
+#lang pollen
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Openbox config -->
@@ -48,42 +49,12 @@
   -->
   <keepBorder>yes</keepBorder>
   <animateIconify>no</animateIconify>
-  <font place="ActiveWindow">
-    <name>Roboto</name>
-    <size>10</size> <!-- font size in points -->
-    <weight>normal</weight> <!-- 'bold' 'normal' -->
-    <slant>normal</slant> <!-- 'italic' 'normal' -->
-  </font>
-  <font place="InactiveWindow">
-    <name>Roboto</name>
-    <size>10</size> <!-- font size in points -->
-    <weight>normal</weight> <!-- 'bold' 'normal' -->
-    <slant>normal</slant> <!-- 'italic' 'normal' -->
-  </font>
-  <font place="MenuHeader">
-    <name>sans</name>
-    <size>9</size> <!-- font size in points -->
-    <weight>normal</weight> <!-- 'bold' or 'normal' -->
-    <slant>normal</slant> <!-- 'italic' or 'normal' -->
-  </font>
-  <font place="MenuItem">
-    <name>sans</name>
-    <size>9</size> <!-- font size in points -->
-    <weight>normal</weight> <!-- 'bold' or 'normal' -->
-    <slant>normal</slant> <!-- 'italic' or 'normal' -->
-  </font>
-  <font place="ActiveOnScreenDisplay">
-    <name>sans</name>
-    <size>9</size> <!-- font size in points -->
-    <weight>bold</weight> <!-- 'bold' or 'normal' -->
-    <slant>normal</slant> <!-- 'italic' or 'normal' -->
-  </font>
-  <font place="InactiveOnScreenDisplay">
-    <name>sans</name>
-    <size>9</size> <!-- font size in points -->
-    <weight>bold</weight> <!-- 'bold' or 'normal' -->
-    <slant>normal</slant> <!-- 'italic' or 'normal' -->
-  </font>
+  ◊(font "ActiveWindow" "Roboto" 10 #:weight "normal" #:slant "normal")
+  ◊(font "InactiveWindow" "Roboto" 10 #:weight "normal" #:slant "normal")
+  ◊(font "MenuHeader" "sans" 9 #:weight "normal" #:slant "normal")
+  ◊(font "MenuItem" "sans" 9 #:weight "normal" #:slant "normal")
+  ◊(font "ActiveOnScreenDisplay" "sans" 9 #:weight "bold" #:slant "normal")
+  ◊(font "InactiveOnScreenDisplay" "sans" 9 #:weight "bold" #:slant "normal")
 </theme>
 
 <desktops>
@@ -148,8 +119,9 @@
 <keyboard>
   <chainQuitKey>C-g</chainQuitKey>
   <keybind key="W-r">
+    <action name="Execute"><command>raco pollen render ~/.config/openbox/</command></action>
     <action name="Execute"><command>openbox --reconfigure</command></action>
-    <action name="Execute"><command>notify-send "Openbox --reconfigure complete" " " --icon view-refresh</command></action>
+    ◊action/notify["Openbox --reconfigure complete" #:icon "view-refresh"]
   </keybind>
 
   <!-- Keybindings for desktop switching -->
@@ -189,12 +161,19 @@
   </keybind>
   <keybind key="W-F10"><action name="ToggleDecorations"/></keybind>
   <keybind key="W-F11"><action name="ToggleFullscreen"/></keybind>
-  <keybind key="W-Up W-k"><action name="Maximize"/></keybind>
+  <keybind key="W-Up W-k">
+    <!-- Toggle maximization -->
+    <action name="if">
+      <maximized>yes</maximized>
+      <then>◊action/decorate-and-unmaximize[]</then>
+      <else>◊action/undecorate-and-maximize[]</else>
+    </action>
+  </keybind>
   <keybind key="W-Down W-j">
     <!-- Minimize if not maximized -->
     <action name="if">
       <maximized>yes</maximized>
-      <then><action name="Unmaximize"/></then>
+      <then>◊action/decorate-and-unmaximize[]</then>
       <else><action name="Iconify"/></else>
     </action>
   </keybind>
@@ -367,7 +346,7 @@
       <action name="if">
         <maximized>yes</maximized>
         <then>
-          <action name="Unmaximize"/>
+          ◊action/decorate-and-unmaximize[]
         </then>
       </action>
       <action name="Move"/>
@@ -408,13 +387,13 @@
       <action name="if">
         <maximized>yes</maximized>
         <then>
-          <action name="Unmaximize"/>
+          ◊action/decorate-and-unmaximize[]
         </then>
       </action>
       <action name="Move"/>
     </mousebind>
     <mousebind button="Left" action="DoubleClick">
-      <action name="ToggleMaximize"/>
+      ◊action/toggle-maximize-and-decorations[]
     </mousebind>
   </context>
 
@@ -555,7 +534,7 @@
       <action name="Unshade"/>
     </mousebind>
     <mousebind button="Left" action="Click">
-      <action name="ToggleMaximize"/>
+      ◊action/undecorate-and-maximize[]
     </mousebind>
     <mousebind button="Middle" action="Click">
       <action name="ToggleMaximize"><direction>vertical</direction></action>
