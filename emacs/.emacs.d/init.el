@@ -12,9 +12,10 @@
     (load bootstrap-file nil 'nomessage)))
 (straight-init)
 
-;; File library
-(straight-use-package 'f)
+(straight-use-package 'f) ; File library
 (require 'f)
+
+(straight-use-package 'suggest) ; examples -> elisp function suggestion
 
 ;; save backups and autosaves to system temp dir
 (setq backup-directory-alist
@@ -141,6 +142,7 @@
   (require 'evil-leader)
   (evil-leader/set-leader ",")
   (evil-leader/set-key
+    "m" 'counsel-imenu
     "e" 'hydra-eval/body
     "z" 'hydra-zoom/body
     "b" 'hydra-buffer/body
@@ -148,7 +150,7 @@
     "l" 'evil-next-buffer
     "h" 'evil-prev-buffer
     "p" 'parinfer-toggle-mode
-    "x" 'execute-extended-command)
+    "x" 'counsel-M-x)
   (evil-leader/set-key-for-mode 'racket-mode
     "r" 'hydra-racket/body
     "e" 'hydra-racket-repl/body)
