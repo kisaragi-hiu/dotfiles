@@ -21,8 +21,10 @@
 (define (action/toggle-maximize-and-decorations)
   (xexpr->string `(action ([name "If"])
                           (maximized "yes")
-                          (then ,(action/decorate-and-unmaximize))
-                          (else ,(action/undecorate-and-maximize)))))
+                          (then (action ([name "Decorate"]))
+                                (action ([name "Unmaximize"])))
+                          (else (action ([name "Undecorate"]))
+                                (action ([name "Maximize"]))))))
 
 (define/contract (action/notify summary [body " "] #:icon [icon #f])
   (->* (string?) (string? #:icon (or/c #f string?)) string?)

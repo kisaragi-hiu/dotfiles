@@ -162,12 +162,7 @@
   <keybind key="W-F10"><action name="ToggleDecorations"/></keybind>
   <keybind key="W-F11"><action name="ToggleFullscreen"/></keybind>
   <keybind key="W-Up W-k">
-    <!-- Toggle maximization -->
-    <action name="if">
-      <maximized>yes</maximized>
-      <then>◊action/decorate-and-unmaximize[]</then>
-      <else>◊action/undecorate-and-maximize[]</else>
-    </action>
+    ◊action/toggle-maximize-and-decorations[]
   </keybind>
   <keybind key="W-Down W-j">
     <!-- Minimize if not maximized -->
