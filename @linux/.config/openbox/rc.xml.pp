@@ -654,3 +654,7 @@
   </application>
 </applications>
 </openbox_config>
+
+◊; Local Variables:
+◊; mode: pollen
+◊; End:
