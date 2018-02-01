@@ -1,1 +1,1 @@
-./.config/plasma-workspace/env/profile.sh
+.xprofile
