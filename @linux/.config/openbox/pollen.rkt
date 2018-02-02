@@ -38,6 +38,13 @@
    `(action ([name "Execute"])
             (command ,command))))
 
+(define (action/plasma-osd text #:icon icon) ; plasma's osd requires an icon
+  `(action ([name "Execute"])
+           (command (string-append "qdbus org.kde.plasmashell /org/kde/osdService org.kde.osdService.showText "
+                                   ,icon
+                                   " "
+                                   ,text))))
+
 (define/contract (font place name [size 11]
                        #:weight [weight "normal"]
                        #:slant [slant "normal"])
