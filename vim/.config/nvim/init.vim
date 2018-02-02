@@ -31,6 +31,8 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'skielbasa/vim-material-monokai'
 Plug 'dracula/vim'
 
+Plug 'osyo-manga/vim-over' " :s highlighting or :OverCommandLine; check :help over
+
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
 function! s:goyo_enter()
