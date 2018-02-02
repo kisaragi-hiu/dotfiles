@@ -35,6 +35,9 @@ keycode 51 = backslash bar U03BB U039B
 ! a, A, Λ, A
 keycode 38 = a A U039B A
 
+! b, B, β, B
+keycode 56 = b B U03B2 B
+
 ! ', ", “ (left double quote), ” (right double quote)
 keycode 48 = apostrophe quotedbl U201C U201D
 
