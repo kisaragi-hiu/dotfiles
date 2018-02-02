@@ -265,26 +265,29 @@
   </keybind>
 
   <!-- W-m for media controls -->
+  <!-- Multibind (like "j Down") seems to break "chrooting" -->
   <keybind key="W-m" chroot="true">
-    <keybind key="l Right">
+    <keybind key="Escape"><action name="BreakChroot"/></keybind>
+    <keybind key="l">
       <action name="Execute"><command>xdotool key XF86AudioNext</command></action>
     </keybind>
-    <keybind key="h Left">
+    <keybind key="h">
       <action name="Execute"><command>xdotool key XF86AudioPrev</command></action>
     </keybind>
-    <keybind key="p Home"> <!-- p for pause. bound to toggle pause/play in plasma. -->
+    <keybind key="p"> <!-- p for pause. bound to toggle pause/play in plasma. -->
       <action name="Execute"><command>notify-send "Media Controls" "Pause toggled" --icon player_pause</command></action>
       <action name="Execute"><command>xdotool key XF86AudioPlay</command></action>
     </keybind>
-    <keybind key="s End"> <!-- s for stop -->
+    <keybind key="s"> <!-- s for stop -->
       <action name="Execute"><command>notify-send "Media Controls" "Audio stopped" --icon player_stop</command></action>
       <action name="Execute"><command>xdotool key XF86AudioStop</command></action>
     </keybind>
-    <keybind key="j Down">
-      <action name="Execute"><command>xdotool key XF86AudioLowerVolume</command></action>
+    <keybind key="j">
+      <action name="Execute"><command>qdbus org.kde.kglobalaccel /component/kmix invokeShortcut decrease_volume</command></action>
     </keybind>
-    <keybind key="k Up">
-      <action name="Execute"><command>xdotool key XF86AudioRaiseVolume</command></action>
+    <keybind key="k">
+      <action name="Execute"><command>qdbus org.kde.kglobalaccel /component/kmix invokeShortcut increase_volume</command></action>
+    </keybind>
     <keybind key="S-j">
       <action name="Execute"><command>qdbus org.kde.kglobalaccel /component/kmix invokeShortcut decrease_microphone_volume</command></action>
     </keybind>
