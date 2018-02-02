@@ -51,7 +51,6 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 Plug 'junegunn/limelight.vim'
-Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' } "helm equivalent for vim
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
