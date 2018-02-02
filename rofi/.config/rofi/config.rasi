@@ -6,7 +6,7 @@ configuration {
    theme: "Adapta-Nokto";
    show-icons: false;
    drun-icon-theme: "Papirus";
-   font: "Fira Sans 12";
+   font: "Noto Sans Mono CJK TC 12";
    width: 50;
    lines: 15;
    columns: 1;
@@ -16,18 +16,23 @@ configuration {
    xoffset: 0;
    eh: 1; /* row height (chars) */
    bw: 0; /* border width */
-   /* sidebar-mode: true; */
-   /* levenshtein-sort: false; */
-   /* disable-history: true; */
+   sidebar-mode: true;
+
+   /* display */
+   display-window: "window";
+   display-windowcd: "window (current desktop)";
+   display-run: "run";
+   display-drun: "drun";
+   display-combi: "combi";
 
    /* Settings */
    modi: "window,run,drun,combi";
-   combi-modi: "window,run";
+   combi-modi: "drun,window,run";
    tokenize: true;
-   /* matching: "fuzzy"; */ /* matches LINE with emacs?!?! Disabling for now.*/
+   matching: "fuzzy";
    terminal: "konsole";
    /* possible values: name, generic, categories, exec, comment, all */
-   /* drun-match-fields: "name,generic,categories"; */
+   drun-match-fields: "name,generic,categories";
    fixed-num-lines: true;
    fullscreen: false;
    threads: 4;
@@ -38,75 +43,17 @@ configuration {
    show-match: true;
 
    /* == Key Bindings == */
-   kb-primary-paste: "Control+V,Shift+Insert";
-   kb-secondary-paste: "Control+v,Insert";
-   kb-clear-line: "Control+w";
-   kb-move-front: "Control+a";
-   kb-move-end: "Control+e";
-   kb-move-word-back: "Alt+b";
-   kb-move-word-forward: "Alt+f";
-   kb-move-char-back: "Left,Control+b";
-   kb-move-char-forward: "Right,Control+f";
-   kb-remove-word-back: "Control+Alt+h,Control+BackSpace";
-   kb-remove-word-forward: "Control+Alt+d";
-   kb-remove-char-forward: "Delete,Control+d";
-   kb-remove-char-back: "BackSpace,Control+h";
-   kb-remove-to-eol: "Control+k";
-   kb-remove-to-sol: "Control+u";
-   kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";
-   kb-accept-custom: "Control+Return";
-   kb-accept-alt: "Shift+Return";
-   kb-delete-entry: "Shift+Delete";
-   kb-mode-next: "Shift+Right,Control+Tab";
-   kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
+   kb-clear-line: "Control+w,Control+c";
+   kb-remove-to-eol: "";
+   kb-remove-to-sol: "";
+   kb-remove-char-back: "BackSpace";
+   kb-accept-entry: "Control+m,Return,KP_Enter";
+   kb-mode-next: "Control+l,Shift+Right,Control+Tab";
+   kb-mode-previous: "Control+h,Shift+Left,Control+ISO_Left_Tab";
    kb-row-left: "Control+Page_Up";
    kb-row-right: "Control+Page_Down";
-   kb-row-up: "Up,Control+p,ISO_Left_Tab";
-   kb-row-down: "Down,Control+n";
-   kb-row-tab: "Tab";
-   kb-page-prev: "Page_Up";
-   kb-page-next: "Page_Down";
-   kb-row-first: "Home,KP_Home";
-   kb-row-last: "End,KP_End";
-   kb-row-select: "Control+space";
-   kb-screenshot: "Alt+S";
-   kb-toggle-case-sensitivity: "grave,dead_grave";
-   kb-toggle-sort: "Alt+grave";
-   kb-cancel: "Escape,Control+g,Control+bracketleft";
-   kb-custom-1: "Alt+1";
-   kb-custom-2: "Alt+2";
-   kb-custom-3: "Alt+3";
-   kb-custom-4: "Alt+4";
-   kb-custom-5: "Alt+5";
-   kb-custom-6: "Alt+6";
-   kb-custom-7: "Alt+7";
-   kb-custom-8: "Alt+8";
-   kb-custom-9: "Alt+9";
-   kb-custom-10: "Alt+0";
-   kb-custom-11: "Alt+exclam";
-   kb-custom-12: "Alt+at";
-   kb-custom-13: "Alt+numbersign";
-   kb-custom-14: "Alt+dollar";
-   kb-custom-15: "Alt+percent";
-   kb-custom-16: "Alt+dead_circumflex";
-   kb-custom-17: "Alt+ampersand";
-   kb-custom-18: "Alt+asterisk";
-   kb-custom-19: "Alt+parenleft";
-   kb-select-1: "Super+1";
-   kb-select-2: "Super+2";
-   kb-select-3: "Super+3";
-   kb-select-4: "Super+4";
-   kb-select-5: "Super+5";
-   kb-select-6: "Super+6";
-   kb-select-7: "Super+7";
-   kb-select-8: "Super+8";
-   kb-select-9: "Super+9";
-   kb-select-10: "Super+0";
-   ml-row-left: "Mouse6";
-   ml-row-right: "Mouse7";
-   ml-row-up: "Mouse4";
-   ml-row-down: "Mouse5";
-   me-select-entry: "Mouse1";
-   me-accept-entry: "MouseD1";
-   me-accept-custom: "Control+MouseD1";
+   kb-row-up: "Control+k,Up,Control+p,ISO_Left_Tab";
+   kb-row-down: "Control+j,Down,Control+n";
+   kb-page-prev: "Control+K,Page_Up";
+   kb-page-next: "Control+J,Page_Down";
 }
