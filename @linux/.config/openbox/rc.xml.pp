@@ -118,6 +118,7 @@
 <!-- keybindings -->
 <keyboard>
   <chainQuitKey>C-g</chainQuitKey>
+  ◊; this is asyncronous. might need to W-r twice to use the newly rendered config
   <keybind key="W-r">
     <action name="Execute"><command>raco pollen render ~/.config/openbox/</command></action>
     <action name="Execute"><command>openbox --reconfigure</command></action>
