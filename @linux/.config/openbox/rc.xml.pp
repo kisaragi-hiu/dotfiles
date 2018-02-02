@@ -285,6 +285,11 @@
     </keybind>
     <keybind key="k Up">
       <action name="Execute"><command>xdotool key XF86AudioRaiseVolume</command></action>
+    <keybind key="S-j">
+      <action name="Execute"><command>qdbus org.kde.kglobalaccel /component/kmix invokeShortcut decrease_microphone_volume</command></action>
+    </keybind>
+    <keybind key="S-k">
+      <action name="Execute"><command>qdbus org.kde.kglobalaccel /component/kmix invokeShortcut increase_microphone_volume</command></action>
     </keybind>
   </keybind>
 
