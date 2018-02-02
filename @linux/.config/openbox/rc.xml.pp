@@ -312,7 +312,7 @@
     <action name="Execute"><command>xdotool key Tab</command></action>
   </keybind>
   <keybind key="F34">
-    <action name="Execute"><command>bash -c "xdotool keydown grave; sleep 1; xdotool keyup grave"</command></action>
+    <action name="Execute"><command>bash -c "xdotool keydown grave; sleep 0.7; xdotool keyup grave"</command></action>
   </keybind>
 </keyboard>
 
