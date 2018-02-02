@@ -347,6 +347,6 @@ augroup END
 augroup xml
     autocmd!
     autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
-    autocmd FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null " makes gg=G work
+    autocmd FileType xml setlocal equalprg=xmllint\ --c14n11\ --format\ --recover\ -\ 2>/dev/null " makes gg=G work
 augroup END
 
