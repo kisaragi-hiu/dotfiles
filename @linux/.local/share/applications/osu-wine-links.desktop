@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=osu!
+MimeType=x-scheme-handler/osu
+Exec=osu-wine %U
+NoDisplay=true
+StartupNotify=true
+Icon=osu-wine
