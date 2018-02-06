@@ -268,7 +268,7 @@
   <!-- W-m for media controls -->
   <!-- Multibind (like "j Down") seems to break "chrooting" -->
   <keybind key="W-m" chroot="true">
-    <keybind key="Escape"><action name="BreakChroot"/></keybind>
+    <keybind key="Escape W-m"><action name="BreakChroot"/></keybind>
     <keybind key="l">
       <action name="Execute"><command>xdotool key XF86AudioNext</command></action>
     </keybind>
