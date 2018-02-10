@@ -195,6 +195,9 @@
   (straight-use-package '(scribble-mode :type git :host github
                                         :repo "emacs-pe/scribble-mode"))
 
+  (straight-use-package 'elpy)
+  (elpy-enable)
+
   (straight-use-package 'markdown-mode)
   (straight-use-package 'fish-mode)
 
