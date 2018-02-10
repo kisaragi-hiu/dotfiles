@@ -1,3 +1,4 @@
+
 ;; Install straight.el
 (defun straight-init ()
   (let ((bootstrap-file (concat user-emacs-directory "straight/bootstrap.el"))
@@ -48,6 +49,14 @@
 (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
 
 ;; (fold-this) folds active region, C-g or Enter unfolds
+(straight-use-package 'vimish-fold)
+(with-eval-after-load 'evil
+  (evil-define-key 'normal global-map (kbd "C-x v f") #'vimish-fold)
+  (evil-define-key 'normal global-map (kbd "C-x v v") #'vimish-fold-delete))
+(define-key prog-mode-map (kbd "C-<tab>") #'evil-toggle-fold)
+(add-hook 'prog-mode-hook #'hs-minor-mode)
+;; (with-eval-after-load 'evil-maps
+;;   (define-key evil-motion-state-map (kbd "<tab>") #'vimish-fold-toggle))
 (straight-use-package 'fold-this)
 (require 'fold-this)
 
