@@ -2,7 +2,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Openbox config -->
-<!-- I feel like I want to write this in some Xexp and compile it back to xml… -->
 
 <!-- Documentation index <"http://openbox.org/wiki/Help:Contents"> -->
 <!-- Configuration documentation <"http://openbox.org/wiki/Help:Configuration"> -->
@@ -270,18 +269,21 @@
   <keybind key="W-m" chroot="true">
     <keybind key="Escape W-m"><action name="BreakChroot"/></keybind>
     <keybind key="l">
-      <action name="Execute"><command>xdotool key XF86AudioNext</command></action>
+      <action name="Execute"><command>qdbus org.kde.kglobalaccel /component/mediacontrol invokeShortcut nextmedia</command></action>
     </keybind>
     <keybind key="h">
-      <action name="Execute"><command>xdotool key XF86AudioPrev</command></action>
+      <action name="Execute"><command>qdbus org.kde.kglobalaccel /component/mediacontrol invokeShortcut previousmedia</command></action>
     </keybind>
     <keybind key="p"> <!-- p for pause. bound to toggle pause/play in plasma. -->
       <action name="Execute"><command>notify-send "Media Controls" "Pause toggled" --icon player_pause</command></action>
-      <action name="Execute"><command>xdotool key XF86AudioPlay</command></action>
+      <action name="Execute"><command>qdbus org.kde.kglobalaccel /component/mediacontrol invokeShortcut playpausemedia</command></action>
     </keybind>
     <keybind key="s"> <!-- s for stop -->
       <action name="Execute"><command>notify-send "Media Controls" "Audio stopped" --icon player_stop</command></action>
-      <action name="Execute"><command>xdotool key XF86AudioStop</command></action>
+      <action name="Execute"><command>qdbus org.kde.kglobalaccel /component/mediacontrol invokeShortcut stopmedia</command></action>
+    </keybind>
+    <keybind key="m"> <!-- Toggle mute with W-m m -->
+      <action name="Execute"><command>qdbus org.kde.kglobalaccel /component/kmix invokeShortcut mute</command></action>
     </keybind>
     <keybind key="j">
       <action name="Execute"><command>qdbus org.kde.kglobalaccel /component/kmix invokeShortcut decrease_volume</command></action>
