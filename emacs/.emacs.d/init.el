@@ -292,6 +292,9 @@
   (add-hook 'org-mode-hook 'evil-org-mode)
   (evil-org-set-key-theme '(navigation insert textobjects additional calendar))
   (evil-org-agenda-set-keys)
+  (setq org-todo-keywords '((sequence "TODO" "NEXT" "DONE")))
+  (setq org-todo-keyword-faces
+        '(("TODO" . org-todo) ("NEXT" . org-todo) ("DONE" . org-done)))
   (setq org-src-fontify-natively t) ;; highlight SRC blocks
   (evil-leader/set-key-for-mode 'org-mode "c" 'org-toggle-checkbox))
 (kisaragi/setup-org)
