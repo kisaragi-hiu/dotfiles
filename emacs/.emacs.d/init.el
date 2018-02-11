@@ -308,6 +308,8 @@
 ;; run ranger to start it
 (ranger-override-dired-mode t)
 
+(straight-use-package 'fzf)
+
 ;; xmlgenexp->xml
 ;; where xexp looks like '(tag ([attr "attr-val"]) (nested-tag) "tag-val"),
 ;; "xmlgenexp" looks like '(tag :attr "attr-val" (nested-tag) "tag-val").
