@@ -26,36 +26,25 @@ Toggle Touchpad=Touchpad Toggle,Touchpad Toggle,切換觸控板
 _k_friendly_name=KDE Daemon
 
 [kded5]
-Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,遞減鍵盤亮度
-Decrease Screen Brightness=Monitor Brightness Down,Monitor Brightness Down,遞減螢幕亮度
-Hibernate=Hibernate,Hibernate,ハイバネーション
-Increase Keyboard Brightness=Keyboard Brightness Up,Keyboard Brightness Up,遞增鍵盤亮度
-Increase Screen Brightness=Monitor Brightness Up,Monitor Brightness Up,遞增螢幕亮度
-PowerOff=Power Off,Power Off,關閉電源
+Decrease Keyboard Brightness[$d]
+Decrease Screen Brightness[$d]
+Hibernate[$d]
+Increase Keyboard Brightness[$d]
+Increase Screen Brightness[$d]
+PowerOff[$d]
 Show System Activity=none,Ctrl+Esc,顯示系統活動
-Sleep=Sleep,Sleep,暫停
-Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,切換鍵盤背光
-_k_friendly_name=電源管理
+Sleep[$d]
+Toggle Keyboard Backlight[$d]
+_k_friendly_name=KDE Daemon
 display=Display,Display\tMeta+P,切換顯示
 
 [khotkeys]
 _k_friendly_name=KDE Daemon
-{1d2caced-b83e-4d05-b2c8-52578680953c}=none,none,Take Rectangular Region Screenshot
-{2bf8adc2-f816-49dc-a08b-eeaeb0d05bc1}=none,none,Restart PulseAudio
-{4776e0ad-0331-45d6-8b20-76b750067c04}=none,none,mouse sensitivity 1.6x
-{67f9f811-b277-4d95-863d-57dc0aabf3e6}=Meta+Shift+O,none,Restore tablet remap
-{6ad0c6c2-aa1a-43e1-a14f-30be991be726}=none,none,Take Full Screen Screenshot
-{84ecdee1-757a-4f04-b729-5010456763ad}=none,none,imagemagick screenshot
 {8b04b080-fd47-4029-980f-d3cb762298cf}=Pause,none,trigger
-{99f26c9b-2c22-4047-bb4c-20add6da5713}=Meta+Shift+I,none,restore mouse sensitivity
-{a685a464-9d07-4d18-9b9d-74c51718c2f1}=none,none,Take Active Window Screenshot
+{9ca1ec02-ff25-4494-b17a-8a8b936a961c}=Meta+E,none,execute code and copy output
 {b0a8e4d8-0680-4f9a-927f-314d6d31cfb2}=Meta+C,none,copy dialog
-{b0edcfcf-d163-44b9-8afe-568d4a9f02d5}=Meta+Print,none,Start Screenshot Tool
 {b59f1136-0672-4da4-a2f5-2ec910d27955}=Meta+F,none,color picker dialog
-{c4af49f1-d5ec-49d1-93a5-d788940752ba}=Shift+F35,none,fcitx-next-im prev
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Search,none,検索
-{d945c5e5-157b-4706-99ef-666033fcbe6b}=Meta+O,none,remap tablet
-{f8964512-75a1-4419-b6b8-286ae1e9244b}=F35,none,fcitx-next-im
 
 [kmix]
 _k_friendly_name=音效音量
@@ -323,6 +312,17 @@ _launch=none,none,啟動 Konsole
 [org.kde.ksysguard.desktop]
 _k_friendly_name=啟動 KSysGuard
 _launch=Ctrl+Shift+Esc,none,啟動 KSysGuard
+
+[org_kde_powerdevil]
+Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,遞減鍵盤亮度
+Decrease Screen Brightness=Monitor Brightness Down,Monitor Brightness Down,遞減螢幕亮度
+Hibernate=Hibernate,Hibernate,ハイバネーション
+Increase Keyboard Brightness=Keyboard Brightness Up,Keyboard Brightness Up,遞增鍵盤亮度
+Increase Screen Brightness=Monitor Brightness Up,Monitor Brightness Up,遞增螢幕亮度
+PowerOff=Power Off,Power Off,關閉電源
+Sleep=Sleep,Sleep,暫停
+Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,切換鍵盤背光
+_k_friendly_name=電源管理
 
 [plasmashell]
 _k_friendly_name=プラズマ

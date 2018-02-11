@@ -174,7 +174,7 @@
   </keybind>
 
   <!-- Alt-tabbing -->
-  <keybind key="A-Tab">
+  <keybind key="A-Tab Menu F24">
     <action name="NextWindow">
       <finalactions>
         <action name="Focus"/>
@@ -183,7 +183,7 @@
       </finalactions>
     </action>
   </keybind>
-  <keybind key="A-S-Tab">
+  <keybind key="A-S-Tab S-Menu S-F24">
     <action name="PreviousWindow">
       <finalactions>
         <action name="Focus"/>
@@ -300,6 +300,8 @@
   </keybind>
 
   <!-- Keybindings for running applications -->
+  ◊(keybind "Scroll_Lock" (action/execute #:return-xexpr? #t
+                                          "qdbus" "org.kde.kglobalaccel" "/component/yakuake" "invokeShortcut" "toggle-window-state"))
 
   <!-- keymap -->
   <keybind key="W-o">

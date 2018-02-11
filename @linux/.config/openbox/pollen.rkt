@@ -37,9 +37,14 @@
            (else (action ([name "Undecorate"]))
                  (action ([name "Maximize"])))))
 
+
+(def/xexpr-switch (action/execute . arguments)
+  `(action ([name "Execute"])
+           (command ,(string-join (flatten arguments)))))
+
 (def/xexpr-switch (action/notify summary [body " "] #:icon [icon #f])
   (let ([icon-arg1 (if icon "--icon" "")] [icon-arg2 (if icon (string-append "\"" icon "\"") "")])
-    (execute #:return-xexpr? #t
+    (action/execute #:return-xexpr? #t
              "notify-send"
              (string-append "\"" summary "\"")
              (string-append "\"" body "\"")
@@ -73,5 +78,3 @@
 (def/xexpr-switch (keybind key . actions)
   `(keybind ([key ,key]) ,@actions))
 
-(def/xexpr-switch (execute . arguments)
-  `(action ([name "Execute"]) (command ,(string-join (map (λ (x) (string-replace x " " "\\ ")) (flatten arguments))))))
