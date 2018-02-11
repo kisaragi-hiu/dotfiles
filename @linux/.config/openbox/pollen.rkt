@@ -3,6 +3,8 @@
          threading)
 
 (provide (all-defined-out))
+(module+ test
+  (require rackunit))
 
 ;; I want a contracted version of this, but simply passing the contract breaks
 ;; as a new input is added
@@ -37,6 +39,13 @@
            (else (action ([name "Undecorate"]))
                  (action ([name "Maximize"])))))
 
+(module+ test
+  (check-equal? (action/toggle-maximize-and-decorations)
+                "<action name=\"If\"><maximized>yes</maximized><then><action name=\"Decorate\"></action><action name=\"Unmaximize\"></action></then><else><action name=\"Undecorate\"></action><action name=\"Maximize\"></action></else></action>")
+  (check-equal? (action/decorate-and-unmaximize)
+                "<action name=\"Decorate\"></action><action name=\"Unmaximize\"></action>")
+  (check-equal? (action/undecorate-and-maximize)
+                "<action name=\"Undecorate\"></action><action name=\"Maximize\"></action>"))
 
 (def/xexpr-switch (action/execute . arguments)
   `(action ([name "Execute"])
@@ -58,6 +67,12 @@
                                    " "
                                    ,text))))
 
+(module+ test
+  (check-equal? (action/notify "hello" #:icon "retry")
+                "<action name=\"Execute\"><command>notify-send \"hello\" \" \" --icon \"retry\"</command></action>")
+  (check-equal? (action/execute "echo" "b" "c")
+                "<action name=\"Execute\"><command>echo b c</command></action>"))
+
 ;; this is only used in one section, no need to use xexpr switch (probably)
 (define/contract (font place name [size 11]
                        #:weight [weight "normal"]
@@ -69,11 +84,8 @@
   (xexpr->string `(font ([place ,place]) (name ,name) (size ,(number->string size)) (weight ,weight) (slant ,slant))))
 
 (module+ test
-  (require rackunit)
   (check-equal? (font "ActiveWindow" "Roboto")
-                "<font place=\"ActiveWindow\"><name>Roboto</name><size>11</size><weight>normal</weight><slant>normal</slant></font>")
-  (check-equal? (action/notify "hello" #:icon "retry")
-                "<action name=\"Execute\"><command>notify-send \"hello\" \" \" --icon \"retry\"</command></action>"))
+                "<font place=\"ActiveWindow\"><name>Roboto</name><size>11</size><weight>normal</weight><slant>normal</slant></font>"))
 
 (def/xexpr-switch (keybind key . actions)
   `(keybind ([key ,key]) ,@actions))
