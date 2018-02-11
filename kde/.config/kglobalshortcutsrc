@@ -1,3 +1,6 @@
+[$Version]
+update_info=powerdevil_move_shortcuts.upd:powerdevil_move_shortcuts
+
 [ActivityManager]
 _k_friendly_name=プラズマ
 switch-to-activity-65aa94b4-229e-46ec-a01e-e9c0bbc0b840=none,none,
@@ -355,4 +358,4 @@ stop current activity=none,Meta+S,現在のアクティビティを停止
 
 [yakuake]
 _k_friendly_name=Yakuake
-toggle-window-state=F24,F12,Yakuake を開く/閉じる
+toggle-window-state=none,F12,Yakuake を開く/閉じる
