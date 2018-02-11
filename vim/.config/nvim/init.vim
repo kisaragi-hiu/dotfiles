@@ -3,10 +3,8 @@ set hidden
 set encoding=utf-8
 set fileencoding=utf-8
 
-"Fish doesnt work well with vim, use bash
-" if &shell =~# 'fish$'
-"     set shell=bash
-" endif
+" == notes ==
+" set scrollbind: binds two views together. useful for eg. translation
 
 " cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'bd' : 'q')<CR>
 
@@ -134,6 +132,13 @@ Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown' "tabular is a dependen
 Plug 'vim-syntastic/syntastic'
 
 "apps
+" :term shortcuts
+Plug 'DanySpin97/ttab.vim'
+" <C-B>{n,p,c,x}: tab: next, previous, new buffer, close current
+" <C-B>{t,|,-}: term: new in new tab, new in :vs, new in :split
+" <C-B>{0..9}: move to nth tab
+" let g:ttab_prefix = '<C-B>'
+
 Plug 'airblade/vim-gitgutter' "<leader>hs <leader>hp <leader>hu -> stage, preview, unstage
 nnoremap <c-N> :GitGutterNextHunk<CR>
 nnoremap <c-P> :GitGutterPrevHunk<CR>
@@ -244,7 +249,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_racket_racket_checker = 1
 let g:syntastic_sh_shellcheck_args = "-x"
 let g:elm_syntastic_show_warnings = 1
-
 " == augroups ==
 augroup main
     autocmd!
