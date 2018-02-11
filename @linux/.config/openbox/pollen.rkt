@@ -70,5 +70,8 @@
   (check-equal? (action/notify "hello" #:icon "retry")
                 "<action name=\"Execute\"><command>notify-send \"hello\" \" \" --icon \"retry\"</command></action>"))
 
+(def/xexpr-switch (keybind key . actions)
+  `(keybind ([key ,key]) ,@actions))
+
 (def/xexpr-switch (execute . arguments)
   `(action ([name "Execute"]) (command ,(string-join (map (λ (x) (string-replace x " " "\\ ")) (flatten arguments))))))
