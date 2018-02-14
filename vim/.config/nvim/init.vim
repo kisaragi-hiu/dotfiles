@@ -71,6 +71,13 @@ Plug 'tpope/vim-repeat'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
 
+"Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<c-c>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-x>"
+
 "Motions, Objects
 Plug 'tpope/vim-surround' "object: s. ex: c s ( '
 Plug 'christoomey/vim-sort-motion' "verb: gs. ex: gs i (
@@ -124,7 +131,8 @@ if executable("elm-format")
 end
 
 Plug 'MicahElliott/vrod'
-Plug 'fasiha/pollen.vim'
+" Plug 'fasiha/pollen.vim'
+Plug 'otherjoel/vim-pollen' " Requires vim-racket (provided by vim-polyglot)
 Plug 'tpope/vim-speeddating' | Plug 'jceb/vim-orgmode'
 Plug 'Firef0x/PKGBUILD.vim'
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown' "tabular is a dependency
@@ -139,12 +147,14 @@ Plug 'DanySpin97/ttab.vim'
 " <C-B>{0..9}: move to nth tab
 " let g:ttab_prefix = '<C-B>'
 
+" git
 Plug 'airblade/vim-gitgutter' "<leader>hs <leader>hp <leader>hu -> stage, preview, unstage
 nnoremap <c-N> :GitGutterNextHunk<CR>
 nnoremap <c-P> :GitGutterPrevHunk<CR>
 nnoremap <c-U> :GitGutterUndoHunk<CR>
-
 Plug 'tpope/vim-fugitive'
+Plug 'jreybert/vimagit'
+
 Plug 'mrtazz/simplenote.vim'
 Plug 'EinfachToll/DidYouMean'
 
