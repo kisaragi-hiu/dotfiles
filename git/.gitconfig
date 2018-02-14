@@ -3,14 +3,13 @@
     path = ~/.config/.gitconfig.sec
 
 [user]
-    email = flyingfeather1501@gmail.com
+    email = mail@kisaragi-hiu.com
     name = Kisaragi Hiu
 
 [core]
     pager = less -r
     editor = nvim
-    # Needed for proper Unicode display
-    quotepath = false
+    quotepath = false # Needed for proper Unicode display
     excludesfile = ~/.gitignore
 
 [alias]
@@ -58,8 +57,8 @@
 [mergetool "meld"]
     cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
 
-[pull]
-    rebase = true
+; [pull]
+;     rebase = true
 
 [push]
     default = simple
