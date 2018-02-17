@@ -660,9 +660,17 @@
     </position>
     <desktop>all</desktop> <!-- 1 is the first desktop, 'all' for all desktops -->
   </application>
+  <application name="wineconsole.exe"
+              class="wineconsole.exe"
+               type="normal"
+               title="名称未設定">
+    <iconic>yes</iconic>
+    <layer>below</layer>
+  </application>
 </applications>
 </openbox_config>
 
 ◊; Local Variables:
 ◊; mode: pollen
 ◊; End:
+◊; vim: filetype=pollen
