@@ -5,7 +5,10 @@
 ◊(require racket/string
           racket/port
           racket/list
-          racket/system)
+          racket/system
+          racket/file)
+
+◊(define include file->string)
 
 ◊(define (defpam_env name . contents)
    (define content (string-join contents ""))
@@ -69,4 +72,6 @@ $◊"{"PATH◊"}"
 ◊defpam_env["WINEDEBUG"]{-all}
 ◊defpam_env["vblank_mode"]{0} # global vsync off
 
+◊; == "sourcing" private env
+◊(file->string (string-append HOME "/.pam_private"))
 ◊; vim: filetype=pollen
