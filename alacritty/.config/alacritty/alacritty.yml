@@ -58,7 +58,7 @@ font:
     style: Italic # optional
 
   # Point size of the font
-  size: 12.0
+  size: 14.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -86,34 +86,32 @@ render_timer: false
 custom_cursor_colors: false
 
 # == Colors ==
-# Nord Alacritty 0.1.0
-# https://github.com/arcticicestudio/nord-alacritty
-# MIT Licensed
+# Adapta Nokto, ported from konsole config
 colors:
   primary:
-    background: '0x2E3440'
-    foreground: '0xD8DEE9'
+    background: '0x263238'
+    foreground: '0xD3DAE3'
   cursor:
     text: '0x2E3440'
     cursor: '0xD8DEE9'
   normal:
-    black: '0x3B4252'
-    red: '0xBF616A'
-    green: '0xA3BE8C'
-    yellow: '0xEBCB8B'
-    blue: '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan: '0x88C0D0'
-    white: '0xE5E9F0'
+    black: '0x222D32'
+    red: '0xE14245'
+    green: '0x5CA75B'
+    yellow: '0xF6AB32'
+    blue: '0x4877B1'
+    magenta: '0xA660C3'
+    cyan: '0x00BCD4'
+    white: '0xA9A9AA'
   bright:
-    black: '0x4C566A'
-    red: '0xBF616A'
-    green: '0xA3BE8C'
-    yellow: '0xEBCB8B'
-    blue: '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan: '0x8FBCBB'
-    white: '0xECEFF4'
+    black: '0x34444D'
+    red: '0xE16F7E'
+    green: '0xADD488'
+    yellow: '0xFDC35F'
+    blue: '0x8CA9BF'
+    magenta: '0xE2AFEC'
+    cyan: '0x73C5E2'
+    white: '0xFCFCFC'
 
 # Disable Visual Bell
 visual_bell:
