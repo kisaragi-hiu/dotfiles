@@ -237,6 +237,20 @@
     <action name="Execute"><command>notify-send "PulseAudio has been restarted" " " --icon view-refresh</command></action>
   </keybind>
 
+  <!-- "extended" commands, or interactive actions -->
+  <keybind key="W-x">
+    <keybind key="Escape W-x"><action name="BreakChroot"/></keybind>
+    <keybind key="c">
+      ◊action/execute/terminal{bash -c 'echo "Write some stuff to copy." | vipe | copy'}
+    </keybind>
+    <keybind key="e">
+      ◊action/execute/terminal{bash -c 'echo "echo \"Write a bash command here and copy its output\"" | vipe | bash | copy'}
+    </keybind>
+    <keybind key="f">
+      ◊action/execute/terminal{bash -c 'cd $(echo "/path/to/search/with/fzf" | vipe) && fzf'}
+    </keybind>
+  </keybind>
+
   <!-- Switch fcitx input methods with [S-]F35 -->
   <keybind key="F35">
     <action name="Execute">
