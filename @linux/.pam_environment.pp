@@ -72,7 +72,7 @@ $◊"{"PATH◊"}"
 }}
 
 ◊; == app behavior controls ==
-◊define/pam["VISUAL"]{nvim}
+◊defpam_env["VISUAL"]{nvim}
 ◊defpam_env["EDITOR"]{nvim}
 ◊defpam_env["SSH_ASKPASS"]{/usr/bin/ksshaskpass} # ssh with kwallet
 ◊defpam_env["OCIO"]{${DOTFILES_DIR}/_filmic-blender/config.ocio}
