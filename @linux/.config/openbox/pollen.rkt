@@ -51,6 +51,11 @@
   `(action ([name "Execute"])
            (command ,(string-join (flatten arguments)))))
 
+(def/xexpr-switch (action/execute/terminal . arguments)
+  (action/execute #:return-xexpr? #t
+                  (or (getenv "TERMINAL") "alacritty") "-e"
+                  arguments))
+
 (def/xexpr-switch (action/notify summary [body " "] #:icon [icon #f])
   (let ([icon-arg1 (if icon "--icon" "")] [icon-arg2 (if icon (string-append "\"" icon "\"") "")])
     (action/execute #:return-xexpr? #t
