@@ -8,11 +8,18 @@
           racket/system
           racket/file)
 
-◊(define include file->string)
-
 ◊(define (defpam_env name . contents)
    (define content (string-join contents ""))
    ◊string-append{◊|name| DEFAULT=◊|content|})
+
+◊; this makes the defined variable usable in Racket/Pollen context as well
+◊; example: (define/pam RACKET "racket.test")
+◊(define-syntax (define/pam stx)
+   (syntax-case stx ()
+     [(_ name body ...)
+      #'(begin
+          (define name (string-append body ...)) ; side effect, but well.
+          (defpam_env (symbol->string 'name) body ...))]))
 
 ◊(define HOME (getenv "HOME"))
 ◊(define USER (getenv "USER"))
@@ -65,13 +72,16 @@ $◊"{"PATH◊"}"
 }}
 
 ◊; == app behavior controls ==
-◊defpam_env["VISUAL"]{nvim}
+◊define/pam["VISUAL"]{nvim}
 ◊defpam_env["EDITOR"]{nvim}
 ◊defpam_env["SSH_ASKPASS"]{/usr/bin/ksshaskpass} # ssh with kwallet
 ◊defpam_env["OCIO"]{${DOTFILES_DIR}/_filmic-blender/config.ocio}
 ◊defpam_env["WINEDEBUG"]{-all}
 ◊defpam_env["vblank_mode"]{0} # global vsync off
 
+◊defpam_env["TERMINAL"]{alacritty}
+
 ◊; == "sourcing" private env
-◊(file->string (string-append HOME "/.pam_private"))
+◊define/pam[PRIVATE_ENVIRONMENT]{◊|HOME|/.pam_private}
+◊(file->string PRIVATE_ENVIRONMENT)
 ◊; vim: filetype=pollen
