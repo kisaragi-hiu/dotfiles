@@ -247,7 +247,7 @@
       ◊action/execute/terminal{bash -c 'echo "echo \"Write a bash command here and copy its output\"" | vipe | bash | copy'}
     </keybind>
     <keybind key="f">
-      ◊action/execute/terminal{bash -c 'cd $(echo "/path/to/search/with/fzf" | vipe) && fzf'}
+      ◊action/execute/terminal{bash -c 'cd $(echo "/path/to/search/with/fzf" | vipe) && fzf | copy'}
     </keybind>
   </keybind>
 
