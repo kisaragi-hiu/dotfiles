@@ -317,14 +317,14 @@ _k_friendly_name=啟動 KSysGuard
 _launch=Ctrl+Shift+Esc,none,啟動 KSysGuard
 
 [org_kde_powerdevil]
-Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,遞減鍵盤亮度
-Decrease Screen Brightness=Monitor Brightness Down,Monitor Brightness Down,遞減螢幕亮度
-Hibernate=Hibernate,Hibernate,ハイバネーション
-Increase Keyboard Brightness=Keyboard Brightness Up,Keyboard Brightness Up,遞增鍵盤亮度
-Increase Screen Brightness=Monitor Brightness Up,Monitor Brightness Up,遞增螢幕亮度
-PowerOff=Power Off,Power Off,關閉電源
-Sleep=Sleep,Sleep,暫停
-Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,切換鍵盤背光
+Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,キーボードの明るさを下げる
+Decrease Screen Brightness=Monitor Brightness Down,Monitor Brightness Down,スクリーンの明るさを下げる
+Hibernate=Hibernate,Hibernate,ハイバネート
+Increase Keyboard Brightness=Keyboard Brightness Up,Keyboard Brightness Up,キーボードの明るさを上げる
+Increase Screen Brightness=Monitor Brightness Up,Monitor Brightness Up,スクリーンの明るさを上げる
+PowerOff=Power Off,Power Off,電源を切る
+Sleep=Sleep,Sleep,サスペンド
+Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,キーボードのバックライトを切り替える
 _k_friendly_name=電源管理
 
 [plasmashell]
