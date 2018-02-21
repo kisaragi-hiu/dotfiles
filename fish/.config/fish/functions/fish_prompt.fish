@@ -1,1 +1,0 @@
-/home/flyin1501/.local/share/omf/themes/bobthefish/fish_prompt.fish
