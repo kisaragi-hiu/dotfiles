@@ -1,1 +1,0 @@
-fontconfig/conf.d is copied to /etc/fonts/local.d and loaded in /etc/fonts/local.conf currently, instead of with symbolic links.
