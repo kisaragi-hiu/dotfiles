@@ -31,17 +31,8 @@
 (def/xexpr-switch (action/decorate-and-unmaximize)
   '(action ([name "Decorate"]))
   '(action ([name "Unmaximize"])))
-(def/xexpr-switch (action/toggle-maximize-and-decorations)
-  `(action ([name "If"])
-           (maximized "yes")
-           (then (action ([name "Decorate"]))
-                 (action ([name "Unmaximize"])))
-           (else (action ([name "Undecorate"]))
-                 (action ([name "Maximize"])))))
 
 (module+ test
-  (check-equal? (action/toggle-maximize-and-decorations)
-                "<action name=\"If\"><maximized>yes</maximized><then><action name=\"Decorate\"></action><action name=\"Unmaximize\"></action></then><else><action name=\"Undecorate\"></action><action name=\"Maximize\"></action></else></action>")
   (check-equal? (action/decorate-and-unmaximize)
                 "<action name=\"Decorate\"></action><action name=\"Unmaximize\"></action>")
   (check-equal? (action/undecorate-and-maximize)
