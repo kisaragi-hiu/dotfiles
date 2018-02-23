@@ -58,6 +58,7 @@
 (defun dotspacemacs/init ()
   "Spacemacs init. Called before layers config."
   (setq-default
+   vc-follow-symlinks t ; follow symlink to a version controlled file?
    evil-move-beyond-eol t ; evil /is/ part of spacemacs core, right?
    dotspacemacs-elpa-https t ; use https?
    dotspacemacs-elpa-timeout 5
