@@ -128,7 +128,7 @@ if executable("elm-format")
     " <Leader>e Shows the detail of the current error or warning.
     " <Leader>d Shows the type and docs for the word under the cursor.
     " <Leader>w Opens the docs web page for the word under the cursor.
-end
+endif
 
 Plug 'MicahElliott/vrod'
 " Plug 'fasiha/pollen.vim'
