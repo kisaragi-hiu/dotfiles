@@ -199,6 +199,8 @@ hi LineNr ctermbg=none guibg=none
 hi NonText ctermbg=none guibg=none
 hi Normal ctermbg=none guibg=none
 
+set autochdir " cd to file path (like emacs evil)
+
 set noshowmode "mode is shown in statusline already, hide it
 set number
 set relativenumber
