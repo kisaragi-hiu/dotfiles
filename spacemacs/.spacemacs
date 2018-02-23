@@ -20,14 +20,13 @@
      version-control
      syntax-checking
      emoji
-     ;; colors
-     ;; spell-checking
      ;; == languages ==
      racket
      emacs-lisp
      vimscript
      shell-scripts
      markdown
+     pollen
      ;; == apps ==
      (wakatime :variables
                wakatime-api-key

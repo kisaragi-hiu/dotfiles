@@ -1,0 +1,28 @@
+#+TITLE: Pollen layer
+
+* Table of Contents                                         :TOC_4_gh:noexport:
+ - [[#description][Description]]
+ - [[#install][Install]]
+ - [[#key-bindings][Key Bindings]]
+   - [[#server][Server]]
+
+* Description
+
+Adds support for the [[http://pollenpub.com][Pollen]]
+programmable publishing system.
+
+This layer is modified from the Racket layer.
+
+* Install
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =pollen= to the existing =dotspacemacs-configuration-layers= list in this
+file.
+
+* Key Bindings
+
+** Server
+
+| Key Binding | Description         |
+|-------------+---------------------|
+| ~SPC s b ~  | Start Pollen server |
+| ~SPC s p~   | Stop Pollen server  |
