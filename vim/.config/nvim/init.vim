@@ -147,6 +147,10 @@ Plug 'DanySpin97/ttab.vim'
 " <C-B>{0..9}: move to nth tab
 " let g:ttab_prefix = '<C-B>'
 
+if executable('wakatime')
+    Plug 'wakatime/vim-wakatime'
+endif
+
 " git
 Plug 'airblade/vim-gitgutter' "<leader>hs <leader>hp <leader>hu -> stage, preview, unstage
 nnoremap <c-N> :GitGutterNextHunk<CR>
