@@ -20,6 +20,7 @@ function fish_prompt --description 'Write out the prompt'
              --project "Terminal" \
              --entity (echo $history[1] | cut -d ' ' -f 1) \
              2>&1 > /dev/null &
+    disown
 
     echo -n -s "$USER" @ (prompt_hostname) ' ' (set_color $color_cwd) (prompt_pwd) (set_color normal) "$suffix "
 end
