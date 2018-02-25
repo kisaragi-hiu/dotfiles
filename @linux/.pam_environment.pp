@@ -69,6 +69,7 @@
 ◊|HOME|/.local/share/npm-global/bin
 ◊|HOME|/.gem/ruby/◊|ruby-version|/bin
 $◊"{"PATH◊"}"
+/usr/bin ◊; safety fallback
 }}
 
 ◊; == app behavior controls ==
