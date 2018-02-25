@@ -10,7 +10,7 @@
 
 ◊(define (defpam_env name . contents)
    (define content (string-join contents ""))
-   ◊string-append{◊|name| DEFAULT=◊|content|})
+   ◊string-append{◊|name| OVERRIDE=◊|content|})
 
 ◊; this makes the defined variable usable in Racket/Pollen context as well
 ◊; example: (define/pam RACKET "racket.test")
