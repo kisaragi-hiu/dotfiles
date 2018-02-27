@@ -125,17 +125,20 @@
   </keybind>
 
   <!-- Keybindings for desktop switching -->
-  <keybind key="C-W-Left C-W-h">
-    <action name="GoToDesktop"><to>left</to><wrap>yes</wrap></action>
-  </keybind>
-  <keybind key="C-W-Right C-W-l">
-    <action name="GoToDesktop"><to>right</to><wrap>yes</wrap></action>
-  </keybind>
-  <keybind key="C-W-Up C-W-k">
-    <action name="GoToDesktop"><to>up</to><wrap>yes</wrap></action>
-  </keybind>
-  <keybind key="C-W-Down C-W-j">
-    <action name="GoToDesktop"><to>down</to><wrap>yes</wrap></action>
+  <keybind key="W-w" chroot="true">
+    <keybind key="Escape W-w"><action name="BreakChroot"/></keybind>
+    <keybind key="Left h">
+      <action name="GoToDesktop"><to>left</to><wrap>yes</wrap></action>
+    </keybind>
+    <keybind key="Right l">
+      <action name="GoToDesktop"><to>right</to><wrap>yes</wrap></action>
+    </keybind>
+    <keybind key="Up k">
+      <action name="GoToDesktop"><to>up</to><wrap>yes</wrap></action>
+    </keybind>
+    <keybind key="Down j">
+      <action name="GoToDesktop"><to>down</to><wrap>yes</wrap></action>
+    </keybind>
   </keybind>
 
   <keybind key="W-A-Left W-A-h">
