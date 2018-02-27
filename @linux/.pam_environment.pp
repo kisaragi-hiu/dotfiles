@@ -10,7 +10,7 @@
 
 ◊(define (defpam_env name . contents)
    (define content (string-join contents ""))
-   ◊string-append{◊|name| OVERRIDE=◊|content|})
+   ◊string-append{◊|name| DEFAULT=◊|content| OVERRIDE=◊|content|})
 
 ◊; this makes the defined variable usable in Racket/Pollen context as well
 ◊; example: (define/pam RACKET "racket.test")
@@ -68,8 +68,9 @@
 ◊|HOME|/.racket/◊|racket-version|/bin
 ◊|HOME|/.local/share/npm-global/bin
 ◊|HOME|/.gem/ruby/◊|ruby-version|/bin
-$◊"{"PATH◊"}"
-/usr/bin ◊; safety fallback
+@◊"{"PATH◊"}"
+◊; safety fallback
+/usr/bin
 }}
 
 ◊; == app behavior controls ==
