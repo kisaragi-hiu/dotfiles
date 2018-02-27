@@ -83,7 +83,7 @@
                          spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t ; sync cursor with state color
    ;; Default font, or prioritized list of fonts.
-   dotspacemacs-default-font '("Hack"
+   dotspacemacs-default-font '("Fira Code"
                                :size 16
                                :weight normal
                                :width normal
