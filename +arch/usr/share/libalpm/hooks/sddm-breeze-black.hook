@@ -1,0 +1,10 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Target = usr/share/sddm/themes/breeze/theme.conf
+
+[Action]
+Description = Patching breeze sddm theme...
+When = PostTransaction
+Exec = /usr/bin/sed -i s/1d99f3/000000/g /usr/share/sddm/themes/breeze/theme.conf

@@ -1,0 +1,11 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Target = etc/pam.d/gdm-*
+
+[Action]
+Description = Getting gdm to start kwallet on login...
+When = PostTransaction
+Exec = /bin/sh -c 'while read -r f; do sed -i "s/auth     optional  pam_gnome_keyring.so/auth     optional  pam_gnome_keyring.so\nauth     optional  pam_kwallet5.so/; s/session  optional  pam_gnome_keyring.so auto_start/session  optional  pam_gnome_keyring.so auto_start\nsession  optional  pam_kwallet5.so auto_start/" "/$f"; done'
+NeedsTargets

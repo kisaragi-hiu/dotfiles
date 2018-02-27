@@ -1,0 +1,10 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Target = usr/share/applications/xfce4-appfinder.desktop
+
+[Action]
+Description = Changing icon for xfce4-appfinder...
+When = PostTransaction
+Exec = /usr/bin/sed -i 's/edit-find/system-search/' /usr/share/applications/xfce4-appfinder.desktop
