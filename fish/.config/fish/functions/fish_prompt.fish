@@ -14,7 +14,8 @@ function fish_prompt --description 'Write out the prompt'
             set suffix '>'
     end
     # wakatime
-    wakatime --write \
+    type wakatime >/dev/null 2>/dev/null
+    and wakatime --write \
              --plugin "fish-local/0.1" \
              --entity-type app \
              --project "Terminal" \
