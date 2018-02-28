@@ -355,6 +355,38 @@
   <keybind key="F34">
     <action name="Execute"><command>bash -c "xdotool keydown grave; sleep 0.7; xdotool keyup grave"</command></action>
   </keybind>
+  <!-- application specific keybinds -->
+  <keybind key="W-a">
+    ◊; <keybind key="Escape W-a"><action name="BreakChroot"/></keybind>
+    <keybind key="o"> <!-- osu -->
+      <keybind key="s"> <!-- sorting -->
+        <keybind key="a">
+          <action name="Execute"><command>◊osu-select-sorting["artist"]</command></action>
+        </keybind>
+        <keybind key="b">
+          <action name="Execute"><command>◊osu-select-sorting["bpm"]</command></action>
+        </keybind>
+        <keybind key="c">
+          <action name="Execute"><command>◊osu-select-sorting["creator"]</command></action>
+        </keybind>
+        <keybind key="d">
+          <action name="Execute"><command>◊osu-select-sorting["date"]</command></action>
+        </keybind>
+        <keybind key="e">
+          <action name="Execute"><command>◊osu-select-sorting["difficulty"]</command></action>
+        </keybind>
+        <keybind key="l">
+          <action name="Execute"><command>◊osu-select-sorting["length"]</command></action>
+        </keybind>
+        <keybind key="r">
+          <action name="Execute"><command>◊osu-select-sorting["rank"]</command></action>
+        </keybind>
+        <keybind key="t">
+          <action name="Execute"><command>◊osu-select-sorting["title"]</command></action>
+        </keybind>
+      </keybind>
+    </keybind>
+  </keybind>
 </keyboard>
 
 <mouse>

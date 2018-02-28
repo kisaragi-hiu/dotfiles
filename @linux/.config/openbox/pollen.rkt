@@ -42,6 +42,29 @@
   `(action ([name "Execute"])
            (command ,(string-join (flatten arguments)))))
 
+(define (osu-select-sorting sorting)
+  ;; item: artist, bpm, creator, date, difficulty, length, rank, title
+  (define item-position
+    (case sorting
+      [("artist") "30"]
+      [("bpm") "60"]
+      [("creator") "100"]
+      [("date") "130"]
+      [("difficulty") "170"]
+      [("length") "200"]
+      [("rank") "230"]
+      [("title") "280"]))
+  (define wait "sleep 0.1")
+  (string-append "bash -c '" 
+                 (string-join
+                   `("xdotool mousemove 1750 55"
+                     "xdotool click 1"
+                     ,wait
+                     ,(string-append "xdotool mousemove_relative 0 " item-position)
+                     "xdotool click 1")
+                    ";")
+                 "'"))
+
 (def/xexpr-switch (action/execute/terminal . arguments)
   (action/execute #:return-xexpr? #t
                   (or (getenv "TERMINAL") "alacritty") "-e"
