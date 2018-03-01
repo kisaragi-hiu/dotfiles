@@ -153,6 +153,59 @@
     <action name="GoToDesktop"><to>down</to><wrap>yes</wrap></action>
   </keybind>
 
+  <!-- edge snap -->
+  <keybind key="W-S-Left W-S-h">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="Maximize"><direction>vertical</direction></action>
+    <action name="MoveResizeTo"><width>50%</width></action>
+    <action name="MoveToEdge"><direction>west</direction></action>
+  </keybind>
+  <keybind key="W-S-Right W-S-l">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="Maximize"><direction>vertical</direction></action>
+    <action name="MoveResizeTo"><width>50%</width></action>
+    <action name="MoveToEdge"><direction>east</direction></action>
+  </keybind>
+  <keybind key="W-S-Up W-S-k">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="Maximize"><direction>horizontal</direction></action>
+    <action name="MoveResizeTo"><height>50%</height></action>
+    <action name="MoveToEdge"><direction>north</direction></action>
+  </keybind>
+  <keybind key="W-S-Down W-S-j">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="Maximize"><direction>horizontal</direction></action>
+    <action name="MoveResizeTo"><height>50%</height></action>
+    <action name="MoveToEdge"><direction>south</direction></action>
+  </keybind>
+
+  <!-- grid snap -->
+  <!-- shortcuts subject to change -->
+  <keybind key="C-W-S-Left C-W-S-h">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="MoveResizeTo"><width>50%</width><height>50%</height></action>
+    <action name="MoveToEdge"><direction>west</direction></action>
+    <action name="MoveToEdge"><direction>north</direction></action>
+  </keybind>
+  <keybind key="C-W-S-Right C-W-S-l">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="MoveResizeTo"><width>50%</width><height>50%</height></action>
+    <action name="MoveToEdge"><direction>west</direction></action>
+    <action name="MoveToEdge"><direction>south</direction></action>
+  </keybind>
+  <keybind key="C-W-S-Up C-W-S-k">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="MoveResizeTo"><width>50%</width><height>50%</height></action>
+    <action name="MoveToEdge"><direction>east</direction></action>
+    <action name="MoveToEdge"><direction>south</direction></action>
+  </keybind>
+  <keybind key="C-W-S-Down C-W-S-j">
+    <action name="Unmaximize"><direction>both</direction></action>
+    <action name="MoveResizeTo"><width>50%</width><height>50%</height></action>
+    <action name="MoveToEdge"><direction>east</direction></action>
+    <action name="MoveToEdge"><direction>north</direction></action>
+  </keybind>
+
   <keybind key="W-A-Left W-A-h">
     <action name="SendToDesktop"><to>left</to><wrap>no</wrap></action>
   </keybind>
@@ -227,32 +280,6 @@
     <action name="Execute">
       <command>rofi -combi-modi window,drun,run -show combi</command>
     </action>
-  </keybind>
-
-  <!-- edge snap -->
-  <keybind key="W-S-Left W-S-h">
-    <action name="Unmaximize"><direction>both</direction></action>
-    <action name="Maximize"><direction>vertical</direction></action>
-    <action name="MoveResizeTo"><width>50%</width></action>
-    <action name="MoveToEdge"><direction>west</direction></action>
-  </keybind>
-  <keybind key="W-S-Right W-S-l">
-    <action name="Unmaximize"><direction>both</direction></action>
-    <action name="Maximize"><direction>vertical</direction></action>
-    <action name="MoveResizeTo"><width>50%</width></action>
-    <action name="MoveToEdge"><direction>east</direction></action>
-  </keybind>
-  <keybind key="W-S-Up W-S-k">
-    <action name="Unmaximize"><direction>both</direction></action>
-    <action name="Maximize"><direction>horizontal</direction></action>
-    <action name="MoveResizeTo"><height>50%</height></action>
-    <action name="MoveToEdge"><direction>north</direction></action>
-  </keybind>
-  <keybind key="W-S-Down W-S-j">
-    <action name="Unmaximize"><direction>both</direction></action>
-    <action name="Maximize"><direction>horizontal</direction></action>
-    <action name="MoveResizeTo"><height>50%</height></action>
-    <action name="MoveToEdge"><direction>south</direction></action>
   </keybind>
 
   <!-- one-off command stuff -->
@@ -473,7 +500,18 @@
       <action name="Move"/>
     </mousebind>
     <mousebind button="Left" action="DoubleClick">
-      ◊action/toggle-maximize-and-decorations[]
+      <!-- Maximize w/ decor = undecor, w/o decor = unmaximize -->
+      <action name="if">
+        <maximized>yes</maximized>
+        <then>
+          <action name="if">
+            <undecorated>no</undecorated>
+            <then><action name="Undecorate"/></then>
+            <else>◊action/decorate-and-unmaximize[]</else>
+          </action>
+        </then>
+        <else>◊action/undecorate-and-maximize[]</else>
+      </action>
     </mousebind>
   </context>
 
