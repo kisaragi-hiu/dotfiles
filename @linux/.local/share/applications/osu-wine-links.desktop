@@ -2,7 +2,7 @@
 Type=Application
 Name=osu! link handler
 MimeType=x-scheme-handler/osu
-Exec=osu-wine %U
+Exec=env WINEPREFIX=/home/flyin1501/.wineprefix/osu wine "X:/osu!.exe" %U
 NoDisplay=true
 StartupNotify=true
 Icon=osu-wine
