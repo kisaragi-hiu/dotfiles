@@ -10,9 +10,17 @@ keycode 36 = Return NoSymbol U23CE
 ! Fuck Insert
 keycode 118 = F35 NoSymbol NoSymbol
 
+! Page up -> Compose
+! Should I use PageUp (this↓) or AltGr-5 for Compose?
+keycode 112 = Multi_key NoSymbol Prior
+! keycode 117 = Next NoSymbol Next
+
 ! Parens are used more often. Note Takuten and Hantakuten will have to be AltGr+( & AltGr+)
 keycode 34 = parenleft bracketleft braceleft parenleft
 keycode 35 = parenright bracketright braceright parenright
+
+! 5 percent Compose percent
+keycode 14 = 5 percent Multi_key percent
 
 ! 6 ^ ◊ ♦
 keycode 15 = 6 asciicircum U25CA U2666
