@@ -3,6 +3,7 @@ fisherman/fzf
 fisherman/git_util
 fisherman/humanize_duration
 fisherman/last_job_id
+kisaragi-hiu/launch
 fisherman/pwd_info
 fisherman/pwd_is_home
 fisherman/ray
