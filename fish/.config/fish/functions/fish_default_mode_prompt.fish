@@ -21,11 +21,13 @@ function fish_default_mode_prompt --description 'Display the default mode for th
     end
     # inject wakatime tracking here
     type wakatime >/dev/null 2>/dev/null
-    and wakatime --write \
-             --plugin "fish-local/0.1" \
-             --entity-type app \
-             --project "Terminal" \
-             --entity (echo $history[1] | cut -d ' ' -f 1) \
-             2>&1 > /dev/null &
-    disown
+    and begin
+        wakatime --write \
+                 --plugin "fish-local/0.1" \
+                 --entity-type app \
+                 --project "Terminal" \
+                --entity (echo $history[1] | cut -d ' ' -f 1) \
+                2>&1 > /dev/null
+        disown
+    end
 end
