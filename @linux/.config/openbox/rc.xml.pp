@@ -386,13 +386,13 @@
     <action name="Execute"><command>xdotool key F2</command></action>
   </keybind>
   <keybind key="F32">
-    <action name="Execute"><command>xdotool key Escape</command></action>
+    <action name="Execute"><command>xdotool click 2</command></action>
   </keybind>
   <keybind key="F33">
     <action name="Execute"><command>xdotool key Tab</command></action>
   </keybind>
   <keybind key="F34">
-    <action name="Execute"><command>bash -c "xdotool keydown grave; sleep 0.7; xdotool keyup grave"</command></action>
+    <action name="Execute"><command>bash -c "xdotool click 2 key Down key Down key Return"</command></action>
   </keybind>
   <!-- application specific keybinds -->
   <keybind key="W-a">
@@ -771,9 +771,7 @@
     <desktop>all</desktop> <!-- 1 is the first desktop, 'all' for all desktops -->
   </application>
   <application name="wineconsole.exe"
-              class="wineconsole.exe"
-               type="normal"
-               title="名称未設定">
+               type="normal">
     <iconic>yes</iconic>
     <layer>below</layer>
   </application>
