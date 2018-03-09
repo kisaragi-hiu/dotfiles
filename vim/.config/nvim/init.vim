@@ -70,6 +70,8 @@ let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`', 'ã€Œ':'ã€
 Plug 'tpope/vim-repeat'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
+Plug 'mbbill/undotree'
+Plug 'ConradIrwin/vim-bracketed-paste'
 
 "Snippets
 Plug 'SirVer/ultisnips'
@@ -160,6 +162,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
 
 Plug 'mrtazz/simplenote.vim'
+source ~/.simplenote.vim
 Plug 'EinfachToll/DidYouMean'
 
 call plug#end()
