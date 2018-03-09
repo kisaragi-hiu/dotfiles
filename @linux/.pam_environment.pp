@@ -26,11 +26,14 @@
 ◊(define racket-version (version))
 ◊(define ruby-version
    ; this, or sed | cut? I don't know which I prefer really.
-   ((compose1 first
-              (λ ($1) (string-split $1 "p"))
-              second
-              (λ ($1) (string-split $1 " ")))
-    (with-output-to-string (λ () (system "ruby --version")))))
+   (and
+    (find-executable-path "ruby")
+    (find-executable-path "gem")
+    ((compose1 first
+               (λ ($1) (string-split $1 "p"))
+               second
+               (λ ($1) (string-split $1 " ")))
+     (with-output-to-string (λ () (system "ruby --version"))))))
 ◊(define (pathlist-string . args)
    (string-join (string-split (string-join args "") "\n") ":"))
 
@@ -67,7 +70,8 @@
 ◊|HOME|/bin
 ◊|HOME|/.racket/◊|racket-version|/bin
 ◊|HOME|/.local/share/npm-global/bin
-◊|HOME|/.gem/ruby/◊|ruby-version|/bin
+◊(when ruby-version
+   (string-append HOME "/.gem/ruby/" ruby-version "/bin"))
 @◊"{"PATH◊"}"
 ◊; safety fallback
 /usr/bin
@@ -85,5 +89,6 @@
 
 ◊; == "sourcing" private env
 ◊define/pam[PRIVATE_ENVIRONMENT]{◊|HOME|/.pam_private}
-◊(file->string PRIVATE_ENVIRONMENT)
+◊(when (file-exists? PRIVATE_ENVIRONMENT)
+   (file->string PRIVATE_ENVIRONMENT))
 ◊; vim: filetype=pollen
