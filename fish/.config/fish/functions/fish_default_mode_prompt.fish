@@ -26,8 +26,8 @@ function fish_default_mode_prompt --description 'Display the default mode for th
                  --plugin "fish-local/0.1" \
                  --entity-type app \
                  --project "Terminal" \
-                --entity (echo $history[1] | cut -d ' ' -f 1) \
-                2>&1 > /dev/null
+                 --entity (echo $history[1] | cut -d ' ' -f 1) \
+                 2>&1 > /dev/null &
         disown
     end
 end
