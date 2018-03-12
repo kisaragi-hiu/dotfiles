@@ -392,7 +392,7 @@
     <action name="Execute"><command>xdotool key Tab</command></action>
   </keybind>
   <keybind key="F34">
-    <action name="Execute"><command>bash -c "xdotool click 2 key Down key Down key Return"</command></action>
+    <action name="Execute"><command>bash -c "xdotool keydown grave; sleep 0.7; xdotool keyup grave"</command></action>
   </keybind>
   <!-- application specific keybinds -->
   <keybind key="W-a">
