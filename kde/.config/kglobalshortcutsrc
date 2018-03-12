@@ -8,7 +8,7 @@ switch-to-activity-f37dc9aa-a4b8-44aa-9dac-69b719932006=none,none,
 
 [KDE Keyboard Layout Switcher]
 Switch to Next Keyboard Layout=none,none,切換到下一個鍵盤佈局
-_k_friendly_name=KDE システム設定
+_k_friendly_name=KDE Daemon
 
 [albert.desktop]
 _k_friendly_name=啟動 Albert
@@ -275,6 +275,8 @@ activate task manager entry 6=,Meta+6,啟用工作管理員項目 6
 activate task manager entry 7=,Meta+7,啟用工作管理員項目 7
 activate task manager entry 8=,Meta+8,啟用工作管理員項目 8
 activate task manager entry 9=,Meta+9,啟用工作管理員項目 9
+activate widget 84=none,none,Active Window Control ウィジェットを有効化
+activate widget 85=Meta+Shift+P,none,Redshift Control ウィジェットを有効化
 clear-history=none,none,クリップボードの履歴を消去(L)
 clipboard_action=none,Ctrl+Alt+X,クリップボードのアクションを有効にする
 cycleNextAction=none,none,履歴の次のアイテム
@@ -341,7 +343,6 @@ activate task manager entry 8=,Meta+8,啟用工作管理員項目 8
 activate task manager entry 9=,Meta+9,啟用工作管理員項目 9
 activate widget 22=none,none,Event Calendar ウィジェットを有効化
 activate widget 28=none,none,タスクマネージャ ウィジェットを有効化
-activate widget 32=Meta+[,none,Redshift Control ウィジェットを有効化
 clear-history=Meta+`,none,クリップボードの履歴を消去(L)
 clipboard_action=none,Ctrl+Alt+X,クリップボードのアクションを有効にする
 cycleNextAction=none,none,履歴の次のアイテム

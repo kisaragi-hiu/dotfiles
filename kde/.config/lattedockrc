@@ -1,6 +1,12 @@
 [Containments][4][General]
 appletOrder[$d]
 
+[PlasmaTransientsConfig]
+raiseOnActivityChange[$d]
+raiseOnDesktopChange[$d]
+timerHide[$d]
+timerShow[$d]
+
 [ScreenConnectors]
 10=DVI-D-0
 
