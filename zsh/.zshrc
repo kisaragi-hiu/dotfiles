@@ -24,7 +24,8 @@ if [[ -z $ANDROID_ROOT ]]; then
 fi
 
 # an async prompt
-zplug "eendroroy/alien"
+# zplug "eendroroy/alien"
+zplug "dracula/zsh", as:theme
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "lib/completion", from:oh-my-zsh
@@ -36,6 +37,8 @@ zplug load
 for i in $(find ~/.zsh/functions/ -name '*.zsh'); do
     source "$i"
 done
+
+test -f /usr/share/doc/pkgfile/command-not-found.zsh && source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # bindkey -v
 # export KEYTIMEOUT=1
