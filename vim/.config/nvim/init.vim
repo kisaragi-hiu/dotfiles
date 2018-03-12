@@ -6,101 +6,52 @@ set fileencoding=utf-8
 " == notes ==
 " set scrollbind: binds two views together. useful for eg. translation
 
-" cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'bd' : 'q')<CR>
-
 " == plugins ==
 call plug#begin('~/.vim/plugged')
 
-"Config
+" Behavior
 Plug 'tpope/vim-sensible'
+Plug 'EinfachToll/DidYouMean'
+Plug 'tpope/vim-repeat'
+Plug 'ConradIrwin/vim-bracketed-paste'
 
-"UI
+" UI
 Plug 'vim-airline/vim-airline'
+Plug 'jeffkreeftmeijer/vim-numbertoggle' " relativenumber off where it makes no sense
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 1
-
-let g:airline#extensions#whitespace#enabled = 1
-
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-
+" Theme
 Plug 'tomasr/molokai'
-Plug 'arcticicestudio/nord-vim'
 Plug 'skielbasa/vim-material-monokai'
-Plug 'dracula/vim'
-
-Plug 'osyo-manga/vim-over' " :s highlighting or :OverCommandLine; check :help over
-
 Plug 'junegunn/seoul256.vim'
-Plug 'junegunn/goyo.vim'
-function! s:goyo_enter()
-    set noshowmode
-    set noshowcmd
-    set scrolloff=999
-    Limelight
-endfunction
-function! s:goyo_leave()
-    set showmode
-    set showcmd
-    set scrolloff=5
-    Limelight!
-endfunction
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
-
-Plug 'junegunn/limelight.vim'
-
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
-"Jumping around
-if executable("ag")
-    Plug 'mileszs/ack.vim'
-    let g:ackprg = 'ag --vimgrep'
-endif
-
-if executable("fzf")
-    Plug 'junegunn/fzf.vim'
-endif
-
 "Editing
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'bhurlow/vim-parinfer'
 Plug 'jiangmiao/auto-pairs'
-let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`', '「':'」', '“':'”'}
-Plug 'tpope/vim-repeat'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
 Plug 'mbbill/undotree'
-Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'osyo-manga/vim-over' " :s highlighting or :OverCommandLine; check :help over
 
 "Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<c-c>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-x>"
 
 "Motions, Objects
 Plug 'tpope/vim-surround' "object: s. ex: c s ( '
 Plug 'christoomey/vim-sort-motion' "verb: gs. ex: gs i (
 Plug 'tpope/vim-commentary' "verb: gc, gcc
 
-Plug 'joereynolds/place.vim'
-let g:place_single_character_mode = 0
-nmap ga <Plug>(place-insert)
+Plug 'junegunn/vim-easy-align'
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 "Easymotion
-Plug 'easymotion/vim-easymotion'
-let g:EasyMotion_use_migemo = 1 "match kana with romaji
-
-nmap F <Plug>(easymotion-prefix)s
-let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+Plug 'easymotion/vim-easymotion' " <leader><leader>[motion]
 
 "vim-textobj-user based
-"a_ vs i_ is analogous to UTAU C-a vs C-w
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-datetime' "{a,i}d{a,f,d,t,z} [a]uto [f]ull [d]ate [t]ime [z]one
-" Plug 'kana/vim-textobj-entire' "object: ae, ie for entire file
 Plug 'kana/vim-textobj-line' "object: al, il -> line
 Plug 'kana/vim-textobj-indent' "object: {a,i}i {a,i}I similar or exact indent level
 Plug 'whatyouhide/vim-textobj-xmlattr' "object: ax, ix for html/xml attrs
@@ -118,36 +69,23 @@ Plug 'guns/vim-sexp' "object: {a,i}{fFse} for forms, toplevel forms, strings, an
 
 "filetypes / languages
 Plug 'sheerun/vim-polyglot' "lang pack
-let g:polyglot_disabled = [ 'elm' ]
-
-if executable("elm-format")
-    Plug 'elmcast/elm-vim'
-    let g:elm_format_autosave = 1
-    " <Leader>m Compile the current buffer.
-    " <Leader>b Compile the Main.elm file in the project.
-    " <Leader>t Runs the tests of the current buffer or 'tests/TestRunner'.
-    " <Leader>r Opens an elm repl in a subprocess.
-    " <Leader>e Shows the detail of the current error or warning.
-    " <Leader>d Shows the type and docs for the word under the cursor.
-    " <Leader>w Opens the docs web page for the word under the cursor.
-endif
-
-Plug 'MicahElliott/vrod'
-" Plug 'fasiha/pollen.vim'
-Plug 'otherjoel/vim-pollen' " Requires vim-racket (provided by vim-polyglot)
+Plug 'otherjoel/vim-pollen', { 'for': 'pollen' } " Requires vim-racket (provided by vim-polyglot)
 Plug 'tpope/vim-speeddating' | Plug 'jceb/vim-orgmode'
-Plug 'Firef0x/PKGBUILD.vim'
-Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown' "tabular is a dependency
+Plug 'Firef0x/PKGBUILD.vim', { 'for': 'PKGBUILD' }
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'godlygeek/tabular'
 "linter
 Plug 'vim-syntastic/syntastic'
 
 "apps
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 " :term shortcuts
 Plug 'DanySpin97/ttab.vim'
-" <C-B>{n,p,c,x}: tab: next, previous, new buffer, close current
-" <C-B>{t,|,-}: term: new in new tab, new in :vs, new in :split
-" <C-B>{0..9}: move to nth tab
-" let g:ttab_prefix = '<C-B>'
+" <C-b>{n,p,c,x}: tab: next, previous, new buffer, close current
+" <C-b>{t,|,-}: term: new in new tab, new in :vs, new in :split
+" <C-b>{0..9}: move to nth tab
+let g:ttab_prefix = '<C-b>'
 
 if executable('wakatime')
     Plug 'wakatime/vim-wakatime'
@@ -163,7 +101,6 @@ Plug 'jreybert/vimagit'
 
 Plug 'mrtazz/simplenote.vim'
 source ~/.simplenote.vim
-Plug 'EinfachToll/DidYouMean'
 
 call plug#end()
 
@@ -195,6 +132,10 @@ function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
 endfunction
 
 " == settings ==
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#whitespace#enabled = 1
+let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`', '「':'」', '“':'”'}
 set background=dark
 set termguicolors
 colorscheme material-monokai
@@ -235,8 +176,8 @@ set mouse=a
 
 " == keys ==
 "Space -> leader
-" nnoremap <space> <nop>
-let mapleader = ","
+nnoremap <space> <nop>
+let mapleader = " "
 
 "leader based stuff
 nnoremap <leader>c :noh<CR>
@@ -267,7 +208,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_racket_racket_checker = 1
 let g:syntastic_sh_shellcheck_args = "-x"
-let g:elm_syntastic_show_warnings = 1
 " == augroups ==
 augroup main
     autocmd!
