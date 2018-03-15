@@ -15,3 +15,8 @@
 # If you want to use XFCE config tools...
 #
 #xfce-mcs-manager &
+xmodmap ~/.Xmodmap.d/capslock-to-altgr.xmodmap
+xmodmap ~/.Xmodmap
+
+dunst &
+

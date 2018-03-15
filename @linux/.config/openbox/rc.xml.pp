@@ -126,6 +126,15 @@
   <!-- Keybindings for desktop switching -->
   <keybind key="W-w" chroot="true">
     <keybind key="Escape W-w"><action name="BreakChroot"/></keybind>
+    <keybind key="t" chroot="true">
+      <keybind key="Escape t"><action name="BreakChroot"/></keybind>
+      <keybind key="Down j">
+        ◊(action/execute "compton-trans" "-c" "-10")
+      </keybind>
+      <keybind key="Up k">
+        ◊(action/execute "compton-trans" "-c" "+10")
+      </keybind>
+    </keybind>
     <keybind key="Left h">
       <action name="GoToDesktop"><to>left</to><wrap>yes</wrap></action>
     </keybind>
