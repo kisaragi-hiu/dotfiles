@@ -382,6 +382,9 @@
     <action name="Execute"><command>notify-send "Using default keymap" " "</command></action>
   </keybind>
   <!-- keybinds for osu!. use a keymap to bind stuff to F32-34 -->
+  <keybind key="F30"> <!-- KP_6 in osu keymap -->
+    <action name="Execute"><command>xdotool key shift+Tab</command></action>
+  </keybind>
   <keybind key="F31">
     <action name="Execute"><command>xdotool key F2</command></action>
   </keybind>
