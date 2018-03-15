@@ -17,4 +17,5 @@ alias vim 'echo using nvim...; sleep 0.1; nvim'
 if type -q rlwrap
     alias sbcl 'rlwrap sbcl'
     alias rash-repl 'rlwrap rash-repl'
+    alias pil 'rlwrap pil'
 end
