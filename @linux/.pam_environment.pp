@@ -80,12 +80,15 @@
 ◊; == app behavior controls ==
 ◊defpam_env["VISUAL"]{nvim}
 ◊defpam_env["EDITOR"]{nvim}
+◊defpam_env["TERMINAL"]{alacritty}
+◊defpam_env["BROWSER"]{firefox}
+◊defpam_env["SURFRAW_browser"]{firefox} ◊; for surfraw, the command line web searcher
+
 ◊defpam_env["SSH_ASKPASS"]{/usr/bin/ksshaskpass} # ssh with kwallet
 ◊defpam_env["OCIO"]{${DOTFILES_DIR}/_filmic-blender/config.ocio}
 ◊defpam_env["WINEDEBUG"]{-all}
 ◊defpam_env["vblank_mode"]{0} # global vsync off
 
-◊defpam_env["TERMINAL"]{alacritty}
 
 ◊; == "sourcing" private env
 ◊define/pam[PRIVATE_ENVIRONMENT]{◊|HOME|/.pam_private}
