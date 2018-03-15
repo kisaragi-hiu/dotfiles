@@ -19,6 +19,7 @@
      syntax-checking
      emoji
      ;; == languages ==
+     clojure
      racket
      emacs-lisp
      vimscript
