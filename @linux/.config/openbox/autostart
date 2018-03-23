@@ -1,22 +1,28 @@
-#
+#!/bin/bash
 # These things are run when an Openbox X Session is started.
-# You may place a similar script in $HOME/.config/openbox/autostart
-# to run user-specific things.
 #
 
-# If you want to use GNOME config tools...
+# GNOME config tools
 #
-#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
-#  /usr/lib/openbox/gnome-settings-daemon &
-#elif which gnome-settings-daemon >/dev/null 2>&1; then
-#  gnome-settings-daemon &
-#fi
+if [ -x /usr/lib/openbox/gnome-settings-daemon ] >/dev/null; then
+  /usr/lib/openbox/gnome-settings-daemon &
+elif which gnome-settings-daemon >/dev/null 2>&1; then
+  gnome-settings-daemon &
+fi
 
-# If you want to use XFCE config tools...
-#
-#xfce-mcs-manager &
+loop-command 10m 0 grive -p /home/flyin1501/ドキュメント/ &
+ssh-agent &
+ssh-add </dev/null
+numlockx &
+
+xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
 xmodmap ~/.Xmodmap.d/capslock-to-altgr.xmodmap
 xmodmap ~/.Xmodmap
 
+randomwallpaper -t 5m -w feh &
+
+compton &
+xcape -e 'Alt_R=Escape;Super_L=Alt_L|F1' -t 250 &
 dunst &
 
+# vim: filetype=sh
