@@ -280,11 +280,6 @@
       <command>rofi -show window</command>
     </action>
   </keybind>
-  <keybind key="A-F1"> <!-- xcape handles W -> A-F1 -->
-    <action name="Execute">
-      <command>rofi -combi-modi window,drun,run -show combi</command>
-    </action>
-  </keybind>
 
   <!-- one-off command stuff -->
   <!-- Restart PulseAudio with W-p -->
@@ -373,6 +368,8 @@
   <!-- Keybindings for running applications -->
   ◊(keybind "Scroll_Lock" (action/execute #:return-xexpr? #t
                                           "qdbus" "org.kde.kglobalaccel" "/component/yakuake" "invokeShortcut" "toggle-window-state"))
+  ◊(keybind "A-F1" (action/execute #:return-xexpr? #t
+                                   "rofi" "-combi-modi" "window,drun,run" "-show" "combi" "-modi" "combi"))
 
   <!-- keymap -->
   <keybind key="W-o">
