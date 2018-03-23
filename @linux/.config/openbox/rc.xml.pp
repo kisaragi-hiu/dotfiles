@@ -253,12 +253,7 @@
     </action>
   </keybind>
   <keybind key="W-Down W-j">
-    <!-- Minimize if not maximized -->
-    <action name="if">
-      <maximized>yes</maximized>
-      <then>◊action/decorate-and-unmaximize[]</then>
-      <else><action name="Iconify"/></else>
-    </action>
+    <action name="Iconify"/>
   </keybind>
 
   <!-- Alt-tabbing -->
