@@ -374,7 +374,7 @@
   <!-- keymap -->
   <keybind key="W-o">
     <action name="Execute"><command>bash -c 'xmodmap &lt;(cat ~/.Xmodmap ~/.Xmodmap.d/osu.xmodmap)'</command></action>
-    <action name="Execute"><command>wacom-sensitivity -c -s 450</command></action>
+    <action name="Execute"><command>wacom-sensitivity -c -s 578</command></action>
     <action name="Execute"><command>notify-send "Using osu! keymap" " "</command></action>
   </keybind>
   <keybind key="W-u">
