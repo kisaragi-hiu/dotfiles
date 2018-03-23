@@ -83,6 +83,7 @@
 ◊defpam_env["TERMINAL"]{alacritty}
 ◊defpam_env["BROWSER"]{firefox}
 ◊defpam_env["SURFRAW_browser"]{firefox} ◊; for surfraw, the command line web searcher
+◊defpam_env["FILTER"]{fzy}
 
 ◊defpam_env["SSH_ASKPASS"]{/usr/bin/ksshaskpass} # ssh with kwallet
 ◊defpam_env["OCIO"]{${DOTFILES_DIR}/_filmic-blender/config.ocio}
