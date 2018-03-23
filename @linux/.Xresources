@@ -7,6 +7,8 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
+Xcursor.theme: Numix-Cursor
+
 ! == XTerm ==
 xterm.termName: xterm-256color
 xterm*renderFont: true
