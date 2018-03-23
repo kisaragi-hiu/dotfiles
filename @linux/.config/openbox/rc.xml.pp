@@ -402,6 +402,37 @@
   <keybind key="F34">
     <action name="Execute"><command>bash -c "xdotool keydown grave; sleep 0.7; xdotool keyup grave"</command></action>
   </keybind>
+  <!-- utau keybinds -->
+  <keybind key="F19">
+    ◊(action/execute "xdotool" "key" "space")
+  </keybind>
+  <keybind key="F20">
+    ◊(action/execute "xdotool" "key" "control+a")
+  </keybind>
+  <keybind key="F21">
+    ◊(action/execute "xdotool" "key" "control+e")
+  </keybind>
+  <keybind key="F22">
+    ◊(action/execute "xdotool" "key" "control+t")
+  </keybind>
+  <keybind key="F23">
+    ◊(action/execute "xdotool" "key" "control+y")
+  </keybind>
+  <keybind key="F24">
+    ◊(action/execute "xdotool" "key" "control+z")
+  </keybind>
+  <keybind key="F25">
+    ◊(action/execute "xdotool" "key" "control+s")
+  </keybind>
+  <keybind key="F26">
+    ◊(action/execute "xdotool" "key" "control+Shift+z")
+  </keybind>
+  <keybind key="F27">
+    ◊(action/execute "xdotool" "key" "b")
+  </keybind>
+  <keybind key="F29">
+    ◊(action/execute "xdotool" "key" "n")
+  </keybind>
   <!-- application specific keybinds -->
   <keybind key="W-a">
     ◊; <keybind key="Escape W-a"><action name="BreakChroot"/></keybind>
