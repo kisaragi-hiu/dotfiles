@@ -262,7 +262,7 @@
   </keybind>
 
   <!-- Alt-tabbing -->
-  <keybind key="A-Tab Menu F24">
+  <keybind key="A-Tab Menu">
     <action name="NextWindow">
       <finalactions>
         <action name="Focus"/>
@@ -271,7 +271,7 @@
       </finalactions>
     </action>
   </keybind>
-  <keybind key="A-S-Tab S-Menu S-F24">
+  <keybind key="A-S-Tab S-Menu">
     <action name="PreviousWindow">
       <finalactions>
         <action name="Focus"/>
@@ -384,6 +384,10 @@
     <action name="Execute"><command>bash -c 'xmodmap &lt;(cat ~/.Xmodmap ~/.Xmodmap.d/osu.xmodmap)'</command></action>
     <action name="Execute"><command>wacom-sensitivity -c -s 450</command></action>
     <action name="Execute"><command>notify-send "Using osu! keymap" " "</command></action>
+  </keybind>
+  <keybind key="W-u">
+    <action name="Execute"><command>bash -c 'xmodmap &lt;(cat ~/.Xmodmap ~/.Xmodmap.d/utau.xmodmap)'</command></action>
+    <action name="Execute"><command>notify-send "Using utau keymap" " "</command></action>
   </keybind>
   <keybind key="W-S-o">
     <action name="Execute"><command>bash -c 'xmodmap &lt;(cat ~/.Xmodmap)'</command></action>

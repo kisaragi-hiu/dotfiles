@@ -1,6 +1,13 @@
-!TODO.
-keycode 80 = KP_Up F31 KP_Up F31
-keycode 79 = KP_Home F32 KP_Home F32
-keycode 83 = KP_Left F33 KP_Left F33
-keycode 84 = KP_Begin F34 KP_Begin F34
-keycode 85 = KP_Right F30 KP_Right F30
+keycode 82 = Shift_L NoSymbol Shift_L
+keycode 86 = Control_L NoSymbol Control_L
+keycode 87 = KP_End F21 KP_End KP_1
+keycode 88 = KP_Down F22 KP_Down KP_2
+keycode 89 = KP_Next F23 KP_Next KP_3
+keycode 83 = KP_Left F24 KP_Left KP_4
+keycode 84 = KP_Begin F25 KP_Begin KP_5
+keycode 85 = KP_Right F26 KP_Right KP_6
+keycode 79 = KP_Home F27 KP_Home KP_7
+keycode 80 = KP_Up F28 KP_Up KP_8
+keycode 81 = KP_Prior F29 KP_Prior KP_9
+keycode 90 = KP_Insert F20 KP_Insert KP_0
+keycode 91 = KP_Delete F19 KP_Delete KP_Decimal
