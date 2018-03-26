@@ -20,10 +20,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " relativenumber off where it makes no sense
 
 " Theme
-Plug 'dracula/vim'
 Plug 'tomasr/molokai'
 Plug 'skielbasa/vim-material-monokai'
-Plug 'junegunn/seoul256.vim'
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
@@ -140,9 +138,6 @@ let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`', 'ã€Œ':'ã€
 set background=dark
 set termguicolors
 colorscheme molokai
-" hi LineNr ctermbg=none guibg=none
-" hi NonText ctermbg=none guibg=none
-" hi Normal ctermbg=none guibg=none
 
 set autochdir " cd to file path (like emacs evil)
 
