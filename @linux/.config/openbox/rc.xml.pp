@@ -434,9 +434,10 @@
     ◊(action/execute "xdotool" "key" "n")
   </keybind>
   <!-- application specific keybinds -->
-  <keybind key="W-a">
-    ◊; <keybind key="Escape W-a"><action name="BreakChroot"/></keybind>
-    <keybind key="o"> <!-- osu -->
+  <keybind key="W-a" chroot="true">
+    <keybind key="Escape W-a"><action name="BreakChroot"/></keybind>
+    <keybind key="o" chroot="true"> <!-- osu -->
+      <keybind key="Escape o"><action name="BreakChroot"/></keybind>
       <keybind key="s"> <!-- sorting -->
         <keybind key="a">
           <action name="Execute"><command>◊osu-select-sorting["artist"]</command></action>
@@ -462,6 +463,54 @@
         <keybind key="t">
           <action name="Execute"><command>◊osu-select-sorting["title"]</command></action>
         </keybind>
+      </keybind>
+      <keybind key="KP_6"> <!-- KP_6 in osu keymap -->
+        <action name="Execute"><command>xdotool key shift+Tab</command></action>
+      </keybind>
+      <keybind key="KP_8">
+        <action name="Execute"><command>xdotool key F2</command></action>
+      </keybind>
+      <keybind key="KP_7">
+        <action name="Execute"><command>xdotool click 2</command></action>
+      </keybind>
+      <keybind key="KP_4">
+        <action name="Execute"><command>xdotool key Tab</command></action>
+      </keybind>
+      <keybind key="KP_5">
+        <action name="Execute"><command>bash -c "xdotool keydown grave; sleep 0.7; xdotool keyup grave"</command></action>
+      </keybind>
+    </keybind>
+    <keybind key="u" chroot="true">
+      <keybind key="Escape u"><action name="BreakChroot"/></keybind>
+      <keybind key="KP_Decimal">
+        ◊(action/execute "xdotool" "key" "space")
+      </keybind>
+      <keybind key="KP_0">
+        ◊(action/execute "xdotool" "key" "control+a")
+      </keybind>
+      <keybind key="KP_1">
+        ◊(action/execute "xdotool" "key" "control+e")
+      </keybind>
+      <keybind key="KP_2">
+        ◊(action/execute "xdotool" "key" "control+t")
+      </keybind>
+      <keybind key="KP_3">
+        ◊(action/execute "xdotool" "key" "control+y")
+      </keybind>
+      <keybind key="KP_4">
+        ◊(action/execute "xdotool" "key" "control+z")
+      </keybind>
+      <keybind key="KP_5">
+        ◊(action/execute "xdotool" "key" "control+s")
+      </keybind>
+      <keybind key="KP_6">
+        ◊(action/execute "xdotool" "key" "control+Shift+z")
+      </keybind>
+      <keybind key="KP_7">
+        ◊(action/execute "xdotool" "key" "b")
+      </keybind>
+      <keybind key="KP_9">
+        ◊(action/execute "xdotool" "key" "n")
       </keybind>
     </keybind>
   </keybind>
@@ -813,6 +862,12 @@
                type="normal">
     <iconic>yes</iconic>
     <layer>below</layer>
+  </application>
+  <application name="megasync"
+               title="MEGAsync"
+               class="MEGAsync"
+               type="normal">
+    <iconic>yes</iconic>
   </application>
 </applications>
 </openbox_config>
