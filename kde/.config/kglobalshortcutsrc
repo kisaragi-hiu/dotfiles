@@ -42,7 +42,7 @@ _k_friendly_name=KDE Daemon
 display=Display,Display\tMeta+P,切換顯示
 
 [khotkeys]
-_k_friendly_name=KDE Daemon
+_k_friendly_name=KDE システム設定
 {8b04b080-fd47-4029-980f-d3cb762298cf}=Pause,none,trigger
 {9ca1ec02-ff25-4494-b17a-8a8b936a961c}=Meta+E,none,execute code and copy output
 {b0a8e4d8-0680-4f9a-927f-314d6d31cfb2}=Meta+C,none,copy dialog
@@ -50,13 +50,13 @@ _k_friendly_name=KDE Daemon
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Search,none,検索
 
 [kmix]
-_k_friendly_name=音效音量
-decrease_microphone_volume=Microphone Volume Down,Microphone Volume Down,遞減麥克風音量
-decrease_volume=Volume Down,Volume Down,遞減音量
-increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,增加麥克風音量
-increase_volume=Volume Up,Volume Up,遞增音量
-mic_mute=Microphone Mute,Microphone Mute,麥克風靜音
-mute=Volume Mute,Volume Mute,靜音
+_k_friendly_name=Audio Volume
+decrease_microphone_volume=Microphone Volume Down,Microphone Volume Down,Decrease Microphone Volume
+decrease_volume=Volume Down,Volume Down,Decrease Volume
+increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,Increase Microphone Volume
+increase_volume=Volume Up,Volume Up,Increase Volume
+mic_mute=Microphone Mute,Microphone Mute,Mute Microphone
+mute=Volume Mute,Volume Mute,Mute
 
 [kopete]
 ReadMessage=Ctrl+Shift+I,Ctrl+Shift+I,メッセージを読む
@@ -265,37 +265,37 @@ view_zoom_out=Meta+-,Meta+-,縮小(O)
 
 [lattedock]
 _k_friendly_name=Latte Dock
-activate task manager entry 1=,Meta+1,啟用工作管理員項目 1
-activate task manager entry 10=,Meta+0,啟用工作管理員項目 10
-activate task manager entry 2=,Meta+2,啟用工作管理員項目 2
-activate task manager entry 3=,Meta+3,啟用工作管理員項目 3
-activate task manager entry 4=,Meta+4,啟用工作管理員項目 4
-activate task manager entry 5=,Meta+5,啟用工作管理員項目 5
-activate task manager entry 6=,Meta+6,啟用工作管理員項目 6
-activate task manager entry 7=,Meta+7,啟用工作管理員項目 7
-activate task manager entry 8=,Meta+8,啟用工作管理員項目 8
-activate task manager entry 9=,Meta+9,啟用工作管理員項目 9
+activate task manager entry 1=,Meta+1,Activate Task Manager Entry 1
+activate task manager entry 10=,Meta+0,Activate Task Manager Entry 10
+activate task manager entry 2=,Meta+2,Activate Task Manager Entry 2
+activate task manager entry 3=,Meta+3,Activate Task Manager Entry 3
+activate task manager entry 4=,Meta+4,Activate Task Manager Entry 4
+activate task manager entry 5=,Meta+5,Activate Task Manager Entry 5
+activate task manager entry 6=,Meta+6,Activate Task Manager Entry 6
+activate task manager entry 7=,Meta+7,Activate Task Manager Entry 7
+activate task manager entry 8=,Meta+8,Activate Task Manager Entry 8
+activate task manager entry 9=,Meta+9,Activate Task Manager Entry 9
 activate widget 84=none,none,Active Window Control ウィジェットを有効化
 activate widget 85=Meta+Shift+P,none,Redshift Control ウィジェットを有効化
-clear-history=none,none,クリップボードの履歴を消去(L)
+clear-history=Meta+`,none,クリップボードの履歴を消去(L)
 clipboard_action=none,Ctrl+Alt+X,クリップボードのアクションを有効にする
 cycleNextAction=none,none,履歴の次のアイテム
 cyclePrevAction=none,none,履歴の前のアイテム
 edit_clipboard=none,none,内容を編集(E)...
-new instance for task manager entry 1=,Meta+Ctrl+1,工作管理員項目 1 的新實體
-new instance for task manager entry 10=,Meta+Ctrl+0,工作管理員項目 10 的新實體
-new instance for task manager entry 2=,Meta+Ctrl+2,工作管理員項目 2 的新實體
-new instance for task manager entry 3=,Meta+Ctrl+3,工作管理員項目 3 的新實體
-new instance for task manager entry 4=,Meta+Ctrl+4,工作管理員項目 4 的新實體
-new instance for task manager entry 5=,Meta+Ctrl+5,工作管理員項目 5 的新實體
-new instance for task manager entry 6=,Meta+Ctrl+6,工作管理員項目 6 的新實體
-new instance for task manager entry 7=,Meta+Ctrl+7,工作管理員項目 7 的新實體
-new instance for task manager entry 8=,Meta+Ctrl+8,工作管理員項目 8 的新實體
-new instance for task manager entry 9=,Meta+Ctrl+9,工作管理員項目 9 的新實體
+new instance for task manager entry 1=,Meta+Ctrl+1,New Instance for Task Manager Entry 1
+new instance for task manager entry 10=,Meta+Ctrl+0,New Instance for Task Manager Entry 10
+new instance for task manager entry 2=,Meta+Ctrl+2,New Instance for Task Manager Entry 2
+new instance for task manager entry 3=,Meta+Ctrl+3,New Instance for Task Manager Entry 3
+new instance for task manager entry 4=,Meta+Ctrl+4,New Instance for Task Manager Entry 4
+new instance for task manager entry 5=,Meta+Ctrl+5,New Instance for Task Manager Entry 5
+new instance for task manager entry 6=,Meta+Ctrl+6,New Instance for Task Manager Entry 6
+new instance for task manager entry 7=,Meta+Ctrl+7,New Instance for Task Manager Entry 7
+new instance for task manager entry 8=,Meta+Ctrl+8,New Instance for Task Manager Entry 8
+new instance for task manager entry 9=,Meta+Ctrl+9,New Instance for Task Manager Entry 9
 repeat_action=none,Ctrl+Alt+R,現在のクリップボードに対するアクションを手動で呼び出す
-show latte dock=,Meta+`,顯示 Latte Dock
+show latte dock=,Meta+`,Show Latte Dock
 show-barcode=none,none,バーコードを表示する(S)...
-show-on-mouse-pos=none,none,在滑鼠游標位置開啟 Klipper
+show-on-mouse-pos=none,none,Open Klipper at Mouse Position
 
 [mediacontrol]
 _k_friendly_name=媒體控制器
@@ -343,7 +343,7 @@ activate task manager entry 8=,Meta+8,啟用工作管理員項目 8
 activate task manager entry 9=,Meta+9,啟用工作管理員項目 9
 activate widget 22=none,none,Event Calendar ウィジェットを有効化
 activate widget 28=none,none,タスクマネージャ ウィジェットを有効化
-clear-history=Meta+`,none,クリップボードの履歴を消去(L)
+clear-history=,none,クリップボードの履歴を消去(L)
 clipboard_action=none,Ctrl+Alt+X,クリップボードのアクションを有効にする
 cycleNextAction=none,none,履歴の次のアイテム
 cyclePrevAction=none,none,履歴の前のアイテム
