@@ -89,29 +89,29 @@ custom_cursor_colors: false
 # Adapta Nokto, ported from konsole config
 colors:
   primary:
-    background: '0x263238'
-    foreground: '0xD3DAE3'
+    background: '0x1B1D1E'
+    foreground: '0xCCCCCC'
   cursor:
     text: '0x2E3440'
     cursor: '0xD8DEE9'
   normal:
-    black: '0x222D32'
-    red: '0xE14245'
-    green: '0x5CA75B'
-    yellow: '0xF6AB32'
-    blue: '0x4877B1'
-    magenta: '0xA660C3'
-    cyan: '0x00BCD4'
-    white: '0xA9A9AA'
+    black: '0x1B1D1E'
+    red: '0xFF0044'
+    green: '0x82B414'
+    yellow: '0xFD971F'
+    blue: '0x266C98'
+    magenta: '0xAC0CB1'
+    cyan: '0xAE81FF'
+    white: '0xCCCCCC'
   bright:
-    black: '0x34444D'
-    red: '0xE16F7E'
-    green: '0xADD488'
-    yellow: '0xFDC35F'
-    blue: '0x8CA9BF'
-    magenta: '0xE2AFEC'
-    cyan: '0x73C5E2'
-    white: '0xFCFCFC'
+    black: '0x808080'
+    red: '0xF92672'
+    green: '0xA6E22E'
+    yellow: '0xE6DB74'
+    blue: '0x7979F0'
+    magenta: '0xD63AE1'
+    cyan: '0x66D9EF'
+    white: '0xF8F8F2'
 
 # Disable Visual Bell
 visual_bell:
