@@ -15,10 +15,6 @@ ssh-agent &
 ssh-add </dev/null
 numlockx &
 
-xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
-xmodmap ~/.Xmodmap.d/capslock-to-altgr.xmodmap
-xmodmap ~/.Xmodmap
-
 randomwallpaper -t 5m -w feh &
 
 compton &
@@ -27,5 +23,10 @@ dunst &
 
 bar &
 latte-dock &
+
+xmodmap ~/.Xmodmap.d/capslock-to-altgr.xmodmap
+xmodmap ~/.Xmodmap
+
+xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
 
 # vim: filetype=sh
