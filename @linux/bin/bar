@@ -1,0 +1,60 @@
+#!/bin/bash
+# shellcheck disable=SC2155
+hl="%{F#FFFFFF}"
+nm="%{F-}"
+
+[ -z "$MAIN_FONT_MONO" ] && MAIN_FONT_MONO="Fira Code"
+
+current_time () {
+    date '+%Y%m%d %H%M%S'
+}
+
+# shellcheck disable=SC2063
+workspace () {
+    local line
+    local workspaces=$(wmctrl -d | sed 's/ \+/ /g')
+    local current_workspace=$(\
+        # 1-indexed
+        echo "$workspaces" \
+        | cut -d ' ' -f 2 \
+        | grep --line-number '*' \
+        | cut -d ':' -f 1
+    )
+    local workspace_count=$(\
+        echo "$workspaces" | wc -l
+    )
+    for i in $(seq 1 "$workspace_count"); do
+        if [ "$current_workspace" == "$i" ]; then
+            line="$line""$hl""●""$nm"" "
+        else
+            line="$line""○"" "
+        fi
+    done
+    echo "$line"
+}
+
+ram_usage () {
+    local line
+    local mem=$(free | grep Mem | sed 's/ \+/ /g')
+    local total=$(echo "$mem" | cut -d ' ' -f 2)
+    local used=$(echo "$mem" | cut -d ' ' -f 3)
+    local available=$(echo "$mem" | cut -d ' ' -f 7)
+    echo "$used / $total"
+}
+
+run_bar () {
+    while true; do
+        echo "%{l} MF-PC $(workspace) "
+             # "%{c}$(current_time)" \
+             # "%{r} $(ram_usage) "
+        sleep 0.1
+    done |\
+        lemonbar \
+          -g x28 \
+          -f "Ionicons" \
+          -f "Fira Code" \
+          -B \#44000000 \
+          -F \#FFFFFF
+}
+
+run_bar

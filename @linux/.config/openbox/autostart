@@ -25,4 +25,7 @@ compton &
 xcape -e 'Alt_R=Escape;Super_L=Alt_L|F1' -t 250 &
 dunst &
 
+bar &
+latte-dock &
+
 # vim: filetype=sh
