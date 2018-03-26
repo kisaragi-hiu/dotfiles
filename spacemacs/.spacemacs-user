@@ -47,7 +47,7 @@
             shell-default-position 'bottom))
 
    ;; config should be in `dotspacemacs/user-config' or make a layer.
-   dotspacemacs-additional-packages '(f s dash parinfer)
+   dotspacemacs-additional-packages '(f s dash parinfer monokai-theme)
    dotspacemacs-frozen-packages '() ; frozen package list
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(evil-search-highlight-persist)
@@ -76,14 +76,15 @@
    dotspacemacs-scratch-mode 'text-mode ; scratch buffer default major mode
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list.
-   dotspacemacs-themes '(material
+   dotspacemacs-themes '(monokai
+                         material
                          material-light
                          spacemacs-dark
                          spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t ; sync cursor with state color
    ;; Default font, or prioritized list of fonts.
    dotspacemacs-default-font '("Fira Code"
-                               :size 16
+                               :size 18
                                :weight normal
                                :width normal
                                :powerline-scale 1.5)
