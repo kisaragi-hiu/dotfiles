@@ -1,3 +1,3 @@
 function fish_title
-    echo "[$PWD]"
+    echo "$TERM: $_ [$PWD]"
 end
