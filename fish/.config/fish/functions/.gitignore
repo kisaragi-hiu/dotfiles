@@ -1,0 +1,13 @@
+*
+!cd.fish
+!fish_default_mode_prompt.fish
+!fish_greeting.fish
+!fish_title.fish
+!get_parent.fish
+!paste-file.fish
+!paste.fish
+!server-here.fish
+!toggle_greeting.fish
+!u.fish
+!waitfor.fish
+!.gitignore
