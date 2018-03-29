@@ -1,0 +1,26 @@
+# Surfraw -- Shell Users' Revolutionary Front Against the World wide web
+#
+# $Id$
+#
+# (c) 2000-2001 Julian Assange, all rights reserved.
+# (c) 2001 Australian Institute for Collaborative Research, all rights reserved.
+# (c) 2000 Melbourne Institute for Advanced Study, all rights reserved.
+#
+# see the file COPYING for further copyright details
+#
+# this file is shell script
+#
+# defintion commands:
+#
+#   def    -- define configuration variable unless already defined
+#             (i.e by the environment)
+#   defyn  -- define boolean configuration variable unless
+#             already defined
+#
+
+defyn SURFRAW_graphical yes
+def SURFRAW_text_browser lynx
+def SURFRAW_graphical_browser "${BROWSER:-}"
+def SURFRAW_text_browser_args none # text browser args or "none"
+def SURFRAW_graphical_browser_args none # graphical browser args or "none"
+def SURFRAW_customsearch_provider duckduckgo

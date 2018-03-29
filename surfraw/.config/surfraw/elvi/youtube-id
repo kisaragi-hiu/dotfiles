@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# AUTHOR: Kisaragi Hiu
+# modified from "youtube" elvi by S.S.R. Oemrawsingh
+#
+# DATE: Thu Mar 29 2018
+#
+# DESC: Elvi to open Youtube id link
+# elvis: youtube-id		-- Open YouTube id (www.youtube.com)
+. surfraw || exit 1
+
+w3_usage_hook () {
+    cat <<EOF
+Usage: $w3_argv0 [options] [search words]...
+Description:
+  Open Youtube id
+EOF
+    w3_global_usage
+}
+
+w3_config
+w3_parse_args "$@"
+if test -z "$w3_args"; then
+    w3_browse_url "https://www.youtube.com/"
+else
+    escaped_args=$(w3_url_of_arg $w3_args)
+    w3_browse_url "https://www.youtube.com/watch?v=${escaped_args}"
+fi
