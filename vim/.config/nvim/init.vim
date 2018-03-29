@@ -73,6 +73,7 @@ Plug 'tpope/vim-speeddating' | Plug 'jceb/vim-orgmode'
 Plug 'Firef0x/PKGBUILD.vim', { 'for': 'PKGBUILD' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'godlygeek/tabular'
+Plug 'kovetskiy/sxhkd-vim'
 "linter
 Plug 'vim-syntastic/syntastic'
 
