@@ -381,10 +381,14 @@
     <action name="Execute"><command>bash -c 'xmodmap &lt;(cat ~/.Xmodmap ~/.Xmodmap.d/utau.xmodmap)'</command></action>
     <action name="Execute"><command>notify-send "Using utau keymap" " "</command></action>
   </keybind>
+  <keybind key="W-S-u">
+    <action name="Execute"><command>bash -c 'xmodmap ~/.Xmodmap.d/utau-reset.xmodmap'</command></action>
+    <action name="Execute"><command>notify-send "Reset utau keymap" " "</command></action>
+  </keybind>
   <keybind key="W-S-o">
-    <action name="Execute"><command>bash -c 'xmodmap &lt;(cat ~/.Xmodmap)'</command></action>
+    <action name="Execute"><command>bash -c 'xmodmap ~/.Xmodmap.d/osu-reset.xmodmap'</command></action>
     <action name="Execute"><command>wacom-sensitivity -c -s 950</command></action>
-    <action name="Execute"><command>notify-send "Using default keymap" " "</command></action>
+    <action name="Execute"><command>notify-send "Reset osu keymap" " "</command></action>
   </keybind>
   <!-- keybinds for osu!. use a keymap to bind stuff to F32-34 -->
   <keybind key="F30"> <!-- KP_6 in osu keymap -->

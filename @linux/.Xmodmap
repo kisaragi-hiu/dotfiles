@@ -1,101 +1,66 @@
-! keycode 135 = F24
+! Manually create map-reset.xmodmap keymaps
+! The more keys remapped at once, the bigger the delay
 
-! Alt_R -> Esc
-! remove mod1 = Alt_R
-! keycode 108 = Escape
+! 6 ^ ◊ ♦
+keycode 15 = 6 asciicircum U25CA U2666
 
-! AltGr + Return -> "⏎"
-keycode 36 = Return NoSymbol U23CE
+! 7, &, ⚬, ・
+keycode 16 = 7 ampersand U26AC U30FB
 
-! Fuck Insert
-keycode 118 = F35 NoSymbol NoSymbol
+! 8 * ☆ ※
+keycode 17 = 8 asterisk U2606 U203B
 
-! Page up -> Compose
-! Should I use PageUp (this↓) or AltGr-5 for Compose?
-keycode 112 = Multi_key NoSymbol Prior
-! keycode 117 = Next NoSymbol Next
+! -, _, – (en dash), — (em dash)
+keycode 20 = minus underscore U2013 U2014
+
+! +=≒≓
+keycode 21 = equal plus U2252 U2253
+
+! r, R, ® (registered mark)
+keycode 27 = r R U00AE U00AE
+
+! u, U, µ (micro sign)
+keycode 30 = u U U00B5 U00B5
 
 ! Parens are used more often. Note Takuten and Hantakuten will have to be AltGr+( & AltGr+)
 keycode 34 = parenleft bracketleft braceleft parenleft
 keycode 35 = parenright bracketright braceright parenright
 
-! 5 percent Compose percent
-keycode 14 = 5 percent Multi_key percent
-
-! 6 ^ ◊ ♦
-keycode 15 = 6 asciicircum U25CA U2666
-
-! 8 * ☆ ※
-keycode 17 = 8 asterisk U2606 U203B
-
-! ` ~ ≈
-keycode 49 = grave asciitilde U2248 U2248
-
-! +=≒≓
-keycode 21 = equal plus U2252 U2253
-
-! -, _, – (en dash), — (em dash)
-keycode 20 = minus underscore U2013 U2014
-
-! backslash, bar, λ, Λ (upper case λ)
-keycode 51 = backslash bar U03BB U039B
+! AltGr + Return -> "⏎"
+keycode 36 = Return NoSymbol U23CE
 
 ! a, A, Λ, A
 keycode 38 = a A U039B A
 
-! b, B, β, B
-keycode 56 = b B U03B2 B
+! d D ð Ð
+keycode 40 = d D U00F0 U00D0
+
+! vim style arrow keys: hjkl HJKL ←↓↑→ ⇐⇓⇑⇒
+keycode 43 = h H U2190 U21D0
+keycode 44 = j J U2193 U21D3
+keycode 45 = k K U2191 U21D1
+keycode 46 = l L U2192 U21D2
 
 ! ', ", “ (left double quote), ” (right double quote)
 keycode 48 = apostrophe quotedbl U201C U201D
 
-! 7, &, ⚬, ・
-keycode 16 = 7 ampersand U26AC U30FB
+! ` ~ ≈
+keycode 49 = grave asciitilde U2248 U2248
 
-! u, U, µ (micro sign)
-keycode 30 = u U U00B5 U00B5
-
-! d D ð Ð
-keycode 40 = d D U00F0 U00D0
+! backslash, bar, λ, Λ (upper case λ)
+keycode 51 = backslash bar U03BB U039B
 
 ! c, C, © (copyrignt sign)
 keycode 54 = c C U00A9 U00A9
 
-! r, R, ® (registered mark)
-keycode 27 = r R U00AE U00AE
+! b, B, β, B
+keycode 56 = b B U03B2 B
 
 ! ., >, …, ︙
 keycode 60 = period greater U2026 UFE19
 
-! vim style arrow keys; single & double arrows ←↓↑→ ⇐⇑⇒⇓
-! Left
-keycode 43 = h H U2190 U21D0
-! Down
-keycode 44 = j J U2193 U21D3
-! Up
-keycode 45 = k K U2191 U21D1
-! Right
-keycode 46 = l L U2192 U21D2
+! Fuck Insert
+keycode 118 = F35 NoSymbol NoSymbol
 
-! large arrows, white and black ⇧⇦⇩⇨ ⬆⬅⬇⮕
-!keycode 25 = w W U21E7 U2B06
-!keycode 38 = a A U21E6 U2B05
-!keycode 39 = s S U21E9 U2B07
-!keycode 40 = d D U21E8 U2B95
-
-! Default stuff for resetting extra maps
-
-keycode 25 = w W w W
-keycode 79 = KP_Home KP_7 KP_Home KP_7
-keycode 80 = KP_Up KP_8 KP_Up KP_8
-keycode 81 = KP_Prior KP_9 KP_Prior KP_9
-keycode 82 = KP_Subtract KP_Subtract KP_Subtract KP_Subtract KP_Subtract KP_Subtract XF86Prev_VMode KP_Subtract KP_Subtract XF86Prev_VMode
-keycode 83 = KP_Left KP_4 KP_Left KP_4
-keycode 84 = KP_Begin KP_5 KP_Begin KP_5
-keycode 85 = KP_Right KP_6 KP_Right KP_6
-keycode 86 = KP_Add KP_Add KP_Add KP_Add KP_Add KP_Add XF86Next_VMode KP_Add KP_Add XF86Next_VMode
-keycode 87 = KP_End KP_1 KP_End KP_1
-keycode 88 = KP_Down KP_2 KP_Down KP_2
-keycode 89 = KP_Next KP_3 KP_Next KP_3
-keycode 90 = KP_Insert KP_0 KP_Insert KP_0
-keycode 91 = KP_Delete KP_Decimal KP_Delete KP_Decimal
+! Page up -> Compose
+keycode 112 = Multi_key NoSymbol Prior

@@ -1,7 +1,17 @@
 ! keymap for osu on a keypad
+! KP_8
 keycode 80 = KP_Up F31 KP_Up F31
+! KP_7
 keycode 79 = KP_Home F32 KP_Home F32
+! KP_4
 keycode 83 = KP_Left F33 KP_Left F33
-keycode 84 = KP_Begin F34 KP_Begin F34
+! KP_5
+keycode 84 = asciitilde asciitilde KP_Begin F34
+! KP_6
 keycode 85 = KP_Right F30 KP_Right F30
-! f34 is bound to hold grave for a second in openbox config
+! For xz playstyle
+! keycode 38 = Tab A a A
+! keycode 39 = F34 S s S
+! keycode 40 = F30 D d D
+! keycode 52 = KP_1 Z z Z
+! keycode 53 = KP_2 X x X
