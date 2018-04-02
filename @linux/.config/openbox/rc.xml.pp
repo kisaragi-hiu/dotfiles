@@ -260,6 +260,9 @@
     <action name="Execute"><command>pulseaudio --start</command></action>
     <action name="Execute"><command>notify-send "PulseAudio has been restarted" " " --icon view-refresh</command></action>
   </keybind>
+  <keybind key="Pause">
+    <action name="Execute"><command>bash -c "touch /tmp/trigger; sleep 1.2; rm /tmp/trigger"</command></action>
+  </keybind>
 
   <!-- "extended" commands, or interactive actions -->
   <keybind key="W-x">
@@ -340,8 +343,11 @@
   <!-- Keybindings for running applications -->
   ◊(keybind "Scroll_Lock" (action/execute #:return-xexpr? #t
                                           "qdbus" "org.kde.kglobalaccel" "/component/yakuake" "invokeShortcut" "toggle-window-state"))
+
   ◊(keybind "A-F1" (action/execute #:return-xexpr? #t
                                    "rofi" "-combi-modi" "window,drun,run" "-show" "combi" "-modi" "combi"))
+  ◊(keybind "W-s" (action/execute #:return-xexpr? #t
+                                  "rofi-surfraw"))
 
   <!-- keymap -->
   <keybind key="W-o">
