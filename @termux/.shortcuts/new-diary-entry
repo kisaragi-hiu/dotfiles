@@ -1,5 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-printf "New diary entry title: "
-read title
-nvim $(bash /sdcard/0.git/diary/diary new "$title" noedit)
+export DIARY_DIR=/sdcard/0.git/notes/diary
+entry=$(bash ~/scripts/diary new "$(date +%H%M%S)")
+
+nvim "$entry"
+
