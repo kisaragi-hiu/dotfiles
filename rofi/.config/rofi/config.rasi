@@ -26,8 +26,8 @@ configuration {
    display-combi: "combi";
 
    /* Settings */
-   modi: "window,run,drun,combi";
-   combi-modi: "drun,window,run";
+   modi: "run,drun,window,combi";
+   combi-modi: "drun,run,window";
    tokenize: true;
    matching: "fuzzy";
    terminal: "konsole";
