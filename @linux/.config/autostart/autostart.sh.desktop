@@ -1,9 +1,0 @@
-[Desktop Entry]
-Categories=Utility;
-Exec=bash $HOME/.config/autostart-scripts/autostart.sh
-Hidden=true
-Name=Autostart
-NoDisplay=True
-StartupNotify=false
-Terminal=false
-Type=Application
