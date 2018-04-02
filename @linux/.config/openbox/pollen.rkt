@@ -25,6 +25,13 @@
       (string-replace _ #rx"^<root>" "")
       (string-replace _ #rx"</root>$" "")))
 
+(define/contract (string->xexpr* str)
+  (-> string? (listof xexpr?))
+  (~> (string-append "<root>" str "</root>")
+      string->xexpr
+      ;; '(root () (tag "stuff") (tag2 "stuff")) at this point
+      (drop _ 2)))
+
 (def/xexpr-switch (action/undecorate-and-maximize)
   '(action ([name "Undecorate"]))
   '(action ([name "Maximize"])))
@@ -93,14 +100,11 @@
                 "<action name=\"Execute\"><command>echo b c</command></action>"))
 
 ;; this is only used in one section, no need to use xexpr switch (probably)
-(define/contract (font place name [size 11]
-                       #:weight [weight "normal"]
-                       #:slant [slant "normal"])
+(define/contract (font place name [size 11] [weight "normal"] [slant "normal"])
   (->* (string? string?)
-       (number? #:weight (or/c "bold" "normal")
-                #:slant (or/c "italic" "normal"))
-       string?)
-  (xexpr->string `(font ([place ,place]) (name ,name) (size ,(number->string size)) (weight ,weight) (slant ,slant))))
+       (number? (or/c "bold" "normal") (or/c "italic" "normal"))
+       xexpr?)
+  `(font ([place ,place]) (name ,name) (size ,(number->string size)) (weight ,weight) (slant ,slant)))
 
 (module+ test
   (check-equal? (font "ActiveWindow" "Roboto")

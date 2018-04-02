@@ -11,108 +11,80 @@
 <openbox_config xmlns="http://openbox.org/3.4/rc"
                 xmlns:xi="http://www.w3.org/2001/XInclude">
 
-<resistance>
-  <strength>10</strength>
-  <screen_edge_strength>20</screen_edge_strength>
-</resistance>
+◊(xexpr->string*
+  '(resistance
+    (strength "10")
+    (screen_edge_strength "20"))
 
-<focus>
-  <focusNew>yes</focusNew> <!-- focus new windows when they appear -->
-  <followMouse>no</followMouse> <!-- focus on hover -->
-  <!-- followMouse settings -->
-  <focusLast>yes</focusLast> <!-- on desktop switch, focus last used, not hovered -->
-  <underMouse>no</underMouse> <!-- keep focus under mouse even when it's not moving -->
-  <focusDelay>200</focusDelay> <!-- delay until focus change after hover -->
-  <raiseOnFocus>no</raiseOnFocus> <!-- raise window if it gets focused -->
-</focus>
+  '(focus
+    (focusNew "yes") ; new windows always get focus
+    (followMouse "no") ; focus on hover
+    ;; followMouse settings {{{
+    (focusLast "yes") ; focus last used , not hovered, on desktop switch
+    (underMouse "no") ; keep focus under cursor even when not moving
+    (focusDelay "200") ; delay until focus change after hover
+    ;; }}}
+    (raiseOnFocus "no")) ; raise window if it gets focused
 
-<placement>
-  <policy>Smart</policy> <!-- 'Smart' or 'UnderMouse' -->
-  <center>yes</center> <!-- place windows in center (y) or top left (n) of free area -->
-  <monitor>Primary</monitor> <!-- which monitor to place windows? 'Any' 'Mouse' 'Active' 'Primary' -->
-  <primaryMonitor>1</primaryMonitor> <!-- which monitor is primary? 1-index or 'Mouse' 'Active' -->
-</placement>
+  '(placement
+    (policy "Smart") ; "Smart" or "UnderMouse"
+    (center "yes") ; place windows in center or top left of free area
+    (monitor "Primary") ; place windows in: Any Mouse Active Primary
+    (primaryMonitor "1")) ; primary monitor: 1-index Mouse Active
 
-<theme>
-  <name>Adapta-Nokto</name>
-  <titleLayout>NLIMC</titleLayout>
-  <!--
-      available characters are NDSLIMC, each can occur at most once.
-      N: window icon
-      L: window label (AKA title).
-      I: iconify
-      M: maximize
-      C: close
-      S: shade (roll up/down)
-      D: omnipresent (on all desktops).
-  -->
-  <keepBorder>yes</keepBorder>
-  <animateIconify>no</animateIconify>
-  ◊(font "ActiveWindow" "Roboto" 10 #:weight "normal" #:slant "normal")
-  ◊(font "InactiveWindow" "Roboto" 10 #:weight "normal" #:slant "normal")
-  ◊(font "MenuHeader" "sans" 9 #:weight "normal" #:slant "normal")
-  ◊(font "MenuItem" "sans" 9 #:weight "normal" #:slant "normal")
-  ◊(font "ActiveOnScreenDisplay" "sans" 9 #:weight "bold" #:slant "normal")
-  ◊(font "InactiveOnScreenDisplay" "sans" 9 #:weight "bold" #:slant "normal")
-</theme>
+  `(theme
+    (name "Adapta-Nokto")
+    ;; a combination of NDSLIMC
+    ;; N: icon, L: title; I: Iconify, M: Maximize
+    ;; C: close, S: shade, D: omnipresent
+    (titleLayout "NLIMC")
+    (keepBorder "yes") ; when turning off window decoration
+    (animateIconify "no")
+    ,(font "ActiveWindow"            "Roboto" 10 "normal" "normal")
+    ,(font "InactiveWindow"          "Roboto" 10 "normal" "normal")
+    ,(font "MenuHeader"              "sans"   9  "normal" "normal")
+    ,(font "MenuItem"                "sans"   9  "normal" "normal")
+    ,(font "ActiveOnScreenDisplay"   "sans"   9  "bold"   "normal")
+    ,(font "InactiveOnScreenDisplay" "sans"   9  "bold"   "normal"))
 
-<desktops>
-  <!-- this stuff is only used at startup, pagers allow you to change them
-       during a session
+  '(desktops
+    ;; Set at startup. Pagers can modify this on the fly.
+    (number "6")
+    (firstdesk "1")
+    (names
+    ; (name "Desktop 1")
+    ; (name "Desktop 2")
+    )
+    (popupTime "2"))
 
-       these are default values to use when other ones are not already set
-       by other applications, or saved in your session
+  '(resize
+    (drawContents "yes")
+    (popupShow "Nonpixel") ; "Always" "Never" "Nonpixel" (like terminals)
+    (popupPosition "Center") ; "Center" "Top" "Fixed"
+    (popupFixedPosition (x "10") (y "10"))) ; "Fixed" coordinates
 
-       use obconf if you want to change these without having to log out
-       and back in -->
-  <number>6</number>
-  <firstdesk>1</firstdesk>
-  <names>
-    <!-- set names up here if you want to, like this:
-    <name>desktop 1</name>
-    <name>desktop 2</name>
-    -->
-  </names>
-  <popupTime>0</popupTime>
-  <!-- The number of milliseconds to show the popup for when switching
-       desktops.  Set this to 0 to disable the popup. -->
-</desktops>
+  ;; Reserve a portion on screen where windows will not cover when
+  ;; maximized or when initially placed.
+  '(margins
+    (top "0")
+    (bottom "0")
+    (left "0")
+    (right "0"))
 
-<resize>
-  <drawContents>yes</drawContents>
-  <popupShow>Nonpixel</popupShow> <!-- 'Always' 'Never' 'Nonpixel' (like terminals) -->
-  <popupPosition>Center</popupPosition> <!-- 'Center' 'Top' 'Fixed' -->
-  <popupFixedPosition> <!-- coordinates when above is Fixed -->
-    <!-- top left = 0,0; negative = from the other side -->
-    <x>10</x> <!-- number or 'Center' -->
-    <y>10</y> <!-- number or 'Center' -->
-  </popupFixedPosition>
-</resize>
-
-<!-- You can reserve a portion of your screen where windows will not cover when
-     they are maximized, or when they are initially placed.
-     Many programs reserve space automatically, but you can use this in other
-     cases. -->
-<margins>
-  <top>0</top>
-  <bottom>0</bottom>
-  <left>0</left>
-  <right>0</right>
-</margins>
-
-<dock>
-  <position>TopLeft</position>
-  <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
-  <floatingX>0</floatingX>
-  <floatingY>0</floatingY>
-  <noStrut>no</noStrut>
-  <stacking>Above</stacking> <!-- 'Above', 'Normal', or 'Below' -->
-  <direction>Horizontal</direction> <!-- 'Vertical' or 'Horizontal' -->
-  <autoHide>no</autoHide>
-  <hideDelay>300</hideDelay> <!-- milliseconds -->
-  <showDelay>300</showDelay> <!-- milliseconds -->
-  <moveButton>Middle</moveButton> <!-- 'Left', 'Middle', 'Right' -->
-</dock>
+  ;; Shown when one or more "dockapp"s are running.
+  ;; https://wiki.archlinux.org/index.php/Window_Maker#Dockapps
+  '(dock
+    (position "TopLeft")
+    (stacking "Above") ; which window layer? "Above" "Normal" "Below"
+    (floatingX "0") (floatingY "0")
+    ;; A "strut" stops windows from being placed or maximized over itself.
+    (noStrut "no")
+    (direction "Horizontal")
+    (autoHide "no")
+    (hideDelay "300")
+    (showDelay "300")
+    ;; the mouse button for moving individual dockapps
+    (moveButton "Middle")))
 
 <!-- keybindings -->
 <keyboard>
@@ -534,22 +506,39 @@
        switching due to hitting the edge of the screen -->
 
   <context name="Frame">
-    <mousebind button="W-Left" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-    </mousebind>
-    <mousebind button="W-Left" action="Click">
-      <action name="Unshade"/>
-    </mousebind>
-    <mousebind button="W-Left" action="Drag">
-      <action name="if">
-        <maximized>yes</maximized>
-        <then>
-          ◊action/decorate-and-unmaximize[]
-        </then>
-      </action>
-      <action name="Move"/>
-    </mousebind>
+    ◊(xexpr->string*
+      '(mousebind
+        ((button "W-Left") (action "Press"))
+        (action ((name "Focus")))
+        (action ((name "Raise"))))
+      '(mousebind
+        ((button "W-Left") (action "Click"))
+        (action ((name "Unshade"))))
+      `(mousebind
+        ((button "W-Left") (action "Drag"))
+        (action
+         ((name "if"))
+         (maximized () "yes")
+         (then ()
+          (action ((name "Decorate")))
+          (action ((name "Unmaximize")))))
+        (action ((name "Move"))))
+      '(mousebind
+        ((button "W-Left") (action "Press"))
+        (action ((name "Focus")))
+        (action ((name "Raise"))))
+      '(mousebind
+        ((button "W-Left") (action "Click"))
+        (action ((name "Unshade"))))
+      '(mousebind
+        ((button "W-Left") (action "Drag"))
+        (action
+         ((name "if"))
+         (maximized () "yes")
+         (then ()
+          (action ((name "Decorate")))
+          (action ((name "Unmaximize")))))
+        (action ((name "Move")))))
 
     <mousebind button="W-Right" action="Press">
       <action name="Focus"/>
