@@ -95,10 +95,10 @@
     ◊action/notify["Openbox --reconfigure complete" #:icon "view-refresh"]
   </keybind>
 
-  <!-- Keybindings for desktop switching -->
+  <!-- Keybindings for desktop switching and window manipulation -->
   <keybind key="W-w" chroot="true">
     <keybind key="Escape W-w"><action name="BreakChroot"/></keybind>
-    <keybind key="t" chroot="true">
+    <keybind key="t" chroot="true"> ◊; transparency
       <keybind key="Escape t"><action name="BreakChroot"/></keybind>
       <keybind key="Down j">
         ◊(action/execute "compton-trans" "-c" "-10")
@@ -107,6 +107,55 @@
         ◊(action/execute "compton-trans" "-c" "+10")
       </keybind>
     </keybind>
+    ◊(xexpr->string*
+      '(keybind ([key "m"] [chroot "true"])
+        (keybind ([key "Escape m"]) (action ([name "BreakChroot"])))
+        (keybind ([key "c"])
+         (action ([name "MoveResizeTo"])
+          (x "center") (y "center")))
+        (keybind ([key "Left h"])
+         (action ([name "MoveRelative"])
+          (x "-10") (y "0")))
+        (keybind ([key "Right l"])
+         (action ([name "MoveRelative"])
+          (x "10") (y "0")))
+        (keybind ([key "Down j"])
+         (action ([name "MoveRelative"])
+          (x "0") (y "10")))
+        (keybind ([key "Up k"])
+         (action ([name "MoveRelative"])
+          (x "0") (y "-10"))))
+
+      '(keybind ([key "r"] [chroot "true"]) ; resize (grow)
+        (keybind ([key "Escape r"]) (action ([name "BreakChroot"])))
+        (keybind ([key "Left h"])
+         (action ([name "ResizeRelative"])
+          (left "10")))
+        (keybind ([key "Right l"])
+         (action ([name "ResizeRelative"])
+          (right "10")))
+        (keybind ([key "Down j"])
+         (action ([name "ResizeRelative"])
+          (down "10")))
+        (keybind ([key "Up k"])
+         (action ([name "ResizeRelative"])
+          (up "10"))))
+
+      ; l/r ↑/↓ swapped to match movement direction
+      '(keybind ([key "S-r"] [chroot "true"]) ; resize (shrink)
+        (keybind ([key "Escape S-r"]) (action ([name "BreakChroot"])))
+        (keybind ([key "Left h"])
+         (action ([name "ResizeRelative"])
+          (right "-10")))
+        (keybind ([key "Right l"])
+         (action ([name "ResizeRelative"])
+          (left "-10")))
+        (keybind ([key "Down j"])
+         (action ([name "ResizeRelative"])
+          (up "-10")))
+        (keybind ([key "Up k"])
+         (action ([name "ResizeRelative"])
+          (down "-10")))))
     <keybind key="Left h">
       <action name="GoToDesktop"><to>left</to><wrap>yes</wrap></action>
     </keybind>
@@ -208,21 +257,17 @@
   <keybind key="A-F4">
     <action name="Close"/>
   </keybind>
-  <keybind key="W-F10"><action name="ToggleDecorations"/></keybind>
-  <keybind key="W-F11"><action name="ToggleFullscreen"/></keybind>
+  ◊(xexpr->string*
+    '(keybind ([key "W-F9"])
+      (action ([name "ShowMenu"])
+       (menu "client-menu")))
+    '(keybind ([key "W-F10"])
+      (action ([name "ToggleDecorations"])))
+    '(keybind ([key "W-F11"])
+      (action ([name "ToggleFullscreen"]))))
   <keybind key="W-Up W-k">
-    <!-- Maximize w/ decor = undecor, w/o decor = unmaximize -->
-    <action name="if">
-      <maximized>yes</maximized>
-      <then>
-        <action name="if">
-          <undecorated>no</undecorated>
-          <then><action name="Undecorate"/></then>
-          <else>◊action/decorate-and-unmaximize[]</else>
-        </action>
-      </then>
-      <else>◊action/undecorate-and-maximize[]</else>
-    </action>
+    <!-- Going with no decorations by default now -->
+    <action name="ToggleMaximize"/>
   </keybind>
   <keybind key="W-Down W-j">
     <action name="Iconify"/>
@@ -345,7 +390,7 @@
                                           "qdbus" "org.kde.kglobalaccel" "/component/yakuake" "invokeShortcut" "toggle-window-state"))
 
   ◊(keybind "A-F1" (action/execute #:return-xexpr? #t
-                                   "rofi" "-combi-modi" "window,drun,run" "-show" "combi" "-modi" "combi"))
+                                   "rofi" "-combi-modi" "drun,run,window" "-show" "combi" "-modi" "combi"))
   ◊(keybind "W-s" (action/execute #:return-xexpr? #t
                                   "rofi-surfraw"))
 
@@ -514,37 +559,16 @@
   <context name="Frame">
     ◊(xexpr->string*
       '(mousebind
-        ((button "W-Left") (action "Press"))
-        (action ((name "Focus")))
-        (action ((name "Raise"))))
+        ([button "W-Left"] [action "Press"])
+        (action ([name "Focus"]))
+        (action ([name "Raise"])))
       '(mousebind
-        ((button "W-Left") (action "Click"))
-        (action ((name "Unshade"))))
-      `(mousebind
-        ((button "W-Left") (action "Drag"))
-        (action
-         ((name "if"))
-         (maximized () "yes")
-         (then ()
-          (action ((name "Decorate")))
-          (action ((name "Unmaximize")))))
-        (action ((name "Move"))))
+        ([button "W-Left"] [action "Click"])
+        (action ([name "Unshade"])))
       '(mousebind
-        ((button "W-Left") (action "Press"))
-        (action ((name "Focus")))
-        (action ((name "Raise"))))
-      '(mousebind
-        ((button "W-Left") (action "Click"))
-        (action ((name "Unshade"))))
-      '(mousebind
-        ((button "W-Left") (action "Drag"))
-        (action
-         ((name "if"))
-         (maximized () "yes")
-         (then ()
-          (action ((name "Decorate")))
-          (action ((name "Unmaximize")))))
-        (action ((name "Move")))))
+        ([button "W-Left"] [action "Drag"])
+        (action ([name "Unmaximize"]))
+        (action ([name "Move"]))))
 
     <mousebind button="W-Right" action="Press">
       <action name="Focus"/>
@@ -578,27 +602,11 @@
 
   <context name="Titlebar">
     <mousebind button="Left" action="Drag">
-      <action name="if">
-        <maximized>yes</maximized>
-        <then>
-          ◊action/decorate-and-unmaximize[]
-        </then>
-      </action>
+      <action name="Unmaximize"/>
       <action name="Move"/>
     </mousebind>
     <mousebind button="Left" action="DoubleClick">
-      <!-- Maximize w/ decor = undecor, w/o decor = unmaximize -->
-      <action name="if">
-        <maximized>yes</maximized>
-        <then>
-          <action name="if">
-            <undecorated>no</undecorated>
-            <then><action name="Undecorate"/></then>
-            <else>◊action/decorate-and-unmaximize[]</else>
-          </action>
-        </then>
-        <else>◊action/undecorate-and-maximize[]</else>
-      </action>
+      <action name="ToggleMaximize"/>
     </mousebind>
   </context>
 
@@ -739,7 +747,7 @@
       <action name="Unshade"/>
     </mousebind>
     <mousebind button="Left" action="Click">
-      ◊action/undecorate-and-maximize[]
+      <action name="ToggleMaximize"/>
     </mousebind>
     <mousebind button="Middle" action="Click">
       <action name="ToggleMaximize"><direction>vertical</direction></action>
@@ -847,6 +855,12 @@
 <applications>
   <!-- Visit /etc/xdg/openbox/rc.xml for the complete list of properties -->
   <!-- Application specific keybinds can be implemented with an if action in the binding sections -->
+  <application class="*">
+    <decor>no</decor>
+  </application>
+  <application class="Ardour*">
+    <decor>yes</decor>
+  </application>
   <!-- position plasma osd -->
   <application name="plasmashell"
               class="plasmashell"
@@ -867,6 +881,13 @@
                class="MEGAsync"
                type="normal">
     <iconic>yes</iconic>
+  </application>
+  <!-- In hope that Plank will stop showing a dock in the window list -->
+  <application name="latte-dock"
+               class="lattedock"
+               type="dock">
+    <skip_pager>yes</skip_pager>
+    <skip_taskbar>yes</skip_taskbar>
   </application>
 </applications>
 </openbox_config>
