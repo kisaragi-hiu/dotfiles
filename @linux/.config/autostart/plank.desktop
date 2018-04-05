@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Plank
+TryExec=plank
+Exec=plank
+Icon=plank
+Terminal=false
+StartupNotify=false
