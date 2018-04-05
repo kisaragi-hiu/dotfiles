@@ -298,11 +298,11 @@ show-barcode=none,none,バーコードを表示する(S)...
 show-on-mouse-pos=none,none,Open Klipper at Mouse Position
 
 [mediacontrol]
-_k_friendly_name=媒體控制器
-nextmedia=Media Next,Media Next,播放下一首
-playpausemedia=Media Play,Media Play,播放/暫停媒體
-previousmedia=Media Previous,Media Previous,播放前一首
-stopmedia=Media Stop,Media Stop,停止媒體播放
+_k_friendly_name=Media Controller
+nextmedia=Media Next,Media Next,Media playback next
+playpausemedia=Media Play,Media Play,Play/Pause media playback
+previousmedia=Media Previous,Media Previous,Media playback previous
+stopmedia=Media Stop,Media Stop,Stop media playback
 
 [org.kde.dolphin.desktop]
 _k_friendly_name=啟動 Dolphin
@@ -359,4 +359,4 @@ stop current activity=none,Meta+S,現在のアクティビティを停止
 
 [yakuake]
 _k_friendly_name=Yakuake
-toggle-window-state=none,F12,Yakuake を開く/閉じる
+toggle-window-state=none,F12,Open/Retract Yakuake

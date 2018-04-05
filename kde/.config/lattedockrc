@@ -5,21 +5,40 @@ ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbIAAAACAQAAAQAA
 Height 1080=601
 Width 1920=797
 
+[Containments][1][General]
+advanced=true
+appletOrder=57
+autoDecreaseIconSize=false
+durationTime=x1
+highlightWindows=true
+iconMargin=10
+iconSize=48
+maxLength=90
+panelSize=25
+shadowOpacity=35
+shadowSize=45
+showWindowActions=true
+zoomLevel=0
+
 [Containments][4][General]
 appletOrder[$d]
 
 [General]
 Number of Actions=0
 
+[Notification Messages]
+really_clear_history=true
+
 [PlasmaRunnerManager]
 LaunchCounts=2 services_onboard.desktop,1 services_gparted.desktop
 pluginWhiteList=services,desktopsessions,PowerDevil,shell,bookmarks,baloosearch,locations
 
 [PlasmaTransientsConfig]
-raiseOnActivityChange[$d]
-raiseOnDesktopChange[$d]
-timerHide[$d]
-timerShow[$d]
+PreloadWeight=42
+raiseOnActivityChange=false
+raiseOnDesktopChange=false
+timerHide=300
+timerShow=0
 
 [ScreenConnectors]
 10=DVI-D-0
