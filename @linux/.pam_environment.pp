@@ -82,7 +82,8 @@
 ◊defpam_env["EDITOR"]{nvim}
 ◊defpam_env["TERMINAL"]{kitty}
 ◊defpam_env["BROWSER"]{firefox}
-◊defpam_env["SURFRAW_browser"]{firefox} ◊; for surfraw, the command line web searcher
+◊; for surfraw, the command line web searcher
+◊defpam_env["SURFRAW_browser"]{firefox}
 ◊defpam_env["FILTER"]{fzy}
 
 ◊defpam_env["SSH_ASKPASS"]{/usr/bin/ksshaskpass} # ssh with kwallet
