@@ -83,11 +83,15 @@
                          spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t ; sync cursor with state color
    ;; Default font, or prioritized list of fonts.
-   dotspacemacs-default-font '("Fira Code"
-                               :size 18
-                               :weight normal
-                               :width normal
-                               :powerline-scale 1.5)
+   dotspacemacs-default-font '(("Fira Code"
+                                :size 18
+                                :weight normal
+                                :width normal
+                                :powerline-scale 1.5)
+                               ("Noto Sans CJK TC"
+                                :size 18
+                                :weight normal
+                                :width normal))
    dotspacemacs-leader-key "SPC" ; The leader key
    dotspacemacs-emacs-command-key "SPC" ; (<leader> what) for M-x?
    dotspacemacs-ex-command-key ":" ; ":"q, ":"edit, etc.
