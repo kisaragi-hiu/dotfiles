@@ -1,0 +1,41 @@
+#!/bin/sh
+#↑ for the highlighting
+settings put global power_sounds_enabled 0
+settings put system transition_animation_scale 0.7
+settings put system window_animation_scale 0.7
+settings put global transition_animation_scale 0.7
+settings put global window_animation_scale 0.7
+settings put global animator_duration_scale 0.7
+
+# don't know if this actually changes storage warning threshold
+settings put secure sys_storage_threshold_percentage 5
+
+settings put global stay_on_while_plugged_in 0
+settings put global heads_up_notifications_enabled 1
+
+settings put global development_settings_enabled 1
+settings put global default_install_location 0
+settings put global charging_sounds_enabled 0
+
+settings put global auto_time 1
+settings put global auto_time_zone 0
+
+# settings get global boot_count
+
+# `cmd package list packages`: list package names
+# `appops get <pkg>`: get all permissions (appops) of <pkg>
+appops set tw.comico VIBRATE deny
+appops set jp.comico VIBRATE deny
+appops set jp.nicovideo.android VIBRATE deny
+appops set cn.ibuka.manga.ui AUTO_START deny
+appops set com.facebook.lite RUN_IN_BACKGROUND deny
+appops set com.facebook.lite VIBRATE deny
+appops set com.facebook.orca VIBRATE deny
+appops set com.levelup.palabre AUTO_START deny
+appops set com.zoho.mail VIBRATE deny
+appops set jp.co.dwango.seiga.manga.android VIBRATE deny
+appops set jp.naver.line.android VIBRATE deny
+appops set jp.pxv.android VIBRATE deny
+appops set org.kde.kdeconnect_tp VIBRATE deny
+appops set tv.abema VIBRATE deny
+appops set tv.twitch.android.app VIBRATE deny
