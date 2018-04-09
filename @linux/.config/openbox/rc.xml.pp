@@ -313,13 +313,13 @@
   <keybind key="W-x">
     <keybind key="Escape W-x"><action name="BreakChroot"/></keybind>
     <keybind key="c">
-      ◊action/execute/terminal{bash -c 'echo "Write some stuff to copy." | vipe | copy'}
+      ◊action/execute/konsole{bash -c 'echo "Write some stuff to copy." | vipe | copy'}
     </keybind>
     <keybind key="e">
-      ◊action/execute/terminal{bash -c 'echo "echo \"Write a bash command here and copy its output\"" | vipe | bash | copy'}
+      ◊action/execute/konsole{bash -c 'echo "echo \"Write a bash command here and copy its output\"" | vipe | bash | copy'}
     </keybind>
     <keybind key="f">
-      ◊action/execute/terminal{bash -c 'cd $(echo "/path/to/search/with/fzf" | vipe) && fzf | copy'}
+      ◊action/execute/konsole{bash -c 'cd $(echo "/path/to/search/with/fzf" | vipe) && fzf | copy'}
     </keybind>
   </keybind>
 

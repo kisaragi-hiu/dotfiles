@@ -72,9 +72,9 @@
                     ";")
                  "'"))
 
-(def/xexpr-switch (action/execute/terminal . arguments)
+(def/xexpr-switch (action/execute/konsole . arguments)
   (action/execute #:return-xexpr? #t
-                  (or (getenv "TERMINAL") "alacritty") "-e"
+                  "konsole" "-e"
                   arguments))
 
 (def/xexpr-switch (action/notify summary [body " "] #:icon [icon #f])
