@@ -6,7 +6,7 @@
 !get_parent.fish
 !paste-file.fish
 !paste.fish
-!server-here.fish
+!serve.fish
 !toggle_greeting.fish
 !u.fish
 !waitfor.fish

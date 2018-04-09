@@ -1,5 +1,5 @@
-function server-here
-    # server-here port [path]
+function serve
+    # serve port [path]
     if test -n "$argv[1]"
         if test -n "$argv[2]"
             pushd "$argv[2]"
