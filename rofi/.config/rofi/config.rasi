@@ -3,7 +3,7 @@
 // css-like format
 configuration {
    /* Theming */
-   theme: "Adapta-Nokto";
+   theme: "Arc-Dark";
    show-icons: false;
    drun-icon-theme: "Papirus";
    font: "Noto Sans Mono CJK TC 12";
