@@ -10,8 +10,8 @@ elif which gnome-settings-daemon >/dev/null 2>&1; then
 fi
 
 # Polkit agent
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-#/usr/lib/polkit-kde-authentication-agent-1
+# /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/polkit-kde-authentication-agent-1 &
 
 loop-command 10m 0 grive -p /home/flyin1501/ドキュメント/ &
 ssh-agent &
@@ -20,7 +20,8 @@ numlockx &
 
 randomwallpaper -t 5m -w feh &
 
-compton &
+xcompmgr &
+# compton &
 xcape -e 'Alt_R=Escape;Super_L=Alt_L|F1' -t 250 &
 dunst &
 
