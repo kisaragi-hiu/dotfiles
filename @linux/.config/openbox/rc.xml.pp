@@ -33,7 +33,7 @@
     (primaryMonitor "1")) ; primary monitor: 1-index Mouse Active
 
   `(theme
-    (name "Adapta-Nokto")
+    (name "Arc-Dark")
     ;; a combination of NDSLIMC
     ;; N: icon, L: title; I: Iconify, M: Maximize
     ;; C: close, S: shade, D: omnipresent
