@@ -6,6 +6,9 @@
 (module+ test
   (require rackunit))
 
+(define (boolean->tf bool) (if bool "true" "false"))
+(define (boolean->yn bool) (if bool "yes" "no"))
+
 ;; I want a contracted version of this, but simply passing the contract breaks
 ;; as a new input is added
 (define-syntax (def/xexpr-switch stx)
