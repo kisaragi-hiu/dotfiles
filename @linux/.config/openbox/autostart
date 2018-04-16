@@ -18,7 +18,7 @@ ssh-agent &
 ssh-add </dev/null
 numlockx &
 
-randomwallpaper -t 5m -w feh &
+randomwallpaper -t 5m -w feh -o &
 
 xcompmgr &
 # compton &
