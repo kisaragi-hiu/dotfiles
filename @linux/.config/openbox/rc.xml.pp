@@ -88,87 +88,82 @@
 
 <!-- keybindings -->
 <keyboard>
-  <chainQuitKey>C-g</chainQuitKey>
-  ◊; this is asyncronous. might need to W-r twice to use the newly rendered config
-  <keybind key="W-r">
-    <action name="Execute"><command>bash -c 'raco pollen render ~/.config/openbox/;openbox --reconfigure'</command></action>
-    ◊action/notify["Openbox --reconfigure complete" #:icon "view-refresh"]
-  </keybind>
+  ◊(xexpr->string*
+    '(chainQuitKey "C-g")
+    `(keybind ([key "W-r"])
+      (action ([name "Execute"]) (command "bash -c 'raco pollen render ~/.config/openbox/; openbox --reconfigure'"))
+      ,(action/notify "Reconfiguring Openbox" #:icon "view-refresh" #:return-xexpr? #t)))
 
   <!-- Keybindings for desktop switching and window manipulation -->
-  <keybind key="W-w" chroot="true">
-    <keybind key="Escape W-w"><action name="BreakChroot"/></keybind>
-    <keybind key="t" chroot="true"> ◊; transparency
-      <keybind key="Escape t"><action name="BreakChroot"/></keybind>
-      <keybind key="Down j">
-        ◊(action/execute "compton-trans" "-c" "-10")
-      </keybind>
-      <keybind key="Up k">
-        ◊(action/execute "compton-trans" "-c" "+10")
-      </keybind>
-    </keybind>
-    ◊(xexpr->string*
-      '(keybind ([key "m"] [chroot "true"])
-        (keybind ([key "Escape m"]) (action ([name "BreakChroot"])))
-        (keybind ([key "c"])
-         (action ([name "MoveResizeTo"])
-          (x "center") (y "center")))
-        (keybind ([key "Left h"])
-         (action ([name "MoveRelative"])
-          (x "-10") (y "0")))
-        (keybind ([key "Right l"])
-         (action ([name "MoveRelative"])
-          (x "10") (y "0")))
-        (keybind ([key "Down j"])
-         (action ([name "MoveRelative"])
-          (x "0") (y "10")))
-        (keybind ([key "Up k"])
-         (action ([name "MoveRelative"])
-          (x "0") (y "-10"))))
+  ◊(xexpr->string*
+    `(keybind ([key "W-w"] [chroot "true"])
+      (keybind ([key "Escape W-w"]) (action ([name "BreakChroot"])))
+      (keybind ([key "t"] [chroot "true"])
+       (keybind ([key "Escape t"]) (action ([name "BreakChroot"])))
+       (keybind ([key "Down j"]) ,(action/execute "compton-trans" "-c" "-10" #:return-xexpr? #t))
+       (keybind ([key "Up k"]) ,(action/execute "compton-trans" "-c" "+10" #:return-xexpr? #t)))
 
-      '(keybind ([key "r"] [chroot "true"]) ; resize (grow)
-        (keybind ([key "Escape r"]) (action ([name "BreakChroot"])))
-        (keybind ([key "Left h"])
-         (action ([name "ResizeRelative"])
-          (left "10")))
-        (keybind ([key "Right l"])
-         (action ([name "ResizeRelative"])
-          (right "10")))
-        (keybind ([key "Down j"])
-         (action ([name "ResizeRelative"])
-          (down "10")))
-        (keybind ([key "Up k"])
-         (action ([name "ResizeRelative"])
-          (up "10"))))
+      (keybind ([key "m"] [chroot "true"])
+       (keybind ([key "Escape m"]) (action ([name "BreakChroot"])))
+       (keybind ([key "c"])
+        (action ([name "MoveResizeTo"])
+         (x "center") (y "center")))
+       (keybind ([key "Left h"])
+        (action ([name "MoveRelative"])
+         (x "-10") (y "0")))
+       (keybind ([key "Right l"])
+        (action ([name "MoveRelative"])
+         (x "10") (y "0")))
+       (keybind ([key "Down j"])
+        (action ([name "MoveRelative"])
+         (x "0") (y "10")))
+       (keybind ([key "Up k"])
+        (action ([name "MoveRelative"])
+         (x "0") (y "-10"))))
 
-      ; l/r ↑/↓ swapped to match movement direction
-      '(keybind ([key "S-r"] [chroot "true"]) ; resize (shrink)
-        (keybind ([key "Escape S-r"]) (action ([name "BreakChroot"])))
-        (keybind ([key "Left h"])
-         (action ([name "ResizeRelative"])
-          (right "-10")))
-        (keybind ([key "Right l"])
-         (action ([name "ResizeRelative"])
-          (left "-10")))
-        (keybind ([key "Down j"])
-         (action ([name "ResizeRelative"])
-          (up "-10")))
-        (keybind ([key "Up k"])
-         (action ([name "ResizeRelative"])
-          (down "-10")))))
-    <keybind key="Left h">
-      <action name="GoToDesktop"><to>left</to><wrap>yes</wrap></action>
-    </keybind>
-    <keybind key="Right l">
-      <action name="GoToDesktop"><to>right</to><wrap>yes</wrap></action>
-    </keybind>
-    <keybind key="Up k">
-      <action name="GoToDesktop"><to>up</to><wrap>yes</wrap></action>
-    </keybind>
-    <keybind key="Down j">
-      <action name="GoToDesktop"><to>down</to><wrap>yes</wrap></action>
-    </keybind>
-  </keybind>
+      (keybind ([key "r"] [chroot "true"]) ; resize (grow)
+       (keybind ([key "Escape r"]) (action ([name "BreakChroot"])))
+       (keybind ([key "Left h"])
+        (action ([name "ResizeRelative"])
+         (left "10")))
+       (keybind ([key "Right l"])
+        (action ([name "ResizeRelative"])
+         (right "10")))
+       (keybind ([key "Down j"])
+        (action ([name "ResizeRelative"])
+         (down "10")))
+       (keybind ([key "Up k"])
+        (action ([name "ResizeRelative"])
+         (up "10"))))
+
+     ; l/r ↑/↓ swapped to match movement direction
+      (keybind ([key "S-r"] [chroot "true"]) ; resize (shrink)
+       (keybind ([key "Escape S-r"]) (action ([name "BreakChroot"])))
+       (keybind ([key "Left h"])
+        (action ([name "ResizeRelative"])
+         (right "-10")))
+       (keybind ([key "Right l"])
+        (action ([name "ResizeRelative"])
+         (left "-10")))
+       (keybind ([key "Down j"])
+        (action ([name "ResizeRelative"])
+         (up "-10")))
+       (keybind ([key "Up k"])
+        (action ([name "ResizeRelative"])
+         (down "-10"))))
+
+      (keybind ([key "Left h"])
+       (action ([name "GoToDesktop"])
+        (to "left") (wrap "yes")))
+      (keybind ([key "Right l"])
+       (action ([name "GoToDesktop"])
+        (to "right") (wrap "yes")))
+      (keybind ([key "Down j"])
+       (action ([name "GoToDesktop"])
+        (to "down") (wrap "yes")))
+      (keybind ([key "Up k"])
+       (action ([name "GoToDesktop"])
+        (to "up") (wrap "yes")))))
 
   <keybind key="C-W-Left C-W-h">
     <action name="GoToDesktop"><to>left</to><wrap>yes</wrap></action>
