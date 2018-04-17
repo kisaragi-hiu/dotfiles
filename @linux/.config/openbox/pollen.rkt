@@ -52,6 +52,36 @@
   `(action ([name "Execute"])
            (command ,(string-join (flatten arguments)))))
 
+(define (position [x #f] [y #f] [monitor #f])
+    (filter-not
+      ;; filter out lists that contain #f
+      (λ (itm) (and (list? itm)
+                    (member #f itm)))
+      `(position (x ,x) (y ,y) (monitor ,monitor))))
+
+(define (action/menu menu [position #f])
+  (filter-not
+    false?
+    `(action ([name "ShowMenu"]) ,menu ,position)))
+
+(define (action name . options)
+  `(action ([name ,name]) ,@options))
+
+(define/contract (action/goto-desktop dest [wrap #t])
+  (->* ((or/c "current"
+              "next"
+              "previous"
+              "last"
+              "north" "up"
+              "south" "down"
+              "west" "left"
+              "east" "right"))
+       (boolean?)
+       xexpr?)
+  `(action ([name "GoToDesktop"])
+           (to ,dest)
+           (wrap ,(boolean->yn wrap))))
+
 (define (osu-select-sorting sorting)
   ;; item: artist, bpm, creator, date, difficulty, length, rank, title
   (define item-position
@@ -113,6 +143,30 @@
   (check-equal? (font "ActiveWindow" "Roboto")
                 "<font place=\"ActiveWindow\"><name>Roboto</name><size>11</size><weight>normal</weight><slant>normal</slant></font>"))
 
-(def/xexpr-switch (keybind key . actions)
-  `(keybind ([key ,key]) ,@actions))
+(define (keybind key #:chroot? [chroot? #f] . extra)
+  (if chroot?
+    `(keybind ([key ,key] [chroot "true"])
+              (keybind ([key ,(string-append "Escape " key)]) (action "BreakChroot"))
+              ,@extra) ; other nested keybinds
+    `(keybind ([key ,key]) ,@extra)))
 
+(define (application-match-multiple matches . rules)
+  (map (λ (match) `(application ,match ,@rules)) matches))
+
+(module+ test
+  (check-equal?
+    (application-match-multiple
+      '(([name "Ardour"])
+        ([name "isoimagewriter"]
+         [type "dialog"]))
+      '(decor "yes"))
+    '((application ((name "Ardour")) (decor "yes"))
+      (application ((name "isoimagewriter") (type "dialog")) (decor "yes")))))
+
+(define (context name . mousebinds)
+  (xexpr->string*
+   '(context ([name ,name]) ,@mousebinds)))
+
+(define (mousebind button #:action mouseaction . actions)
+  `(mousebind ([button ,button] [action ,mouseaction])
+              ,@actions))

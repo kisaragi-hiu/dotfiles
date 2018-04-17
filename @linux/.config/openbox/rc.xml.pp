@@ -633,255 +633,160 @@
     </mousebind>
   </context>
 
-  <context name="Right">
-    <mousebind button="Left" action="Drag">
-      <action name="Resize"><edge>right</edge></action>
-    </mousebind>
-  </context>
+  ◊(context "Right"
+    (mousebind "Left" #:action "Drag"
+     (action "Resize" '(edge "right"))))
 
-  <context name="Bottom">
-    <mousebind button="Left" action="Drag">
-      <action name="Resize"><edge>bottom</edge></action>
-    </mousebind>
+  ◊(context "Bottom"
+    (mousebind "Left" #:action "Drag"
+     (action "Resize" '(edge "bottom")))
+    (mousebind "Right" #:action "Press"
+     (action "Focus")
+     (action "Raise")
+     (action/menu "client-menu")))
 
-    <mousebind button="Right" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-      <action name="ShowMenu"><menu>client-menu</menu></action>
-    </mousebind>
-  </context>
+  ◊(context "TRCorner BRCorner TLCorner BLCorner"
+    (mousebind "Left" #:action "Press"
+     (action "Focus")
+     (action "Raise")
+     (action "Unshade"))
+    (mousebind "Left" #:action "Drag"
+     (action "Resize")))
 
-  <context name="TRCorner BRCorner TLCorner BLCorner">
-    <mousebind button="Left" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-      <action name="Unshade"/>
-    </mousebind>
-    <mousebind button="Left" action="Drag">
-      <action name="Resize"/>
-    </mousebind>
-  </context>
+  ◊(context "Client"
+    (mousebind "W-Up" #:action "Click"
+     (action/goto-desktop "previous"))
+    (mousebind "W-Down" #:action "Click"
+     (action/goto-desktop "next"))
+    (mousebind "Left Middle Right" #:action "Press"
+     (action "Focus")
+     (action "Raise")))
 
-  <context name="Client">
-    <mousebind button="Left" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-    </mousebind>
-    <mousebind button="Middle" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-    </mousebind>
-    <mousebind button="Right" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-    </mousebind>
-  </context>
+  ◊(context "Icon"
+    (mousebind "Left" #:action "Press"
+     (action "Focus")
+     (action "Raise")
+     (action "Unshade")
+     (action/menu "client-menu"))
+    (mousebind "Right" #:action "Press"
+     (action "Focus")
+     (action "Raise")
+     (action/menu "client-menu")))
 
-  <context name="Icon">
-    <mousebind button="Left" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-      <action name="Unshade"/>
-      <action name="ShowMenu"><menu>client-menu</menu></action>
-    </mousebind>
-    <mousebind button="Right" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-      <action name="ShowMenu"><menu>client-menu</menu></action>
-    </mousebind>
-  </context>
+  ◊(context "AllDesktops"
+    (mousebind "Left" #:action "Press"
+     (action "Focus")
+     (action "Raise")
+     (action "Unshade"))
+    (mousebind "Left" #:action "Click"
+     (action "ToggleOmnipresent")))
 
-  <context name="AllDesktops">
-    <mousebind button="Left" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-      <action name="Unshade"/>
-    </mousebind>
-    <mousebind button="Left" action="Click">
-      <action name="ToggleOmnipresent"/>
-    </mousebind>
-  </context>
+  ◊(context "Shade"
+    (mousebind "Left" #:action "Press"
+     (action "Focus")
+     (action "Raise"))
+    (mousebind "Left" #:action "Click"
+     (action "ToggleShade")))
 
-  <context name="Shade">
-    <mousebind button="Left" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-    </mousebind>
-    <mousebind button="Left" action="Click">
-      <action name="ToggleShade"/>
-    </mousebind>
-  </context>
+  ◊(context "Iconify"
+    (mousebind "Left" #:action "Press"
+     (action "Focus")
+     (action "Raise"))
+    (mousebind "Left" #:action "Click"
+     (action "Iconify")))
 
-  <context name="Iconify">
-    <mousebind button="Left" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-    </mousebind>
-    <mousebind button="Left" action="Click">
-      <action name="Iconify"/>
-    </mousebind>
-  </context>
+  ◊(context "Maximize"
+    (mousebind "Left Middle Right" #:action "Press"
+     (action "Focus")
+     (action "Raise")
+     (action "Unshade"))
+    (mousebind "Left" #:action "Click"
+     (action "ToggleMaximize"))
+    (mousebind "Middle" #:action "Click"
+     (action "ToggleMaximize" '(direction "vertical")))
+    (mousebind "Right" #:action "Click"
+     (action "ToggleMaximize" '(direction "horizontal"))))
 
-  <context name="Maximize">
-    <mousebind button="Left" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-      <action name="Unshade"/>
-    </mousebind>
-    <mousebind button="Middle" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-      <action name="Unshade"/>
-    </mousebind>
-    <mousebind button="Right" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-      <action name="Unshade"/>
-    </mousebind>
-    <mousebind button="Left" action="Click">
-      <action name="ToggleMaximize"/>
-    </mousebind>
-    <mousebind button="Middle" action="Click">
-      <action name="ToggleMaximize"><direction>vertical</direction></action>
-    </mousebind>
-    <mousebind button="Right" action="Click">
-      <action name="ToggleMaximize"><direction>horizontal</direction></action>
-    </mousebind>
-  </context>
+  ◊(context "Close"
+    (mousebind "Left" #:action "Press"
+     (action "Focus")
+     (action "Raise")
+     (action "Unshade"))
+    (mousebind "Left" #:action "Click"
+     (action "Close")))
 
-  <context name="Close">
-    <mousebind button="Left" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-      <action name="Unshade"/>
-    </mousebind>
-    <mousebind button="Left" action="Click">
-      <action name="Close"/>
-    </mousebind>
-  </context>
+  ◊(context "Desktop"
+    (mousebind "Up W-Up" #:action "Click"
+     (action/goto-desktop "previous"))
+    (mousebind "Down W-Down" #:action "Click"
+     (action/goto-desktop "next"))
+    (mousebind "Left" #:action "Press"
+     (action "Focus")
+     (action "Raise"))
+    (mousebind "Right" #:action "Press"
+     (action "Focus")
+     (action "Raise")))
 
-  <context name="Desktop">
-    <mousebind button="Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
-    </mousebind>
-    <mousebind button="Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
-    </mousebind>
+  ◊(context "Root"
+    (mousebind "Middle" #:action "Press"
+     (action/menu "client-list-combined-menu"))
+    (mousebind "Right" #:action "Press"
+     (action/menu "root-menu")))
 
-    <mousebind button="A-Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
-    </mousebind>
-    <mousebind button="A-Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
-    </mousebind>
-    <mousebind button="C-A-Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
-    </mousebind>
-    <mousebind button="C-A-Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
-    </mousebind>
-
-    <mousebind button="Left" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-    </mousebind>
-    <mousebind button="Right" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-    </mousebind>
-  </context>
-
-  <context name="Root">
-    <!-- Menus -->
-    <mousebind button="Middle" action="Press">
-      <action name="ShowMenu"><menu>client-list-combined-menu</menu></action>
-    </mousebind>
-    <mousebind button="Right" action="Press">
-      <action name="ShowMenu"><menu>root-menu</menu></action>
-    </mousebind>
-  </context>
-
-  <context name="MoveResize">
-    <mousebind button="Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
-    </mousebind>
-    <mousebind button="Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
-    </mousebind>
-    <mousebind button="A-Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
-    </mousebind>
-    <mousebind button="A-Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
-    </mousebind>
-  </context>
+  ◊(context "MoveResize"
+    (mousebind "Up A-Up" #:action "Click"
+     (action/goto-desktop "previous"))
+    (mousebind "Down A-Down" #:action "Click"
+     (action/goto-desktop "next")))
 </mouse>
 
-<menu>
-  <!-- You can specify more than one menu file in here and they are all loaded,
-       just don't make menu ids clash or, well, it'll be kind of pointless -->
+◊(xexpr->string*
+  '(menu
+    ;; more than one menu files can be specified
+    (file "menu.xml")
+    ;; if a press-release lasts longer than this, the menu hides again
+    (hideDelay "200")
+    ;; center submenus vertically about the parent entry
+    (middle "no")
+    ;; Time between hovering an entry and its submenu opening. Negative means don't show on hover.
+    (submenuShowDelay "100")
+    ;; time to delay before hiding a submenu when selecting another entry in parent menu
+    ;; negative: submenu will not be hidden until a different submenu is opened
+    (submenuHideDelay "400")
+    (showIcons "yes")
+    (manageDesktops "yes")))
 
-  <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
-  <file>menu.xml</file>
-  <hideDelay>200</hideDelay>
-  <!-- if a press-release lasts longer than this setting (in milliseconds), the
-       menu is hidden again -->
-  <middle>no</middle>
-  <!-- center submenus vertically about the parent entry -->
-  <submenuShowDelay>100</submenuShowDelay>
-  <!-- time to delay before showing a submenu after hovering over the parent
-       entry.
-       if this is a negative value, then the delay is infinite and the
-       submenu will not be shown until it is clicked on -->
-  <submenuHideDelay>400</submenuHideDelay>
-  <!-- time to delay before hiding a submenu when selecting another
-       entry in parent menu
-       if this is a negative value, then the delay is infinite and the
-       submenu will not be hidden until a different submenu is opened -->
-  <showIcons>yes</showIcons>
-  <!-- controls if icons appear in the client-list-(combined-)menu -->
-  <manageDesktops>yes</manageDesktops>
-  <!-- show the manage desktops section in the client-list-(combined-)menu -->
-</menu>
+◊(xexpr->string*
+  `(applications
+    (application ([class "*"])
+     (decor "no"))
 
-<applications>
-  <!-- Visit /etc/xdg/openbox/rc.xml for the complete list of properties -->
-  <!-- Application specific keybinds can be implemented with an if action in the binding sections -->
-  <application class="*">
-    <decor>no</decor>
-  </application>
-  <application class="Ardour*">
-    <decor>yes</decor>
-  </application>
-  <!-- position plasma osd -->
-  <application name="plasmashell"
-              class="plasmashell"
-               type="normal">
-    <position force="no">
-      <x>center</x>
-      <y>60%</y>
-    </position>
-    <desktop>all</desktop> <!-- 1 is the first desktop, 'all' for all desktops -->
-  </application>
-  <application name="wineconsole.exe"
-               type="normal">
-    <iconic>yes</iconic>
-    <layer>below</layer>
-  </application>
-  <application name="megasync"
-               title="MEGAsync"
-               class="MEGAsync"
-               type="normal">
-    <iconic>yes</iconic>
-  </application>
-  <!-- In hope that Plank will stop showing a dock in the window list -->
-  <application name="latte-dock"
-               class="lattedock"
-               type="dock">
-    <skip_pager>yes</skip_pager>
-    <skip_taskbar>yes</skip_taskbar>
-  </application>
-</applications>
+    ,@(application-match-multiple
+       '(([class "Ardour"])
+         ([class "isoimagewriter"]))
+       '(decor "yes"))
+
+   ; position plasma osd
+    (application ([name "plasmashell"]
+                  [class "plasmashell"]
+                  [type "normal"])
+     (position ([force "no"])
+      (x "center") (y "60%"))
+     (desktop "all"))
+    (application ([name "wineconsole.exe"]
+                  [type "normal"])
+     (iconic "yes")
+     (layer "below"))
+    (application ([name "megasync"]
+                  [title "MEGAsync"]
+                  [type "normal"])
+     (iconic "yes"))
+   ; plank, please stop showing latte-dock…
+    (application ([name "latte-dock"]
+                  [class "lattedock"]
+                  [type "dock"])
+     (skip_pager "yes")
+     (skip_taskbar "yes"))))
 </openbox_config>
 
 ◊; Local Variables:
