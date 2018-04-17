@@ -3,10 +3,10 @@
 
 <!-- Openbox config -->
 
-<!-- Documentation index <"http://openbox.org/wiki/Help:Contents"> -->
-<!-- Configuration documentation <"http://openbox.org/wiki/Help:Configuration"> -->
-<!-- Actions documentation <"http://openbox.org/wiki/Help:Actions"> -->
-<!-- Keybinding documentation <"http://openbox.org/wiki/Help:Bindings"> -->
+◊; Documentation index <"http://openbox.org/wiki/Help:Contents">
+◊; Configuration documentation <"http://openbox.org/wiki/Help:Configuration">
+◊; Actions documentation <"http://openbox.org/wiki/Help:Actions">
+◊; Keybinding documentation <"http://openbox.org/wiki/Help:Bindings">
 
 <openbox_config xmlns="http://openbox.org/3.4/rc"
                 xmlns:xi="http://www.w3.org/2001/XInclude">
