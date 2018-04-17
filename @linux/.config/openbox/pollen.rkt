@@ -141,7 +141,7 @@
 
 (module+ test
   (check-equal? (font "ActiveWindow" "Roboto")
-                "<font place=\"ActiveWindow\"><name>Roboto</name><size>11</size><weight>normal</weight><slant>normal</slant></font>"))
+                '(font ([place "ActiveWindow"]) (name "Roboto") (size "11") (weight "normal") (slant "normal"))))
 
 (define (keybind key #:chroot? [chroot? #f] . extra)
   (if chroot?
