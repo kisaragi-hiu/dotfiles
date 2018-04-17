@@ -253,20 +253,17 @@
     <action name="Close"/>
   </keybind>
   ◊(xexpr->string*
-    '(keybind ([key "W-F9"])
+    '(keybind ([key "W-F9 A-Menu"])
       (action ([name "ShowMenu"])
        (menu "client-menu")))
     '(keybind ([key "W-F10"])
       (action ([name "ToggleDecorations"])))
     '(keybind ([key "W-F11"])
-      (action ([name "ToggleFullscreen"]))))
-  <keybind key="W-Up W-k">
-    <!-- Going with no decorations by default now -->
-    <action name="ToggleMaximize"/>
-  </keybind>
-  <keybind key="W-Down W-j">
-    <action name="Iconify"/>
-  </keybind>
+      (action ([name "ToggleFullscreen"])))
+    '(keybind ([key "W-Up W-k"])
+      (action ([name "ToggleMaximize"])))
+    '(keybind ([key "W-Down W-j"])
+      (action ([name "Iconify"]))))
 
   <!-- Alt-tabbing -->
   <keybind key="A-Tab Menu">
@@ -381,13 +378,13 @@
   </keybind>
 
   <!-- Keybindings for running applications -->
-  ◊(keybind "Scroll_Lock" (action/execute #:return-xexpr? #t
-                                          "qdbus" "org.kde.kglobalaccel" "/component/yakuake" "invokeShortcut" "toggle-window-state"))
-
-  ◊(keybind "A-F1" (action/execute #:return-xexpr? #t
-                                   "rofi" "-combi-modi" "drun,run,window" "-show" "combi" "-modi" "combi"))
-  ◊(keybind "W-s" (action/execute #:return-xexpr? #t
-                                  "rofi-surfraw"))
+  ◊(xexpr->string*
+    (keybind "Scroll_Lock" (action/execute #:return-xexpr? #t
+                                           "qdbus" "org.kde.kglobalaccel" "/component/yakuake" "invokeShortcut" "toggle-window-state"))
+    (keybind "A-F1" (action/execute #:return-xexpr? #t
+                                    "rofi" "-combi-modi" "drun,run,window" "-show" "combi" "-modi" "combi"))
+    (keybind "W-s" (action/execute #:return-xexpr? #t
+                                   "rofi-surfraw")))
 
   <!-- keymap -->
   <keybind key="W-o">
