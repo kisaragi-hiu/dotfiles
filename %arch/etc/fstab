@@ -1,0 +1,21 @@
+#
+# /etc/fstab: static file system information
+#
+# <file system> <dir> <type> <options> <dump> <pass>
+# Root
+UUID=c1c9f65f-9726-4abb-aac5-74fdffc5a4ba / btrfs rw,relatime,ssd,space_cache,subvolid=5,subvol=/ 0 0
+
+# Home
+UUID=a3899547-d2fb-4f1a-96c5-a25dcba10eb3 /home ext4 rw,relatime,data=ordered 0 2
+
+# Boot
+UUID=7421-1A90 /boot vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro 0 2
+
+# swap
+UUID=2d08bf14-3599-48d2-a4a1-7823856ccfae none swap defaults,pri=10 0 0
+
+# Data
+UUID=4959BCD6115629E5 /run/media/flyin1501/Data ntfs defaults,noauto,nofail,uid=1000,gid=1000,user,exec,x-gvfs-show,x-systemd.automount
+
+# Partition for Windows VM disk
+UUID=73fcef19-2371-4f34-bb28-9bd8c02eb106 /run/media/flyin1501/Windows ext4 rw,relatime,data=ordered,nofail 0 2
