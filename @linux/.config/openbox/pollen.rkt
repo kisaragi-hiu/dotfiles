@@ -75,7 +75,8 @@
               "north" "up"
               "south" "down"
               "west" "left"
-              "east" "right"))
+              "east" "right"
+              number?))
        (boolean?)
        xexpr?)
   `(action ([name "GoToDesktop"])
