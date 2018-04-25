@@ -19,3 +19,5 @@ if type -q rlwrap
     alias rash-repl 'rlwrap rash-repl'
     alias pil 'rlwrap pil'
 end
+
+alias ls 'ls -a --color=auto'
