@@ -753,7 +753,10 @@
 
     ,@(application-match-multiple
        '(([class "Ardour"])
-         ([class "isoimagewriter"]))
+         ([class "isoimagewriter"])
+         ([class "VirtualBox"]
+          [name "VirtualBox"]
+          [title "Windows 10*"]))
        '(decor "yes"))
 
    ; position plasma osd
