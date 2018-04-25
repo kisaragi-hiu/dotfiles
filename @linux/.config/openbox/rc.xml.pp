@@ -548,49 +548,39 @@
   <!-- Set this to TRUE to move the mouse pointer across the desktop when
        switching due to hitting the edge of the screen -->
 
-  <context name="Frame">
-    ◊(xexpr->string*
-      '(mousebind
-        ([button "W-Left"] [action "Press"])
-        (action ([name "Focus"]))
-        (action ([name "Raise"])))
-      '(mousebind
-        ([button "W-Left"] [action "Click"])
-        (action ([name "Unshade"])))
-      '(mousebind
-        ([button "W-Left"] [action "Drag"])
-        (action ([name "Unmaximize"]))
-        (action ([name "Move"]))))
+  ◊(context "Frame"
+    (mousebind "W-Left" #:action "Press"
+     (action "Focus")
+     (action "Raise"))
+    (mousebind "W-Left" #:action "Click"
+     (action "Unshade"))
+    (mousebind "W-Left" #:action "Drag"
+     (action "Unmaximize")
+     (action "Move"))
 
-    <mousebind button="W-Right" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-      <action name="Unshade"/>
-    </mousebind>
-    <mousebind button="W-Right" action="Drag">
-      <action name="Resize"/>
-    </mousebind>
+    ; (mousebind "W-Right" #:action "Press"
+    ;  (action "Focus")
+    ;  (action "Raise")
+    ;  (action "Unshade"))
+    (mousebind "W-Right" #:action "Press"
+     (action "Focus")
+     (action "Raise")
+     (action/menu "client-menu"))
+    (mousebind "W-Right" #:action "Drag"
+     (action "Resize"))
 
-    <mousebind button="W-Middle" action="Press">
-      <action name="Lower"/>
-      <action name="FocusToBottom"/>
-      <action name="Unfocus"/>
-    </mousebind>
-
-    <!-- Up Down = mwheelup/down -->
-    <mousebind button="W-Up" action="Click">
-      <action name="GoToDesktop"><to>previous</to></action>
-    </mousebind>
-    <mousebind button="W-Down" action="Click">
-      <action name="GoToDesktop"><to>next</to></action>
-    </mousebind>
-    <mousebind button="W-S-Up" action="Click">
-      <action name="SendToDesktop"><to>previous</to></action>
-    </mousebind>
-    <mousebind button="W-S-Down" action="Click">
-      <action name="SendToDesktop"><to>next</to></action>
-    </mousebind>
-  </context>
+    (mousebind "W-Middle" #:action "Press"
+     (action "Lower")
+     (action "FocusToBottom")
+     (action "Unfocus"))
+    (mousebind "W-Up" #:action "Click"
+     (action/goto-desktop "previous"))
+    (mousebind "W-Down" #:action "Click"
+     (action/goto-desktop "next"))
+    (mousebind "W-A-Up" #:action "Click"
+     (action/sendto-desktop "previous"))
+    (mousebind "W-A-Down" #:action "Click"
+     (action/sendto-desktop "next")))
 
   <context name="Titlebar">
     <mousebind button="Left" action="Drag">
