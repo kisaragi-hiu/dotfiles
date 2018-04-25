@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# AUTHOR: Kisaragi Hiu
+# modified from "youtube" elvi by S.S.R. Oemrawsingh
+#
+# DATE: Fri Apr 20 2018
+#
+# DESC: Elvi to open niconico id link
+# elvis: nicovideo-id		-- Open niconico id (nicovideo.jp)
+. surfraw || exit 1
+
+w3_usage_hook () {
+    cat <<EOF
+Usage: $w3_argv0 [options] [search words]...
+Description:
+  Open niconico id
+EOF
+    w3_global_usage
+}
+
+w3_config
+w3_parse_args "$@"
+if test -z "$w3_args"; then
+    w3_browse_url "http://nicovideo.jp/"
+else
+    escaped_args=$(w3_url_of_arg $w3_args)
+    w3_browse_url "http://nicovideo.jp/watch/${escaped_args}"
+fi
