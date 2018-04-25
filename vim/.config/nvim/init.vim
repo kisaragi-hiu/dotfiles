@@ -26,7 +26,13 @@ Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
 "Editing
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 Plug 'bhurlow/vim-parinfer'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
@@ -68,6 +74,7 @@ Plug 'guns/vim-sexp' "object: {a,i}{fFse} for forms, toplevel forms, strings, an
 
 "filetypes / languages
 Plug 'sheerun/vim-polyglot' "lang pack
+Plug 'MicahElliott/vrod' "Racket omnicompletion
 Plug 'otherjoel/vim-pollen', { 'for': 'pollen' } " Requires vim-racket (provided by vim-polyglot)
 Plug 'tpope/vim-speeddating' | Plug 'jceb/vim-orgmode'
 Plug 'Firef0x/PKGBUILD.vim', { 'for': 'PKGBUILD' }
@@ -197,6 +204,9 @@ if &statusline ==# ''
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
 endif
+
+"deoplete
+let g:deoplete#enable_at_startup = 1
 
 "syntastic
 let g:syntastic_always_populate_loc_list = 1
