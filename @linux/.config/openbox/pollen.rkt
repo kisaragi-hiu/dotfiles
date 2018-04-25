@@ -83,6 +83,23 @@
            (to ,dest)
            (wrap ,(boolean->yn wrap))))
 
+(define/contract (action/sendto-desktop dest [wrap #t] [follow #t])
+  (->* ((or/c "current"
+              "next"
+              "previous"
+              "last"
+              "north" "up"
+              "south" "down"
+              "west" "left"
+              "east" "right"
+              number?))
+       (boolean? boolean?)
+       xexpr?)
+  `(action ([name "SendToDesktop"])
+           (to ,dest)
+           (wrap ,(boolean->yn wrap))
+           (follow ,(boolean->yn follow))))
+
 (define (osu-select-sorting sorting)
   ;; item: artist, bpm, creator, date, difficulty, length, rank, title
   (define item-position
