@@ -1,3 +1,4 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=UTAU - 歌声合成ツール
 Exec=env WINEPREFIX="/home/flyin1501/.wineprefix/UTAU" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/flyin1501/.wineprefix/UTAU/dosdevices/c:/users/flyin1501/Start\\ Menu/Programs/U\\ T\\ A\\ U/UTAU\\ -\\ 歌声合成ツール.lnk
