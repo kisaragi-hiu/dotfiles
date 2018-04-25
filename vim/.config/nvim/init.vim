@@ -305,6 +305,13 @@ augroup shell
     autocmd BufEnter sh setlocal softtabstop=2
 augroup END
 
+augroup org
+    autocmd!
+    autocmd FileType org call TextEnableCodeSnip('sh', '#+BEGIN_SRC sh', '#+END_SRC', 'SpecialComment')
+    autocmd FileType org call TextEnableCodeSnip('racket', '#+BEGIN_SRC racket', '#+END_SRC', 'SpecialComment')
+    autocmd FileType org call TextEnableCodeSnip('clojure', '#+BEGIN_SRC clojure', '#+END_SRC', 'SpecialComment')
+augroup END
+
 augroup javascript
     autocmd!
     autocmd FileType html call TextEnableCodeSnip('javascript', '<script>', '</script>', 'SpecialComment')
