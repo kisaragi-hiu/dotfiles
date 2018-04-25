@@ -26,6 +26,7 @@
      shell-scripts
      markdown
      pollen
+     php
      ;; == apps ==
      (wakatime :variables
                wakatime-api-key
