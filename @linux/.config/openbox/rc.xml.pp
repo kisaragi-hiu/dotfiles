@@ -330,10 +330,7 @@
   <!-- W-Print to start Spectacle, or just Print to use imagemagick -->
   <keybind key="Print">
     <action name="Execute">
-      <command>bash -c 'import -window root "$XDG_PICTURES_DIR"/Screenshots/Screenshot_$(date +%Y%m%d_%H%M%S).jpg'</command>
-    </action>
-    <action name="Execute">
-      <command>notify-send "Screenshot taken" " " --icon accessories-screenshot</command>
+      <command>fish -c 'screenshot "$XDG_PICTURES_DIR"/Screenshots/Screenshot_(date +%Y%m%d_%H%M%S).jpg; notify-send "Screenshot taken" " " --icon accessories-screenshot'</command>
     </action>
   </keybind>
   <keybind key="W-Print">
@@ -383,6 +380,12 @@
                                            "qdbus" "org.kde.kglobalaccel" "/component/yakuake" "invokeShortcut" "toggle-window-state"))
     (keybind "A-F1" (action/execute #:return-xexpr? #t
                                     "rofi" "-combi-modi" "drun,run,window" "-show" "combi" "-modi" "combi"))
+    (keybind "W-b" (action/execute #:return-xexpr? #t
+                                   "rofi-toggle" "plank" "xcompmgr"))
+    (keybind "W-l" (action/execute #:return-xexpr? #t
+                                   "oblogout"))
+    ; (keybind "W-b" (action/execute #:return-xexpr? #t
+    ;                                "toggle" "plank"))
     (keybind "W-s" (action/execute #:return-xexpr? #t
                                    "rofi-surfraw")))
 
@@ -753,10 +756,7 @@
 
     ,@(application-match-multiple
        '(([class "Ardour"])
-         ([class "isoimagewriter"])
-         ([class "VirtualBox"]
-          [name "VirtualBox"]
-          [title "Windows 10*"]))
+         ([class "isoimagewriter"]))
        '(decor "yes"))
 
    ; position plasma osd
