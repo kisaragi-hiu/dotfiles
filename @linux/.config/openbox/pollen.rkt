@@ -182,7 +182,7 @@
 
 (define (context name . mousebinds)
   (xexpr->string*
-   '(context ([name ,name]) ,@mousebinds)))
+   `(context ([name ,name]) ,@mousebinds)))
 
 (define (mousebind button #:action mouseaction . actions)
   `(mousebind ([button ,button] [action ,mouseaction])
