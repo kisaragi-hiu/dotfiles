@@ -2,11 +2,11 @@
 # shellcheck disable=SC1090
 
 # == directory shortcuts ==
-export D=/run/media/flyin1501/Data
-export C=/run/media/flyin1501/Windows
+export D=/run/media/"$USER"/Data
+export C=/run/media/"$USER"/Windows
 export G="$HOME"/ドキュメント
-export M=/run/media/flyin1501/Data/mega
-export P=/run/media/flyin1501/Data/mega/Projects
+export M=/run/media/"$USER"/Data/mega
+export P=/run/media/"$USER"/Data/mega/Projects
 source "$HOME"/.bookmarks
 
 # for XDG_* directory quick access
