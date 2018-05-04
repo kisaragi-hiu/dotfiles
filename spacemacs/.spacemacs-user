@@ -48,7 +48,8 @@
             shell-default-position 'bottom))
 
    ;; config should be in `dotspacemacs/user-config' or make a layer.
-   dotspacemacs-additional-packages '(f s dash parinfer monokai-theme)
+   dotspacemacs-additional-packages '(f s dash parinfer monokai-theme
+                                        qml-mode company-qml)
    dotspacemacs-frozen-packages '() ; frozen package list
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(evil-search-highlight-persist)
