@@ -23,10 +23,9 @@
 (define/contract (xexpr->string* . xexprs)
   ;; xexpr->string only takes one xml tree. Work around that, take multiple xexprs and turn them into a string.
   (->* () () #:rest (listof xexpr?) string?)
-  (~> (cons 'root xexprs)
-      xexpr->string
-      (string-replace _ #rx"^<root>" "")
-      (string-replace _ #rx"</root>$" "")))
+  (string-join
+    (map xexpr->string xexprs)
+    ""))
 
 (define/contract (string->xexpr* str)
   (-> string? (listof xexpr?))
