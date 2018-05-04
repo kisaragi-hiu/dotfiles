@@ -13,5 +13,5 @@ keycode 85 = KP_Right F30 KP_Right F30
 ! keycode 38 = Tab A a A
 ! keycode 39 = F34 S s S
 ! keycode 40 = F30 D d D
-! keycode 52 = KP_1 Z z Z
-! keycode 53 = KP_2 X x X
+keycode 87 = x X x X
+keycode 88 = z Z z Z
