@@ -87,10 +87,14 @@
 (show-paren-mode 1)
 (add-hook 'prog-mode-hook (lambda () (interactive) (column-marker-1 80)))
 
-(set-default-font (font-spec :name "Overpass Mono" :size 20))
-(if (functionp 'set-fontset-font)
-  (set-fontset-font "fontset-default" 'unicode
-                    (font-spec :name "Noto Sans Mono CJK TC" :size 18)))
+(defun kisaragi/set-font ()
+  (set-default-font (font-spec :name "Mononoki" :size 20))
+  (if (functionp 'set-fontset-font)
+      (set-fontset-font "fontset-default" 'unicode
+                        (font-spec :name "Noto Sans Mono CJK TC" :size 18))))
+(kisaragi/set-font)
+(add-hook 'after-make-frame-functions
+          #'kisaragi/set-font)
 
 (evil-org-set-key-theme '(navigation insert textobjects additional calendar))
 (evil-org-agenda-set-keys)
