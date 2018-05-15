@@ -1,8 +1,42 @@
+;; start modes
+(smartparens-global-mode)
+(global-evil-surround-mode)
+(evil-commentary-mode)
+(global-evil-leader-mode)
+(evil-mode 1)
+(company-flx-mode)
+(ivy-mode)
+
+(linum-relative-global-mode)
+(global-linum-mode)
+
+(require 'telephone-line-config)
+(telephone-line-evil-config)
+
+;; auto-mode-alist
+(add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+;; hooks
+(add-hook 'doc-view-mode
+    (lambda ()
+      (linum-relative-off)
+      (linum-mode -1)))
+
+(add-hook 'prog-mode-hook #'hs-minor-mode)
+(add-hook 'racket-mode-hook #'parinfer-mode)
+(add-hook 'lisp-mode-hook #'parinfer-mode)
+(add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
+(add-hook 'after-init-hook #'global-company-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'pollen-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'org-mode-hook #'evil-org-mode)
+
 ;; save backups and autosaves to system temp dir
 (setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
+      (list (cons ".*" temporary-file-directory)))
 (setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
+      (list (list ".*" temporary-file-directory t)))
 
 (delete-selection-mode 1)
 (setq tab-always-indent 'complete)
@@ -17,7 +51,8 @@
          smart-yank))
 (setq evil-move-beyond-eol t)
 
-(add-to-list 'company-backends 'company-files '(company-shell company-shell-env))
+(add-to-list 'company-backends 'company-files)
+(add-to-list 'company-backends '(company-shell company-shell-env))
 
 (setq ivy-re-builders-alist
       '((t . ivy--regex-fuzzy)))
@@ -55,14 +90,14 @@
 (set-default-font (font-spec :name "Overpass Mono" :size 20))
 (if (functionp 'set-fontset-font)
   (set-fontset-font "fontset-default" 'unicode
-                    (font-spec :name "Noto Sans Mono CJK TC" :size 18))))
+                    (font-spec :name "Noto Sans Mono CJK TC" :size 18)))
 
 (evil-org-set-key-theme '(navigation insert textobjects additional calendar))
 (evil-org-agenda-set-keys)
-  (setq org-todo-keywords '((sequence "TODO" "NEXT" "DONE")))
-  (setq org-todo-keyword-faces
-        '(("TODO" . org-todo) ("NEXT" . org-todo) ("DONE" . org-done)))
-  (setq org-src-fontify-natively t) ;; highlight SRC blocks
+(setq org-todo-keywords '((sequence "TODO" "NEXT" "DONE")))
+(setq org-todo-keyword-faces
+      '(("TODO" . org-todo) ("NEXT" . org-todo) ("DONE" . org-done)))
+(setq org-src-fontify-natively t) ;; highlight SRC blocks
 (ranger-override-dired-mode t)
 
 (setq-default indent-tabs-mode nil)

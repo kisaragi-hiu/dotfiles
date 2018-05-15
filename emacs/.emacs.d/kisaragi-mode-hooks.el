@@ -1,8 +1,0 @@
-(add-hook 'prog-mode-hook #'hs-minor-mode)
-(add-hook 'racket-mode-hook #'parinfer-mode)
-(add-hook 'lisp-mode-hook #'parinfer-mode)
-(add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
-(add-hook 'after-init-hook #'global-company-mode)
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-(add-hook 'pollen-mode-hook #'rainbow-delimiters-mode)
-(add-hook 'org-mode-hook #'evil-org-mode)
