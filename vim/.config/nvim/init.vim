@@ -81,6 +81,7 @@ Plug 'Firef0x/PKGBUILD.vim', { 'for': 'PKGBUILD' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'godlygeek/tabular'
 Plug 'kovetskiy/sxhkd-vim'
+Plug 'vim-scripts/gnuplot-syntax-highlighting'
 "linter
 Plug 'vim-syntastic/syntastic'
 
@@ -296,6 +297,8 @@ augroup shell
     autocmd FileType sh call TextEnableCodeSnip('racket', '<<''RKT''', 'RKT', 'SpecialComment')
     autocmd FileType sh call TextEnableCodeSnip('c', '<<C', 'C', 'SpecialComment')
     autocmd FileType sh call TextEnableCodeSnip('c', '<<''C''', 'C', 'SpecialComment')
+    autocmd FileType sh call TextEnableCodeSnip('javascript', '<<JS', 'JS', 'SpecialComment')
+    autocmd FileType sh call TextEnableCodeSnip('javascript', '<<''JS''', 'JS', 'SpecialComment')
     autocmd FileType sh call TextEnableCodeSnip('json', '<<JSON', 'JSON', 'SpecialComment')
     autocmd FileType sh call TextEnableCodeSnip('json', '<<''JSON''', 'JSON', 'SpecialComment')
     autocmd FileType sh call TextEnableCodeSnip('python', '<<PYTHON', 'PYTHON', 'SpecialComment')
