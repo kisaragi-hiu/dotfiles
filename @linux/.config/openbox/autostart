@@ -18,10 +18,9 @@ ssh-agent &
 ssh-add </dev/null
 numlockx &
 
-randomwallpaper -t 5m -w feh -o &
+randomwallpaper -t 5m -w plasma -o &
 
 xcompmgr &
-# compton &
 xcape -e 'Alt_R=Escape;Super_L=Alt_L|F1' -t 250 &
 dunst &
 
