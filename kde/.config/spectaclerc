@@ -1,12 +1,12 @@
 [General]
 last-saved-to[$e]=$HOME/画像
-lastSaveAsLocation=file:///home/flyin1501/git/utau-tutorial-series/images/
+lastSaveAsLocation=file:///tmp/
 
 [GuiConfig]
 captureModeIndex=3
-cropRegion=892,247,882,528
+cropRegion=57,111,1044,482
 includeDecorations=false
 includePointer=false
 lastUsedSaveMode=0
-onClickChecked=false
+onClickChecked=true
 window-position=459,170

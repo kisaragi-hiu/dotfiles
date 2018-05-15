@@ -1,5 +1,5 @@
 [Misc]
-version=6
+version=8
 
 [Show]
 Exif.Image.DateTime=false
@@ -27,11 +27,11 @@ fileName=false
 fileSize=false
 hasPart=false
 isPartOf=false
-kfileitem#modified=false
+kfileitem#modified[$d]
 kfileitem#owner=false
 kfileitem#permissions=false
 lastModified=false
 mimeType=false
-originUrl=false
+originUrl[$d]
 plainTextContent=false
 url=false
