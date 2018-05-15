@@ -1,1 +1,1 @@
-set PATH $HOME/scripts/ $PATH
+set PATH $HOME/scripts/ $HOME/bin $PATH
