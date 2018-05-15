@@ -55,7 +55,7 @@
     ; (name "Desktop 1")
     ; (name "Desktop 2")
     )
-    (popupTime "2"))
+    (popupTime "0"))
 
   '(resize
     (drawContents "yes")
@@ -91,7 +91,7 @@
   ◊(xexpr->string*
     '(chainQuitKey "C-g")
     `(keybind ([key "W-r"])
-      (action ([name "Execute"]) (command "bash -c 'raco pollen render ~/.config/openbox/; openbox --reconfigure'"))
+      (action ([name "Execute"]) (command "bash -c 'raco pollen render ~/.config/openbox/ && openbox --reconfigure'"))
       ,(action/notify "Reconfiguring Openbox" #:icon "view-refresh" #:return-xexpr? #t)))
 
   <!-- Keybindings for desktop switching and window manipulation -->
@@ -755,7 +755,7 @@
      (decor "no"))
 
     ,@(application-match-multiple
-       '(([class "Ardour"])
+       '(([class "*Ardour*"])
          ([class "isoimagewriter"]))
        '(decor "yes"))
 
@@ -766,6 +766,9 @@
      (position ([force "no"])
       (x "center") (y "60%"))
      (desktop "all"))
+    (application ([name "vlc"]
+                  [class "vlc"])
+     (fullscreen "no"))
     (application ([name "wineconsole.exe"]
                   [type "normal"])
      (iconic "yes")
