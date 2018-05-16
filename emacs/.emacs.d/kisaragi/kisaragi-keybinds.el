@@ -9,12 +9,13 @@
 (evilem-default-keybindings "SPC")
 (evil-leader/set-leader ",")
 (evil-leader/set-key
-  "m" 'counsel-imenu
   "l" 'evil-next-buffer
   "h" 'evil-prev-buffer
+  "b" 'ivy-switch-buffer
   "p" 'parinfer-toggle-mode
-  "x" 'counsel-M-x)
-(evil-leader/set-key-for-mode 'org-mode "c" 'org-toggle-checkbox)
+  "x" 'execute-extended-command)
+(evil-leader/set-key-for-mode 'org-mode
+  "c" 'org-toggle-checkbox)
 (global-set-key (kbd "C-h f") #'helpful-callable)
 (global-set-key (kbd "C-h v") #'helpful-variable)
 (global-set-key (kbd "C-h k") #'helpful-key)

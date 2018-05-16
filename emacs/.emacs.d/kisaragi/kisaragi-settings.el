@@ -3,7 +3,8 @@
 (global-evil-surround-mode)
 (evil-commentary-mode)
 (global-evil-leader-mode)
-(evil-mode 1)
+(evil-mode)
+(evil-collection-init)
 (company-flx-mode)
 (ivy-mode)
 
@@ -27,6 +28,7 @@
 (add-hook 'racket-mode-hook #'parinfer-mode)
 (add-hook 'lisp-mode-hook #'parinfer-mode)
 (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
+(add-hook 'xah-elisp-mode-hook #'parinfer-mode)
 (add-hook 'after-init-hook #'global-company-mode)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'pollen-mode-hook #'rainbow-delimiters-mode)
@@ -105,3 +107,14 @@
 (ranger-override-dired-mode t)
 
 (setq-default indent-tabs-mode nil)
+
+(setq evil-emacs-state-cursor '("red" box))
+(setq evil-normal-state-cursor '("green" box))
+(setq evil-visual-state-cursor '("orange" box))
+(setq evil-insert-state-cursor '("red" bar))
+(setq evil-replace-state-cursor '("red" bar))
+(setq evil-operator-state-cursor '("red" hollow))
+
+(setq scroll-conservatively 150
+      scroll-margin 10
+      scroll-step 1)

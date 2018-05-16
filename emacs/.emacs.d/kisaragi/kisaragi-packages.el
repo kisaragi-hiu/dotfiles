@@ -1,6 +1,7 @@
 ;; kisaragi-packages.el:
 ;; package installations
 (use-package f)
+(use-package fn)
 (use-package suggest)
 (use-package smartparens)
 (use-package parinfer)
@@ -11,7 +12,10 @@
 (use-package evil-surround)
 (use-package evil-commentary)
 (use-package evil-leader)
-(use-package evil)
+(use-package evil
+  :init
+  (setq evil-want-integration nil))
+(use-package evil-collection)
 (use-package evil-numbers)
 (use-package evil-textobj-line
   :straight
@@ -27,6 +31,7 @@
 (use-package flycheck)
 (use-package ivy)
 
+(use-package xah-elisp-mode)
 (use-package racket-mode)
 (use-package pollen-mode)
 (use-package scribble-mode
