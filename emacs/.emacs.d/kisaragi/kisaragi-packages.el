@@ -20,7 +20,8 @@
     :type git :host github
     :repo "syohex/evil-textobj-line"))
 (use-package evil-easymotion)
-(use-package hydra)
+;; (use-paclage general)
+;; (use-package hydra)
 
 (use-package company)
 (use-package company-shell)
