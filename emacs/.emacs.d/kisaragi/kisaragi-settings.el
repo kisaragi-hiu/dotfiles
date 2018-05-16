@@ -1,5 +1,8 @@
 ;; kisaragi-settings.el: emacs settings
 
+;; this needs to be set before evil starts
+(setq evil-want-integration nil)
+
 ;; start modes
 (smartparens-global-mode)
 (global-evil-surround-mode)

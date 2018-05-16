@@ -11,9 +11,7 @@
 (use-package evil-surround)
 (use-package evil-commentary)
 (use-package evil-leader)
-(use-package evil
-  :init
-  (setq evil-want-integration nil))
+(use-package evil)
 (use-package evil-collection)
 (use-package evil-numbers)
 (use-package evil-textobj-line
