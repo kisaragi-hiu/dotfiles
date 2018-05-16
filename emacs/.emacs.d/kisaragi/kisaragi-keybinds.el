@@ -2,9 +2,8 @@
 ;; TODO: switch to using general.el
 (global-set-key (kbd "C-,") 'parinfer-toggle-mode)
 
-(with-eval-after-load 'evil
-  (evil-define-key 'normal global-map (kbd "C-x v f") #'vimish-fold)
-  (evil-define-key 'normal global-map (kbd "C-x v v") #'vimish-fold-delete))
+(evil-define-key 'normal global-map (kbd "C-x v f") #'vimish-fold)
+(evil-define-key 'normal global-map (kbd "C-x v v") #'vimish-fold-delete))
 (define-key prog-mode-map (kbd "C-<tab>") #'evil-toggle-fold)
 (global-set-key (kbd "C-=") 'evil-numbers/inc-at-pt)
 (global-set-key (kbd "C--") 'evil-numbers/dec-at-pt)
