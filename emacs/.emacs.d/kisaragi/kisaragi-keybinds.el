@@ -1,3 +1,5 @@
+;; kisaragi-keybinds.el: Key bindings
+;; TODO: switch to using general.el
 (global-set-key (kbd "C-,") 'parinfer-toggle-mode)
 
 (with-eval-after-load 'evil

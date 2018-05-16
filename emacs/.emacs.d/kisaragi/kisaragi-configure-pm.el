@@ -1,3 +1,4 @@
+;; kisaragi-configure-pm.el: install Straight and use-package
 (let ((bootstrap-file
         (concat
           user-emacs-directory

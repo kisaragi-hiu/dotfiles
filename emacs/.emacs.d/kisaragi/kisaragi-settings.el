@@ -1,3 +1,5 @@
+;; kisaragi-settings.el: emacs settings
+
 ;; start modes
 (smartparens-global-mode)
 (global-evil-surround-mode)

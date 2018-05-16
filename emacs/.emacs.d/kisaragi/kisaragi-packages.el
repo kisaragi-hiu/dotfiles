@@ -1,5 +1,4 @@
-;; kisaragi-packages.el:
-;; package installations
+;; kisaragi-packages.el: package installations
 (use-package f)
 (use-package fn)
 (use-package suggest)
