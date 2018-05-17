@@ -1,22 +1,41 @@
-;; kisaragi-keybinds.el: Key bindings
-;; TODO: switch to using general.el
-(global-set-key (kbd "C-,") 'parinfer-toggle-mode)
+;;; kisaragi-keybinds.el --- Key bindings
+;;; Commentary:
+;;; All the keybindings, in one file.
+;;; I'm trying to utilize general.el.
+;;; Code:
+(general-define-key
+ "C-," 'parinfer-toggle-mode
+ "C-=" 'evil-numbers/inc-at-pt
+ "C--" 'evil-numbers/dec-at-pt
+ "C-h f" 'helpful-callable
+ "C-h v" 'helpful-variable
+ "C-h k" 'helpful-key)
 
-(evil-define-key 'normal global-map (kbd "C-x v f") #'vimish-fold)
-(evil-define-key 'normal global-map (kbd "C-x v v") #'vimish-fold-delete)
-(define-key prog-mode-map (kbd "C-<tab>") #'evil-toggle-fold)
-(global-set-key (kbd "C-=") 'evil-numbers/inc-at-pt)
-(global-set-key (kbd "C--") 'evil-numbers/dec-at-pt)
-(evilem-default-keybindings "SPC")
-(evil-leader/set-leader ",")
-(evil-leader/set-key
-  "l" 'evil-next-buffer
-  "h" 'evil-prev-buffer
-  "b" 'ivy-switch-buffer
-  "p" 'parinfer-toggle-mode
-  "x" 'execute-extended-command)
-(evil-leader/set-key-for-mode 'org-mode
-  "c" 'org-toggle-checkbox)
-(global-set-key (kbd "C-h f") #'helpful-callable)
-(global-set-key (kbd "C-h v") #'helpful-variable)
-(global-set-key (kbd "C-h k") #'helpful-key)
+(general-define-key
+ :keymaps 'prog-mode-map
+ "C-<tab>" 'evil-toggle-fold)
+
+(general-define-key
+ :state 'normal
+ "C-x v f" 'vimish-fold
+ "C-x v v" 'vimish-fold-delete)
+
+(defconst kisaragi/primary-leader "SPC" "My primary leader key.")
+(general-define-key
+ :prefix kisaragi/primary-leader
+ :states 'normal
+ "b" 'ivy-switch-buffer
+ "f" 'ffap
+ "h" 'evil-prev-buffer
+ "l" 'evil-next-buffer
+ "g" 'magit-status
+ "p" 'parinfer-toggle-mode
+ "x" 'execute-extended-command)
+(general-define-key
+ :prefix kisaragi/primary-leader
+ :states 'normal
+ :keymaps 'org-mode-map
+ "c" 'org-toggle-checkbox)
+
+(evilem-default-keybindings ",")
+;;; kisaragi-keybinds.el ends here

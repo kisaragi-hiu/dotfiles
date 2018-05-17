@@ -10,8 +10,10 @@
 (use-package moccur-edit)
 (use-package evil-surround)
 (use-package evil-commentary)
-(use-package evil-leader)
-(use-package evil)
+;; (use-package evil-leader)
+(use-package evil
+  :init
+  (setq evil-want-integration nil))
 (use-package evil-collection)
 (use-package evil-numbers)
 (use-package evil-textobj-line
@@ -29,7 +31,7 @@
 (use-package flycheck)
 (use-package ivy)
 
-(use-package xah-elisp-mode)
+;; (use-package xah-elisp-mode)
 (use-package racket-mode)
 (use-package pollen-mode)
 (use-package scribble-mode

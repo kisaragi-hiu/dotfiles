@@ -1,15 +1,15 @@
 ;; kisaragi-settings.el: emacs settings
 
 ;; this needs to be set before evil starts
-(setq evil-want-integration nil)
 
 ;; start modes
 (smartparens-global-mode)
 (global-evil-surround-mode)
 (evil-commentary-mode)
-(global-evil-leader-mode)
-(evil-mode)
-(evil-collection-init)
+;; (global-evil-leader-mode)
+(evil-mode 1)
+(with-eval-after-load 'evil
+  (evil-collection-init))
 (company-flx-mode)
 (ivy-mode)
 
@@ -33,7 +33,7 @@
 (add-hook 'racket-mode-hook #'parinfer-mode)
 (add-hook 'lisp-mode-hook #'parinfer-mode)
 (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
-(add-hook 'xah-elisp-mode-hook #'parinfer-mode)
+;; (add-hook 'xah-elisp-mode-hook #'parinfer-mode)
 (add-hook 'after-init-hook #'global-company-mode)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'pollen-mode-hook #'rainbow-delimiters-mode)
@@ -65,10 +65,6 @@
       '((t . ivy--regex-fuzzy)))
 
 (setq initial-scratch-message nil)
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(when (functionp 'scroll-bar-mode)
-  (scroll-bar-mode -1))
 (setq linum-relative-current-symbol "")
 
 (defun kisaragi/set-theme ()
