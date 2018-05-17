@@ -1,4 +1,8 @@
-;; kisaragi-packages.el: package installations
+;;; kisaragi-packages.el --- package installations
+;;; Commentary:
+;;; This file contains package installation statements, and maybe variables
+;;; that need to be set before a package loads.
+;;; Code:
 (use-package f)
 (use-package fn)
 (use-package suggest)
@@ -16,17 +20,17 @@
   (setq evil-want-integration nil))
 (use-package evil-collection)
 (use-package evil-numbers)
-(use-package evil-textobj-line
-  :straight
-  (evil-textobj-line
-    :type git :host github
-    :repo "syohex/evil-textobj-line"))
+(straight-use-package
+ '(evil-textobj-line
+   :type git :host github
+   :repo "syohex/evil-textobj-line"))
 (use-package evil-easymotion)
-;; (use-paclage general)
+(use-package general)
 ;; (use-package hydra)
 
 (use-package company)
 (use-package company-shell)
+(use-package company-jedi)
 (use-package company-flx)
 (use-package flycheck)
 (use-package ivy)
@@ -71,5 +75,5 @@
 ;; -> <tag attr="attr-val"><nested-tag/>tag-val</tag>
 (straight-use-package
  '(xmlgen :type git :host github
-    :repo "philjackson/xmlgen"))
-
+          :repo "philjackson/xmlgen"))
+;;; kisaragi-packages.el ends here

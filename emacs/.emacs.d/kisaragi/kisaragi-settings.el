@@ -1,4 +1,18 @@
-;; kisaragi-settings.el: emacs settings
+;;; kisaragi-settings.el --- settings
+;;; Commentary:
+;;; Settings after packages have been loaded.
+;;; Code:
+(setq inhibit-startup-screen t)
+
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(when (functionp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
+
+(defun kisaragi/set-font ()
+  "Set up my font preferences."
+  (set-frame-font (font-spec :name "Sarasa Term TC" :size 20)))
+(kisaragi/set-font)
 
 ;; this needs to be set before evil starts
 
@@ -29,6 +43,8 @@
       (linum-relative-off)
       (linum-mode -1)))
 
+(add-hook 'after-make-frame-functions #'kisaragi/set-font)
+
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 (add-hook 'racket-mode-hook #'parinfer-mode)
 (add-hook 'lisp-mode-hook #'parinfer-mode)
@@ -38,6 +54,7 @@
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'pollen-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'org-mode-hook #'evil-org-mode)
+(add-hook 'prog-mode-hook #'flycheck-mode)
 
 ;; save backups and autosaves to system temp dir
 (setq backup-directory-alist
@@ -60,6 +77,7 @@
 
 (add-to-list 'company-backends 'company-files)
 (add-to-list 'company-backends '(company-shell company-shell-env))
+(add-to-list 'company-backends '(company-jedi company-files))
 
 (setq ivy-re-builders-alist
       '((t . ivy--regex-fuzzy)))
@@ -68,6 +86,7 @@
 (setq linum-relative-current-symbol "")
 
 (defun kisaragi/set-theme ()
+  "Set up my theme preferences."
   (load-theme
     (if (display-graphic-p)
       'material
@@ -90,14 +109,6 @@
 (show-paren-mode 1)
 (add-hook 'prog-mode-hook (lambda () (interactive) (column-marker-1 80)))
 
-(defun kisaragi/set-font ()
-  (set-default-font (font-spec :name "Mononoki" :size 20))
-  (if (functionp 'set-fontset-font)
-      (set-fontset-font "fontset-default" 'unicode
-                        (font-spec :name "Noto Sans Mono CJK TC" :size 18))))
-(kisaragi/set-font)
-(add-hook 'after-make-frame-functions
-          #'kisaragi/set-font)
 
 (evil-org-set-key-theme '(navigation insert textobjects additional calendar))
 (evil-org-agenda-set-keys)
@@ -119,3 +130,6 @@
 (setq scroll-conservatively 150
       scroll-margin 10
       scroll-step 1)
+; (setq warning-minimum-level :emergency)
+(setq warning-minimum-level :warning)
+;;; kisaragi-settings.el ends here
