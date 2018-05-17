@@ -44,17 +44,17 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Fira Code
+    family: Sarasa Term TC
     style: Regular # optional
 
   # The bold font face
   bold:
-    family: Fira Code
+    family: Sarasa Term TC
     style: Bold # optional
 
   # The italic font face
   italic:
-    family: Fira Code
+    family: Sarasa Term TC
     style: Italic # optional
 
   # Point size of the font
