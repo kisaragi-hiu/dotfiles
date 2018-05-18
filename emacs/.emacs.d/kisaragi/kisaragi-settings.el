@@ -2,8 +2,9 @@
 ;;; Commentary:
 ;;; Settings after packages have been loaded.
 ;;; Code:
-(setq inhibit-startup-screen t)
 
+;; UI Base
+(setq inhibit-startup-screen t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (when (functionp 'scroll-bar-mode)
@@ -14,7 +15,14 @@
   (set-frame-font (font-spec :name "Sarasa Term TC" :size 20)))
 (kisaragi/set-font)
 
-;; this needs to be set before evil starts
+(defun kisaragi/set-theme ()
+  "Set up my theme preferences."
+  (load-theme
+    (if (display-graphic-p)
+      'material
+      'monokai)
+    t))
+(kisaragi/set-theme)
 
 ;; start modes
 (smartparens-global-mode)
@@ -47,6 +55,7 @@
 
 (add-hook 'after-make-frame-functions #'kisaragi/set-font)
 
+(add-hook 'after-make-frame-functions #'kisaragi/set-theme)
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 (add-hook 'racket-mode-hook #'parinfer-mode)
 (add-hook 'lisp-mode-hook #'parinfer-mode)
@@ -87,16 +96,6 @@
 (setq initial-scratch-message nil)
 (setq linum-relative-current-symbol "")
 
-(defun kisaragi/set-theme ()
-  "Set up my theme preferences."
-  (load-theme
-    (if (display-graphic-p)
-      'material
-      'monokai)
-    t))
-(kisaragi/set-theme)
-(add-hook 'after-make-frame-functions
-          #'kisaragi/set-theme)
 (setq-default show-trailing-whitespace t)
 (setq whitespace-style
       '(face tabs newline space-mark tab-mark newline-mark)
