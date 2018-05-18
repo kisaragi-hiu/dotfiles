@@ -6,9 +6,9 @@
              (expand-file-name "kisaragi/" user-emacs-directory))
 (load "kisaragi-configure-pm")
 
-(load "kisaragi-packages")
-(load "kisaragi-settings")
-(load "kisaragi-keybinds")
+(load "kisaragi-packages.el")
+(load "kisaragi-settings.el")
+(load "kisaragi-keybinds.el")
 
 (server-start)
 ;;; init.el ends here

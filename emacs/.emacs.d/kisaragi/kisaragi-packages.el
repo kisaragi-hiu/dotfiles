@@ -35,7 +35,7 @@
 (use-package flycheck)
 (use-package ivy)
 
-;; (use-package xah-elisp-mode)
+(use-package xah-elisp-mode)
 (use-package racket-mode)
 (use-package pollen-mode)
 (use-package scribble-mode
