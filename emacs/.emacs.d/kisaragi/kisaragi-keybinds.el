@@ -30,13 +30,23 @@
  "f" 'ffap
  "h" 'evil-prev-buffer
  "l" 'evil-next-buffer
- "g" 'magit-status
+ "gs" 'magit-status
+ "g↓" 'magit-pull
+ "g↑" 'magit-push
  "p" 'parinfer-toggle-mode
+ "SPC" 'execute-extended-command
  "x" 'execute-extended-command)
 
 (kisaragi/primary-leader-def
  :keymaps 'org-mode-map
  "c" 'org-toggle-checkbox)
+
+(kisaragi/primary-leader-def
+ :keymaps '(xah-elisp-mode-map emacs-lisp-mode-map)
+ "eb" 'eval-buffer
+ "ed" 'eval-defun
+ "er" 'eval-region
+ "el" 'eval-last-sexp)
 
 (evilem-default-keybindings ",")
 ;;; kisaragi-keybinds.el ends here
