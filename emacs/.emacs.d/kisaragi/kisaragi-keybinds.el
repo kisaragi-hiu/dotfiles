@@ -21,9 +21,11 @@
  "C-x v v" 'vimish-fold-delete)
 
 (defconst kisaragi/primary-leader "SPC" "My primary leader key.")
-(general-define-key
- :prefix kisaragi/primary-leader
- :states 'normal
+(general-create-definer kisaragi/primary-leader-def
+  :prefix kisaragi/primary-leader
+  :states 'normal)
+
+(kisaragi/primary-leader-def
  "b" 'ivy-switch-buffer
  "f" 'ffap
  "h" 'evil-prev-buffer
@@ -31,9 +33,8 @@
  "g" 'magit-status
  "p" 'parinfer-toggle-mode
  "x" 'execute-extended-command)
-(general-define-key
- :prefix kisaragi/primary-leader
- :states 'normal
+
+(kisaragi/primary-leader-def
  :keymaps 'org-mode-map
  "c" 'org-toggle-checkbox)
 
