@@ -66,6 +66,7 @@
   :config
   (require 'evil-org-agenda))
 (use-package helpful)
+(use-package which-key)
 (use-package ranger)
 (use-package fzf)
 

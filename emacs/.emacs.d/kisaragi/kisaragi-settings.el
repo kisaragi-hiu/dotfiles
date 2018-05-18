@@ -33,6 +33,8 @@
 (require 'telephone-line-config)
 (telephone-line-evil-config)
 
+(which-key-mode)
+
 ;; auto-mode-alist
 (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
