@@ -4,7 +4,7 @@
 ;;; Code:
 (add-to-list 'load-path
              (expand-file-name "kisaragi/" user-emacs-directory))
-(load "kisaragi-configure-pm")
+(load "kisaragi-configure-pm.el")
 
 (load "kisaragi-packages.el")
 (load "kisaragi-settings.el")
