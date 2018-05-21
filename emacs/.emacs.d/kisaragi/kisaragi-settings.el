@@ -12,7 +12,7 @@
 
 (defun kisaragi/set-font ()
   "Set up my font preferences."
-  (set-frame-font (font-spec :name "Sarasa Term TC" :size 20)))
+  (set-frame-font (find-font (font-spec :name "Sarasa Term TC" :size 20))))
 (kisaragi/set-font)
 
 (defun kisaragi/set-theme ()
