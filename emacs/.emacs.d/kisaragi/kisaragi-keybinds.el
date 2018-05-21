@@ -27,7 +27,8 @@
 
 (kisaragi/primary-leader-def
  "b" 'ivy-switch-buffer
- "f" 'ffap
+ "ff" 'find-file
+ "fp" 'find-file-at-point
  "h" 'evil-prev-buffer
  "l" 'evil-next-buffer
  "gs" 'magit-status
