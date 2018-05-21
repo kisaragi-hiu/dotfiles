@@ -3,18 +3,39 @@
 ;;; This file contains package installation statements, and maybe variables
 ;;; that need to be set before a package loads.
 ;;; Code:
+
+;; Libraries
 (use-package f)
 (use-package fn)
+(straight-use-package
+ '(xmlgen :type git :host github
+          :repo "philjackson/xmlgen"))
+
+;; Emacs features
+(use-package color-moccur)
+(use-package fzf)
+(use-package helpful)
+(use-package ivy)
+(use-package moccur-edit)
+(use-package which-key)
+
+;; Apps
+(use-package ranger)
+(use-package magit)
 (use-package suggest)
+
+;; Editing
 (use-package smartparens)
 (use-package parinfer)
 (use-package vimish-fold)
 (use-package fold-this)
-(use-package color-moccur)
-(use-package moccur-edit)
+(straight-use-package
+ '(git-undo :type git :host github
+            :repo "jwiegley/git-undo-el"))
+
+;; Evil
 (use-package evil-surround)
 (use-package evil-commentary)
-;; (use-package evil-leader)
 (use-package evil
   :init
   (setq evil-want-integration nil))
@@ -25,16 +46,32 @@
    :type git :host github
    :repo "syohex/evil-textobj-line"))
 (use-package evil-easymotion)
+(use-package evil-org
+  :config
+  (require 'evil-org-agenda))
 (use-package general)
-;; (use-package hydra)
+(use-package evil-magit)
 
+;; UI
+(straight-use-package
+ '(minimal-fringes :type git :host github
+                   :repo "SpecialBomb/emacs-minimal-fringes"))
+(use-package monokai-theme)
+(use-package material-theme)
+(use-package dracula-theme)
+(use-package telephone-line)
+(use-package rainbow-delimiters)
+(use-package linum-relative)
+(use-package column-marker)
+
+;; Autocomplete, Syntax
 (use-package company)
 (use-package company-shell)
 (use-package company-jedi)
 (use-package company-flx)
 (use-package flycheck)
-(use-package ivy)
 
+;; Languages
 (use-package xah-elisp-mode)
 (use-package racket-mode)
 (use-package pollen-mode)
@@ -48,36 +85,5 @@
 (use-package vimrc-mode)
 (use-package yaml-mode)
 (use-package web-mode)
-(use-package linum-relative)
 
-(straight-use-package
- '(minimal-fringes :type git :host github
-                   :repo "SpecialBomb/emacs-minimal-fringes"))
-(use-package monokai-theme)
-(use-package material-theme)
-(use-package dracula-theme)
-
-(use-package telephone-line)
-(use-package rainbow-delimiters)
-(use-package column-marker)
-(use-package magit)
-(use-package evil-magit)
-(straight-use-package
- '(git-undo :type git :host github
-            :repo "jwiegley/git-undo-el"))
-(use-package evil-org
-  :config
-  (require 'evil-org-agenda))
-(use-package helpful)
-(use-package which-key)
-(use-package ranger)
-(use-package fzf)
-
-;; xmlgenexp->xml
-;; where xexp looks like '(tag ([attr "attr-val"]) (nested-tag) "tag-val"),
-;; "xmlgenexp" looks like '(tag :attr "attr-val" (nested-tag) "tag-val").
-;; -> <tag attr="attr-val"><nested-tag/>tag-val</tag>
-(straight-use-package
- '(xmlgen :type git :host github
-          :repo "philjackson/xmlgen"))
 ;;; kisaragi-packages.el ends here
