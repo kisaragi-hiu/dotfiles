@@ -34,7 +34,7 @@
   (evil-collection-init))
 (company-flx-mode)
 (ivy-mode)
-
+(yas-reload-all)
 (linum-relative-global-mode)
 (global-linum-mode)
 
@@ -57,6 +57,7 @@
 
 (add-hook 'after-make-frame-functions #'kisaragi/set-theme)
 (add-hook 'prog-mode-hook #'hs-minor-mode)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 (add-hook 'racket-mode-hook #'parinfer-mode)
 (add-hook 'lisp-mode-hook #'parinfer-mode)
 (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)

@@ -1,5 +1,4 @@
 ;; -*- lexical-binding: t -*-
-(setq debug-on-error t)
 
 ;;; init.el --- Kisaragi Hiu's Emacs config
 ;;; Commentary:

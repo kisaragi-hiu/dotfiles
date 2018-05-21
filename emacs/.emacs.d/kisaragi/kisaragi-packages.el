@@ -32,6 +32,9 @@
 (straight-use-package
  '(git-undo :type git :host github
             :repo "jwiegley/git-undo-el"))
+(use-package yasnippet)
+(use-package yasnippet-snippets)
+(use-package ivy-yasnippet)
 
 ;; Evil
 (use-package evil-surround)
