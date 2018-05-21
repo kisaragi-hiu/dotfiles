@@ -1,3 +1,6 @@
+;; -*- lexical-binding: t -*-
+(setq debug-on-error t)
+
 ;;; init.el --- Kisaragi Hiu's Emacs config
 ;;; Commentary:
 ;;; I'm roughly following the config model of VSCode.
@@ -8,7 +11,7 @@
       (init-gc-cons-threshold (* 128 1024 1024)))
   (setq gc-cons-threshold init-gc-cons-threshold)
   (add-hook 'after-init-hook
-           (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
+            (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
 (load "kisaragi-configure-pm.el")
 
