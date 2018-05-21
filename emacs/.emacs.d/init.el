@@ -2,8 +2,7 @@
 ;;; Commentary:
 ;;; I'm roughly following the config model of VSCode.
 ;;; Code:
-(add-to-list 'load-path
-             (expand-file-name "kisaragi/" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "kisaragi" user-emacs-directory))
 
 (let ((normal-gc-cons-threshold (* 20 1024 1024))
       (init-gc-cons-threshold (* 128 1024 1024)))
