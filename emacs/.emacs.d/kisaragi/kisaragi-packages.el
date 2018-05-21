@@ -50,6 +50,9 @@
 (use-package web-mode)
 (use-package linum-relative)
 
+(straight-use-package
+ '(minimal-fringes :type git :host github
+                   :repo "SpecialBomb/emacs-minimal-fringes"))
 (use-package monokai-theme)
 (use-package material-theme)
 (use-package dracula-theme)
