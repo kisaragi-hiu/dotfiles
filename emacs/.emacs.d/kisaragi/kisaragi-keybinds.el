@@ -62,6 +62,7 @@
  :prefix kisaragi/primary-leader
  :states 'normal
  :keymaps 'org-mode-map
+ "TAB" 'org-cycle
  "c" 'org-toggle-checkbox)
 
 (general-define-key
