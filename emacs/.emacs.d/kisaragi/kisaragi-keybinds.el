@@ -61,7 +61,10 @@
  "c" 'org-toggle-checkbox)
 
 (general-define-key
+ :prefix kisaragi/primary-leader
+ :states '(normal visual)
  :keymaps '(xah-elisp-mode-map emacs-lisp-mode-map)
+ "p" 'parinfer-toggle-mode
  "eb" 'eval-buffer
  "ed" 'eval-defun
  "er" 'eval-region
