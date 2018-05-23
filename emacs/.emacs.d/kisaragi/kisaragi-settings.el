@@ -38,7 +38,7 @@
 (linum-relative-global-mode)
 (global-linum-mode)
 
-(require 'telephone-line-config)
+;; (require 'telephone-line-config)
 (telephone-line-evil-config)
 
 (which-key-mode)
@@ -46,6 +46,10 @@
 ;; auto-mode-alist
 (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+(add-to-list 'company-backends 'company-files)
+(add-to-list 'company-backends '(company-shell company-shell-env))
+(add-to-list 'company-backends '(company-jedi company-files))
 
 ;; hooks
 (add-hook 'doc-view-mode
@@ -74,16 +78,29 @@
 (add-hook 'org-mode-hook #'evil-org-mode)
 (add-hook 'prog-mode-hook #'flycheck-mode)
 
+;; emacs behavior
 ;; save backups and autosaves to system temp dir
 (setq backup-directory-alist
-      (list (cons ".*" temporary-file-directory)))
-(setq auto-save-file-name-transforms
+      (list (cons ".*" temporary-file-directory))
+      auto-save-file-name-transforms
       (list (list ".*" temporary-file-directory t)))
 
+(setq which-key-idle-delay 0.4
+      which-key-idle-secondary-delay 0.1)
+
+(setq vc-follow-symlinks t)
+(setq warning-minimum-level :emergency)
+
+(setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
+(setq initial-scratch-message nil)
+(setq linum-relative-current-symbol "")
+(setq evil-move-beyond-eol t)
+(setq-default indent-tabs-mode nil)
+(ranger-override-dired-mode t)
+
+;; editing
 (delete-selection-mode 1)
 (setq tab-always-indent 'complete)
-;; Follow link into vc'd files
-(setq vc-follow-symlinks t)
 
 (setq parinfer-extensions
       '(defaults
@@ -91,21 +108,8 @@
          evil
          smart-tab
          smart-yank))
-(setq evil-move-beyond-eol t)
 
-(setq which-key-idle-delay 0.4
-      which-key-idle-secondary-delay 0.1)
-
-(add-to-list 'company-backends 'company-files)
-(add-to-list 'company-backends '(company-shell company-shell-env))
-(add-to-list 'company-backends '(company-jedi company-files))
-
-(setq ivy-re-builders-alist
-      '((t . ivy--regex-fuzzy)))
-
-(setq initial-scratch-message nil)
-(setq linum-relative-current-symbol "")
-
+;; UI
 (setq-default show-trailing-whitespace t)
 (setq whitespace-style
       '(face tabs newline space-mark tab-mark newline-mark)
@@ -114,31 +118,27 @@
       '(((newline-mark 10 [172 10]) ; 172: not sign (U00A7)
          (tab-mark 9 [9655 9] [92 9]))))
 
+(setq scroll-conservatively 150
+      scroll-margin 10
+      scroll-step 1)
+
+(setq evil-emacs-state-cursor '("red" box)
+      evil-normal-state-cursor '("green" box)
+      evil-visual-state-cursor '("orange" box)
+      evil-insert-state-cursor '("red" bar)
+      evil-replace-state-cursor '("red" bar)
+      evil-operator-state-cursor '("red" hollow))
+
 ;; should mode enabling be in settings or packages?
 (global-whitespace-mode 1)
 (global-hl-line-mode 1)
 (show-paren-mode 1)
 
-
 (evil-org-set-key-theme '(navigation insert textobjects additional calendar))
 (evil-org-agenda-set-keys)
-(setq org-todo-keywords '((sequence "TODO" "NEXT" "DONE")))
-(setq org-todo-keyword-faces
+(setq org-todo-keywords '((sequence "TODO" "NEXT" "DONE"))
+      org-todo-keyword-faces
       '(("TODO" . org-todo) ("NEXT" . org-todo) ("DONE" . org-done)))
 (setq org-src-fontify-natively t) ;; highlight SRC blocks
-(ranger-override-dired-mode t)
 
-(setq-default indent-tabs-mode nil)
-
-(setq evil-emacs-state-cursor '("red" box))
-(setq evil-normal-state-cursor '("green" box))
-(setq evil-visual-state-cursor '("orange" box))
-(setq evil-insert-state-cursor '("red" bar))
-(setq evil-replace-state-cursor '("red" bar))
-(setq evil-operator-state-cursor '("red" hollow))
-
-(setq scroll-conservatively 150
-      scroll-margin 10
-      scroll-step 1)
-(setq warning-minimum-level :emergency)
 ;;; kisaragi-settings.el ends here
