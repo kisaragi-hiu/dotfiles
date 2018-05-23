@@ -58,11 +58,14 @@
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook (lambda () (interactive) (column-marker-1 80)))
 (add-hook 'racket-mode-hook #'parinfer-mode)
 (add-hook 'lisp-mode-hook #'parinfer-mode)
 (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
-(add-hook 'xah-elisp-mode-hook #'parinfer-mode)
-(add-hook 'xah-elisp-mode-hook (lambda () (abbrev-mode -1)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (interactive) (column-marker-1 120)))
+;; (add-hook 'xah-elisp-mode-hook #'parinfer-mode)
+;; (add-hook 'xah-elisp-mode-hook (lambda () (abbrev-mode -1)))
+;; (add-hook 'xah-elisp-mode-hook (lambda () (interactive) (column-marker-1 120)))
 
 (add-hook 'after-init-hook #'global-company-mode)
 (add-hook 'after-init-hook (lambda () (setq gc-cons-threshold (* 20 1024 1024))))
@@ -115,7 +118,6 @@
 (global-whitespace-mode 1)
 (global-hl-line-mode 1)
 (show-paren-mode 1)
-(add-hook 'prog-mode-hook (lambda () (interactive) (column-marker-1 80)))
 
 
 (evil-org-set-key-theme '(navigation insert textobjects additional calendar))
