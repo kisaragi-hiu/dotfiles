@@ -6,6 +6,7 @@
 
 ;; Libraries
 (use-package f)
+(use-package s)
 (use-package fn)
 (straight-use-package
  '(xmlgen :type git :host github
