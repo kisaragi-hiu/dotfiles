@@ -90,6 +90,9 @@
          smart-yank))
 (setq evil-move-beyond-eol t)
 
+(setq which-key-idle-delay 0.4
+      which-key-idle-secondary-delay 0.1)
+
 (add-to-list 'company-backends 'company-files)
 (add-to-list 'company-backends '(company-shell company-shell-env))
 (add-to-list 'company-backends '(company-jedi company-files))
