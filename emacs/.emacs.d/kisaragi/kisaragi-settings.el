@@ -64,6 +64,8 @@
 (add-hook 'xah-elisp-mode-hook #'parinfer-mode)
 (add-hook 'after-init-hook #'global-company-mode)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'after-init-hook (lambda () (setq gc-cons-threshold (* 20 1024 1024))))
+
 (add-hook 'pollen-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'org-mode-hook #'evil-org-mode)
 (add-hook 'prog-mode-hook #'flycheck-mode)
