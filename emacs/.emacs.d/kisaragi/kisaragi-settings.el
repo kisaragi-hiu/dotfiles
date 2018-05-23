@@ -140,6 +140,5 @@
 (setq scroll-conservatively 150
       scroll-margin 10
       scroll-step 1)
-; (setq warning-minimum-level :emergency)
-(setq warning-minimum-level :warning)
+(setq warning-minimum-level :emergency)
 ;;; kisaragi-settings.el ends here
