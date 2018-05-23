@@ -54,16 +54,17 @@
       (linum-mode -1)))
 
 (add-hook 'after-make-frame-functions #'kisaragi/set-font)
-
 (add-hook 'after-make-frame-functions #'kisaragi/set-theme)
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'racket-mode-hook #'parinfer-mode)
 (add-hook 'lisp-mode-hook #'parinfer-mode)
 (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
 (add-hook 'xah-elisp-mode-hook #'parinfer-mode)
+(add-hook 'xah-elisp-mode-hook (lambda () (abbrev-mode -1)))
+
 (add-hook 'after-init-hook #'global-company-mode)
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'after-init-hook (lambda () (setq gc-cons-threshold (* 20 1024 1024))))
 
 (add-hook 'pollen-mode-hook #'rainbow-delimiters-mode)
