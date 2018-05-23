@@ -53,7 +53,7 @@
         :which-key "packages.el")
  "ek" `(,(lambda () (interactive) (find-file (f-join user-emacs-directory "kisaragi" "kisaragi-keybinds.el")))
          :which-key "keybinds.el")
- "en" `(,(lambda () (interactive) (find-file (if (getenv "TERMUX_HOME")
+ "en" `(,(lambda () (interactive) (find-file (if (getenv "ANDROID_ROOT")
                                                  (f-join "/sdcard" "0.git" "notes" "notes.org")
                                                  (f-join (getenv "HOME") "git" "notes" "notes.org"))))
          :which-key "notes.org"))
