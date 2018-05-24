@@ -21,7 +21,7 @@
 (use-package which-key)
 
 ;; Apps
-(use-package ranger)
+(use-package dired-sidebar)
 (use-package magit)
 (use-package suggest)
 

@@ -25,6 +25,7 @@
  :prefix kisaragi/primary-leader
  :states 'normal
  kisaragi/primary-leader 'execute-extended-command
+ "s" 'dired-sidebar
  "x" 'execute-extended-command
  "b" 'ivy-switch-buffer
  "h" 'evil-prev-buffer

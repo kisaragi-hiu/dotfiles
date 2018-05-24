@@ -96,7 +96,6 @@
 (setq linum-relative-current-symbol "")
 (setq evil-move-beyond-eol t)
 (setq-default indent-tabs-mode nil)
-(ranger-override-dired-mode t)
 
 ;; editing
 (delete-selection-mode 1)
