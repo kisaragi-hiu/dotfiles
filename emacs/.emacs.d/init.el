@@ -1,5 +1,3 @@
-;; -*- lexical-binding: t -*-
-
 ;;; init.el --- Kisaragi Hiu's Emacs config
 ;;; Commentary:
 ;;; I'm roughly following the config model of VSCode.
