@@ -4,6 +4,7 @@
 ;;; I'm trying to utilize general.el.
 ;;; Code:
 (defconst kisaragi/primary-leader "SPC" "My primary leader key.")
+(defconst kisaragi/mode-leader "," "My leader key for mode specific bindings.")
 
 (general-define-key
  "C-=" 'evil-numbers/inc-at-pt
@@ -25,7 +26,7 @@
  :prefix kisaragi/primary-leader
  :states 'normal
  kisaragi/primary-leader 'execute-extended-command
- "s" 'dired-sidebar
+ "s" 'dired-sidebar-toggle-sidebar
  "x" 'execute-extended-command
  "b" 'ivy-switch-buffer
  "h" 'evil-prev-buffer
@@ -67,9 +68,9 @@
  "c" 'org-toggle-checkbox)
 
 (general-define-key
- :prefix kisaragi/primary-leader
+ :prefix kisaragi/mode-leader
  :states '(normal visual)
- :keymaps '(xah-elisp-mode-map emacs-lisp-mode-map)
+ :keymaps 'emacs-lisp-mode-map
  "p" 'parinfer-toggle-mode
  "eb" 'eval-buffer
  "ed" 'eval-defun
