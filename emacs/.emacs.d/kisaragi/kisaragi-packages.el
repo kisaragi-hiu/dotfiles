@@ -15,10 +15,14 @@
 ;; Emacs features
 (use-package color-moccur)
 (use-package fzf)
+(use-package ag)
 (use-package helpful)
 (use-package ivy)
 (use-package moccur-edit)
 (use-package which-key)
+(use-package projectile
+  :config
+  (use-package counsel-projectile))
 
 ;; Apps
 (use-package dired-sidebar)

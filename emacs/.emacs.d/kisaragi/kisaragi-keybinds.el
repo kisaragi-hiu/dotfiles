@@ -28,6 +28,7 @@
  kisaragi/primary-leader 'execute-extended-command
  "s" 'dired-sidebar-toggle-sidebar
  "x" 'execute-extended-command
+ "p" 'projectile-command-map
  "b" 'ivy-switch-buffer
  "h" 'evil-prev-buffer
  "l" 'evil-next-buffer)

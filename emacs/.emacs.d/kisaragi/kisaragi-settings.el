@@ -25,6 +25,7 @@
 (kisaragi/set-theme)
 
 ;; start modes
+(projectile-global-mode)
 (smartparens-global-mode)
 (global-evil-surround-mode)
 (evil-commentary-mode)
