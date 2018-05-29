@@ -81,14 +81,15 @@
 
 ;; Languages
 ;; (use-package xah-elisp-mode)
-(use-package racket-mode)
 (use-package picolisp-mode)
-(use-package pollen-mode)
-(use-package scribble-mode
-  :straight
-  (scribble-mode
-    :type git :host github
-    :repo "emacs-pe/scribble-mode"))
+(use-package racket-mode
+  :config
+  (use-package pollen-mode)
+  (use-package scribble-mode
+    :straight
+    (scribble-mode
+      :type git :host github
+      :repo "emacs-pe/scribble-mode")))
 (use-package markdown-mode)
 (use-package fish-mode)
 (use-package vimrc-mode)
