@@ -82,6 +82,7 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'godlygeek/tabular'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'vim-scripts/gnuplot-syntax-highlighting'
+Plug 'wilsaj/chuck.vim'
 "linter
 Plug 'vim-syntastic/syntastic'
 
