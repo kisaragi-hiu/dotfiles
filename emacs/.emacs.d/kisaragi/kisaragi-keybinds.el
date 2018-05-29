@@ -22,10 +22,11 @@
  "C-x v f" 'vimish-fold
  "C-x v v" 'vimish-fold-delete)
 
+;; global normal state leader maps
 (general-define-key
  :prefix kisaragi/primary-leader
  :states 'normal
- kisaragi/primary-leader 'execute-extended-command
+ kisaragi/primary-leader '(:keymap evilem-map :wk "easymotion")
  "s" 'dired-sidebar-toggle-sidebar
  "x" 'execute-extended-command
  "p" 'projectile-command-map
@@ -47,7 +48,7 @@
  "" '(:ignore t :which-key "file")
  "f" 'find-file
  "p" 'find-file-at-point
- "e" '(:ignore t :which-key "edit config")
+ "e" '(:ignore t :which-key "open common files")
  "ed" `(,(lambda () (interactive) (find-file (f-join user-emacs-directory "init.el")))
         :which-key "init.el")
  "es" `(,(lambda () (interactive) (find-file (f-join user-emacs-directory "kisaragi" "kisaragi-settings.el")))
