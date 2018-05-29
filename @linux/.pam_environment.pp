@@ -80,7 +80,7 @@
 ◊; == app behavior controls ==
 ◊defpam_env["VISUAL"]{nvim}
 ◊defpam_env["EDITOR"]{nvim}
-◊defpam_env["TERMINAL"]{kitty}
+◊defpam_env["TERMINAL"]{alacritty}
 ◊defpam_env["BROWSER"]{firefox}
 ◊; for surfraw, the command line web searcher
 ◊defpam_env["SURFRAW_browser"]{firefox}
