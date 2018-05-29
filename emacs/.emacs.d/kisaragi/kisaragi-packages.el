@@ -95,6 +95,9 @@
 (use-package vimrc-mode)
 (use-package yaml-mode)
 (use-package web-mode)
+(use-package clojure-mode
+  :config
+  (use-package cider))
 (when (executable-find "chuck")
   (use-package chuck-mode
     :straight
