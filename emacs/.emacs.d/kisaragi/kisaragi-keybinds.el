@@ -68,6 +68,14 @@
  :keymaps 'org-mode-map
  "c" 'org-toggle-checkbox)
 
+;; mode specific maps
+
+(general-define-key
+ :prefix kisaragi/mode-leader
+ :states '(normal visual)
+ :keymaps '(emacs-lisp-mode-map racket-mode-map clojure-mode-map lisp-mode-map)
+ "p" 'parinfer-toggle-mode)
+
 (general-define-key
  :states 'normal
  :keymaps 'org-mode-map
@@ -77,11 +85,28 @@
  :prefix kisaragi/mode-leader
  :states '(normal visual)
  :keymaps 'emacs-lisp-mode-map
- "p" 'parinfer-toggle-mode
+ "e" '(:ignore t :which-key "eval")
  "eb" 'eval-buffer
  "ed" 'eval-defun
  "er" 'eval-region
  "el" 'eval-last-sexp)
 
-(evilem-default-keybindings ",")
+(general-define-key
+ :prefix kisaragi/mode-leader
+ :states '(normal visual)
+ :keymaps 'racket-mode-map
+ "d" 'racket-doc
+ "e" '(:ignore t :which-key "expand")
+ "ea" 'racket-expand-again
+ "el" 'racket-expand-last-sexp
+ "er" 'racket-expand-region
+ "ex" 'racket-expand-definition
+ "f" 'racket-describe
+ "o" 'racket-open-require-path
+ "r" '(:ignore t :which-key "repl")
+ "re" 'racket-repl
+ "rl" 'racket-send-last-sexp
+ "rr" 'racket-send-region
+ "t" 'racket-test)
+
 ;;; kisaragi-keybinds.el ends here
