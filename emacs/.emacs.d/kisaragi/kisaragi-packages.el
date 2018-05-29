@@ -95,5 +95,10 @@
 (use-package vimrc-mode)
 (use-package yaml-mode)
 (use-package web-mode)
+(when (executable-find "chuck")
+  (use-package chuck-mode
+    :straight
+    (chuck-mode :type git :host github
+                :repo "emacsattic/chuck-mode")))
 
 ;;; kisaragi-packages.el ends here
