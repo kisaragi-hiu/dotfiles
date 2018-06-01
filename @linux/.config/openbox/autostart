@@ -1,6 +1,9 @@
 #!/bin/bash
 # These things are run when an Openbox X Session is started.
 #
+__run_if_present () {
+    command -v "$1" >/dev/null 2>/dev/null && "$@"
+}
 
 # GNOME config tools
 if [ -x /usr/lib/openbox/gnome-settings-daemon ] >/dev/null; then
@@ -24,6 +27,8 @@ xcompmgr &
 xcape -e 'Alt_R=Escape;Super_L=Alt_L|F1' -t 250 &
 dunst &
 
+# Uh-huh.
+plasmashell &
 bar &
 latte-dock &
 
@@ -32,7 +37,6 @@ xmodmap ~/.Xmodmap
 
 xsetwacom --set "Wacom Intuos PT S 2 Pen stylus" Area 0 0 15200 8550
 
-# Uh-huh.
-plasmashell &
+__run_if_present aw-qt &
 
 # vim: filetype=sh
