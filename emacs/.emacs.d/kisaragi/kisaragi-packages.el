@@ -82,6 +82,7 @@
 ;; Languages
 ;; (use-package xah-elisp-mode)
 (use-package racket-mode)
+(use-package picolisp-mode)
 (use-package pollen-mode)
 (use-package scribble-mode
   :straight
