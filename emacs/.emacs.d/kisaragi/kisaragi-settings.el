@@ -43,6 +43,7 @@
 (telephone-line-evil-config)
 
 (which-key-mode)
+(editorconfig-mode)
 
 ;; auto-mode-alist
 (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))

@@ -23,6 +23,7 @@
 (use-package projectile
   :config
   (use-package counsel-projectile))
+(use-package editorconfig)
 
 ;; Apps
 (use-package dired-sidebar)
