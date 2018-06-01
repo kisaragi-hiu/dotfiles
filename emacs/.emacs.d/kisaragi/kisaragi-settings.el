@@ -47,6 +47,7 @@
 ;; auto-mode-alist
 (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.l\\'" . picolisp-mode))
 
 (add-to-list 'company-backends 'company-files)
 (add-to-list 'company-backends '(company-shell company-shell-env))
@@ -85,6 +86,11 @@
       (list (cons ".*" temporary-file-directory))
       auto-save-file-name-transforms
       (list (list ".*" temporary-file-directory t)))
+
+(when (getenv "ANDROID_ROOT")
+  (setq picolisp-documentation-directory
+        (f-join (getenv "PREFIX")
+                "lib/picolisp/doc/")))
 
 (setq which-key-idle-delay 0.4
       which-key-idle-secondary-delay 0.1)
