@@ -24,26 +24,8 @@
     t))
 (kisaragi/set-theme)
 
-;; start modes
-(projectile-global-mode)
-(smartparens-global-mode)
-(global-evil-surround-mode)
-(evil-commentary-mode)
-;; (global-evil-leader-mode)
-(evil-mode 1)
-(with-eval-after-load 'evil
-  (evil-collection-init))
-(company-flx-mode)
-(ivy-mode)
-(yas-reload-all)
-(linum-relative-global-mode)
-(global-linum-mode)
-
-;; (require 'telephone-line-config)
-(telephone-line-evil-config)
-
-(which-key-mode)
-(editorconfig-mode)
+(when (s-prefix? "26" emacs-version)
+  (setq-default display-line-numbers 'relative))
 
 ;; auto-mode-alist
 (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
@@ -55,10 +37,11 @@
 (add-to-list 'company-backends '(company-jedi company-files))
 
 ;; hooks
-(add-hook 'doc-view-mode
-    (lambda ()
-      (linum-relative-off)
-      (linum-mode -1)))
+(when (not (s-prefix? "26" emacs-version))
+  (add-hook 'doc-view-mode
+            (lambda ()
+              (linum-relative-off)
+              (linum-mode -1))))
 
 (add-hook 'after-make-frame-functions #'kisaragi/set-font)
 (add-hook 'after-make-frame-functions #'kisaragi/set-theme)

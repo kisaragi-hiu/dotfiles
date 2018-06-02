@@ -1,7 +1,7 @@
 ;;; kisaragi-packages.el --- package installations
 ;;; Commentary:
-;;; This file contains package installation statements, and maybe variables
-;;; that need to be set before a package loads.
+;;; Package installation, mode initialization
+;;; Hooks go in settings.el
 ;;; Code:
 
 ;; Libraries
@@ -17,13 +17,20 @@
 (use-package fzf)
 (use-package ag)
 (use-package helpful)
-(use-package ivy)
+(use-package ivy
+  :config
+  (ivy-mode))
 (use-package moccur-edit)
-(use-package which-key)
+(use-package which-key
+  :config
+  (which-key-mode))
 (use-package projectile
   :config
-  (use-package counsel-projectile))
-(use-package editorconfig)
+  (use-package counsel-projectile)
+  (projectile-global-mode))
+(use-package editorconfig
+  :config
+  (editorconfig-mode))
 
 ;; Apps
 (use-package dired-sidebar)
@@ -31,35 +38,48 @@
 (use-package suggest)
 
 ;; Editing
-(use-package smartparens)
+;; (use-package smartparens)
+(electric-pair-mode)
 (use-package parinfer)
 (use-package vimish-fold)
 (use-package fold-this)
 (straight-use-package
  '(git-undo :type git :host github
             :repo "jwiegley/git-undo-el"))
-(use-package yasnippet)
-(use-package yasnippet-snippets)
-(use-package ivy-yasnippet)
+(use-package yasnippet
+  :config
+  (use-package yasnippet-snippets)
+  (use-package ivy-yasnippet)
+  (yas-reload-all))
 
 ;; Evil
-(use-package evil-surround)
-(use-package evil-commentary)
 (use-package evil
   :init
-  (setq evil-want-integration nil))
-(use-package evil-collection)
-(use-package evil-numbers)
-(straight-use-package
- '(evil-textobj-line
-   :type git :host github
-   :repo "syohex/evil-textobj-line"))
-(use-package evil-easymotion)
-(use-package evil-org
+  (setq evil-want-integration nil)
+  (use-package evil-surround
+    :config
+    (global-evil-surround-mode))
+  (use-package evil-commentary
+    :config
+    (evil-commentary-mode))
+
   :config
-  (require 'evil-org-agenda))
+  (use-package evil-collection
+    :config
+    (evil-collection-init))
+  (evil-mode)
+  (use-package evil-numbers)
+  (straight-use-package
+   '(evil-textobj-line
+     :type git :host github
+     :repo "syohex/evil-textobj-line"))
+  (use-package evil-org
+    :config
+    (require 'evil-org-agenda))
+  (use-package evil-magit)
+  (use-package evil-easymotion))
+
 (use-package general)
-(use-package evil-magit)
 
 ;; UI
 (straight-use-package
@@ -68,16 +88,25 @@
 (use-package monokai-theme)
 (use-package material-theme)
 (use-package dracula-theme)
-(use-package telephone-line)
+(use-package telephone-line
+  :config
+  (telephone-line-evil-config))
 (use-package rainbow-delimiters)
-(use-package linum-relative)
+(when (not (s-prefix? "26" emacs-version))
+  (use-package linum-relative
+    :config
+    (linum-relative-global-mode)
+    (global-linum-mode)))
+; (display-line-numbers-mode))
 (use-package column-marker)
 
 ;; Autocomplete, Syntax
-(use-package company)
-(use-package company-shell)
-(use-package company-jedi)
-(use-package company-flx)
+(use-package company
+  :config
+  (use-package company-shell)
+  (use-package company-jedi)
+  (use-package company-flx)
+  (company-flx-mode))
 (use-package flycheck)
 
 ;; Languages
