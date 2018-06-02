@@ -12,5 +12,8 @@
 (load "kisaragi-settings.el")
 (load "kisaragi-keybinds.el")
 
+(load "kisaragi-extra-functions.el")
+
 (server-start)
+
 ;;; init.el ends here
