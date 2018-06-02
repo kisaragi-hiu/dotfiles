@@ -53,9 +53,6 @@
 (add-hook 'lisp-mode-hook #'parinfer-mode)
 (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
 (add-hook 'emacs-lisp-mode-hook (lambda () (interactive) (column-marker-1 120)))
-;; (add-hook 'xah-elisp-mode-hook #'parinfer-mode)
-;; (add-hook 'xah-elisp-mode-hook (lambda () (abbrev-mode -1)))
-;; (add-hook 'xah-elisp-mode-hook (lambda () (interactive) (column-marker-1 120)))
 
 (add-hook 'after-init-hook #'global-company-mode)
 (add-hook 'after-init-hook (lambda () (setq gc-cons-threshold (* 20 1024 1024))))
