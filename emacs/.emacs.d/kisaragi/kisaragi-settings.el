@@ -81,7 +81,8 @@
 
 (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
 (setq initial-scratch-message nil)
-(setq linum-relative-current-symbol "")
+(when (featurep 'linum-relative)
+  (setq linum-relative-current-symbol ""))
 (setq evil-move-beyond-eol t)
 (setq-default indent-tabs-mode nil)
 
