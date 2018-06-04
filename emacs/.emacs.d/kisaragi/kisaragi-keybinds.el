@@ -32,7 +32,8 @@
  "p" 'projectile-command-map
  "b" 'ivy-switch-buffer
  "h" 'evil-prev-buffer
- "l" 'evil-next-buffer)
+ "l" 'evil-next-buffer
+ "c" 'powerthesaurus-lookup-word)
 
 (general-define-key
  :prefix (key-description (list kisaragi/primary-leader "g"))
@@ -63,7 +64,7 @@
          :which-key "notes.org"))
 
 (general-define-key
- :prefix kisaragi/primary-leader
+ :prefix kisaragi/mode-leader
  :states 'normal
  :keymaps 'org-mode-map
  "c" 'org-toggle-checkbox)

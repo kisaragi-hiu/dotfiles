@@ -40,6 +40,7 @@
 ;; Editing
 ;; (use-package smartparens)
 (electric-pair-mode)
+(use-package powerthesaurus)
 (use-package parinfer)
 (use-package vimish-fold)
 (use-package fold-this)
